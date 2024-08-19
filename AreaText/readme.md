@@ -36,3 +36,10 @@ prompt = model.forecast(your_data)
 for p in prompt:
     print(p)
 ```
+
+# 3. 安装部署
+
+```
+pip install -r Time-LLM_requirements.txt
+```
+
