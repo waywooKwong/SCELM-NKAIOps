@@ -1,0 +1,22 @@
+probe_success{env="prod", instance="172.16.80.2:8083", job="port_probe"}
+probe_success{env="prod", instance="172.16.80.2:9093", job="port_probe"}
+increase(http_service_level_sli_result_count_total{job="be/ycard"}[2m])
+increase(http_service_level_sli_result_error_ratio_total{job="be/ycard"}[2m])
+increase(http_service_level_sli_result_duration_le5_total{job="be/ycard"}[2m])
+increase(http_service_level_sli_result_duration_total{job="be/ycard"}[2m])
+increase(grpc_service_level_sli_result_count_total{job="be/ycard"}[2m])
+increase(grpc_service_level_sli_result_error_ratio_total{job="be/ycard"}[2m])
+increase(grpc_service_level_sli_result_duration_total{job="be/ycard"}[2m])
+increase(grpc_service_level_sli_result_duration_le5_total{job="be/ycard"}[2m])
+(sum(increase(std_grpc_server_handling_seconds_bucket{job="be/ycard", grpc_method=~"QueryCard(Bin)?", le="2.5"}[1w])) / sum(increase(std_grpc_server_handling_seconds_bucket{job="be/ycard", grpc_method=~"QueryCard(Bin)?", le="+Inf"}[1w])))*100
+(1-sum(increase(std_grpc_server_handled_total{job="be/ycard",grpc_method=~"QueryCard(Bin)?",biz_code="6000",grpc_code=~"Unknown|OK"}[5m]) or increase(std_grpc_server_handled_total{job="be/ycard",grpc_method=~"QueryCard(Bin)?",grpc_code!~"Unknown|OK"}[5m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job="be/ycard",grpc_method=~"QueryCard(Bin)?"}[5m])))*100
+1- ((sum(increase(std_requests_total{job="be/ycard",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/ycard",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/ycard",environment="prod"}[2m])))
+sum(increase(std_requests_total{job="be/ycard",environment="prod", code="404"}[2m]))
+1-sum(increase(std_grpc_server_handled_total{job="be/ycard",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/ycard",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/ycard",environment="prod"}[2m])) or vector(1)
+1-sum(increase(std_grpc_server_handled_total{job="be/ycard",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/ycard",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/ycard",environment="prod"}[2m])) or vector(1)
+sum( increase(std_grpc_server_handled_total{job="be/ycard",environment="prod", grpc_code="OK"}[2m]))
+sum( increase(std_grpc_server_handled_total{job="be/ycard",environment="prod", grpc_code="Unknown"}[2m]))
+sum(increase(std_request_duration_seconds_bucket{le='5',job="be/ycard",environment="prod"}[2m]))  by(job) / sum(increase(std_request_duration_seconds_bucket{le='+Inf',job="be/ycard",environment="prod"}[2m]))  by(job) *100
+(sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/ycard",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/ycard",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job="be/ycard",environment="prod"}[2m])) by (job,le))
+histogram_quantile(0.999,sum(rate(std_grpc_server_handling_seconds_bucket{job="be/ycard",environment="prod", grpc_method!="ServerReflectionInfo"}[2m])) by (job,le))

@@ -1,0 +1,22 @@
+success{env="prod", instance="172.16.23.125:6740", job="port_probe"}
+probe_success{env="prod", instance="172.16.23.125:6741", job="port_probe"}
+(1-sum(increase(ymsg_service_sms_order_result{status="5",environment="prod",job="be/ymsg",failed_type=~"systemErr|unknown"}[2m]) or vector(0))/sum(increase(ymsg_service_sms_order_result{status=~"3|4|5",job="be/ymsg",environment="prod"}[2m])))*100
+(1 - sum(increase(ymsg_service_mail_send_result{status="3",channel_type=~"AliSMTP|SendCloud",environment="prod",sub_status=~"SmtpMfFreq|SmtpContSpam|SmtpTempErr|SmtpMfLimit|SmtpMfBad|SmtpSpfFail|SmtpDmaFail|UnkSmtpError|409|507|509"}[2m]) or vector(0)) / sum(increase(ymsg_service_mail_send_result{status=~"2|3",channel_type=~"AliSMTP|SendCloud",environment="prod"}[2m])))*100
+1- ((sum(increase(std_requests_total{job="be/ymsg",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/ymsg",environment="prod", code=~"5.."}[2m]))  or  vector(0)) / sum(increase(std_requests_total{job="be/ymsg",environment="prod"}[2m])))
+1-sum(increase(std_grpc_server_handled_total{job="be/ymsg",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/ymsg",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/ymsg",environment="prod"}[2m])) or vector(1)
+(sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/ymsg",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/ymsg",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+sum(rate(std_requests_total{job="be/ymsg",code="2..",environment="prod"}[2m]))
+sum(rate(std_requests_total{job="be/ymsg",code="3..",environment="prod"}[2m]))
+sum(rate(std_requests_total{job="be/ymsg",code="4..",environment="prod"}[2m]))
+sum( increase(std_grpc_server_handled_total{job="be/ymsg",environment="prod", grpc_code="OK"}[2m]))
+sum( increase(std_grpc_server_handled_total{job="be/ymsg",environment="prod", grpc_code="Unknown"}[2m]))
+1-((sum(increase(std_requests_total{job="be/ymsg",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/ymsg",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/ymsg"}[2m]))))
+increase(http_service_level_sli_result_count_total{job="be/ymsg"}[2m])
+increase(http_service_level_sli_result_error_ratio_total{job="be/ymsg"}[2m])
+increase(http_service_level_sli_result_duration_le5_total{job="be/ymsg"}[2m])
+increase(http_service_level_sli_result_duration_total{job="be/ymsg"}[2m])
+increase(grpc_service_level_sli_result_count_total{job="be/ymsg"}[2m])
+increase(grpc_service_level_sli_result_error_ratio_total{job="be/ymsg"}[2m])
+increase(grpc_service_level_sli_result_duration_total{job="be/ymsg"}[2m])
+increase(grpc_service_level_sli_result_duration_le5_total{job="be/ymsg"}[2m])
+histogram_quantile(0.999,sum(rate(std_grpc_server_handling_seconds_bucket{job="be/ymsg",environment="prod", grpc_method!="ServerReflectionInfo"}[2m])) by (le))

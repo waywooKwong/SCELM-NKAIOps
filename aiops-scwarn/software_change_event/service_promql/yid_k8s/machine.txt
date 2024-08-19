@@ -1,0 +1,6 @@
+container_memory_rss{{prometheus="monitoring-cce-bj4-dev-01",container="",namespace=~"jiesuan",pod=~"{0}",metrics_path="/metrics/cadvisor"}} / 1048576 
+sum(rate(container_network_receive_bytes_total{{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan", pod=~"{0}", node="{1}", metrics_path="/metrics/cadvisor"}}[2m])) by (pod,namespace,node) * 8
+sum(rate(container_network_transmit_bytes_total{{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan", pod=~"{0}", node="{1}", metrics_path="/metrics/cadvisor"}}[2m])) by (pod,namespace,node) * 8
+sum(rate(container_network_receive_bytes_total{{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan", pod=~"{0}", node="{1}", metrics_path="/metrics/cadvisor"}}[2m])) by (pod,namespace,node) * 8
+(sum(irate(container_cpu_usage_seconds_total{{prometheus="monitoring-cce-bj4-dev-01",container!="",container!="POD",namespace=~"jiesuan",pod=~"{0}", metrics_path="/metrics/cadvisor"}} [2m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan",pod=~"{0}",container!="",metrics_path="/metrics/cadvisor"}}) by(namespace,pod) / 100000) ) * 100
+irate (container_cpu_usage_seconds_total{{prometheus="monitoring-cce-bj4-dev-01",container="",namespace=~"jiesuan",pod=~"{0}",metrics_path="/metrics/cadvisor"}} [2m]) * 100

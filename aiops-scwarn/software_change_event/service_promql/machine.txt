@@ -1,0 +1,22 @@
+1-avg(irate(node_cpu_seconds_total{{hostname=~"{0}", mode=~"idle"}}[1m])) by (mode, hostname)
+node_load1{{hostname=~"{0}"}}
+node_load5{{hostname=~"{0}"}}
+node_load15{{hostname=~"{0}"}}
+(1-(node_memory_MemAvailable_bytes{{hostname=~"{0}"}}/node_memory_MemTotal_bytes{{hostname=~"{0}"}}))*100
+1-(node_filesystem_free_bytes{{hostname=~"{0}",fstype=~"ext4|xfs",mountpoint="/"}} / node_filesystem_size_bytes{{hostname=~"{0}",fstype=~"ext4|xfs",mountpoint="/"}})
+1-(node_filesystem_free_bytes{{hostname=~"{0}",fstype=~"ext4|xfs",mountpoint="/data"}} / node_filesystem_size_bytes{{hostname=~"{0}",fstype=~"ext4|xfs",mountpoint="/data"}})
+irate(node_disk_reads_completed_total{{hostname=~"{0}"}}[1m])
+irate(node_disk_writes_completed_total{{hostname=~"{0}"}}[1m])
+irate(node_disk_read_time_seconds_total{{hostname=~"{0}"}}[1m])
+irate(node_disk_write_time_seconds_total{{hostname=~"{0}"}}[1m])
+irate(node_disk_read_bytes_total{{hostname=~"{0}"}}[1m])
+irate(node_disk_written_bytes_total{{hostname=~"{0}"}}[1m])
+node_netstat_Tcp_CurrEstab{{hostname=~"{0}"}}
+node_sockstat_TCP_tw{{hostname=~"{0}"}}
+irate(node_netstat_Tcp_ActiveOpens{{hostname=~"{0}"}}[1m])
+irate(node_netstat_Tcp_PassiveOpens{{hostname=~"{0}"}}[1m])
+node_sockstat_TCP_alloc{{hostname=~"{0}"}}
+node_sockstat_TCP_inuse{{hostname=~"{0}"}}
+probe_duration_seconds{{hostname=~"{0}"}}
+irate(node_network_receive_bytes_total{{hostname=~"{0}",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}}[5m])*8
+irate(node_network_transmit_bytes_total{{hostname=~"{0}",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}}[5m])*8

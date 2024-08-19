@@ -1,0 +1,13 @@
+increase(http_service_level_sli_result_count_total{job="be/bkverify"}[2m])
+increase(http_service_level_sli_result_error_ratio_total{job="be/bkverify"}[2m])
+increase(http_service_level_sli_result_duration_le5_total{job="be/bkverify"}[2m])
+increase(http_service_level_sli_result_duration_total{job="be/bkverify"}[2m])
+1- ((sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/bkverify",environment="prod"}[2m])))
+sum(rate(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+sum(increase(std_requests_total{job="be/bkverify",code="404",environment="prod"}[2m]))
+sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+1-sum(increase(std_grpc_server_handled_total{job="be/bkverify",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod"}[2m])) or vector(1)
+sum(increase(std_request_duration_seconds_bucket{le='5',job="be/bkverify",environment="prod"}[2m]))  by(job) / sum(increase(std_request_duration_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod"}[2m]))  by(job) *100
+(sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job="be/bkverify",environment="prod"}[2m])) by (job,le))
+1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m]))))

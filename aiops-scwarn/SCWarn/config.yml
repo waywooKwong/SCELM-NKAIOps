@@ -1,0 +1,42 @@
+train_path: "data/sample/train.csv"
+test_path: "data/sample/abnormal.csv"
+output_path: "result_test/sample.csv"
+
+scaler: 'standard'
+dim: from 1 to 4
+
+algorithms:
+  LSTM:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 10
+  ISST:
+      dim_pos: 3
+  AE:
+      epoch: 50
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 10
+  VAE:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 10
+  MLSTM:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 10
+      modal_path: '/model/MLSTM_10_32_0.01.pt'
+      modal:   #前4个是机器指标，后面3个是业务指标
+        - 4 
+        - 3 
+  MMAE:
+      epoch: 10
+      batch_size: 32
+      learning_rate: 0.01
+      seq_len: 15
+      modal:
+      - 4
+      - 3 
