@@ -1,0 +1,50 @@
+数据集名称,异常情况,指标名称
+0badfdebad4428ade54a078fc6a15087,出现异常,"(1-sum(increase(std_grpc_server_handled_total{job=""be/yid"",biz_code=""6000"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",grpc_code=~""Unknown|OK"",grpc_method=~""ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources""}[1m]) or increase(std_grpc_server_handled_total{job=""be/yid"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",biz_code=""6000"",grpc_method=~""ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources""}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=""be/yid"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",grpc_method=~""ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources""}[1m])))*100"
+da340877fa5ea2f1c201aedfc91d22bc,正常,computeDeptMembersObjectIDs end
+7023eefc5d78a5c7551373c93600b099,正常,infra.grpc.invoker
+36eb617f7b86484b4dcce1d631115997,出现异常,"sum(rate(std_requests_total{job=""be/yid"",code=~""4.."",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt""}[1m]))"
+96083cc4cec914fa215aec6db9ebaef6,正常,Depts only have yunzhanghu
+c1066526e3b973229933e0fb9d037bbf,出现异常,approve callback start
+cec8c557b95827cb976dbfae645fb853,出现异常,"sum(rate(std_requests_total{job=""be/yid"",code=~""2.."",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt""}[1m]))"
+89eb85302e82b16b1bf31826d3be068a,出现异常,"sum(rate(container_network_receive_bytes_total{prometheus=""monitoring-cce-bj4-dev-01"",namespace=~""jiesuan"", pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"", node=""10.200.66.205"", metrics_path=""/metrics/cadvisor""}[1m])) by (pod,namespace,node) * 8"
+b038fe83651f5e4fe8f49fd8bcf042dc,正常,"sum(rate(std_grpc_server_handled_total{job=""be/yid"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",grpc_method=~""ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources"", grpc_code=""OK""}[1m]))"
+b1bd7c01c3ef58909e115c5936d39ad0,正常,no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+e476d2894bb5e9819c8fefb74ac0d59f,出现异常,approve status error
+acc9b27a031b8d0328379149f0dfaff9,正常,DeleteFieldValues <:REQ:>
+a47f48821fc1ffe7057a87438b541bec,出现异常,build <:*:> <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+e937d159618b42e3d8ca2cad01913f7e,出现异常,svc.ApproveCallback failed
+a12a3588ce6e1070ca3dd19d3b8acf4c,出现异常,Response=<:MAP:>
+6300af06fd5be620cb7ab2f3b3d2c52c,正常,parseDataReportFlag ok
+62920d13ca9ff31950a65b98312bcfe0,出现异常,<:list modules:>
+3a89b33d9935c21f9b60e49c11bf8705,出现异常,"sum(rate(container_network_receive_bytes_total{prometheus=""monitoring-cce-bj4-dev-01"",namespace=~""jiesuan"", pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"", node=""10.200.66.205"", metrics_path=""/metrics/cadvisor""}[1m])) by (pod,namespace,node) * 8.1"
+3415e4bc823ff9c472ee313e2c790cf9,出现异常,parse metadata
+9a9aa91233ed2f49aaa9ae2b59b4bd35,正常,"container_memory_rss{prometheus=""monitoring-cce-bj4-dev-01"",container="""",namespace=~""jiesuan"",pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"",metrics_path=""/metrics/cadvisor""} / 1048576"
+19930931b560277fcf06ecc09f41e752,出现异常,AuthListByName <:<:ChineseInfo:>:>
+2ce5ac45d4275008d857abb5385cf1b3,正常,getPermTagsAndValues <:*:>
+e4aa88345de77d0282de38d940b97037,出现异常,<:staticStrategies:>
+25552d842c2e7aecc66305b33001408c,正常,"sum(rate(container_network_transmit_bytes_total{prometheus=""monitoring-cce-bj4-dev-01"",namespace=~""jiesuan"", pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"", node=""10.200.66.205"", metrics_path=""/metrics/cadvisor""}[1m])) by (pod,namespace,node) * 8"
+aedcea2b95e6a07cb77a9a0da350ab7f,正常,loaded policy count:<:NUM:>
+9acf1a4090ed511da774d820d33e61a3,出现异常,"(sum(irate(container_cpu_usage_seconds_total{prometheus=""monitoring-cce-bj4-dev-01"",container!="""",container!=""POD"",namespace=~""jiesuan"",pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"", metrics_path=""/metrics/cadvisor""} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=""monitoring-cce-bj4-dev-01"",namespace=~""jiesuan"",pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"",container!="""",metrics_path=""/metrics/cadvisor""}) by(namespace,pod) / 100000) ) * 100"
+8df10c3d5b13f5e9968401e99475aa04,正常,build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+addb8708ca4d6be7f10fb32c51d26c4b,正常,ClientEnvHandler is <:*:>
+3c381765fd3b9e79f88acad64d1f9271,出现异常,"irate (container_cpu_usage_seconds_total{prometheus=""monitoring-cce-bj4-dev-01"",container="""",namespace=~""jiesuan"",pod=~""yid-k8s-aiops-81-8479bf857f-dwxwt"",metrics_path=""/metrics/cadvisor""} [1m]) * 100"
+853015ced4aeeb33a38c6866d33110a3,正常,<:REQ:>
+ce08cf4f6a573556e44efd5992b77721,出现异常,rego exec input:<:MAP:>
+001af3fb6b4d143bcf025ea210b71ead,正常,getBackupEmp success
+4497c7155104ca8d37e8b1ad7eb8d788,正常,"sum( increase(std_grpc_server_handled_total{job=""be/yid"",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"", grpc_code=""Unknown""}[1m]))"
+6ad2d13248c5eddd35b3dbb2c1dd6a53,正常,loadRegoMySQLInterval success
+a4a58c952a98e5616e4e5acf3cc4a933,出现异常,no need or no have tags
+4b20aff7926272178b85218712b15cc7,正常,<:GIN:>
+832302238b58d0f61f6cfcf72ceec26e,正常,"sum( increase(std_grpc_server_handled_total{job=""be/yid"",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"", grpc_code=""OK""}[1m]))"
+cb12e6d152c39675bebadcf33887e185,正常,curpkg+name: code.yunzhanghu.com/be/yid/server/grpc/v1/CheckDelay [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+6bff220e161557e15d7790189b65cd7b,正常,"sum(rate(std_grpc_server_handled_total{job=""be/yid"", grpc_code=""OK"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"" ,grpc_method=~""GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp""}[1m]))"
+6326114b91842880149e9876a90e7bca,出现异常,superiorAndDeputy empty
+6b46f192cbbfe2c7af9703f2d00c7934,出现异常,"1-sum(increase(std_grpc_server_handled_total{job=""be/yid"",biz_code=""6000"",environment=""rc"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",grpc_code=~""Unknown|OK""}[1m]) or increase(std_grpc_server_handled_total{job=""be/yid"",environment=""rc"",instance=""{1}"",grpc_code!~""Unknown|OK""}[1m]))/sum(increase(std_grpc_server_handled_total{job=""be/yid"",instance=""{2}"",environment=""rc""}[1m])) or vector(1)"
+ad921d60486366258809553a3db49a4a,正常,unknown
+5e0cf0fa2956ad7395caae46732f5151,出现异常,computeOwnObjectIDs end
+ba7e4d879f5b61c48192f115c8423009,正常,getDept success
+b332b80f550a064f5f996fdf876b9fbe,正常,"1- ((sum(increase(std_requests_total{job=""be/yid"",code=""200"",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"", bizcode=""6000""}[1m]) or increase(std_requests_total{job=""be/yid"",environment=""rc"", instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",code=~""5..""}[1m]))  or  vector(0)) /  sum(increase(std_requests_total{job=""be/yid"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"",environment=""rc""}[1m])))"
+78e731027d8fd50ed642340b7c9a63b3,出现异常,message
+451b79e4344fcafd29a9de017fe442a5,正常,"sum(rate(std_grpc_server_handled_total{job=""be/yid"", grpc_code=""Unknown"",instance=""yid-k8s-aiops-81-8479bf857f-dwxwt"", grpc_method=~""GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp""}[1m]))"
+f128e17cfd250649baef37f04d6c19b9,正常,get metadata from header
+190fec651a741dc908508ed5a84bb5e6,出现异常,build <:*:>

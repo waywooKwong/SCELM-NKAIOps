@@ -1,0 +1,102 @@
+领域文本：
+编号:NO.29811
+服务:E-TRAN
+提交时间:2024-05-17 16:49:58
+分析结束时间:2024-05-17 16:49:58
+分析开始时间:2024-05-17 16:49:58
+与服务相关的指标变化分析：
+    1, 指标：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+    2, 指标：irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.008754761091605811; 最大值: 16.83079836004057; 均值: -0.008754761091605811; 整体的趋势: 上升; 
+    3, 指标：node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -4.7183541150143595; 最大值: 5.436657774593692; 均值: 0.17109605405618356; 整体的趋势: 下降; 
+    4, 指标：irate(node_disk_read_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.026548318655225906; 最大值: 44.7943316260472; 均值: -0.026548318655225906; 整体的趋势: 下降; 
+    5, 指标：node_sockstat_TCP_alloc{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -2.935635535170634; 最大值: 3.2745452538899205; 均值: 0.32092268348307124; 整体的趋势: 下降; 
+    6, 指标：1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"}); 最小值: -0.33972231873380127; 最大值: 0.4167439170759808; 均值: -0.06780410286916219; 整体的趋势: 下降; 
+    7, 指标：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-01"}))*100; 最小值: -3.208059552902355; 最大值: 1.1009888860773964; 均值: 0.32536511364122017; 整体的趋势: 下降; 
+    8, 指标：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -1.0490208905445673; 最大值: 20.075210996851688; 均值: -0.358686515139461; 整体的趋势: 上升; 
+    9, 指标：1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m])))); 最小值: -54.700023933000146; 最大值: 0.03455505418517606; 均值: 0.03455505418517606; 整体的趋势: 上升; 
+    10, 指标：node_load15{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -0.5511636433433087; 最大值: 7.590289466945639; 均值: -0.5511636433433087; 整体的趋势: 下降; 
+    11, 指标：sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m])); 最小值: -1.7044880496330999; 最大值: 8.149290363831485; 均值: 0.3380552591884269; 整体的趋势: 下降; 
+    12, 指标：1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"}); 最小值: -0.6005333157995575; 最大值: 0.87317631618477; 均值: -0.04949056083090019; 整体的趋势: 下降; 
+    13, 指标：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -3.2557888192237376; 最大值: 8.651205882331197; 均值: -0.08059023214242175; 整体的趋势: 下降; 
+    14, 指标：node_sockstat_TCP_inuse{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -2.587567618060241; 最大值: 5.82007191478631; 均值: 0.35510621843605183; 整体的趋势: 下降; 
+    15, 指标：node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -3.0518804667396076; 最大值: 2.0755365121666474; 均值: -0.4881719772864801; 整体的趋势: 下降; 
+    16, 指标：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -1.204437994661235; 最大值: 43.573126836306365; 均值: 0.10885851455931514; 整体的趋势: 下降; 
+    17, 指标：node_load5{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -0.779580570214463; 最大值: 10.43307279871887; 均值: -0.286716685865745; 整体的趋势: 下降; 
+    18, 指标：irate(node_disk_written_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.5285448443468787; 最大值: 52.356624663735126; 均值: -0.08170196082928727; 整体的趋势: 下降; 
+    19, 指标：probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.23853997767656002; 最大值: 5.891166297764549; 均值: -0.18758452194175187; 整体的趋势: 下降; 
+    20, 指标：node_sockstat_TCP_tw{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -1.4922952006284171; 最大值: 19.24668777146254; 均值: 0.24032869324247294; 整体的趋势: 上升; 
+    21, 指标：(sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100; 最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+    22, 指标：node_load1{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.17206631448961987; 最大值: 25.583316542463667; 均值: -0.17206631448961987; 整体的趋势: 上升; 
+    23, 指标：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"}); 最小值: -0.6475938996788634; 最大值: 0.8367170673179756; 均值: -0.004056877343263937; 整体的趋势: 下降; 
+    24, 指标：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-03", mode=~"idle"}[2m])) by (mode, hostname); 最小值: -0.14713526757979334; 最大值: 0.3264474675560187; 均值: 0.010725650666291286; 整体的趋势: 上升; 
+    25, 指标：node_load5{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -0.7625768291989403; 最大值: 10.775395097977906; 均值: -0.25541322800435373; 整体的趋势: 下降; 
+    26, 指标：unknown; 最小值: -0.47702454048132864; 最大值: 15.42945835032013; 均值: -0.47702454048132864; 整体的趋势: 下降; 
+    27, 指标：sum(rate(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m])); 最小值: -1.7044875270953832; 最大值: 8.149289106982476; 均值: 0.33805541288544994; 整体的趋势: 下降; 
+    28, 指标：node_load15{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.0714804614145657; 最大值: 12.066423729633602; 均值: -0.0714804614145657; 整体的趋势: 下降; 
+    29, 指标：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -0.03259436897063668; 最大值: 45.978422068747605; 均值: -0.03259436897063668; 整体的趋势: 下降; 
+    30, 指标：node_load1{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -0.4129937143378452; 最大值: 22.881278689293122; 均值: -0.19375350348014198; 整体的趋势: 下降; 
+    31, 指标：node_load5{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.24881876964316943; 最大值: 14.155154194950121; 均值: -0.24881876964316943; 整体的趋势: 上升; 
+    32, 指标：irate(node_disk_reads_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.03185087274340396; 最大值: 48.44988140040068; 均值: -0.03185087274340396; 整体的趋势: 上升; 
+    33, 指标：irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.22374496587195747; 最大值: 29.472521844043733; 均值: -0.044094228804767904; 整体的趋势: 下降; 
+    34, 指标：increase(http_service_level_sli_result_error_ratio_total{job="be/bkverify"}[2m]); 最小值: -0.02245431747521558; 最大值: 53.52618545622233; 均值: -0.02245431747521558; 整体的趋势: 下降; 
+    35, 指标：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: -1.1424062614578574; 最大值: 4.6902699177834135; 均值: -0.5175877546075831; 整体的趋势: 下降; 
+    36, 指标：ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>; 最小值: -0.44714269033984083; 最大值: 10.752636311268855; 均值: -0.44714269033984083; 整体的趋势: 上升; 
+    37, 指标：irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -2.2417352824252568; 最大值: 4.105614280621252; 均值: 0.3421219079853625; 整体的趋势: 下降; 
+    38, 指标：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: -0.25821094684629464; 最大值: 4.510264814900677; 均值: -0.16009416160534504; 整体的趋势: 下降; 
+    39, 指标：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -4.600028931889124; 最大值: 5.029765904172891; 均值: -0.09651254107271169; 整体的趋势: 下降; 
+    40, 指标：probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -0.07962144429053661; 最大值: 3.5293191824782584; 均值: -0.05217457424863498; 整体的趋势: 下降; 
+    41, 指标：1-sum(increase(std_grpc_server_handled_total{job="be/bkverify",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod"}[2m])) or vector(1); 最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+    42, 指标：callService; 最小值: -0.5447007031002247; 最大值: 8.190945078468335; 均值: -0.5447007031002247; 整体的趋势: 下降; 
+    43, 指标：node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -4.163691702193178; 最大值: 8.189826539624349; 均值: 0.09614217429562445; 整体的趋势: 下降; 
+    44, 指标：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -1.467978509562268; 最大值: 12.086444286995174; 均值: 0.13578907323651346; 整体的趋势: 上升; 
+    45, 指标：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: -17.2328033490484; 最大值: 0.04330882340957651; 均值: 0.019144819438513358; 整体的趋势: 上升; 
+    46, 指标：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+    47, 指标：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-03"}))*100; 最小值: -1.7154167269429306; 最大值: 2.015800989513405; 均值: -0.3078885484326472; 整体的趋势: 上升; 
+    48, 指标：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -0.343007767549391; 最大值: 8.206779805519709; 均值: -0.08452581753670199; 整体的趋势: 上升; 
+    49, 指标：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -6.024230416199976; 最大值: 6.460699752381546; 均值: -0.05559496743939381; 整体的趋势: 下降; 
+    50, 指标：increase(http_service_level_sli_result_duration_total{job="be/bkverify"}[2m]); 最小值: -0.028132118680847924; 最大值: 49.75851897697983; 均值: -0.027675475368082743; 整体的趋势: 下降; 
+    51, 指标：irate(node_network_receive_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -1.602179720351862; 最大值: 6.220159274574409; 均值: 0.27267513551597145; 整体的趋势: 下降; 
+    52, 指标：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: -6.265115544075085; 最大值: 6.313878966004634; 均值: 0.022704511696759962; 整体的趋势: 上升; 
+    53, 指标：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 最小值: -3.65027783747948; 最大值: 5.369619151341952; 均值: 0.25824416966325303; 整体的趋势: 下降; 
+    54, 指标：node_load15{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -0.5859937499371718; 最大值: 6.595360581670266; 均值: -0.5859937499371718; 整体的趋势: 下降; 
+    55, 指标：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"}); 最小值: -0.02834734740258369; 最大值: 0.028416255388713285; 均值: -7.311103659668106e-05; 整体的趋势: 上升; 
+    56, 指标：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -0.02951582861153334; 最大值: 56.18543378567954; 均值: -0.02951582861153334; 整体的趋势: 下降; 
+    57, 指标：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -3.4231982051139425; 最大值: 11.50896266711168; 均值: 0.06097266507203616; 整体的趋势: 下降; 
+    58, 指标：increase(http_service_level_sli_result_duration_le5_total{job="be/bkverify"}[2m]); 最小值: -0.028132837792142446; 最大值: 49.76198899875187; 均值: -0.027675706725626314; 整体的趋势: 下降; 
+    59, 指标：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: -1.226401426534289; 最大值: 3.7088442641433788; 均值: -0.42609131453250504; 整体的趋势: 上升; 
+    60, 指标：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -0.041369520581053094; 最大值: 38.10701470003559; 均值: -0.041369520581053094; 整体的趋势: 下降; 
+    61, 指标：node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.165489144481838; 最大值: 6.040359691945733; 均值: -0.165489144481838; 整体的趋势: 上升; 
+    62, 指标：node_netstat_Tcp_CurrEstab{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -2.951137049557001; 最大值: 3.260010927973329; 均值: 0.38167406033732243; 整体的趋势: 下降; 
+    63, 指标：1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-bkverify-prod-02", mode=~"idle"}[2m])) by (mode, hostname); 最小值: -0.9388956844741232; 最大值: 15.727364940350764; 均值: -0.016651911882596335; 整体的趋势: 上升; 
+    64, 指标：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-01", mode=~"idle"}[2m])) by (mode, hostname); 最小值: -2.842330091763012; 最大值: 15.321534871133391; 均值: 0.010118020714418887; 整体的趋势: 下降; 
+    65, 指标：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -0.8096218141294248; 最大值: 25.59257539342033; 均值: -0.19202655781247124; 整体的趋势: 上升; 
+    66, 指标：increase(http_service_level_sli_result_count_total{job="be/bkverify"}[2m]); 最小值: -0.028130896639845984; 最大值: 49.75855724060497; 均值: -0.027676149718691714; 整体的趋势: 下降; 
+    67, 指标：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -4.758315686528491; 最大值: 5.4236331860590115; 均值: 0.26980721351472026; 整体的趋势: 下降; 
+    68, 指标：node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-01"}; 最小值: -1.5423943452903006; 最大值: 19.066553674624156; 均值: 0.058673710949169317; 整体的趋势: 下降; 
+    69, 指标：node_load1{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -0.40991299745266335; 最大值: 21.86242744578752; 均值: -0.2368119059248899; 整体的趋势: 下降; 
+    70, 指标：histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job="be/bkverify",environment="prod"}[2m])) by (job,le)); 最小值: -4.129491542840449; 最大值: 7.176012410809576; 均值: 0.3338382188632685; 整体的趋势: 上升; 
+    71, 指标：probe_duration_seconds{hostname=~"bj3-rd-bkverify-prod-02"}; 最小值: -0.04127469176713619; 最大值: 4.033258911126454; 均值: -0.01653584720434839; 整体的趋势: 上升; 
+    72, 指标：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m]); 最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+    73, 指标：irate(node_disk_writes_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]); 最小值: -0.9219992781414361; 最大值: 24.079859752352252; 均值: -0.366402410797132; 整体的趋势: 下降; 
+    74, 指标：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-03"}; 最小值: -0.13767118372681106; 最大值: 7.2596487828386325; 均值: -0.13767118372681106; 整体的趋势: 下降; 
+    75, 指标：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"}); 最小值: -0.36561244787373703; 最大值: 0.31661414785930736; 均值: 0.008483429140701744; 整体的趋势: 上升; 
+    76, 指标：<:ControlInfo:>; 最小值: -1.4860182618526112; 最大值: 12.167351985023442; 均值: 0.26558207386081645; 整体的趋势: 下降; 
+    77, 指标：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m]); 最小值: -1.5963521617919794; 最大值: 10.521450124291398; 均值: -0.032764770039285185; 整体的趋势: 上升; 
+    78, 指标：1- ((sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/bkverify",environment="prod"}[2m]))); 最小值: -1.6272007786656717; 最大值: 0.0017140505200498146; 均值: 0.0017140505200498146; 整体的趋势: 下降; 
+    79, 指标：(1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-bkverify-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-bkverify-prod-02"}))*100; 最小值: -2.9138367641744067; 最大值: 0.8320140594936327; 均值: 0.3486679442921769; 整体的趋势: 下降; 
+    80, 指标：sum(increase(std_requests_total{job="be/bkverify",code="404",environment="prod"}[2m])); 最小值: -21.564751450134725; 最大值: 0.07472633891222186; 均值: 0.047448096031023644; 整体的趋势: 上升; 
+    81, 指标：pyroscope upload profile: do http <:RequestPost:>; 最小值: -0.9513727979853102; 最大值: 5.927994415459014; 均值: 0.031393946792450445; 整体的趋势: 上升; 
+SCWARN 算法认为在下述时间戳有异常：
+    1, 2024-03-14 16:38:16
+    2, 2024-03-14 16:50:16
+    3, 2024-03-14 21:10:16
+    4, 2024-03-15 01:14:16
+    5, 2024-03-15 01:24:16
+    6, 2024-03-15 01:44:16
+    7, 2024-03-15 09:28:16
+请分析如上领域文本以及指标异常情况,并给出你的判断:预期变更or失败变更
+并且给出你的思考和推理原因,如果是失败变更,请给出你的建议解决方法
+请按如下格式进行回答:{(
+ "change_type":"请返回预期变更或是失败变更,"
+ "reason":"你确定change_type字段的原因",
+"solution":"None if this is an expected change or solution")}

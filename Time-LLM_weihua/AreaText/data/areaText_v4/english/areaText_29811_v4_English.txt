@@ -1,0 +1,386 @@
+id:NO.29811 
+Service:bkverify
+Submission start time:2024-03-09 09:54:16
+Submission end time:2024-03-14 09:54:16
+Analysis start time:2024-03-14 09:54:16
+Analysis end time:2024-03-15 09:54:16
+Analysis of kpi changes related to the service:
+    1.kpi name: node_load15{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -0.586; max: 6.5954; mean: -0.586; whole trend: down;  }
+        After change：{ min: -0.5645; max: 5.5105; mean: -0.5645; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.586,6.5954], After change range: [-0.5645,5.5105]
+    2.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -4.6; max: 5.0298; mean: -0.0965; whole trend: down;  }
+        After change：{ min: -3.1246; max: 5.1851; mean: -0.0689; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-4.6,5.0298], After change range: [-3.1246,5.1851]
+    3.kpi name: 1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m]))))
+        Before change: { min: -54.7; max: 0.0346; mean: 0.0346; whole trend: up;  }
+        After change：{ min: -26.6112; max: 0.0419; mean: 0.0419; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-54.7,0.0346], After change range: [-26.6112,0.0419]
+    4.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -0.0295; max: 56.1854; mean: -0.0295; whole trend: down;  }
+        After change：{ min: -0.0383; max: 26.6435; mean: -0.0383; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0295,56.1854], After change range: [-0.0383,26.6435]
+    5.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.0319; max: 48.4499; mean: -0.0319; whole trend: up;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0319,48.4499], After change range: [0.0,0.0]
+    6.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -0.0326; max: 45.9784; mean: -0.0326; whole trend: down;  }
+        After change：{ min: -0.0305; max: 21.5649; mean: -0.0305; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0326,45.9784], After change range: [-0.0305,21.5649]
+    7.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.1655; max: 6.0404; mean: -0.1655; whole trend: up;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1655,6.0404], After change range: [0.0,0.0]
+    8.kpi name: increase(http_service_level_sli_result_duration_total{job="be/bkverify"}[2m])
+        Before change: { min: -0.0281; max: 49.7585; mean: -0.0277; whole trend: down;  }
+        After change：{ min: -0.0755; max: 23.7552; mean: -0.0546; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0281,49.7585], After change range: [-0.0755,23.7552]
+    9.kpi name: probe_duration_seconds{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -0.0413; max: 4.0333; mean: -0.0165; whole trend: up;  }
+        After change：{ min: -0.0285; max: 0.2519; mean: -0.0042; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0413,4.0333], After change range: [-0.0285,0.2519]
+    10.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.1377; max: 7.2596; mean: -0.1377; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1377,7.2596], After change range: [0.0,0.0]
+    11.kpi name: (sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    12.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -0.0414; max: 38.107; mean: -0.0414; whole trend: down;  }
+        After change：{ min: -0.0426; max: 26.5295; mean: -0.0426; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0414,38.107], After change range: [-0.0426,26.5295]
+    13.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    14.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -0.8096; max: 25.5926; mean: -0.192; whole trend: up;  }
+        After change：{ min: -0.2698; max: 25.9062; mean: -0.0745; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8096,25.5926], After change range: [-0.2698,25.9062]
+    15.kpi name: unknown
+        Before change: { min: -0.477; max: 15.4295; mean: -0.477; whole trend: down;  }
+        After change：{ min: -0.523; max: 9.0122; mean: -0.523; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.477,15.4295], After change range: [-0.523,9.0122]
+    16.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -3.6503; max: 5.3696; mean: 0.2582; whole trend: down;  }
+        After change：{ min: -1.7335; max: 3.6177; mean: 0.3225; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.6503,5.3696], After change range: [-1.7335,3.6177]
+    17.kpi name: increase(http_service_level_sli_result_duration_le5_total{job="be/bkverify"}[2m])
+        Before change: { min: -0.0281; max: 49.762; mean: -0.0277; whole trend: down;  }
+        After change：{ min: -0.0755; max: 23.7552; mean: -0.0546; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0281,49.762], After change range: [-0.0755,23.7552]
+    18.kpi name: 1-sum(increase(std_grpc_server_handled_total{job="be/bkverify",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod"}[2m])) or vector(1)
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    19.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-bkverify-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.9389; max: 15.7274; mean: -0.0167; whole trend: up;  }
+        After change：{ min: -0.7974; max: 15.6194; mean: -0.0139; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9389,15.7274], After change range: [-0.7974,15.6194]
+    20.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.0265; max: 44.7943; mean: -0.0265; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0265,44.7943], After change range: [0.0,0.0]
+    21.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -1.468; max: 12.0864; mean: 0.1358; whole trend: up;  }
+        After change：{ min: -1.6899; max: 4.0806; mean: 0.1411; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.468,12.0864], After change range: [-1.6899,4.0806]
+    22.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    23.kpi name: node_load5{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.2488; max: 14.1552; mean: -0.2488; whole trend: up;  }
+        After change：{ min: -0.2465; max: 12.3438; mean: -0.2465; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2488,14.1552], After change range: [-0.2465,12.3438]
+    24.kpi name: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -0.0796; max: 3.5293; mean: -0.0522; whole trend: down;  }
+        After change：{ min: -0.0691; max: 1.0505; mean: -0.0461; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0796,3.5293], After change range: [-0.0691,1.0505]
+    25.kpi name: sum(increase(std_requests_total{job="be/bkverify",code="404",environment="prod"}[2m]))
+        Before change: { min: -21.5648; max: 0.0747; mean: 0.0474; whole trend: up;  }
+        After change：{ min: -15.4483; max: 0.1071; mean: 0.0656; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-21.5648,0.0747], After change range: [-15.4483,0.1071]
+    26.kpi name: node_load1{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -0.4099; max: 21.8624; mean: -0.2368; whole trend: down;  }
+        After change：{ min: -0.5261; max: 14.7343; mean: -0.2099; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4099,21.8624], After change range: [-0.5261,14.7343]
+    27.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: -0.2582; max: 4.5103; mean: -0.1601; whole trend: down;  }
+        After change：{ min: -0.237; max: 2.5813; mean: -0.1377; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2582,4.5103], After change range: [-0.237,2.5813]
+    28.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -1.5964; max: 10.5215; mean: -0.0328; whole trend: up;  }
+        After change：{ min: -1.7186; max: 3.757; mean: 0.0883; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5964,10.5215], After change range: [-1.7186,3.757]
+    29.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.3656; max: 0.3166; mean: 0.0085; whole trend: up;  }
+        After change：{ min: -0.2279; max: 0.3041; mean: -0.0667; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3656,0.3166], After change range: [-0.2279,0.3041]
+    30.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.922; max: 24.0799; mean: -0.3664; whole trend: down;  }
+        After change：{ min: -0.9091; max: 13.4963; mean: -0.4812; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.922,24.0799], After change range: [-0.9091,13.4963]
+    31.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -1.5424; max: 19.0666; mean: 0.0587; whole trend: down;  }
+        After change：{ min: -1.8581; max: 3.4361; mean: 0.2358; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5424,19.0666], After change range: [-1.8581,3.4361]
+    32.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -2.9511; max: 3.26; mean: 0.3817; whole trend: down;  }
+        After change：{ min: -4.8838; max: 2.3836; mean: 0.2034; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9511,3.26], After change range: [-4.8838,2.3836]
+    33.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -3.4232; max: 11.509; mean: 0.061; whole trend: down;  }
+        After change：{ min: -3.3924; max: 6.3948; mean: -0.13; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.4232,11.509], After change range: [-3.3924,6.3948]
+    34.kpi name: ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>
+        Before change: { min: -0.4471; max: 10.7526; mean: -0.4471; whole trend: up;  }
+        After change：{ min: -0.2153; max: 11.7456; mean: -0.2153; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4471,10.7526], After change range: [-0.2153,11.7456]
+    35.kpi name: node_load1{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.1721; max: 25.5833; mean: -0.1721; whole trend: up;  }
+        After change：{ min: -0.1725; max: 19.3762; mean: -0.1725; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1721,25.5833], After change range: [-0.1725,19.3762]
+    36.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -4.7184; max: 5.4367; mean: 0.1711; whole trend: down;  }
+        After change：{ min: -2.8513; max: 2.4136; mean: 0.2792; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.7184,5.4367], After change range: [-2.8513,2.4136]
+    37.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -2.2417; max: 4.1056; mean: 0.3421; whole trend: down;  }
+        After change：{ min: -2.4165; max: 2.2834; mean: 0.3189; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.2417,4.1056], After change range: [-2.4165,2.2834]
+    38.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -3.0519; max: 2.0755; mean: -0.4882; whole trend: down;  }
+        After change：{ min: -4.547; max: 2.0589; mean: -0.5835; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.0519,2.0755], After change range: [-4.547,2.0589]
+    39.kpi name: increase(http_service_level_sli_result_error_ratio_total{job="be/bkverify"}[2m])
+        Before change: { min: -0.0225; max: 53.5262; mean: -0.0225; whole trend: down;  }
+        After change：{ min: -0.0828; max: 15.9694; mean: -0.0828; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0225,53.5262], After change range: [-0.0828,15.9694]
+    40.kpi name: node_load5{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -0.7626; max: 10.7754; mean: -0.2554; whole trend: down;  }
+        After change：{ min: -0.9126; max: 11.285; mean: -0.2707; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.7626,10.7754], After change range: [-0.9126,11.285]
+    41.kpi name: <:ControlInfo:>
+        Before change: { min: -1.486; max: 12.1674; mean: 0.2656; whole trend: down;  }
+        After change：{ min: -1.6015; max: 1.7352; mean: 0.3855; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.486,12.1674], After change range: [-1.6015,1.7352]
+    42.kpi name: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.2385; max: 5.8912; mean: -0.1876; whole trend: down;  }
+        After change：{ min: -0.2662; max: 3.8847; mean: -0.2191; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2385,5.8912], After change range: [-0.2662,3.8847]
+    43.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-03"}))*100
+        Before change: { min: -1.7154; max: 2.0158; mean: -0.3079; whole trend: up;  }
+        After change：{ min: -3.967; max: 2.1906; mean: 0.0386; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7154,2.0158], After change range: [-3.967,2.1906]
+    44.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.2044; max: 43.5731; mean: 0.1089; whole trend: down;  }
+        After change：{ min: -1.7337; max: 4.0527; mean: 0.2845; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2044,43.5731], After change range: [-1.7337,4.0527]
+    45.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-bkverify-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-bkverify-prod-02"}))*100
+        Before change: { min: -2.9138; max: 0.832; mean: 0.3487; whole trend: down;  }
+        After change：{ min: -2.8157; max: 2.1386; mean: 0.0686; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9138,0.832], After change range: [-2.8157,2.1386]
+    46.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: -1.1424; max: 4.6903; mean: -0.5176; whole trend: down;  }
+        After change：{ min: -1.183; max: 2.4816; mean: -0.5363; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1424,4.6903], After change range: [-1.183,2.4816]
+    47.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    48.kpi name: node_load1{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -0.413; max: 22.8813; mean: -0.1938; whole trend: down;  }
+        After change：{ min: -0.3599; max: 13.8015; mean: -0.2168; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.413,22.8813], After change range: [-0.3599,13.8015]
+    49.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: -6.2651; max: 6.3139; mean: 0.0227; whole trend: up;  }
+        After change：{ min: -0.007; max: 0.007; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-6.2651,6.3139], After change range: [-0.007,0.007]
+    50.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.2237; max: 29.4725; mean: -0.0441; whole trend: down;  }
+        After change：{ min: -0.2486; max: 3.9777; mean: -0.0649; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2237,29.4725], After change range: [-0.2486,3.9777]
+    51.kpi name: node_load5{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -0.7796; max: 10.4331; mean: -0.2867; whole trend: down;  }
+        After change：{ min: -0.6913; max: 8.8342; mean: -0.243; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.7796,10.4331], After change range: [-0.6913,8.8342]
+    52.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -4.7583; max: 5.4236; mean: 0.2698; whole trend: down;  }
+        After change：{ min: -2.8992; max: 2.3906; mean: 0.2461; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.7583,5.4236], After change range: [-2.8992,2.3906]
+    53.kpi name: node_load15{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.0715; max: 12.0664; mean: -0.0715; whole trend: down;  }
+        After change：{ min: -0.0575; max: 10.1707; mean: -0.0575; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0715,12.0664], After change range: [-0.0575,10.1707]
+    54.kpi name: node_sockstat_TCP_alloc{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -2.9356; max: 3.2745; mean: 0.3209; whole trend: down;  }
+        After change：{ min: -4.8561; max: 2.414; mean: 0.2329; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9356,3.2745], After change range: [-4.8561,2.414]
+    55.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -0.6476; max: 0.8367; mean: -0.0041; whole trend: down;  }
+        After change：{ min: -0.3385; max: 0.4182; mean: -0.0577; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6476,0.8367], After change range: [-0.3385,0.4182]
+    56.kpi name: node_load15{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -0.5512; max: 7.5903; mean: -0.5512; whole trend: down;  }
+        After change：{ min: -0.5164; max: 7.8409; mean: -0.5164; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5512,7.5903], After change range: [-0.5164,7.8409]
+    57.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-01"}
+        Before change: { min: -4.1637; max: 8.1898; mean: 0.0961; whole trend: down;  }
+        After change：{ min: -2.6001; max: 3.0672; mean: 0.1202; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.1637,8.1898], After change range: [-2.6001,3.0672]
+    58.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: -1.2264; max: 3.7088; mean: -0.4261; whole trend: up;  }
+        After change：{ min: -1.2647; max: 3.0812; mean: -0.3819; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2264,3.7088], After change range: [-1.2647,3.0812]
+    59.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -1.049; max: 20.0752; mean: -0.3587; whole trend: up;  }
+        After change：{ min: -0.7683; max: 19.1615; mean: -0.3329; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.049,20.0752], After change range: [-0.7683,19.1615]
+    60.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -0.6005; max: 0.8732; mean: -0.0495; whole trend: down;  }
+        After change：{ min: -0.3165; max: 0.405; mean: -0.0643; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6005,0.8732], After change range: [-0.3165,0.405]
+    61.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        Before change: { min: -17.2328; max: 0.0433; mean: 0.0191; whole trend: up;  }
+        After change：{ min: -0.021; max: 0.0211; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-17.2328,0.0433], After change range: [-0.021,0.0211]
+    62.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-03"}
+        Before change: { min: -0.1655; max: 6.0404; mean: -0.1655; whole trend: up;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1655,6.0404], After change range: [0.0,0.0]
+    63.kpi name: histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job="be/bkverify",environment="prod"}[2m])) by (job,le))
+        Before change: { min: -4.1295; max: 7.176; mean: 0.3338; whole trend: up;  }
+        After change：{ min: -3.9002; max: 1.9225; mean: 0.3677; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.1295,7.176], After change range: [-3.9002,1.9225]
+    64.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -3.2558; max: 8.6512; mean: -0.0806; whole trend: down;  }
+        After change：{ min: -2.0912; max: 14.1364; mean: -0.0628; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.2558,8.6512], After change range: [-2.0912,14.1364]
+    65.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-03", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.1471; max: 0.3264; mean: 0.0107; whole trend: up;  }
+        After change：{ min: -0.1507; max: 0.2703; mean: 0.0072; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1471,0.3264], After change range: [-0.1507,0.2703]
+    66.kpi name: 1- ((sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/bkverify",environment="prod"}[2m])))
+        Before change: { min: -1.6272; max: 0.0017; mean: 0.0017; whole trend: down;  }
+        After change：{ min: -0.755; max: 0.0022; mean: 0.0022; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6272,0.0017], After change range: [-0.755,0.0022]
+    67.kpi name: callService
+        Before change: { min: -0.5447; max: 8.1909; mean: -0.5447; whole trend: down;  }
+        After change：{ min: -0.4739; max: 11.1917; mean: -0.4739; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5447,8.1909], After change range: [-0.4739,11.1917]
+    68.kpi name: sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+        Before change: { min: -1.7045; max: 8.1493; mean: 0.3381; whole trend: down;  }
+        After change：{ min: -1.7406; max: 1.8043; mean: 0.4259; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7045,8.1493], After change range: [-1.7406,1.8043]
+    69.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.6022; max: 6.2202; mean: 0.2727; whole trend: down;  }
+        After change：{ min: -1.7496; max: 2.4497; mean: 0.3333; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6022,6.2202], After change range: [-1.7496,2.4497]
+    70.kpi name: sum(rate(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+        Before change: { min: -1.7045; max: 8.1493; mean: 0.3381; whole trend: down;  }
+        After change：{ min: -1.7406; max: 1.8043; mean: 0.4259; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7045,8.1493], After change range: [-1.7406,1.8043]
+    71.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.3397; max: 0.4167; mean: -0.0678; whole trend: down;  }
+        After change：{ min: -0.0964; max: 0.1203; mean: -0.0078; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3397,0.4167], After change range: [-0.0964,0.1203]
+    72.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        Before change: { min: -0.343; max: 8.2068; mean: -0.0845; whole trend: up;  }
+        After change：{ min: -0.1828; max: 23.6682; mean: -0.0717; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.343,8.2068], After change range: [-0.1828,23.6682]
+    73.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -2.8423; max: 15.3215; mean: 0.0101; whole trend: down;  }
+        After change：{ min: -0.6858; max: 14.4217; mean: -0.003; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.8423,15.3215], After change range: [-0.6858,14.4217]
+    74.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-01"}))*100
+        Before change: { min: -3.2081; max: 1.101; mean: 0.3254; whole trend: down;  }
+        After change：{ min: -2.8451; max: 1.9101; mean: 0.2348; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.2081,1.101], After change range: [-2.8451,1.9101]
+    75.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.0088; max: 16.8308; mean: -0.0088; whole trend: up;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0088,16.8308], After change range: [0.0,0.0]
+    76.kpi name: increase(http_service_level_sli_result_count_total{job="be/bkverify"}[2m])
+        Before change: { min: -0.0281; max: 49.7586; mean: -0.0277; whole trend: down;  }
+        After change：{ min: -0.0802; max: 22.9663; mean: -0.0567; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0281,49.7586], After change range: [-0.0802,22.9663]
+    77.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        Before change: { min: -0.5285; max: 52.3566; mean: -0.0817; whole trend: down;  }
+        After change：{ min: -0.8236; max: 19.8041; mean: -0.1781; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5285,52.3566], After change range: [-0.8236,19.8041]
+    78.kpi name: pyroscope upload profile: do http <:RequestPost:>
+        Before change: { min: -0.9514; max: 5.928; mean: 0.0314; whole trend: up;  }
+        After change：{ min: -1.0629; max: 3.4841; mean: -0.1535; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9514,5.928], After change range: [-1.0629,3.4841]
+    79.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.0283; max: 0.0284; mean: -0.0001; whole trend: up;  }
+        After change：{ min: -0.0056; max: 0.0056; mean: 0.0; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0283,0.0284], After change range: [-0.0056,0.0056]
+    80.kpi name: node_sockstat_TCP_inuse{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -2.5876; max: 5.8201; mean: 0.3551; whole trend: down;  }
+        After change：{ min: -3.7815; max: 2.1369; mean: 0.2277; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.5876,5.8201], After change range: [-3.7815,2.1369]
+    81.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -6.0242; max: 6.4607; mean: -0.0556; whole trend: down;  }
+        After change：{ min: -1.2551; max: 5.287; mean: -0.2147; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-6.0242,6.4607], After change range: [-1.2551,5.287]
+    82.kpi name: node_sockstat_TCP_tw{hostname=~"bj3-rd-bkverify-prod-02"}
+        Before change: { min: -1.4923; max: 19.2467; mean: 0.2403; whole trend: up;  }
+        After change：{ min: -1.9057; max: 3.5855; mean: 0.2565; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4923,19.2467], After change range: [-1.9057,3.5855]
+
+SCWARN algorithm identifies anomalies at the following timestamps:
+    1, 2024-03-14 16:38:16
+    2, 2024-03-14 16:50:16
+    3, 2024-03-14 21:10:16
+    4, 2024-03-15 01:14:16
+    5, 2024-03-15 01:24:16
+    6, 2024-03-15 01:44:16
+    7, 2024-03-15 09:28:16
+
+Types of single kpi anomalies related to overall anomalies (single kpi anomalies not related to overall anomalies are not output):
+    10.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-bkverify-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-bkverify-prod-02"}))*100
+      This kpi has 1 anomaly types in total, with types: ['Single spike']
+      Among them, type [Single spike] recovered to normal, timestamps coinciding with overall anomalies: 2024-03-15 01:24:16
+    21.kpi name: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-01"}
+      This kpi has 1 anomaly types in total, with types: ['Single spike']
+      Among them, type [Single spike] recovered to normal, timestamps coinciding with overall anomalies: 2024-03-15 01:24:16
+    23.kpi name: 1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m]))))
+      This kpi has 1 anomaly types in total, with types: ['Single spike']
+      Among them, type [Single spike] recovered to normal, timestamps coinciding with overall anomalies: 2024-03-15 01:24:16
+    33.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-03"}
+      This kpi has 1 anomaly types in total, with types: ['Single spike']
+      Among them, type [Single spike] recovered to normal, timestamps coinciding with overall anomalies: 2024-03-14 16:38:16, 2024-03-15 01:14:16, 2024-03-15 01:24:16, 2024-03-15 01:44:16
+Total anomalies found: 529
+Total number of anomalous kpis: 59
+Total number of anomaly description shapes: 3
+
+These are definitions for anomaly types (patterns):
+        Anomaly description shapes are divided into two major categories: Still in abnormal state and Recover to normal state,
+        Still in abnormal state, these anomalies remain in an abnormal state after appearing at the anomaly point
+        1. Sudden increase
+        2. Sudden decrease
+        3. Level shift up
+        4. Level shift down
+        5. Steady increase
+        6. Steady decrease
+        Recover to normal state, these anomalies return to normal state after appearing at the anomaly point
+        7. Single spike
+        8. Single dip
+        9. Transient level shift up
+        10. Transient level shift down
+        11. Multiple spikes
+        12. Multiple dips
+        13. Fluctuations
+
+Please analyze the above domain text and kpi anomaly situations, and provide your judgment: Expected change or failed change
+Also provide your thoughts and reasoning. If it's a failed change, please provide your suggested solution
+Please answer in the following format:{(
+ "change_type":"Please return expected change or failed change,"
+ "reason":"Your reason for the change_type field",
+ "solution":"None if this is an expected change or solution")}

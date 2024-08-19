@@ -1,0 +1,204 @@
+id:NO.10042 
+Service:yid_k8s
+Submission start time:2023-11-23 16:00:00
+Submission end time:2023-11-28 16:00:00
+Analysis start time:2023-11-28 16:00:00
+Analysis end time:2023-11-28 17:00:00
+Analysis of kpi changes related to the service:
+
+SCWARN algorithm identifies anomalies at the following timestamps:
+    1, 2023-11-28 16:00:00
+    2, 2023-11-28 16:02:00
+    3, 2023-11-28 16:04:00
+    4, 2023-11-28 16:06:00
+    5, 2023-11-28 16:10:00
+    6, 2023-11-28 16:12:00
+    7, 2023-11-28 16:46:00
+    8, 2023-11-28 16:48:00
+    9, 2023-11-28 16:50:00
+    10, 2023-11-28 16:52:00
+    11, 2023-11-28 16:56:00
+    12, 2023-11-28 16:58:00
+
+These are definitions for anomaly types (patterns):
+    Anomaly description shapes are divided into two major categories: Still in abnormal state and Recover to normal state,
+    Still in abnormal state, these anomalies remain in an abnormal state after appearing at the anomaly point
+    1. Sudden increase
+    2. Sudden decrease
+    3. Level shift up
+    4. Level shift down
+    5. Steady increase
+    6. Steady decrease
+    Recover to normal state, these anomalies return to normal state after appearing at the anomaly point
+    7. Single spike
+    8. Single dip
+    9. Transient level shift up
+    10. Transient level shift down
+    11. Multiple spikes
+    12. Multiple dips
+    13. Fluctuations
+
+Types of single kpi anomalies related to overall anomalies (single kpi anomalies not related to overall anomalies are not output):    1.kpi name: container_memory_rss{prometheus="monitoring-cce-bj4-dev-01",container="",namespace=~"jiesuan",pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd",metrics_path="/metrics/cadvisor"} / 1048576
+        Before change: { min: -1.6945; max: 4.9672; mean: -0.4111; whole trend: up;  }
+        After change：{ min: -2.7287; max: 1.3723; mean: 0.2661; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6945,4.9672], After change range: [-2.7287,1.3723]
+    2.kpi name: GetSupervisorPosition success
+        Before change: { min: -0.4217; max: 7.6317; mean: -0.4217; whole trend: up;  }
+        After change：{ min: -0.5015; max: 2.9535; mean: -0.5015; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4217,7.6317], After change range: [-0.5015,2.9535]
+    3.kpi name: Response=<:MAP:>
+        Before change: { min: -0.8797; max: 27.725; mean: -0.3019; whole trend: down;  }
+        After change：{ min: -2.1182; max: 2.091; mean: -0.4345; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8797,27.725], After change range: [-2.1182,2.091]
+    4.kpi name: <:list modules:>
+        Before change: { min: -0.0287; max: 34.4205; mean: -0.0287; whole trend: down;  }
+        After change：{ min: -5.4763; max: 0.1825; mean: 0.1825; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0287,34.4205], After change range: [-5.4763,0.1825]
+    5.kpi name: svc.ApproveCallback failed
+        Before change: { min: -2.4302; max: 2.9881; mean: -0.6241; whole trend: down;  }
+        After change：{ min: -2.0654; max: 2.1469; mean: -0.3805; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.4302,2.9881], After change range: [-2.0654,2.1469]
+    6.kpi name: irate (container_cpu_usage_seconds_total{prometheus="monitoring-cce-bj4-dev-01",container="",namespace=~"jiesuan",pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd",metrics_path="/metrics/cadvisor"} [1m]) * 100
+        Before change: { min: -3.3845; max: 3.6807; mean: 0.0157; whole trend: down;  }
+        After change：{ min: -3.4244; max: 2.231; mean: 0.0068; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.3845,3.6807], After change range: [-3.4244,2.231]
+    7.kpi name: build <:*:> <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+        Before change: { min: -0.9485; max: 5.4612; mean: -0.2886; whole trend: up;  }
+        After change：{ min: -1.1469; max: 1.8577; mean: -0.2567; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9485,5.4612], After change range: [-1.1469,1.8577]
+    8.kpi name: <:REQ:>
+        Before change: { min: -10.762; max: 4.1484; mean: 0.14; whole trend: up;  }
+        After change：{ min: -3.3367; max: 1.878; mean: 0.3355; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-10.762,4.1484], After change range: [-3.3367,1.878]
+    9.kpi name: approve status error
+        Before change: { min: -2.3676; max: 3.2148; mean: -0.5068; whole trend: up;  }
+        After change：{ min: -1.9772; max: 2.2793; mean: -0.2746; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.3676,3.2148], After change range: [-1.9772,2.2793]
+    10.kpi name: parseDataReportFlag ok
+        Before change: { min: -9.9844; max: 4.0576; mean: -0.136; whole trend: up;  }
+        After change：{ min: -3.3595; max: 1.0652; mean: 0.2848; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-9.9844,4.0576], After change range: [-3.3595,1.0652]
+    11.kpi name: unknown
+        Before change: { min: -0.1702; max: 40.4561; mean: -0.1702; whole trend: down;  }
+        After change：{ min: -0.487; max: 3.745; mean: -0.4847; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1702,40.4561], After change range: [-0.487,3.745]
+    12.kpi name: getPermTagsAndValues <:*:>
+        Before change: { min: -1.5903; max: 2.0903; mean: -0.749; whole trend: up;  }
+        After change：{ min: -0.3208; max: 5.4251; mean: -0.1942; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5903,2.0903], After change range: [-0.3208,5.4251]
+    13.kpi name: approve callback start
+        Before change: { min: -2.4302; max: 2.9881; mean: -0.6241; whole trend: down;  }
+        After change：{ min: -2.0654; max: 2.1469; mean: -0.3805; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.4302,2.9881], After change range: [-2.0654,2.1469]
+    14.kpi name: rego exec input:<:MAP:>
+        Before change: { min: -4.4437; max: 4.0176; mean: -0.381; whole trend: up;  }
+        After change：{ min: -0.8077; max: 5.1106; mean: -0.2137; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4437,4.0176], After change range: [-0.8077,5.1106]
+    15.kpi name: DeleteFieldValues <:REQ:>
+        Before change: { min: -10.762; max: 4.1484; mean: 0.14; whole trend: up;  }
+        After change：{ min: -2.8829; max: 0.909; mean: 0.4041; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-10.762,4.1484], After change range: [-2.8829,0.909]
+    16.kpi name: no need or no have tags
+        Before change: { min: -1.5904; max: 2.0903; mean: -0.7491; whole trend: up;  }
+        After change：{ min: -0.3247; max: 5.1133; mean: -0.2542; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5904,2.0903], After change range: [-0.3247,5.1133]
+    17.kpi name: <:staticStrategies:>
+        Before change: { min: -1.5909; max: 2.0904; mean: -0.7495; whole trend: down;  }
+        After change：{ min: -0.4151; max: 4.8304; mean: -0.3832; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5909,2.0904], After change range: [-0.4151,4.8304]
+    18.kpi name: getDept success
+        Before change: { min: -4.4845; max: 2.179; mean: -0.6216; whole trend: up;  }
+        After change：{ min: -2.3678; max: 1.3621; mean: 0.1657; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4845,2.179], After change range: [-2.3678,1.3621]
+    19.kpi name: ClientEnvHandler is <:*:>
+        Before change: { min: -0.6701; max: 28.586; mean: -0.2129; whole trend: up;  }
+        After change：{ min: -2.5755; max: 1.9015; mean: -0.337; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6701,28.586], After change range: [-2.5755,1.9015]
+    20.kpi name: (sum(irate(container_cpu_usage_seconds_total{prometheus="monitoring-cce-bj4-dev-01",container!="",container!="POD",namespace=~"jiesuan",pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", metrics_path="/metrics/cadvisor"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan",pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd",container!="",metrics_path="/metrics/cadvisor"}) by(namespace,pod) / 100000) ) * 100
+        Before change: { min: -3.4207; max: 4.1729; mean: 0.0036; whole trend: down;  }
+        After change：{ min: -2.6133; max: 1.8516; mean: 0.0161; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.4207,4.1729], After change range: [-2.6133,1.8516]
+    21.kpi name: curpkg+name: code.yunzhanghu.com/be/yid/server/grpc/v1/CheckDelay [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+        Before change: { min: -1.5903; max: 2.0903; mean: -0.749; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5903,2.0903], After change range: [0.0,0.0]
+    22.kpi name: get metadata from header
+        Before change: { min: -9.9844; max: 4.0576; mean: -0.136; whole trend: up;  }
+        After change：{ min: -3.3595; max: 1.0652; mean: 0.2848; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-9.9844,4.0576], After change range: [-3.3595,1.0652]
+    23.kpi name: sum(rate(container_network_transmit_bytes_total{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node="10.200.65.114", metrics_path="/metrics/cadvisor"}[1m])) by (pod,namespace,node) * 8
+        Before change: { min: -3.073; max: 3.0648; mean: 0.0417; whole trend: down;  }
+        After change：{ min: -2.005; max: 2.4079; mean: -0.051; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.073,3.0648], After change range: [-2.005,2.4079]
+    24.kpi name: superiorAndDeputy empty
+        Before change: { min: -0.6535; max: 6.4449; mean: -0.6535; whole trend: up;  }
+        After change：{ min: -0.6591; max: 3.2703; mean: -0.6591; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6535,6.4449], After change range: [-0.6591,3.2703]
+    25.kpi name: infra.grpc.invoker
+        Before change: { min: -9.985; max: 4.0569; mean: -0.1361; whole trend: up;  }
+        After change：{ min: -3.3593; max: 1.0645; mean: 0.2843; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-9.985,4.0569], After change range: [-3.3593,1.0645]
+    26.kpi name: no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+        Before change: { min: -1.5904; max: 2.0903; mean: -0.7491; whole trend: up;  }
+        After change：{ min: -0.3822; max: 5.1245; mean: -0.2391; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5904,2.0903], After change range: [-0.3822,5.1245]
+    27.kpi name: parse metadata
+        Before change: { min: -9.9844; max: 4.0576; mean: -0.136; whole trend: up;  }
+        After change：{ min: -3.3606; max: 1.0646; mean: 0.2859; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-9.9844,4.0576], After change range: [-3.3606,1.0646]
+    28.kpi name: 1-sum(increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",environment="rc",instance="yid-k8s-aiops-81-5778cb86bf-tmvfd",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job="be/yid",environment="rc",instance="{1}",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job="be/yid",instance="{2}",environment="rc"}[1m])) or vector(1)
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    29.kpi name: <:GIN:>
+        Before change: { min: -0.67; max: 28.584; mean: -0.2129; whole trend: up;  }
+        After change：{ min: -2.5755; max: 1.9015; mean: -0.337; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.67,28.584], After change range: [-2.5755,1.9015]
+    30.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+        Before change: { min: -4.4421; max: 4.3542; mean: -0.6357; whole trend: up;  }
+        After change：{ min: -1.7543; max: 4.832; mean: -0.0375; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4421,4.3542], After change range: [-1.7543,4.832]
+    31.kpi name: loaded policy count:<:NUM:>
+        Before change: { min: -0.0287; max: 34.4205; mean: -0.0287; whole trend: down;  }
+        After change：{ min: -5.4763; max: 0.1825; mean: 0.1825; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0287,34.4205], After change range: [-5.4763,0.1825]
+    32.kpi name: computeDeptMembersObjectIDs end
+        Before change: { min: -1.5904; max: 2.0903; mean: -0.7491; whole trend: down;  }
+        After change：{ min: -0.3434; max: 5.118; mean: -0.2751; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5904,2.0903], After change range: [-0.3434,5.118]
+    33.kpi name: Depts only have yunzhanghu
+        Before change: { min: -4.4528; max: 2.184; mean: -0.6375; whole trend: up;  }
+        After change：{ min: -2.2401; max: 1.3423; mean: 0.24; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4528,2.184], After change range: [-2.2401,1.3423]
+    34.kpi name: build <:*:>
+        Before change: { min: -4.4437; max: 4.0176; mean: -0.381; whole trend: up;  }
+        After change：{ min: -0.8077; max: 5.1106; mean: -0.2137; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4437,4.0176], After change range: [-0.8077,5.1106]
+    35.kpi name: loadRegoMySQLInterval success
+        Before change: { min: -0.0287; max: 34.4205; mean: -0.0287; whole trend: down;  }
+        After change：{ min: -5.4763; max: 0.1825; mean: 0.1825; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0287,34.4205], After change range: [-5.4763,0.1825]
+    36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus="monitoring-cce-bj4-dev-01",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node="10.200.65.114", metrics_path="/metrics/cadvisor"}[1m])) by (pod,namespace,node) * 8
+        Before change: { min: -2.7342; max: 3.8468; mean: -0.236; whole trend: down;  }
+        After change：{ min: -0.5745; max: 3.1211; mean: -0.3881; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.7342,3.8468], After change range: [-0.5745,3.1211]
+    37.kpi name: getBackupEmp success
+        Before change: { min: -4.4845; max: 2.179; mean: -0.6216; whole trend: up;  }
+        After change：{ min: -2.3678; max: 1.3621; mean: 0.1657; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.4845,2.179], After change range: [-2.3678,1.3621]
+    38.kpi name: AuthListByName <:<:ChineseInfo:>:>
+        Before change: { min: -0.9489; max: 5.1746; mean: -0.3185; whole trend: up;  }
+        After change：{ min: -0.3011; max: 5.1058; mean: -0.2506; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9489,5.1746], After change range: [-0.3011,5.1058]
+    39.kpi name: computeOwnObjectIDs end
+        Before change: { min: -1.5904; max: 2.0903; mean: -0.7491; whole trend: down;  }
+        After change：{ min: -0.3434; max: 5.1187; mean: -0.275; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5904,2.0903], After change range: [-0.3434,5.1187]
+    40.kpi name: message
+        Before change: { min: -2.4202; max: 3.8305; mean: -0.6342; whole trend: down;  }
+        After change：{ min: -2.091; max: 2.1182; mean: -0.4073; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.4202,3.8305], After change range: [-2.091,2.1182]
+Total anomalies found: 595
+Total number of anomalous kpis: 40
+Total number of anomaly description shapes: 3
+

@@ -1,0 +1,432 @@
+id:NO.30659 
+Service:yid
+Submission start time:2024-04-13 17:27:22
+Submission end time:2024-04-18 17:27:22
+Analysis start time:2024-04-18 17:27:22
+Analysis end time:2024-04-19 17:27:22
+Analysis of kpi changes related to the service:
+    1.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -1.1944; max: 20.8234; mean: -0.2007; whole trend: up;  }
+        After change：{ min: -1.401; max: 8.1787; mean: -0.0838; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1944,20.8234], After change range: [-1.401,8.1787]
+    2.kpi name: sum(rate(std_requests_total{job="be/yid", code="200",method=~"GET|POST",url=~"/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset"}[5m]))
+        Before change: { min: -0.3395; max: 13.5538; mean: -0.3395; whole trend: up;  }
+        After change：{ min: -0.3802; max: 10.3973; mean: -0.3218; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3395,13.5538], After change range: [-0.3802,10.3973]
+    3.kpi name: node_load5{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -1.1636; max: 6.9375; mean: -0.3082; whole trend: up;  }
+        After change：{ min: -0.9911; max: 6.5486; mean: -0.2978; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1636,6.9375], After change range: [-0.9911,6.5486]
+    4.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-yos-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.3287; max: 36.1307; mean: -0.2121; whole trend: up;  }
+        After change：{ min: -0.1324; max: 26.444; mean: -0.0869; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3287,36.1307], After change range: [-0.1324,26.444]
+    5.kpi name: unknown
+        Before change: { min: -0.0488; max: 58.3187; mean: -0.0488; whole trend: up;  }
+        After change：{ min: -0.1521; max: 14.6482; mean: -0.1521; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0488,58.3187], After change range: [-0.1521,14.6482]
+    6.kpi name: AuthSessionVali<:updateFanweiEmployee failed:>
+        Before change: { min: -0.3228; max: 11.3825; mean: -0.3228; whole trend: up;  }
+        After change：{ min: -0.3587; max: 8.3572; mean: -0.3587; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3228,11.3825], After change range: [-0.3587,8.3572]
+    7.kpi name: sum(rate(std_grpc_server_handled_total{job="be/yid", grpc_code="OK",grpc_method=~"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp"}[5m]))
+        Before change: { min: -1.0444; max: 6.5652; mean: -0.3096; whole trend: up;  }
+        After change：{ min: -2.1812; max: 4.223; mean: -0.4303; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0444,6.5652], After change range: [-2.1812,4.223]
+    8.kpi name: sync <:*:>
+        Before change: { min: -0.1021; max: 15.592; mean: -0.1021; whole trend: down;  }
+        After change：{ min: -0.124; max: 10.1211; mean: -0.124; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1021,15.592], After change range: [-0.124,10.1211]
+    9.kpi name: (1- (sum(increase(std_requests_total{job="be/yid",code="200",bizcode="6000",method=~"GET|POST",url=~"/sso/oauth2/auth|/sso/oauth2/token|/sso/oauth2/revoke|sso/userinfo|/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset"}[2m]) or increase(std_requests_total{job="be/yid",code=~"5..",method=~"GET|POST",url=~"/sso/oauth2/auth|/sso/oauth2/token|/sso/oauth2/revoke|sso/userinfo|/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset"}[2m])) or vector(0)) / sum(increase(std_requests_total{job="be/yid",method=~"GET|POST",url=~"/sso/oauth2/auth|/sso/oauth2/token|/sso/oauth2/revoke|sso/userinfo|/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset"}[2m])))*100
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    10.kpi name: isEqualDirectSuperior failed, err=fanweiEmployee not exist in yid
+        Before change: { min: -0.817; max: 1.2312; mean: -0.817; whole trend: up;  }
+        After change：{ min: -0.8177; max: 1.2352; mean: -0.8177; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.817,1.2312], After change range: [-0.8177,1.2352]
+    11.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.8837; max: 22.0743; mean: -0.3805; whole trend: up;  }
+        After change：{ min: -0.9789; max: 12.882; mean: -0.4938; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8837,22.0743], After change range: [-0.9789,12.882]
+    12.kpi name: 1- ((sum(increase(std_requests_total{job="be/yid",code="200",environment="prod", bizcode="6000"}[5m]) or increase(std_requests_total{job="$service",environment="be/yid", code=~"5.."}[5m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/yid",environment="prod"}[5m])))
+        Before change: { min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [0.0,0.0], After change range: [0.0,0.0]
+    13.kpi name: sum(rate(std_requests_total{job="be/yid",code=~"3..",environment="prod"}[5m]))
+        Before change: { min: -0.6086; max: 10.1394; mean: -0.4057; whole trend: up;  }
+        After change：{ min: -0.5834; max: 12.616; mean: -0.4267; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6086,10.1394], After change range: [-0.5834,12.616]
+    14.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -0.1058; max: 23.1859; mean: -0.1058; whole trend: up;  }
+        After change：{ min: -0.1321; max: 13.7991; mean: -0.1321; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1058,23.1859], After change range: [-0.1321,13.7991]
+    15.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -12.8571; max: 3.9588; mean: 0.2236; whole trend: up;  }
+        After change：{ min: -1.5821; max: 2.6081; mean: -0.0952; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-12.8571,3.9588], After change range: [-1.5821,2.6081]
+    16.kpi name: node_sockstat_TCP_alloc{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.763; max: 4.0239; mean: 0.1151; whole trend: up;  }
+        After change：{ min: -1.6614; max: 3.3303; mean: -0.0149; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.763,4.0239], After change range: [-1.6614,3.3303]
+    17.kpi name: node_load1{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.2528; max: 7.8038; mean: -0.307; whole trend: down;  }
+        After change：{ min: -1.2955; max: 9.2344; mean: -0.3075; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2528,7.8038], After change range: [-1.2955,9.2344]
+    18.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -1.7704; max: 12.9023; mean: -0.2663; whole trend: up;  }
+        After change：{ min: -1.6832; max: 13.4167; mean: -0.2787; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7704,12.9023], After change range: [-1.6832,13.4167]
+    19.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-yos-prod-03", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -1.151; max: 8.1458; mean: -0.1817; whole trend: up;  }
+        After change：{ min: -1.2197; max: 4.8908; mean: -0.1522; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.151,8.1458], After change range: [-1.2197,4.8908]
+    20.kpi name: sum(rate(std_requests_total{job="be/yid",code=~"2..",environment="prod"}[5m]))
+        Before change: { min: -2.8859; max: 6.2846; mean: -0.198; whole trend: up;  }
+        After change：{ min: -5.9732; max: 5.9424; mean: -0.4267; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.8859,6.2846], After change range: [-5.9732,5.9424]
+    21.kpi name: the employee does not exist
+        Before change: { min: -2.9894; max: 5.6831; mean: -0.0222; whole trend: up;  }
+        After change：{ min: -4.7004; max: 9.146; mean: -0.4612; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9894,5.6831], After change range: [-4.7004,9.146]
+    22.kpi name: [isEqualDirectSuperior] fanwei Employee not exist in yid
+        Before change: { min: -0.817; max: 1.2311; mean: -0.817; whole trend: up;  }
+        After change：{ min: -0.8177; max: 1.2352; mean: -0.8177; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.817,1.2311], After change range: [-0.8177,1.2352]
+    23.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -0.8488; max: 28.5549; mean: -0.2175; whole trend: down;  }
+        After change：{ min: -1.0696; max: 14.2271; mean: -0.1609; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8488,28.5549], After change range: [-1.0696,14.2271]
+    24.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -0.1402; max: 3.0235; mean: -0.0574; whole trend: up;  }
+        After change：{ min: -0.1134; max: 2.2515; mean: -0.0512; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1402,3.0235], After change range: [-0.1134,2.2515]
+    25.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -0.1746; max: 16.5438; mean: -0.1746; whole trend: up;  }
+        After change：{ min: -0.2291; max: 8.6085; mean: -0.2291; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1746,16.5438], After change range: [-0.2291,8.6085]
+    26.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -2.8395; max: 8.2697; mean: -0.1357; whole trend: up;  }
+        After change：{ min: -2.188; max: 6.5215; mean: -0.0279; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.8395,8.2697], After change range: [-2.188,6.5215]
+    27.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-yos-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-yos-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -1.4656; max: 1.461; mean: 0.0153; whole trend: up;  }
+        After change：{ min: -1.0218; max: 3.0725; mean: -0.1141; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4656,1.461], After change range: [-1.0218,3.0725]
+    28.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.0707; max: 49.2838; mean: -0.0707; whole trend: down;  }
+        After change：{ min: -0.2319; max: 9.9365; mean: -0.2319; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0707,49.2838], After change range: [-0.2319,9.9365]
+    29.kpi name: node_sockstat_TCP_inuse{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -1.2006; max: 7.64; mean: -0.3707; whole trend: up;  }
+        After change：{ min: -1.3847; max: 3.2299; mean: -0.1657; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2006,7.64], After change range: [-1.3847,3.2299]
+    30.kpi name: (1-sum(increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",grpc_code=~"Unknown|OK",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources"}[2m]) or increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources"}[2m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job="be/yid",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources"}[2m])))*100
+        Before change: { min: -43.4207; max: 0.0704; mean: 0.0704; whole trend: down;  }
+        After change：{ min: -25.858; max: 0.057; mean: 0.057; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-43.4207,0.0704], After change range: [-25.858,0.057]
+    31.kpi name: node_sockstat_TCP_alloc{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -1.6045; max: 4.3043; mean: 0.2001; whole trend: up;  }
+        After change：{ min: -1.5613; max: 2.6536; mean: -0.0804; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6045,4.3043], After change range: [-1.5613,2.6536]
+    32.kpi name: node_sockstat_TCP_tw{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -3.0189; max: 4.7462; mean: -0.0309; whole trend: up;  }
+        After change：{ min: -2.5944; max: 3.4331; mean: -0.0688; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.0189,4.7462], After change range: [-2.5944,3.4331]
+    33.kpi name: can't find addEmp from updateEmp and empMapTo
+        Before change: { min: -0.5027; max: 4.4014; mean: -0.5027; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5027,4.4014], After change range: [0.0,0.0]
+    34.kpi name: node_sockstat_TCP_tw{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -2.5716; max: 8.9469; mean: -0.1623; whole trend: up;  }
+        After change：{ min: -2.0811; max: 7.9677; mean: -0.1883; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.5716,8.9469], After change range: [-2.0811,7.9677]
+    35.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-yos-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.9385; max: 11.5948; mean: -0.3328; whole trend: up;  }
+        After change：{ min: -0.906; max: 11.4187; mean: -0.284; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9385,11.5948], After change range: [-0.906,11.4187]
+    36.kpi name: [updateFanweiEmployee] failed, <:updateEmployeeData:>
+        Before change: { min: -0.8155; max: 1.2261; mean: -0.8155; whole trend: up;  }
+        After change：{ min: -0.8179; max: 1.2226; mean: -0.8179; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8155,1.2261], After change range: [-0.8179,1.2226]
+    37.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -1.6374; max: 4.4797; mean: 0.1882; whole trend: up;  }
+        After change：{ min: -1.5292; max: 2.6573; mean: -0.0779; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6374,4.4797], After change range: [-1.5292,2.6573]
+    38.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-yos-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.1003; max: 59.2015; mean: -0.0645; whole trend: up;  }
+        After change：{ min: -0.2129; max: 25.6553; mean: -0.1215; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1003,59.2015], After change range: [-0.2129,25.6553]
+    39.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.0494; max: 51.7385; mean: -0.0494; whole trend: down;  }
+        After change：{ min: -0.0947; max: 23.9224; mean: -0.0947; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0494,51.7385], After change range: [-0.0947,23.9224]
+    40.kpi name: node_load1{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -0.7063; max: 13.1286; mean: -0.3002; whole trend: down;  }
+        After change：{ min: -0.6817; max: 14.9545; mean: -0.3094; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.7063,13.1286], After change range: [-0.6817,14.9545]
+    41.kpi name: [securitySessionCheck] CreatAndSaveSessio<:updateFanweiEmployee failed:>
+        Before change: { min: -0.3073; max: 15.1178; mean: -0.3073; whole trend: up;  }
+        After change：{ min: -0.366; max: 7.418; mean: -0.366; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3073,15.1178], After change range: [-0.366,7.418]
+    42.kpi name: node_load5{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -1.207; max: 5.7505; mean: -0.3526; whole trend: up;  }
+        After change：{ min: -1.168; max: 4.9032; mean: -0.2516; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.207,5.7505], After change range: [-1.168,4.9032]
+    43.kpi name: sum(rate(std_grpc_server_handled_total{job="be/yid",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources", grpc_code="Unknown"}[5m]))
+        Before change: { min: -0.0358; max: 44.8789; mean: -0.0358; whole trend: up;  }
+        After change：{ min: -0.0751; max: 9.2795; mean: -0.0751; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0358,44.8789], After change range: [-0.0751,9.2795]
+    44.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-yos-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-yos-prod-02"}))*100
+        Before change: { min: -3.1904; max: 4.6012; mean: -0.0899; whole trend: down;  }
+        After change：{ min: -2.3521; max: 4.6151; mean: -0.3253; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.1904,4.6012], After change range: [-2.3521,4.6151]
+    45.kpi name: node_load15{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -1.3498; max: 3.9153; mean: -0.3469; whole trend: up;  }
+        After change：{ min: -1.4835; max: 4.1928; mean: -0.128; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3498,3.9153], After change range: [-1.4835,4.1928]
+    46.kpi name: <:SimplePos<:updateFanweiEmployee failed:>
+        Before change: { min: -0.8155; max: 1.2261; mean: -0.8155; whole trend: up;  }
+        After change：{ min: -0.8179; max: 1.2226; mean: -0.8179; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8155,1.2261], After change range: [-0.8179,1.2226]
+    47.kpi name: [SimplePost] failed, <:ERRORPost:>
+        Before change: { min: -0.816; max: 1.2254; mean: -0.816; whole trend: up;  }
+        After change：{ min: -0.8179; max: 1.2226; mean: -0.8179; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.816,1.2254], After change range: [-0.8179,1.2226]
+    48.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -2.9428; max: 8.3831; mean: -0.0914; whole trend: up;  }
+        After change：{ min: -2.2194; max: 6.7179; mean: -0.0598; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9428,8.3831], After change range: [-2.2194,6.7179]
+    49.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj3-rd-yos-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.4994; max: 24.7072; mean: -0.3483; whole trend: up;  }
+        After change：{ min: -0.2573; max: 25.0384; mean: -0.166; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4994,24.7072], After change range: [-0.2573,25.0384]
+    50.kpi name: node_sockstat_TCP_inuse{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.2557; max: 6.6686; mean: -0.3501; whole trend: up;  }
+        After change：{ min: -1.3928; max: 3.7334; mean: -0.1845; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2557,6.6686], After change range: [-1.3928,3.7334]
+    51.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-yos-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.1141; max: 50.9844; mean: -0.082; whole trend: up;  }
+        After change：{ min: -0.1288; max: 26.442; mean: -0.0871; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1141,50.9844], After change range: [-0.1288,26.442]
+    52.kpi name: [UpdateEmployee] <:SimplePos<:updateFanweiEmployee failed:>
+        Before change: { min: -0.8155; max: 1.2261; mean: -0.8155; whole trend: up;  }
+        After change：{ min: -0.8179; max: 1.2226; mean: -0.8179; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8155,1.2261], After change range: [-0.8179,1.2226]
+    53.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -1.1164; max: 17.7837; mean: -0.2085; whole trend: up;  }
+        After change：{ min: -1.2853; max: 6.1769; mean: -0.1136; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1164,17.7837], After change range: [-1.2853,6.1769]
+    54.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -0.4617; max: 7.8141; mean: -0.2234; whole trend: up;  }
+        After change：{ min: -0.5153; max: 6.6404; mean: -0.2062; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4617,7.8141], After change range: [-0.5153,6.6404]
+    55.kpi name: probe_duration_seconds{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -0.051; max: 1.1134; mean: -0.0237; whole trend: down;  }
+        After change：{ min: -0.0531; max: 1.0676; mean: -0.0276; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.051,1.1134], After change range: [-0.0531,1.0676]
+    56.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-yos-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-yos-prod-01",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.5448; max: 0.6193; mean: 0.0056; whole trend: up;  }
+        After change：{ min: -0.1693; max: 0.1347; mean: 0.0244; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5448,0.6193], After change range: [-0.1693,0.1347]
+    57.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -1.2784; max: 28.3735; mean: -0.2186; whole trend: up;  }
+        After change：{ min: -1.8663; max: 3.0602; mean: -0.2241; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2784,28.3735], After change range: [-1.8663,3.0602]
+    58.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -0.1238; max: 33.5158; mean: -0.1238; whole trend: down;  }
+        After change：{ min: -0.1435; max: 20.479; mean: -0.1435; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1238,33.5158], After change range: [-0.1435,20.479]
+    59.kpi name: sum(rate(std_grpc_server_handled_total{job="be/yid",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources", grpc_code="OK"}[5m]))
+        Before change: { min: -0.6611; max: 7.6494; mean: -0.3981; whole trend: up;  }
+        After change：{ min: -0.705; max: 6.8484; mean: -0.4077; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6611,7.6494], After change range: [-0.705,6.8484]
+    60.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-yos-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-yos-prod-02",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -1.2219; max: 1.2273; mean: -0.037; whole trend: down;  }
+        After change：{ min: -1.0337; max: 1.1934; mean: -0.0697; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2219,1.2273], After change range: [-1.0337,1.1934]
+    61.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-yos-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-yos-prod-01"}))*100
+        Before change: { min: -6.4925; max: 6.279; mean: -0.035; whole trend: down;  }
+        After change：{ min: -1.9002; max: 4.9985; mean: -0.3672; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-6.4925,6.279], After change range: [-1.9002,4.9985]
+    62.kpi name: node_load5{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.4336; max: 5.6839; mean: -0.2674; whole trend: down;  }
+        After change：{ min: -1.5116; max: 5.2417; mean: -0.2374; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4336,5.6839], After change range: [-1.5116,5.2417]
+    63.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.743; max: 4.2061; mean: 0.1161; whole trend: up;  }
+        After change：{ min: -1.6302; max: 3.1877; mean: 0.0012; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.743,4.2061], After change range: [-1.6302,3.1877]
+    64.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -1.0482; max: 14.9304; mean: -0.4972; whole trend: up;  }
+        After change：{ min: -1.0746; max: 13.7095; mean: -0.5033; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0482,14.9304], After change range: [-1.0746,13.7095]
+    65.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-yos-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.2386; max: 48.6972; mean: -0.1722; whole trend: up;  }
+        After change：{ min: -0.2653; max: 24.163; mean: -0.1861; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2386,48.6972], After change range: [-0.2653,24.163]
+    66.kpi name: sum(rate(std_requests_total{job="be/yid",code=~"4..",environment="prod"}[5m]))
+        Before change: { min: -0.3886; max: 38.3844; mean: -0.0709; whole trend: up;  }
+        After change：{ min: -1.5116; max: 6.0535; mean: -0.2505; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3886,38.3844], After change range: [-1.5116,6.0535]
+    67.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -0.1045; max: 48.6739; mean: -0.1045; whole trend: down;  }
+        After change：{ min: -0.2167; max: 13.534; mean: -0.2167; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1045,48.6739], After change range: [-0.2167,13.534]
+    68.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-yos-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.895; max: 11.6359; mean: -0.3549; whole trend: up;  }
+        After change：{ min: -1.0145; max: 13.0107; mean: -0.2849; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.895,11.6359], After change range: [-1.0145,13.0107]
+    69.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.2126; max: 26.8967; mean: -0.1051; whole trend: up;  }
+        After change：{ min: -0.239; max: 3.0192; mean: -0.1397; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2126,26.8967], After change range: [-0.239,3.0192]
+    70.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -0.231; max: 26.9187; mean: -0.1074; whole trend: up;  }
+        After change：{ min: -0.2609; max: 2.7933; mean: -0.1212; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.231,26.9187], After change range: [-0.2609,2.7933]
+    71.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-yos-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-yos-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.5361; max: 0.4421; mean: 0.0054; whole trend: up;  }
+        After change：{ min: -0.3272; max: 0.3682; mean: -0.023; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5361,0.4421], After change range: [-0.3272,0.3682]
+    72.kpi name: yid_login_rate{exported_job="yid_login",instance="172.16.17.3:9092",job="push-gateway"}
+        Before change: { min: -1.5114; max: 1.0622; mean: 0.511; whole trend: down;  }
+        After change：{ min: -0.759; max: 1.5458; mean: -0.759; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5114,1.0622], After change range: [-0.759,1.5458]
+    73.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.4462; max: 39.6267; mean: -0.0784; whole trend: down;  }
+        After change：{ min: -0.9502; max: 18.6674; mean: -0.1725; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4462,39.6267], After change range: [-0.9502,18.6674]
+    74.kpi name: 1-sum(increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[5m]) or increase(std_grpc_server_handled_total{job="be/yid",environment="prod",grpc_code!~"Unknown|OK"}[5m]))/sum(increase(std_grpc_server_handled_total{job="be/yid",environment="prod"}[5m])) or vector(1)
+        Before change: { min: -0.1363; max: 0.0006; mean: 0.0006; whole trend: down;  }
+        After change：{ min: -0.1065; max: 0.0007; mean: 0.0007; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1363,0.0006], After change range: [-0.1065,0.0007]
+    75.kpi name: probe_duration_seconds{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -0.0543; max: 1.2011; mean: -0.0288; whole trend: down;  }
+        After change：{ min: -0.0617; max: 1.076; mean: -0.0343; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0543,1.2011], After change range: [-0.0617,1.076]
+    76.kpi name: sum(rate(std_requests_total{job="be/yid", code="200",method="GET",url=~"/api/v1/employee/:empID|/api/v1/employees|/api/v1/dept|/api/v1/depts|/api/v1/team/:teamID|/api/v1/teams|/api/v1/supervisors/:empIDs|/api/v1/dept-tree|/api/v1/emplist"}[5m]))
+        Before change: { min: -0.6115; max: 7.651; mean: -0.4951; whole trend: up;  }
+        After change：{ min: -0.7805; max: 4.7728; mean: -0.3442; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6115,7.651], After change range: [-0.7805,4.7728]
+    77.kpi name: [securitySessionCheck] GetSecuritySessionFromReq failed, err=securecookie: expired timestamp [trace.id=<:SEQ:> <:transactionID:> <:spanID:>
+        Before change: { min: -0.3077; max: 14.7918; mean: -0.3077; whole trend: up;  }
+        After change：{ min: -0.3658; max: 7.4364; mean: -0.3658; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3077,14.7918], After change range: [-0.3658,7.4364]
+    78.kpi name: not find dictionary type=<:NUM:>
+        Before change: { min: -1.3773; max: 3.3147; mean: -0.2946; whole trend: up;  }
+        After change：{ min: -1.3768; max: 2.598; mean: -0.2927; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3773,3.3147], After change range: [-1.3768,2.598]
+    79.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-yos-prod-03",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-yos-prod-03",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -1.6213; max: 1.7911; mean: -0.1064; whole trend: up;  }
+        After change：{ min: -1.2424; max: 1.488; mean: 0.0066; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6213,1.7911], After change range: [-1.2424,1.488]
+    80.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -2.9847; max: 4.1382; mean: -0.0237; whole trend: up;  }
+        After change：{ min: -3.0616; max: 4.7397; mean: -0.0111; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9847,4.1382], After change range: [-3.0616,4.7397]
+    81.kpi name: node_load15{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -1.6394; max: 4.3292; mean: -0.262; whole trend: down;  }
+        After change：{ min: -1.6576; max: 3.5694; mean: -0.2757; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6394,4.3292], After change range: [-1.6576,3.5694]
+    82.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-yos-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-yos-prod-03"}))*100
+        Before change: { min: -2.3725; max: 5.8276; mean: -0.2306; whole trend: down;  }
+        After change：{ min: -1.1877; max: 6.6801; mean: -0.2366; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.3725,5.8276], After change range: [-1.1877,6.6801]
+    83.kpi name: node_load15{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -1.385; max: 4.4462; mean: -0.3183; whole trend: up;  }
+        After change：{ min: -1.2037; max: 4.3436; mean: -0.2582; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.385,4.4462], After change range: [-1.2037,4.3436]
+    84.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -13.1705; max: 3.8959; mean: 0.1982; whole trend: up;  }
+        After change：{ min: -1.5215; max: 2.6785; mean: -0.1033; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-13.1705,3.8959], After change range: [-1.5215,2.6785]
+    85.kpi name: node_load1{hostname=~"bj3-rd-yos-prod-02"}
+        Before change: { min: -0.7725; max: 15.5962; mean: -0.322; whole trend: down;  }
+        After change：{ min: -0.7222; max: 9.4493; mean: -0.2957; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.7725,15.5962], After change range: [-0.7222,9.4493]
+    86.kpi name: [getOtpKey] <:*:> failed:>
+        Before change: { min: -0.3091; max: 10.6194; mean: -0.3091; whole trend: down;  }
+        After change：{ min: -0.3735; max: 7.9033; mean: -0.3735; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3091,10.6194], After change range: [-0.3735,7.9033]
+    87.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj3-rd-yos-prod-02"}[2m])
+        Before change: { min: -0.0933; max: 30.5074; mean: -0.0933; whole trend: up;  }
+        After change：{ min: -0.1176; max: 17.5515; mean: -0.1176; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0933,30.5074], After change range: [-0.1176,17.5515]
+    88.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj3-rd-yos-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.2691; max: 55.3988; mean: -0.1405; whole trend: up;  }
+        After change：{ min: -0.8534; max: 9.0378; mean: -0.3419; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2691,55.3988], After change range: [-0.8534,9.0378]
+    89.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-yos-prod-01"}
+        Before change: { min: -1.2094; max: 7.3452; mean: -0.3645; whole trend: up;  }
+        After change：{ min: -1.3753; max: 3.438; mean: -0.1931; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2094,7.3452], After change range: [-1.3753,3.438]
+    90.kpi name: no employee
+        Before change: { min: -0.9616; max: 2.2512; mean: 0.6448; whole trend: up;  }
+        After change：{ min: -0.9772; max: 2.277; mean: 0.6499; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9616,2.2512], After change range: [-0.9772,2.277]
+    91.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-yos-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-yos-prod-02",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.3408; max: 0.3012; mean: 0.0072; whole trend: up;  }
+        After change：{ min: -0.1904; max: 0.3045; mean: -0.0649; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3408,0.3012], After change range: [-0.1904,0.3045]
+    92.kpi name: probe_duration_seconds{hostname=~"bj3-rd-yos-prod-03"}
+        Before change: { min: -0.1288; max: 1.4032; mean: -0.0673; whole trend: up;  }
+        After change：{ min: -0.1256; max: 1.0615; mean: -0.0692; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1288,1.4032], After change range: [-0.1256,1.0615]
+    93.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-yos-prod-03"}[2m])
+        Before change: { min: -0.1944; max: 25.2126; mean: -0.1944; whole trend: down;  }
+        After change：{ min: -0.1924; max: 23.3074; mean: -0.1924; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1944,25.2126], After change range: [-0.1924,23.3074]
+    94.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -2.4056; max: 10.0844; mean: -0.2817; whole trend: up;  }
+        After change：{ min: -2.4475; max: 6.7441; mean: 0.0743; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.4056,10.0844], After change range: [-2.4475,6.7441]
+    95.kpi name: sum(rate(std_grpc_server_handled_total{job="be/yid", grpc_code="Unknown",grpc_method=~"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp"}[5m]))
+        Before change: { min: -0.1463; max: 16.8486; mean: -0.1463; whole trend: down;  }
+        After change：{ min: -0.2252; max: 7.5045; mean: -0.2252; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1463,16.8486], After change range: [-0.2252,7.5045]
+    96.kpi name: [GetWeChatUserInfo] GetWeChatUserInf<:updateFanweiEmployee failed:>
+        Before change: { min: -0.3091; max: 10.6194; mean: -0.3091; whole trend: down;  }
+        After change：{ min: -0.3735; max: 7.9033; mean: -0.3735; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3091,10.6194], After change range: [-0.3735,7.9033]
+    97.kpi name: (1-sum(increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",grpc_code=~"Unknown|OK",grpc_method=~"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp"}[2m]) or increase(std_grpc_server_handled_total{job="be/yid",biz_code="6000",grpc_method=~"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp"}[2m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job="be/yid",grpc_method=~"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp"}[2m])))*100
+        Before change: { min: -34.1145; max: 0.0661; mean: 0.0661; whole trend: down;  }
+        After change：{ min: -13.5311; max: 0.0187; mean: 0.0187; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-34.1145,0.0661], After change range: [-13.5311,0.0187]
+    98.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-yos-prod-01"}[2m])
+        Before change: { min: -0.0494; max: 48.425; mean: -0.0494; whole trend: down;  }
+        After change：{ min: -0.0682; max: 26.1224; mean: -0.0682; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0494,48.425], After change range: [-0.0682,26.1224]
+
+SCWARN algorithm identifies anomalies at the following timestamps:
+    1, no fault
+
+Types of single kpi anomalies related to overall anomalies (single kpi anomalies not related to overall anomalies are not output):
+Total anomalies found: 1100
+Total number of anomalous kpis: 51
+Total number of anomaly description shapes: 3
+
+These are definitions for anomaly types (patterns):
+        Anomaly description shapes are divided into two major categories: Still in abnormal state and Recover to normal state,
+        Still in abnormal state, these anomalies remain in an abnormal state after appearing at the anomaly point
+        1. Sudden increase
+        2. Sudden decrease
+        3. Level shift up
+        4. Level shift down
+        5. Steady increase
+        6. Steady decrease
+        Recover to normal state, these anomalies return to normal state after appearing at the anomaly point
+        7. Single spike
+        8. Single dip
+        9. Transient level shift up
+        10. Transient level shift down
+        11. Multiple spikes
+        12. Multiple dips
+        13. Fluctuations
+
+Please analyze the above domain text and kpi anomaly situations, and provide your judgment: Expected change or failed change
+Also provide your thoughts and reasoning. If it's a failed change, please provide your suggested solution
+Please answer in the following format:{(
+ "change_type":"Please return expected change or failed change,"
+ "reason":"Your reason for the change_type field",
+ "solution":"None if this is an expected change or solution")}

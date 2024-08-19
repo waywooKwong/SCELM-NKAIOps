@@ -1,0 +1,340 @@
+领域文本：
+编号:NO.29828
+服务:E-TRAN
+提交开始时间:2024-03-09 11:59:00
+提交结束时间:2024-03-14 11:59:00
+分析开始时间:2024-03-14 11:59:00
+分析结束时间:2024-03-15 11:59:00
+与服务相关的指标变化分析：
+    1. 指标训练集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-02"}))*100; 24de898760fd28d1dece47d012488f5b;最小值: -6.7707652033585655; 最大值: 3.7899653112849094; 均值: 0.026462703306593713; 整体的趋势: 下降; 
+    1. 指标测试集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-02"}))*100; 24de898760fd28d1dece47d012488f5b;最小值: -1.2548072717435066; 最大值: 3.2388237953669945; 均值: -0.471963954112916; 整体的趋势: 上升; 
+    2. 指标训练集：node_load1{hostname=~"bj1-rd-geass-prod-02"}; 6f4b1da1a73ea045a5cd16e59ef0f1e4;最小值: -0.8643164560857587; 最大值: 11.102555353572932; 均值: -0.30476028220161167; 整体的趋势: 下降; 
+    2. 指标测试集：node_load1{hostname=~"bj1-rd-geass-prod-02"}; 6f4b1da1a73ea045a5cd16e59ef0f1e4;最小值: -0.7831949772709063; 最大值: 9.260986928686732; 均值: -0.2782564847159707; 整体的趋势: 下降; 
+    3. 指标训练集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-02", mode=~"idle"}[2m])) by (mode, hostname); b1e079989a89cd6dfc27697490b375fc;最小值: -1.7957641971479268; 最大值: 7.873918307207658; 均值: -0.12317045628999486; 整体的趋势: 下降; 
+    3. 指标测试集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-02", mode=~"idle"}[2m])) by (mode, hostname); b1e079989a89cd6dfc27697490b375fc;最小值: -1.3684201517152397; 最大值: 7.083486645502985; 均值: -0.142107095694073; 整体的趋势: 上升; 
+    4. 指标训练集：node_load1{hostname=~"bj1-rd-geass-prod-04"}; d744369283ceeca193d869290741872b;最小值: -0.992930476482227; 最大值: 7.861235711488642; 均值: -0.2982189755798972; 整体的趋势: 上升; 
+    4. 指标测试集：node_load1{hostname=~"bj1-rd-geass-prod-04"}; d744369283ceeca193d869290741872b;最小值: -1.0496658721154781; 最大值: 6.111129043011903; 均值: -0.27670837618523114; 整体的趋势: 上升; 
+    5. 指标训练集：node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-04"}; 60c93e9541a6b518f136ee546e6df17c;最小值: -0.8116772099671059; 最大值: 3.5086297141930407; 均值: -0.6787111542790287; 整体的趋势: 下降; 
+    5. 指标测试集：node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-04"}; 60c93e9541a6b518f136ee546e6df17c;最小值: -0.8736835504655419; 最大值: 3.0854033241817382; 均值: -0.6893921871191998; 整体的趋势: 下降; 
+    6. 指标训练集：node_load15{hostname=~"bj1-rd-geass-prod-01"}; 08f2ce6c7a88f981154e0418d9930f71;最小值: -1.069015507006445; 最大值: 5.595413180745462; 均值: -0.28378070693899987; 整体的趋势: 下降; 
+    6. 指标测试集：node_load15{hostname=~"bj1-rd-geass-prod-01"}; 08f2ce6c7a88f981154e0418d9930f71;最小值: -1.2715751849680028; 最大值: 4.955560804879845; 均值: -0.22902300567220918; 整体的趋势: 下降; 
+    7. 指标训练集：irate(node_disk_read_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 8b65155d96cae6d751da81aaed6caa86;最小值: -0.08766938872723808; 最大值: 32.70308862557814; 均值: -0.08766938872723808; 整体的趋势: 下降; 
+    7. 指标测试集：irate(node_disk_read_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 8b65155d96cae6d751da81aaed6caa86;最小值: -0.13211437854583255; 最大值: 19.17447903653101; 均值: -0.13211437854583255; 整体的趋势: 下降; 
+    8. 指标训练集：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; e5a00ce7b4a7a4af52538a2377276904;最小值: -0.3921565469902867; 最大值: 48.982603056719555; 均值: -0.04802610509371603; 整体的趋势: 下降; 
+    8. 指标测试集：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; e5a00ce7b4a7a4af52538a2377276904;最小值: -1.3619451789038222; 最大值: 4.683745913528142; 均值: -0.20163000059818656; 整体的趋势: 上升; 
+    9. 指标训练集：irate(node_disk_writes_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 79157446e7c55a84c9590120e936cf87;最小值: -1.1041389421421173; 最大值: 19.438678475637374; 均值: -0.39950404390693683; 整体的趋势: 上升; 
+    9. 指标测试集：irate(node_disk_writes_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 79157446e7c55a84c9590120e936cf87;最小值: -1.0767486327126645; 最大值: 4.7746621518386885; 均值: -0.1104606132454685; 整体的趋势: 上升; 
+    10. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"}); cda88d7a227cb056d05638489fcb6c8b;最小值: -0.9970774613992189; 最大值: 1.4163015036391207; 均值: -0.016159115566318345; 整体的趋势: 下降; 
+    10. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"}); cda88d7a227cb056d05638489fcb6c8b;最小值: -0.46209728589650706; 最大值: 0.9391986213688059; 均值: -0.059946600246419346; 整体的趋势: 下降; 
+    11. 指标训练集：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; a7760db1e274b1cec04637812a43fb56;最小值: -1.3257760698558312; 最大值: 9.952120463758048; 均值: -0.194162578546859; 整体的趋势: 下降; 
+    11. 指标测试集：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; a7760db1e274b1cec04637812a43fb56;最小值: -1.1868120729961593; 最大值: 5.761125406198257; 均值: -0.18690980355210668; 整体的趋势: 上升; 
+    12. 指标训练集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); d65798f8eb4e5639db778ee036cfeddc;最小值: -1.1521742700703055; 最大值: 10.806173486608996; 均值: -0.3121250474936602; 整体的趋势: 上升; 
+    12. 指标测试集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); d65798f8eb4e5639db778ee036cfeddc;最小值: -1.1954531094628804; 最大值: 5.593580614673136; 均值: -0.28706127313482177; 整体的趋势: 上升; 
+    13. 指标训练集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 629641a3a287ffed3b1e7c82f586e086;最小值: -0.1171410258511693; 最大值: 34.623269114751366; 均值: -0.1171410258511693; 整体的趋势: 上升; 
+    13. 指标测试集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 629641a3a287ffed3b1e7c82f586e086;最小值: -0.14713767030930852; 最大值: 16.45823674718497; 均值: -0.14713767030930852; 整体的趋势: 上升; 
+    14. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"}); 62692def4f88de98784351899fe95895;最小值: -0.9547142586881958; 最大值: 1.046685244920627; 均值: -0.06886364088217353; 整体的趋势: 上升; 
+    14. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"}); 62692def4f88de98784351899fe95895;最小值: -0.6569480720009528; 最大值: 0.6396251844410298; 均值: -0.04232045746804977; 整体的趋势: 下降; 
+    15. 指标训练集：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; ea70b454e2a9cf7ff1f6a5f9172faf35;最小值: -0.3017397340061087; 最大值: 32.50849262895168; 均值: -0.06830562541029044; 整体的趋势: 上升; 
+    15. 指标测试集：irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; ea70b454e2a9cf7ff1f6a5f9172faf35;最小值: -0.3277917025654301; 最大值: 26.327072975963702; 均值: -0.0674042896688529; 整体的趋势: 上升; 
+    16. 指标训练集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj2-rd-geass-prod-03", mode=~"idle"}[2m])) by (mode, hostname); 337663a086ba14de9097e2600ba8155f;最小值: -1.5194530960167845; 最大值: 9.112644334274046; 均值: -0.14723165359048082; 整体的趋势: 下降; 
+    16. 指标测试集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj2-rd-geass-prod-03", mode=~"idle"}[2m])) by (mode, hostname); 337663a086ba14de9097e2600ba8155f;最小值: -1.0319524113263392; 最大值: 8.129654462877971; 均值: -0.22253381275402828; 整体的趋势: 上升; 
+    17. 指标训练集：node_load5{hostname=~"bj1-rd-geass-prod-02"}; edb5d4d4836c8cc2637c84e7edc7a6d2;最小值: -0.9468356635037167; 最大值: 8.168186307316315; 均值: -0.2910786871857289; 整体的趋势: 下降; 
+    17. 指标测试集：node_load5{hostname=~"bj1-rd-geass-prod-02"}; edb5d4d4836c8cc2637c84e7edc7a6d2;最小值: -0.9026918933191536; 最大值: 8.249573356881328; 均值: -0.27087871036645755; 整体的趋势: 下降; 
+    18. 指标训练集：node_load5{hostname=~"bj1-rd-geass-prod-04"}; c782fc64afe22517bc5c2a0d08f54a3b;最小值: -0.9503211584392742; 最大值: 5.873169858664042; 均值: -0.3252685461855353; 整体的趋势: 上升; 
+    18. 指标测试集：node_load5{hostname=~"bj1-rd-geass-prod-04"}; c782fc64afe22517bc5c2a0d08f54a3b;最小值: -0.925347334412182; 最大值: 4.64361286784286; 均值: -0.29381576508429064; 整体的趋势: 上升; 
+    19. 指标训练集：node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-01"}; e871394e0a95766651ca590884721e4d;最小值: -3.331859233971373; 最大值: 3.78538490777065; 均值: -0.03320143775814663; 整体的趋势: 下降; 
+    19. 指标测试集：node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-01"}; e871394e0a95766651ca590884721e4d;最小值: -2.256949566128811; 最大值: 3.4532160236829683; 均值: 0.033854328308952936; 整体的趋势: 下降; 
+    20. 指标训练集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m]); 5fc97fa23b1b50a40d8e213b5c44fc54;最小值: -3.6961578902654026; 最大值: 25.80121795459171; 均值: -0.20814702393923357; 整体的趋势: 下降; 
+    20. 指标测试集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m]); 5fc97fa23b1b50a40d8e213b5c44fc54;最小值: -1.4015444311643959; 最大值: 16.897619532432568; 均值: -0.17438156181075293; 整体的趋势: 下降; 
+    21. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"}); be7bbca087cd3c0d94f4a06caac26a5b;最小值: -1.683545271012438; 最大值: 2.048222403746446; 均值: -0.16546082112493313; 整体的趋势: 上升; 
+    21. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"}); be7bbca087cd3c0d94f4a06caac26a5b;最小值: -1.2966876012222737; 最大值: 1.5610416761133192; 均值: -0.07088699068457671; 整体的趋势: 上升; 
+    22. 指标训练集：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-01"}; 74dc1bd6ec953fbfa0115f8131966c0b;最小值: -4.696328541277609; 最大值: 11.48762446251728; 均值: 0.08381080359326075; 整体的趋势: 下降; 
+    22. 指标测试集：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-01"}; 74dc1bd6ec953fbfa0115f8131966c0b;最小值: -1.2520712397560705; 最大值: 4.738382179078492; 均值: -0.43248184165681447; 整体的趋势: 上升; 
+    23. 指标训练集：irate(node_disk_written_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 6be173c0101dd610442c3c7107f67156;最小值: -0.3159415134442801; 最大值: 12.671861263571612; 均值: -0.17097768997948853; 整体的趋势: 下降; 
+    23. 指标测试集：irate(node_disk_written_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 6be173c0101dd610442c3c7107f67156;最小值: -0.30419246727127425; 最大值: 10.755421132281239; 均值: -0.18256814867987756; 整体的趋势: 上升; 
+    24. 指标训练集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); 7ef76f83fa88d25d7f14822f01a40a3b;最小值: -0.2745755685260878; 最大值: 33.48769336265588; 均值: -0.1485090766817827; 整体的趋势: 上升; 
+    24. 指标测试集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); 7ef76f83fa88d25d7f14822f01a40a3b;最小值: -0.33063368018303246; 最大值: 10.138586788182295; 均值: -0.19148933584005895; 整体的趋势: 下降; 
+    25. 指标训练集：node_netstat_Tcp_CurrEstab{hostname=~"bj2-rd-geass-prod-03"}; eb479cb89b29dee468073c54941782f1;最小值: -4.928663207386105; 最大值: 7.028783300596838; 均值: 0.13286954741349288; 整体的趋势: 下降; 
+    25. 指标测试集：node_netstat_Tcp_CurrEstab{hostname=~"bj2-rd-geass-prod-03"}; eb479cb89b29dee468073c54941782f1;最小值: -1.289612789839323; 最大值: 3.179661234185155; 均值: -0.6081277436228245; 整体的趋势: 上升; 
+    26. 指标训练集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m]); 8ee9c805de2922911b2a33ba3b2981b5;最小值: -13.966470454707178; 最大值: 7.890623242941817; 均值: 0.05158119948120535; 整体的趋势: 上升; 
+    26. 指标测试集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m]); 8ee9c805de2922911b2a33ba3b2981b5;最小值: -4.684791090530657; 最大值: 3.593033744967759; 均值: 0.06278491806402094; 整体的趋势: 上升; 
+    27. 指标训练集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); 09092a3272be368a4f07e88ff36e4ce0;最小值: -0.07616684080450092; 最大值: 47.52195104075361; 均值: -0.07616684080450092; 整体的趋势: 上升; 
+    27. 指标测试集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); 09092a3272be368a4f07e88ff36e4ce0;最小值: -0.1108884632469964; 最大值: 5.42931148644371; 均值: -0.1108884632469964; 整体的趋势: 下降; 
+    28. 指标训练集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); c9820cd2f71ef0027ca10ab364729e4c;最小值: -0.5975930139626588; 最大值: 22.554557096004157; 均值: -0.49242425896058717; 整体的趋势: 下降; 
+    28. 指标测试集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); c9820cd2f71ef0027ca10ab364729e4c;最小值: -0.7336760620387719; 最大值: 2.5583097791091496; 均值: -0.589290718465791; 整体的趋势: 上升; 
+    29. 指标训练集：node_load15{hostname=~"bj2-rd-geass-prod-03"}; 2d11670901c8378e2e98cfd4e615591c;最小值: -0.9726439189031727; 最大值: 5.438070298277553; 均值: -0.33861723808310096; 整体的趋势: 下降; 
+    29. 指标测试集：node_load15{hostname=~"bj2-rd-geass-prod-03"}; 2d11670901c8378e2e98cfd4e615591c;最小值: -1.1371497556731416; 最大值: 5.627185414470143; 均值: -0.28534458609954255; 整体的趋势: 上升; 
+    30. 指标训练集：node_sockstat_TCP_alloc{hostname=~"bj2-rd-geass-prod-03"}; 37c378bc5f777855e25fc840379e148a;最小值: -5.223751742185804; 最大值: 7.04995401913581; 均值: 0.16217821214941855; 整体的趋势: 下降; 
+    30. 指标测试集：node_sockstat_TCP_alloc{hostname=~"bj2-rd-geass-prod-03"}; 37c378bc5f777855e25fc840379e148a;最小值: -1.3083813011030327; 最大值: 3.252114207781831; 均值: -0.6055092334254372; 整体的趋势: 上升; 
+    31. 指标训练集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 0b010df184d438905e09784514eb4b23;最小值: -0.08865957044604239; 最大值: 51.28043737281159; 均值: -0.08865957044604239; 整体的趋势: 上升; 
+    31. 指标测试集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 0b010df184d438905e09784514eb4b23;最小值: -0.14258146174465525; 最大值: 18.16021653608519; 均值: -0.14258146174465525; 整体的趋势: 下降; 
+    32. 指标训练集：node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-04"}; 0be4097b621649d7c93ab581377fcd45;最小值: -0.7594030440463948; 最大值: 1.6376226286069104; 均值: -0.6932430997905711; 整体的趋势: 上升; 
+    32. 指标测试集：node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-04"}; 0be4097b621649d7c93ab581377fcd45;最小值: -0.7746549986170418; 最大值: 1.5616539358820425; 均值: -0.7035499440888088; 整体的趋势: 上升; 
+    33. 指标训练集：node_load15{hostname=~"bj1-rd-geass-prod-04"}; 995bd80f018ca0f0c3d11d63734d8c52;最小值: -0.9302785706931318; 最大值: 5.554418497092441; 均值: -0.3548447011968011; 整体的趋势: 上升; 
+    33. 指标测试集：node_load15{hostname=~"bj1-rd-geass-prod-04"}; 995bd80f018ca0f0c3d11d63734d8c52;最小值: -0.9001704322013961; 最大值: 4.090798433405087; 均值: -0.33515508892519047; 整体的趋势: 下降; 
+    34. 指标训练集：node_load5{hostname=~"bj1-rd-geass-prod-01"}; e8bad33e10b4c80e3633c62134b3eea3;最小值: -0.8556309322792828; 最大值: 6.441829725097591; 均值: -0.2875651326032386; 整体的趋势: 下降; 
+    34. 指标测试集：node_load5{hostname=~"bj1-rd-geass-prod-01"}; e8bad33e10b4c80e3633c62134b3eea3;最小值: -1.0822882758852064; 最大值: 6.511261270817734; 均值: -0.2431089459261213; 整体的趋势: 上升; 
+    35. 指标训练集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m]); 93d492871176019beea4865cbbb776a9;最小值: -2.7190684362226096; 最大值: 4.0609510682818994; 均值: 0.6709413160296441; 整体的趋势: 上升; 
+    35. 指标测试集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m]); 93d492871176019beea4865cbbb776a9;最小值: -1.0670250851944054; 最大值: 2.4290592509977476; 均值: 0.681017082901671; 整体的趋势: 下降; 
+    36. 指标训练集：irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 721e4e83b8da48498d6ed0ad42e1f6d0;最小值: -1.5294405725259455; 最大值: 33.7687450892227; 均值: -0.07354214567578056; 整体的趋势: 下降; 
+    36. 指标测试集：irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 721e4e83b8da48498d6ed0ad42e1f6d0;最小值: -0.9503718783761198; 最大值: 13.384292347688264; 均值: -0.21072754417993927; 整体的趋势: 下降; 
+    37. 指标训练集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); b88e82a137a71abfd2f82fee1efdadcf;最小值: -0.2153449963635033; 最大值: 22.817811472138573; 均值: -0.2153449963635033; 整体的趋势: 下降; 
+    37. 指标测试集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); b88e82a137a71abfd2f82fee1efdadcf;最小值: -0.2691250786248392; 最大值: 9.799691155051763; 均值: -0.2691250786248392; 整体的趋势: 下降; 
+    38. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"}); 54b49290875ef3dcff1362db25bea2ff;最小值: -2.427091763463278; 最大值: 1.8063862290428567; 均值: 0.002021408677584543; 整体的趋势: 下降; 
+    38. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"}); 54b49290875ef3dcff1362db25bea2ff;最小值: -2.320524166807334; 最大值: 1.5996865020669673; 均值: 0.10710357369808388; 整体的趋势: 上升; 
+    39. 指标训练集：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-04"}; 105ef4da40d48dfa8468e1c1be1ce465;最小值: -0.7636058346796177; 最大值: 1.683336013067457; 均值: -0.6922366974536615; 整体的趋势: 上升; 
+    39. 指标测试集：node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-04"}; 105ef4da40d48dfa8468e1c1be1ce465;最小值: -0.765714362904754; 最大值: 1.5695986138898725; 均值: -0.6995726010347537; 整体的趋势: 上升; 
+    40. 指标训练集：node_load5{hostname=~"bj2-rd-geass-prod-03"}; d35c5d3e57490f037ac7bcef96d3bbc3;最小值: -0.7944124038247182; 最大值: 6.3583775517414916; 均值: -0.3227998792818912; 整体的趋势: 下降; 
+    40. 指标测试集：node_load5{hostname=~"bj2-rd-geass-prod-03"}; d35c5d3e57490f037ac7bcef96d3bbc3;最小值: -0.8428030500650989; 最大值: 7.417786862692813; 均值: -0.25970258563512866; 整体的趋势: 上升; 
+    41. 指标训练集：timestamp; d7e6d55ba379a13d08c25d15faf2a23b;最小值: -1.732596326232517; 最大值: 1.730543524987004; 均值: -0.0015075259146736825; 整体的趋势: 上升; 
+    41. 指标测试集：timestamp; d7e6d55ba379a13d08c25d15faf2a23b;最小值: -1.7336560783310833; 最大值: 1.725535909345926; 均值: -0.004060084492578649; 整体的趋势: 上升; 
+    42. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"}); ec01b0cbd6d240fef73d840df83d075c;最小值: -2.018832036667067; 最大值: 2.1829042146599393; 均值: -0.07245350196144981; 整体的趋势: 上升; 
+    42. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"}); ec01b0cbd6d240fef73d840df83d075c;最小值: -1.2935046192512114; 最大值: 1.5598000909693976; 均值: -0.09454976281321649; 整体的趋势: 上升; 
+    43. 指标训练集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m]); 0b6dc0f28f41adaf5fe5a178607fc526;最小值: -4.563185848678492; 最大值: 16.47094923555664; 均值: -0.21129583125053306; 整体的趋势: 下降; 
+    43. 指标测试集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m]); 0b6dc0f28f41adaf5fe5a178607fc526;最小值: -1.8281953188123463; 最大值: 8.23943819605754; 均值: -0.2023663039886401; 整体的趋势: 下降; 
+    44. 指标训练集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj2-rd-geass-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj2-rd-geass-prod-03"}))*100; 714b3c39e1faaccb36025a2b9e63a2fd;最小值: -5.707267356917402; 最大值: 4.040276172952253; 均值: 0.0031432832387912582; 整体的趋势: 下降; 
+    44. 指标测试集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj2-rd-geass-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj2-rd-geass-prod-03"}))*100; 714b3c39e1faaccb36025a2b9e63a2fd;最小值: -1.2395749396809188; 最大值: 3.4287689724263504; 均值: -0.5168063152797326; 整体的趋势: 上升; 
+    45. 指标训练集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); bfb428287ce622f974a6b51426276fea;最小值: -0.18298243634837744; 最大值: 54.24797959532111; 均值: -0.09349127965543433; 整体的趋势: 上升; 
+    45. 指标测试集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); bfb428287ce622f974a6b51426276fea;最小值: -0.358672364782322; 最大值: 11.788258756466707; 均值: -0.1920858809962984; 整体的趋势: 上升; 
+    46. 指标训练集：node_load15{hostname=~"bj1-rd-geass-prod-02"}; ea5448430fbe5ee2024e6a22e751503d;最小值: -1.1435764524659517; 最大值: 5.303872554003863; 均值: -0.29287137522340656; 整体的趋势: 下降; 
+    46. 指标测试集：node_load15{hostname=~"bj1-rd-geass-prod-02"}; ea5448430fbe5ee2024e6a22e751503d;最小值: -1.091872110009116; 最大值: 5.83771196334597; 均值: -0.261360161142589; 整体的趋势: 上升; 
+    47. 指标训练集：node_sockstat_TCP_inuse{hostname=~"bj2-rd-geass-prod-03"}; 9e166bfa5f92c4f146348aa298c1f5d6;最小值: -4.4499573552353375; 最大值: 8.346623581653832; 均值: 0.0746904215151943; 整体的趋势: 下降; 
+    47. 指标测试集：node_sockstat_TCP_inuse{hostname=~"bj2-rd-geass-prod-03"}; 9e166bfa5f92c4f146348aa298c1f5d6;最小值: -1.1458208013796383; 最大值: 3.4576970976629773; 均值: -0.6423110311718522; 整体的趋势: 上升; 
+    48. 指标训练集：irate(node_disk_reads_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); f783a8f31a766f26288bd8064822c94c;最小值: -0.16446607360834448; 最大值: 30.97279733059455; 均值: -0.16446607360834448; 整体的趋势: 下降; 
+    48. 指标测试集：irate(node_disk_reads_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); f783a8f31a766f26288bd8064822c94c;最小值: -0.21536810938039577; 最大值: 8.484158719880012; 均值: -0.21536810938039577; 整体的趋势: 下降; 
+    49. 指标训练集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 17f8b9e4a24ab126c24ebc1ac7299998;最小值: -1.102347587221894; 最大值: 5.230422711338349; 均值: -0.4074800232900966; 整体的趋势: 下降; 
+    49. 指标测试集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 17f8b9e4a24ab126c24ebc1ac7299998;最小值: -1.0423521050131948; 最大值: 2.7170652715641395; 均值: -0.37219509440593085; 整体的趋势: 下降; 
+    50. 指标训练集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 590264ec9ff1daae04f70c163f790183;最小值: -0.0675648174708858; 最大值: 32.10919670621262; 均值: -0.0675648174708858; 整体的趋势: 上升; 
+    50. 指标测试集：irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 590264ec9ff1daae04f70c163f790183;最小值: -0.08028354552073069; 最大值: 16.96447724819706; 均值: -0.08028354552073069; 整体的趋势: 上升; 
+    51. 指标训练集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-04", mode=~"idle"}[2m])) by (mode, hostname); 707662bde3960114099d0b51d82ce656;最小值: -0.9689815500225117; 最大值: 5.383262527391793; 均值: -0.25671619273959495; 整体的趋势: 上升; 
+    51. 指标测试集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-04", mode=~"idle"}[2m])) by (mode, hostname); 707662bde3960114099d0b51d82ce656;最小值: -1.1279412530663535; 最大值: 5.353655295595758; 均值: -0.2730430568912074; 整体的趋势: 上升; 
+    52. 指标训练集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-04"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-04"}))*100; cd0f35f329295d29c2412d731a160283;最小值: -1.1237055830365466; 最大值: 3.8129263012581247; 均值: -0.6331435965220517; 整体的趋势: 上升; 
+    52. 指标测试集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-04"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-04"}))*100; cd0f35f329295d29c2412d731a160283;最小值: -1.7405450310861417; 最大值: 2.494916620565326; 均值: 0.13959885026863972; 整体的趋势: 上升; 
+    53. 指标训练集：node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-04"}; 95d76c9af8fbca9b6ca0d600e37a0720;最小值: -0.7645973375920261; 最大值: 1.6788649423724917; 均值: -0.6933296877597277; 整体的趋势: 上升; 
+    53. 指标测试集：node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-04"}; 95d76c9af8fbca9b6ca0d600e37a0720;最小值: -0.7663277955471721; 最大值: 1.5660169095437724; 均值: -0.7002701023746617; 整体的趋势: 下降; 
+    54. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"}); 2ae0e0c4af05a8bd6090df2f61f42be9;最小值: -0.6177493288358872; 最大值: 1.4918323179547515; 均值: 0.049134956363260575; 整体的趋势: 下降; 
+    54. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"}); 2ae0e0c4af05a8bd6090df2f61f42be9;最小值: -0.32396421106484696; 最大值: 1.2364640733246859; 均值: -0.028525193923145533; 整体的趋势: 下降; 
+    55. 指标训练集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-01"}))*100; 2566d947bc1f5aa3247dfa0cb980069c;最小值: -6.65166675886357; 最大值: 4.17408447938522; 均值: -0.024973707449151786; 整体的趋势: 下降; 
+    55. 指标测试集：(1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-01"}))*100; 2566d947bc1f5aa3247dfa0cb980069c;最小值: -1.3687661139756646; 最大值: 3.7827468563154953; 均值: -0.4947814139042674; 整体的趋势: 上升; 
+    56. 指标训练集：irate(node_disk_read_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); e0c6074d6094cea1557a5e54f7fa93a0;最小值: -0.09504382847419006; 最大值: 25.14084526316697; 均值: -0.09504382847419006; 整体的趋势: 上升; 
+    56. 指标测试集：irate(node_disk_read_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); e0c6074d6094cea1557a5e54f7fa93a0;最小值: -0.07032296359954787; 最大值: 3.739360532125748; 均值: -0.07032296359954787; 整体的趋势: 上升; 
+    57. 指标训练集：node_load1{hostname=~"bj2-rd-geass-prod-03"}; a8c6c1c8c583e456a28a2f4965b3a402;最小值: -0.6371588954018056; 最大值: 9.192278885538315; 均值: -0.3016158386227252; 整体的趋势: 下降; 
+    57. 指标测试集：node_load1{hostname=~"bj2-rd-geass-prod-03"}; a8c6c1c8c583e456a28a2f4965b3a402;最小值: -0.6108186138344011; 最大值: 9.789221474965892; 均值: -0.29179897920862524; 整体的趋势: 上升; 
+    58. 指标训练集：node_sockstat_TCP_tw{hostname=~"bj2-rd-geass-prod-03"}; d09f004cdeedc7fa8b3b32e67649288d;最小值: -4.83765977004176; 最大值: 4.13048945512285; 均值: 0.010394120716682227; 整体的趋势: 上升; 
+    58. 指标测试集：node_sockstat_TCP_tw{hostname=~"bj2-rd-geass-prod-03"}; d09f004cdeedc7fa8b3b32e67649288d;最小值: -2.89159986410936; 最大值: 4.444091929030442; 均值: -0.02868847425276292; 整体的趋势: 下降; 
+    59. 指标训练集：probe_duration_seconds{hostname=~"bj1-rd-geass-prod-04"}; d6e92c70aafc868a283cbaa039638b2c;最小值: -0.029573198381914186; 最大值: 1.142838589170465; 均值: -0.00984744090777527; 整体的趋势: 上升; 
+    59. 指标测试集：probe_duration_seconds{hostname=~"bj1-rd-geass-prod-04"}; d6e92c70aafc868a283cbaa039638b2c;最小值: -0.0390099382384324; 最大值: 1.1469152806502465; 均值: -0.012315995417966423; 整体的趋势: 下降; 
+    60. 指标训练集：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 60c7546d1033e83a437b0d571a445954;最小值: -0.05500386765130942; 最大值: 44.06581221715131; 均值: -0.05500386765130942; 整体的趋势: 下降; 
+    60. 指标测试集：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 60c7546d1033e83a437b0d571a445954;最小值: -0.05840105575094739; 最大值: 25.859389166549278; 均值: -0.05840105575094739; 整体的趋势: 上升; 
+    61. 指标训练集：irate(node_disk_write_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 04ae150164bd9023cf53b814750ec364;最小值: -0.2890145570414815; 最大值: 15.763366350686676; 均值: -0.17435469353403948; 整体的趋势: 上升; 
+    61. 指标测试集：irate(node_disk_write_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m]); 04ae150164bd9023cf53b814750ec364;最小值: -0.28866981073241205; 最大值: 12.125017895073745; 均值: -0.16789731025563134; 整体的趋势: 上升; 
+    62. 指标训练集：probe_duration_seconds{hostname=~"bj1-rd-geass-prod-01"}; bd07d873940e2132949c70ca1da2150a;最小值: -0.12097581340720254; 最大值: 1.6479636050518118; 均值: -0.09529418419929553; 整体的趋势: 上升; 
+    62. 指标测试集：probe_duration_seconds{hostname=~"bj1-rd-geass-prod-01"}; bd07d873940e2132949c70ca1da2150a;最小值: -0.13452987315889; 最大值: 1.3374179852274717; 均值: -0.09059236810678355; 整体的趋势: 下降; 
+    63. 指标训练集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 4854c3db58aa5fd29df287bfd431646b;最小值: -0.33773866493545446; 最大值: 35.37544222099345; 均值: -0.19267545432014138; 整体的趋势: 上升; 
+    63. 指标测试集：irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 4854c3db58aa5fd29df287bfd431646b;最小值: -0.11363764371902159; 最大值: 26.162726846195916; 均值: -0.07873575274314977; 整体的趋势: 上升; 
+    64. 指标训练集：node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-01"}; c3630721e555a9274fd52e406cab4c04;最小值: -3.394230677859981; 最大值: 13.00972647051267; 均值: 0.019416197785621498; 整体的趋势: 下降; 
+    64. 指标测试集：node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-01"}; c3630721e555a9274fd52e406cab4c04;最小值: -1.127463425867344; 最大值: 4.815536162486152; 均值: -0.4653357543388293; 整体的趋势: 上升; 
+    65. 指标训练集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-01", mode=~"idle"}[2m])) by (mode, hostname); 5bf4b1e5c2bc0b6a02d6417981d1acb1;最小值: -1.831155831888381; 最大值: 7.42565809198606; 均值: -0.12049046783534806; 整体的趋势: 下降; 
+    65. 指标测试集：1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-01", mode=~"idle"}[2m])) by (mode, hostname); 5bf4b1e5c2bc0b6a02d6417981d1acb1;最小值: -1.4084691722691107; 最大值: 6.407850584695688; 均值: -0.10812426526335812; 整体的趋势: 上升; 
+    66. 指标训练集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m]); 3785c01c2f1575fb462b258bb1661d0d;最小值: -10.820961955194214; 最大值: 5.918698125072766; 均值: 0.010582802625594757; 整体的趋势: 下降; 
+    66. 指标测试集：irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m]); 3785c01c2f1575fb462b258bb1661d0d;最小值: -5.103987566747569; 最大值: 3.5608594802884013; 均值: -0.09462286767990824; 整体的趋势: 上升; 
+    67. 指标训练集：probe_duration_seconds{hostname=~"bj2-rd-geass-prod-03"}; bd08ce6b65bb5fb60918d2effb3e8aba;最小值: -0.11712394431201464; 最大值: 1.690349455267251; 均值: -0.0844630360723257; 整体的趋势: 下降; 
+    67. 指标测试集：probe_duration_seconds{hostname=~"bj2-rd-geass-prod-03"}; bd08ce6b65bb5fb60918d2effb3e8aba;最小值: -0.08670969155769137; 最大值: 2.0787953549682596; 均值: -0.06358060244595365; 整体的趋势: 上升; 
+    68. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"}); da98857481dfbe97b4f8b764072e142b;最小值: -1.6720923236426284; 最大值: 2.012902760811188; 均值: -0.22060453576649555; 整体的趋势: 上升; 
+    68. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"}); da98857481dfbe97b4f8b764072e142b;最小值: -1.2313739814713274; 最大值: 1.5751120192308052; 均值: -0.13332911062936534; 整体的趋势: 上升; 
+    69. 指标训练集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"}); 21940806b481c19f294286033f2363c8;最小值: -1.1280670897114875; 最大值: 1.707986955579926; 均值: -0.09302330576152272; 整体的趋势: 下降; 
+    69. 指标测试集：1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"}); 21940806b481c19f294286033f2363c8;最小值: -0.5694891612725504; 最大值: 1.0980046944758317; 均值: -0.00522037917571964; 整体的趋势: 上升; 
+    70. 指标训练集：node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-01"}; 7122521f2d8e9a5258a92f468a56fbc6;最小值: -4.726177871704294; 最大值: 11.649556977428611; 均值: 0.10299291543796071; 整体的趋势: 下降; 
+    70. 指标测试集：node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-01"}; 7122521f2d8e9a5258a92f468a56fbc6;最小值: -1.2336086345126032; 最大值: 4.830802257395704; 均值: -0.4446164011265733; 整体的趋势: 上升; 
+    71. 指标训练集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 4dcfd6f97b2c9fdca75402e3c7453c40;最小值: -1.1455700061372451; 最大值: 9.10224080528849; 均值: -0.47431602285608326; 整体的趋势: 上升; 
+    71. 指标测试集：irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 4dcfd6f97b2c9fdca75402e3c7453c40;最小值: -0.9984882914309632; 最大值: 11.263961766651596; 均值: -0.3490750484795503; 整体的趋势: 下降; 
+    72. 指标训练集：irate(node_network_receive_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; b6ebbca839bb7a52eb83d66992c6d2c6;最小值: -1.4284884720073792; 最大值: 16.104748265452496; 均值: -0.18031085496860988; 整体的趋势: 下降; 
+    72. 指标测试集：irate(node_network_receive_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; b6ebbca839bb7a52eb83d66992c6d2c6;最小值: -1.4333521074569306; 最大值: 3.929168768653001; 均值: -0.14564650494965084; 整体的趋势: 下降; 
+    73. 指标训练集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 2357c4d5d1b0c074e417bb86bb48edf5;最小值: -0.30831862079968764; 最大值: 20.658524426072557; 均值: -0.16583389663436965; 整体的趋势: 上升; 
+    73. 指标测试集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m]); 2357c4d5d1b0c074e417bb86bb48edf5;最小值: -0.23608587230748695; 最大值: 21.966676385595626; 均值: -0.13236288099017832; 整体的趋势: 上升; 
+    74. 指标训练集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 4bc22c03bf066c547352c0f9fc0324ae;最小值: -0.5658722100662344; 最大值: 26.48973480177922; 均值: -0.34917538091431743; 整体的趋势: 下降; 
+    74. 指标测试集：irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 4bc22c03bf066c547352c0f9fc0324ae;最小值: -0.9957213998001987; 最大值: 6.484548265035538; 均值: -0.5312925038328544; 整体的趋势: 下降; 
+    75. 指标训练集：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 22908c49cf157de1ed436e7ba84508d8;最小值: -0.10051275508543847; 最大值: 20.95244727429988; 均值: -0.10051275508543847; 整体的趋势: 下降; 
+    75. 指标测试集：irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m]); 22908c49cf157de1ed436e7ba84508d8;最小值: -0.09046846714207339; 最大值: 21.74406827410204; 均值: -0.09046846714207339; 整体的趋势: 下降; 
+    76. 指标训练集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); e1b9a0045e38e7cbd1df794c7639a909;最小值: -0.07369011449045951; 最大值: 54.7130992562103; 均值: -0.07369011449045951; 整体的趋势: 下降; 
+    76. 指标测试集：irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m]); e1b9a0045e38e7cbd1df794c7639a909;最小值: -0.22449083500291214; 最大值: 8.214442653789876; 均值: -0.22449083500291214; 整体的趋势: 下降; 
+    77. 指标训练集：node_load1{hostname=~"bj1-rd-geass-prod-01"}; 60b575327c19a5e2d24425d900f19f86;最小值: -0.8306981819064395; 最大值: 10.275736816922969; 均值: -0.31598183283607567; 整体的趋势: 下降; 
+    77. 指标测试集：node_load1{hostname=~"bj1-rd-geass-prod-01"}; 60b575327c19a5e2d24425d900f19f86;最小值: -0.9283628385521706; 最大值: 10.798031011684348; 均值: -0.25661424937299265; 整体的趋势: 上升; 
+    78. 指标训练集：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 287bcb8023c7ed2bc484613049d54610;最小值: -2.13810260977014; 最大值: 9.905777880754973; 均值: -0.13246404147960178; 整体的趋势: 上升; 
+    78. 指标测试集：irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8; 287bcb8023c7ed2bc484613049d54610;最小值: -2.3549781516245063; 最大值: 7.306736655613214; 均值: -0.24785330808502118; 整体的趋势: 下降; 
+    79. 指标训练集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m]); dec71c0556a28c717efef8744ffd0980;最小值: -0.9384435172589936; 最大值: 3.7604216015823932; 均值: -0.6366815371499137; 整体的趋势: 下降; 
+    79. 指标测试集：irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m]); dec71c0556a28c717efef8744ffd0980;最小值: -1.0902439170852916; 最大值: 3.489150207420518; 均值: -0.6323045046347106; 整体的趋势: 下降; 
+
+SCWARN 算法认为在下述时间戳有异常：
+    1, 2024-03-15 00:17:00
+
+具体指标异常对应的形状：
+    1.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 05:59:00
+    2.指标名称: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00, 2024-03-15 13:53:00, 2024-03-15 13:55:00, 2024-03-15 13:57:00
+    3.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 09:33:00
+    4.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 00:11:00, 2024-03-15 00:47:00
+    5.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 08:49:00
+    6.指标名称: node_load1{hostname=~"bj2-rd-geass-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 19:35:00
+    7.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-02"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 19:59:00, 2024-03-14 20:01:00, 2024-03-14 20:03:00, 2024-03-14 20:05:00, 2024-03-14 20:07:00, 2024-03-14 20:09:00, 2024-03-14 20:11:00, 2024-03-14 20:13:00, 2024-03-14 20:15:00, 2024-03-14 20:17:00, 2024-03-14 20:19:00, 2024-03-14 20:21:00, 2024-03-14 20:23:00, 2024-03-14 20:25:00, 2024-03-14 20:27:00, 2024-03-14 20:29:00, 2024-03-14 20:31:00, 2024-03-14 20:33:00, 2024-03-14 20:35:00, 2024-03-14 20:37:00, 2024-03-14 20:39:00, 2024-03-14 20:41:00, 2024-03-14 20:43:00, 2024-03-14 20:45:00, 2024-03-14 20:47:00, 2024-03-14 20:49:00, 2024-03-14 20:51:00, 2024-03-14 20:53:00, 2024-03-14 20:55:00, 2024-03-14 20:57:00, 2024-03-14 20:59:00, 2024-03-14 21:01:00, 2024-03-14 21:03:00, 2024-03-14 21:05:00, 2024-03-14 21:07:00, 2024-03-14 21:09:00, 2024-03-14 21:11:00, 2024-03-14 21:13:00, 2024-03-14 21:15:00, 2024-03-14 21:17:00, 2024-03-14 21:19:00, 2024-03-14 21:21:00, 2024-03-14 21:23:00, 2024-03-14 21:25:00, 2024-03-14 21:27:00, 2024-03-14 21:29:00, 2024-03-14 21:31:00, 2024-03-14 21:33:00, 2024-03-14 21:35:00, 2024-03-14 21:37:00, 2024-03-14 21:39:00, 2024-03-14 21:41:00, 2024-03-14 21:43:00, 2024-03-14 21:45:00, 2024-03-14 21:47:00, 2024-03-14 21:49:00, 2024-03-14 21:51:00, 2024-03-14 21:53:00, 2024-03-14 23:59:00, 2024-03-15 00:01:00, 2024-03-15 16:51:00, 2024-03-15 16:53:00, 2024-03-15 16:55:00, 2024-03-15 16:57:00, 2024-03-15 16:59:00, 2024-03-15 17:01:00, 2024-03-15 17:03:00, 2024-03-15 17:05:00, 2024-03-15 17:07:00, 2024-03-15 17:09:00, 2024-03-15 17:11:00, 2024-03-15 17:13:00, 2024-03-15 17:15:00, 2024-03-15 17:17:00, 2024-03-15 17:19:00, 2024-03-15 17:21:00, 2024-03-15 17:23:00, 2024-03-15 17:25:00, 2024-03-15 17:27:00, 2024-03-15 17:29:00, 2024-03-15 17:31:00, 2024-03-15 17:33:00, 2024-03-15 17:35:00, 2024-03-15 17:37:00, 2024-03-15 17:39:00, 2024-03-15 17:41:00, 2024-03-15 17:43:00, 2024-03-15 17:45:00, 2024-03-15 17:47:00, 2024-03-15 17:49:00, 2024-03-15 17:53:00, 2024-03-15 17:55:00
+    8.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 09:27:00
+    9.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 06:49:00, 2024-03-15 06:51:00
+    10.指标名称: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-04"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 00:47:00
+    11.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 16:13:00, 2024-03-15 16:47:00, 2024-03-15 18:23:00
+    12.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00
+    13.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single dip']
+      其中，类型[Single dip]的时间戳是: 2024-03-15 00:11:00
+    14.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 23:41:00
+    15.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-01"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00
+    16.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:43:00, 2024-03-15 17:25:00, 2024-03-15 17:27:00, 2024-03-15 17:31:00, 2024-03-15 17:33:00, 2024-03-15 17:35:00, 2024-03-15 17:37:00, 2024-03-15 17:39:00, 2024-03-15 17:41:00, 2024-03-15 17:43:00, 2024-03-15 17:45:00, 2024-03-15 17:47:00, 2024-03-15 17:49:00, 2024-03-15 17:51:00, 2024-03-15 17:53:00, 2024-03-15 17:55:00, 2024-03-15 17:57:00, 2024-03-15 17:59:00, 2024-03-15 18:01:00, 2024-03-15 18:03:00, 2024-03-15 18:05:00, 2024-03-15 18:07:00, 2024-03-15 18:09:00, 2024-03-15 18:11:00, 2024-03-15 18:13:00, 2024-03-15 18:15:00, 2024-03-15 18:17:00, 2024-03-15 18:25:00, 2024-03-15 18:27:00, 2024-03-15 18:29:00, 2024-03-15 18:31:00, 2024-03-15 18:33:00, 2024-03-15 18:35:00, 2024-03-15 18:37:00, 2024-03-15 18:39:00, 2024-03-15 18:41:00, 2024-03-15 18:43:00, 2024-03-15 18:45:00, 2024-03-15 18:47:00, 2024-03-15 18:49:00, 2024-03-15 18:51:00, 2024-03-15 18:53:00
+    17.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00, 2024-03-15 18:41:00
+    18.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00
+    19.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 20:41:00, 2024-03-15 06:11:00
+    20.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 08:59:00, 2024-03-15 09:01:00, 2024-03-15 09:03:00, 2024-03-15 13:41:00, 2024-03-15 18:41:00
+    21.指标名称: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 09:01:00, 2024-03-15 13:41:00, 2024-03-15 18:41:00
+    22.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 08:49:00
+    23.指标名称: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 13:41:00, 2024-03-15 18:41:00
+    24.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 23:47:00
+    25.指标名称: node_load1{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 05:59:00
+    26.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 08:49:00, 2024-03-15 08:59:00
+    27.指标名称: node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 10:53:00, 2024-03-15 12:57:00
+    28.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 01:01:00, 2024-03-15 13:53:00, 2024-03-15 16:13:00, 2024-03-15 16:17:00, 2024-03-15 16:47:00, 2024-03-15 18:23:00
+    29.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 18:13:00
+    30.指标名称: node_load1{hostname=~"bj1-rd-geass-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 06:49:00, 2024-03-15 06:51:00, 2024-03-15 06:53:00
+    31.指标名称: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-04"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 11:53:00, 2024-03-15 12:15:00, 2024-03-15 18:57:00
+    32.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 05:41:00
+    33.指标名称: node_sockstat_TCP_tw{hostname=~"bj2-rd-geass-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 04:41:00
+    34.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj2-rd-geass-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj2-rd-geass-prod-03"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 15:31:00
+    35.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 20:41:00
+    36.指标名称: node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 08:59:00, 2024-03-15 09:01:00, 2024-03-15 09:03:00, 2024-03-15 13:41:00, 2024-03-15 18:41:00
+    37.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 22:11:00, 2024-03-15 03:41:00, 2024-03-15 16:41:00
+    38.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj2-rd-geass-prod-03", mode=~"idle"}[2m])) by (mode, hostname)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 23:41:00, 2024-03-14 23:43:00
+    39.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Steady increase']
+      其中，类型[Steady increase]的时间戳是: 2024-03-14 23:57:00
+    40.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 20:41:00, 2024-03-14 20:43:00, 2024-03-14 20:45:00, 2024-03-14 20:47:00, 2024-03-14 20:49:00, 2024-03-14 20:51:00, 2024-03-14 20:53:00, 2024-03-14 20:55:00, 2024-03-14 20:57:00, 2024-03-14 20:59:00, 2024-03-14 21:01:00, 2024-03-14 21:03:00, 2024-03-14 21:05:00, 2024-03-14 21:07:00, 2024-03-14 21:09:00, 2024-03-14 21:11:00, 2024-03-14 21:13:00, 2024-03-14 21:15:00, 2024-03-14 21:17:00, 2024-03-14 21:19:00, 2024-03-14 21:21:00, 2024-03-14 21:23:00, 2024-03-14 21:25:00, 2024-03-14 21:27:00, 2024-03-14 21:29:00, 2024-03-14 21:31:00, 2024-03-14 21:33:00, 2024-03-14 21:35:00, 2024-03-14 21:37:00, 2024-03-14 21:39:00, 2024-03-14 21:41:00, 2024-03-14 21:43:00, 2024-03-14 21:45:00, 2024-03-14 21:47:00, 2024-03-14 21:49:00, 2024-03-14 21:51:00, 2024-03-14 21:53:00, 2024-03-14 21:55:00, 2024-03-14 21:57:00, 2024-03-14 21:59:00, 2024-03-14 22:01:00, 2024-03-14 22:03:00, 2024-03-14 22:05:00, 2024-03-14 22:07:00, 2024-03-14 22:09:00, 2024-03-14 22:47:00, 2024-03-14 22:49:00, 2024-03-14 22:51:00, 2024-03-14 22:53:00, 2024-03-15 01:15:00, 2024-03-15 01:17:00, 2024-03-15 01:19:00, 2024-03-15 01:21:00, 2024-03-15 01:23:00, 2024-03-15 01:25:00, 2024-03-15 01:27:00, 2024-03-15 01:29:00, 2024-03-15 01:31:00, 2024-03-15 01:43:00, 2024-03-15 01:45:00, 2024-03-15 01:47:00, 2024-03-15 02:53:00, 2024-03-15 02:55:00, 2024-03-15 02:57:00, 2024-03-15 02:59:00, 2024-03-15 03:09:00, 2024-03-15 03:11:00, 2024-03-15 03:13:00, 2024-03-15 03:15:00, 2024-03-15 03:17:00, 2024-03-15 09:35:00, 2024-03-15 11:47:00, 2024-03-15 11:49:00, 2024-03-15 11:51:00, 2024-03-15 11:53:00, 2024-03-15 11:55:00, 2024-03-15 11:57:00, 2024-03-15 11:59:00, 2024-03-15 12:01:00, 2024-03-15 12:03:00, 2024-03-15 12:05:00, 2024-03-15 12:07:00, 2024-03-15 12:09:00, 2024-03-15 12:11:00, 2024-03-15 12:25:00, 2024-03-15 13:59:00, 2024-03-15 14:01:00, 2024-03-15 14:03:00, 2024-03-15 14:05:00, 2024-03-15 14:07:00, 2024-03-15 14:09:00, 2024-03-15 14:11:00, 2024-03-15 14:13:00, 2024-03-15 14:15:00, 2024-03-15 14:17:00, 2024-03-15 14:19:00, 2024-03-15 14:21:00, 2024-03-15 14:23:00, 2024-03-15 14:25:00, 2024-03-15 14:27:00, 2024-03-15 14:29:00, 2024-03-15 14:33:00, 2024-03-15 14:35:00, 2024-03-15 14:37:00, 2024-03-15 14:39:00, 2024-03-15 14:41:00, 2024-03-15 14:43:00, 2024-03-15 14:45:00, 2024-03-15 14:47:00, 2024-03-15 15:59:00, 2024-03-15 16:01:00, 2024-03-15 16:03:00, 2024-03-15 16:05:00, 2024-03-15 16:07:00, 2024-03-15 16:09:00, 2024-03-15 18:05:00, 2024-03-15 18:07:00, 2024-03-15 18:09:00, 2024-03-15 18:11:00, 2024-03-15 18:13:00, 2024-03-15 18:15:00, 2024-03-15 18:19:00, 2024-03-15 18:21:00, 2024-03-15 18:23:00, 2024-03-15 18:25:00
+    41.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 20:21:00, 2024-03-15 04:41:00, 2024-03-15 07:59:00, 2024-03-15 09:05:00, 2024-03-15 10:33:00, 2024-03-15 11:47:00, 2024-03-15 13:41:00, 2024-03-15 13:45:00, 2024-03-15 13:53:00, 2024-03-15 14:01:00
+    42.指标名称: node_load5{hostname=~"bj1-rd-geass-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 06:51:00
+    43.指标名称: node_load15{hostname=~"bj1-rd-geass-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 16:39:00
+    44.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Level shift down']
+      其中，类型[Level shift down]的时间戳是: 2024-03-14 23:41:00
+    45.指标名称: node_sockstat_TCP_inuse{hostname=~"bj2-rd-geass-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-14 20:01:00, 2024-03-15 14:47:00
+    46.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 11:11:00, 2024-03-15 16:41:00
+    47.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]的时间戳是: 2024-03-15 00:41:00
+总共发现 347 个异常情况
+出现异常的指标总数：47
+异常描述形状编号总数：4
+
+这是对异常类型(pattern)的定义：
+    异常描述形状分为两大类：Still in abnormal state和Recover to normal state,
+    Still in abnormal state,这类异常在出现异常点后持续处于异常状态
+     1. Sudden increase 突增
+     2. Sudden decrease 突降
+     3. Level shift up 整体层次上升
+     4. Level shift down 整体层次下降
+     5. Steady increase 持续上升
+     6. Steady decrease 持续下降
+    Recover to normal state,这类异常在出现异常点后回归正常状态
+     7. Single spike 单一高峰
+     8. Single dip 单一低谷
+     9. Transient level shift up 瞬间整体层次上升
+     10. Transient level shift down 瞬间整体层次下降
+     11. Multiple spikes 连续多峰
+     12. Multiple dips 连续多谷
+     13. Fluctuations 持续波动
+
+请分析如上领域文本以及指标异常情况,并给出你的判断:预期变更or失败变更
+并且给出你的思考和推理原因,如果是失败变更,请给出你的建议解决方法
+请按如下格式进行回答:{(
+ "change_type":"请返回预期变更或是失败变更,"
+ "reason":"你确定change_type字段的原因",
+ "solution":"None if this is an expected change or solution")}

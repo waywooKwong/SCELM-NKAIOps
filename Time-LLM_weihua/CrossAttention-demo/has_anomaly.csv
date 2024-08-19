@@ -1,0 +1,34 @@
+趋势变化的指标,异常
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",出现异常
+"node_sockstat_TCP_inuse{hostname=~""bj1-rd-bkverify-prod-03""}",出现异常
+"1-avg(irate(node_cpu_seconds_total{hostname=~""bj1-rd-bkverify-prod-03"", mode=~""idle""}[2m])) by (mode, hostname)",正常
+"irate(node_disk_writes_completed_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",出现异常
+"histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job=""be/bkverify"",environment=""prod""}[2m])) by (job,le))",正常
+"node_sockstat_TCP_tw{hostname=~""bj1-rd-bkverify-prod-03""}",出现异常
+"irate(node_disk_write_time_seconds_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",出现异常
+"node_sockstat_TCP_tw{hostname=~""bj3-rd-bkverify-prod-02""}",出现异常
+ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>,出现异常
+"irate(node_disk_read_time_seconds_total{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",出现异常
+"irate(node_netstat_Tcp_ActiveOpens{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",出现异常
+"probe_duration_seconds{hostname=~""bj1-rd-bkverify-prod-03""}",出现异常
+"node_sockstat_TCP_alloc{hostname=~""bj1-rd-bkverify-prod-03""}",出现异常
+"irate(node_disk_written_bytes_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",出现异常
+"1-(node_filesystem_free_bytes{hostname=~""bj3-rd-bkverify-prod-02"",fstype=~""ext4|xfs"",mountpoint=""/""} / node_filesystem_size_bytes{hostname=~""bj3-rd-bkverify-prod-02"",fstype=~""ext4|xfs"",mountpoint=""/""})",出现异常
+pyroscope upload profile: do http <:RequestPost:>,正常
+"node_load5{hostname=~""bj1-rd-bkverify-prod-01""}",出现异常
+"node_load1{hostname=~""bj1-rd-bkverify-prod-01""}",出现异常
+"node_sockstat_TCP_alloc{hostname=~""bj3-rd-bkverify-prod-02""}",出现异常
+"(1-(node_memory_MemAvailable_bytes{hostname=~""bj1-rd-bkverify-prod-03""}/node_memory_MemTotal_bytes{hostname=~""bj1-rd-bkverify-prod-03""}))*100",出现异常
+"irate(node_network_transmit_bytes_total{hostname=~""bj1-rd-bkverify-prod-03"",device!~""tap.*|veth.*|br.*|docker.*|virbr*|lo*""}[5m])*8",出现异常
+"node_load15{hostname=~""bj1-rd-bkverify-prod-01""}",正常
+"node_netstat_Tcp_CurrEstab{hostname=~""bj3-rd-bkverify-prod-02""}",正常
+"irate(node_disk_writes_completed_total{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",正常
+"irate(node_network_receive_bytes_total{hostname=~""bj1-rd-bkverify-prod-03"",device!~""tap.*|veth.*|br.*|docker.*|virbr*|lo*""}[5m])*8",出现异常
+unknown,正常
+"1-avg(irate(node_cpu_seconds_total{hostname=~""bj3-rd-bkverify-prod-02"", mode=~""idle""}[2m])) by (mode, hostname)",出现异常
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",正常
+"1-(node_filesystem_free_bytes{hostname=~""bj1-rd-bkverify-prod-01"",fstype=~""ext4|xfs"",mountpoint=""/""} / node_filesystem_size_bytes{hostname=~""bj1-rd-bkverify-prod-01"",fstype=~""ext4|xfs"",mountpoint=""/""})",出现异常
+"probe_duration_seconds{hostname=~""bj1-rd-bkverify-prod-01""}",出现异常
+"irate(node_disk_reads_completed_total{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",出现异常
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",正常
+"irate(node_disk_write_time_seconds_total{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",正常

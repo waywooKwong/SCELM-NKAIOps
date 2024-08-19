@@ -1,0 +1,497 @@
+异常变更领域文本：
+编号:NO.29811
+服务:E-TRAN
+提交开始时间:2024-03-09 09:54:16
+提交结束时间:2024-03-14 09:54:16
+分析开始时间:2024-03-14 09:54:16
+分析结束时间:2024-03-15 09:54:16
+与服务相关的指标变化分析：
+    1.指标名称: increase(http_service_level_sli_result_duration_total{job="be/bkverify"}[2m])
+        变更发生前最小值: -0.0281; 最大值: 49.7585; 均值: -0.0277; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0755; 最大值: 23.7552; 均值: -0.0546; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0281,49.7585], 变更后范围：[-0.0755,23.7552]
+    2.指标名称: sum(rate(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+        变更发生前最小值: -1.7045; 最大值: 8.1493; 均值: 0.3381; 整体的趋势: 下降; 
+        变更发生后最小值: -1.7406; 最大值: 1.8043; 均值: 0.4259; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.7045,8.1493], 变更后范围：[-1.7406,1.8043]
+    3.指标名称: node_load15{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -0.586; 最大值: 6.5954; 均值: -0.586; 整体的趋势: 下降; 
+        变更发生后最小值: -0.5645; 最大值: 5.5105; 均值: -0.5645; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.586,6.5954], 变更后范围：[-0.5645,5.5105]
+    4.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"})
+        变更发生前最小值: -0.3397; 最大值: 0.4167; 均值: -0.0678; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0964; 最大值: 0.1203; 均值: -0.0078; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.3397,0.4167], 变更后范围：[-0.0964,0.1203]
+    5.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -6.0242; 最大值: 6.4607; 均值: -0.0556; 整体的趋势: 下降; 
+        变更发生后最小值: -1.2551; 最大值: 5.287; 均值: -0.2147; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-6.0242,6.4607], 变更后范围：[-1.2551,5.287]
+    6.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-03"}))*100
+        变更发生前最小值: -1.7154; 最大值: 2.0158; 均值: -0.3079; 整体的趋势: 上升; 
+        变更发生后最小值: -3.967; 最大值: 2.1906; 均值: 0.0386; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.7154,2.0158], 变更后范围：[-3.967,2.1906]
+    7.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-bkverify-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+        变更发生前最小值: -0.9389; 最大值: 15.7274; 均值: -0.0167; 整体的趋势: 上升; 
+        变更发生后最小值: -0.7974; 最大值: 15.6194; 均值: -0.0139; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.9389,15.7274], 变更后范围：[-0.7974,15.6194]
+    8.指标名称: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -4.7184; 最大值: 5.4367; 均值: 0.1711; 整体的趋势: 下降; 
+        变更发生后最小值: -2.8513; 最大值: 2.4136; 均值: 0.2792; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-4.7184,5.4367], 变更后范围：[-2.8513,2.4136]
+    9.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -0.0295; 最大值: 56.1854; 均值: -0.0295; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0383; 最大值: 26.6435; 均值: -0.0383; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0295,56.1854], 变更后范围：[-0.0383,26.6435]
+    10.指标名称: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -4.1637; 最大值: 8.1898; 均值: 0.0961; 整体的趋势: 下降; 
+        变更发生后最小值: -2.6001; 最大值: 3.0672; 均值: 0.1202; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-4.1637,8.1898], 变更后范围：[-2.6001,3.0672]
+    11.指标名称: sum(increase(std_requests_total{job="be/bkverify",code="404",environment="prod"}[2m]))
+        变更发生前最小值: -21.5648; 最大值: 0.0747; 均值: 0.0474; 整体的趋势: 上升; 
+        变更发生后最小值: -15.4483; 最大值: 0.1071; 均值: 0.0656; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-21.5648,0.0747], 变更后范围：[-15.4483,0.1071]
+    12.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: -1.1424; 最大值: 4.6903; 均值: -0.5176; 整体的趋势: 下降; 
+        变更发生后最小值: -1.183; 最大值: 2.4816; 均值: -0.5363; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-1.1424,4.6903], 变更后范围：[-1.183,2.4816]
+    13.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+        变更发生前最小值: -0.6476; 最大值: 0.8367; 均值: -0.0041; 整体的趋势: 下降; 
+        变更发生后最小值: -0.3385; 最大值: 0.4182; 均值: -0.0577; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.6476,0.8367], 变更后范围：[-0.3385,0.4182]
+    14.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.1377; 最大值: 7.2596; 均值: -0.1377; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.1377,7.2596], 变更后范围：[0.0,0.0]
+    15.指标名称: 1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m]))))
+        变更发生前最小值: -54.7; 最大值: 0.0346; 均值: 0.0346; 整体的趋势: 上升; 
+        变更发生后最小值: -26.6112; 最大值: 0.0419; 均值: 0.0419; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-54.7,0.0346], 变更后范围：[-26.6112,0.0419]
+    16.指标名称: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: -17.2328; 最大值: 0.0433; 均值: 0.0191; 整体的趋势: 上升; 
+        变更发生后最小值: -0.021; 最大值: 0.0211; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-17.2328,0.0433], 变更后范围：[-0.021,0.0211]
+    17.指标名称: node_load5{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.2488; 最大值: 14.1552; 均值: -0.2488; 整体的趋势: 上升; 
+        变更发生后最小值: -0.2465; 最大值: 12.3438; 均值: -0.2465; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.2488,14.1552], 变更后范围：[-0.2465,12.3438]
+    18.指标名称: node_load1{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -0.413; 最大值: 22.8813; 均值: -0.1938; 整体的趋势: 下降; 
+        变更发生后最小值: -0.3599; 最大值: 13.8015; 均值: -0.2168; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.413,22.8813], 变更后范围：[-0.3599,13.8015]
+    19.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: -6.2651; 最大值: 6.3139; 均值: 0.0227; 整体的趋势: 上升; 
+        变更发生后最小值: -0.007; 最大值: 0.007; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-6.2651,6.3139], 变更后范围：[-0.007,0.007]
+    20.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.2237; 最大值: 29.4725; 均值: -0.0441; 整体的趋势: 下降; 
+        变更发生后最小值: -0.2486; 最大值: 3.9777; 均值: -0.0649; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.2237,29.4725], 变更后范围：[-0.2486,3.9777]
+    21.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -3.2558; 最大值: 8.6512; 均值: -0.0806; 整体的趋势: 下降; 
+        变更发生后最小值: -2.0912; 最大值: 14.1364; 均值: -0.0628; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-3.2558,8.6512], 变更后范围：[-2.0912,14.1364]
+    22.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"})
+        变更发生前最小值: -0.6005; 最大值: 0.8732; 均值: -0.0495; 整体的趋势: 下降; 
+        变更发生后最小值: -0.3165; 最大值: 0.405; 均值: -0.0643; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.6005,0.8732], 变更后范围：[-0.3165,0.405]
+    23.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-bkverify-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-bkverify-prod-02"}))*100
+        变更发生前最小值: -2.9138; 最大值: 0.832; 均值: 0.3487; 整体的趋势: 下降; 
+        变更发生后最小值: -2.8157; 最大值: 2.1386; 均值: 0.0686; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-2.9138,0.832], 变更后范围：[-2.8157,2.1386]
+    24.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.0088; 最大值: 16.8308; 均值: -0.0088; 整体的趋势: 上升; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0088,16.8308], 变更后范围：[0.0,0.0]
+    25.指标名称: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.1655; 最大值: 6.0404; 均值: -0.1655; 整体的趋势: 上升; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.1655,6.0404], 变更后范围：[0.0,0.0]
+    26.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -0.343; 最大值: 8.2068; 均值: -0.0845; 整体的趋势: 上升; 
+        变更发生后最小值: -0.1828; 最大值: 23.6682; 均值: -0.0717; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.343,8.2068], 变更后范围：[-0.1828,23.6682]
+    27.指标名称: (sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+        变更发生前最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[0.0,0.0], 变更后范围：[0.0,0.0]
+    28.指标名称: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -1.468; 最大值: 12.0864; 均值: 0.1358; 整体的趋势: 上升; 
+        变更发生后最小值: -1.6899; 最大值: 4.0806; 均值: 0.1411; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.468,12.0864], 变更后范围：[-1.6899,4.0806]
+    29.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: -1.2264; 最大值: 3.7088; 均值: -0.4261; 整体的趋势: 上升; 
+        变更发生后最小值: -1.2647; 最大值: 3.0812; 均值: -0.3819; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-1.2264,3.7088], 变更后范围：[-1.2647,3.0812]
+    30.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -0.8096; 最大值: 25.5926; 均值: -0.192; 整体的趋势: 上升; 
+        变更发生后最小值: -0.2698; 最大值: 25.9062; 均值: -0.0745; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.8096,25.5926], 变更后范围：[-0.2698,25.9062]
+    31.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -4.7583; 最大值: 5.4236; 均值: 0.2698; 整体的趋势: 下降; 
+        变更发生后最小值: -2.8992; 最大值: 2.3906; 均值: 0.2461; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-4.7583,5.4236], 变更后范围：[-2.8992,2.3906]
+    32.指标名称: callService
+        变更发生前最小值: -0.5447; 最大值: 8.1909; 均值: -0.5447; 整体的趋势: 下降; 
+        变更发生后最小值: -0.4739; 最大值: 11.1917; 均值: -0.4739; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.5447,8.1909], 变更后范围：[-0.4739,11.1917]
+    33.指标名称: sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+        变更发生前最小值: -1.7045; 最大值: 8.1493; 均值: 0.3381; 整体的趋势: 下降; 
+        变更发生后最小值: -1.7406; 最大值: 1.8043; 均值: 0.4259; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.7045,8.1493], 变更后范围：[-1.7406,1.8043]
+    34.指标名称: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -0.0796; 最大值: 3.5293; 均值: -0.0522; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0691; 最大值: 1.0505; 均值: -0.0461; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.0796,3.5293], 变更后范围：[-0.0691,1.0505]
+    35.指标名称: node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -3.0519; 最大值: 2.0755; 均值: -0.4882; 整体的趋势: 下降; 
+        变更发生后最小值: -4.547; 最大值: 2.0589; 均值: -0.5835; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-3.0519,2.0755], 变更后范围：[-4.547,2.0589]
+    36.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.5285; 最大值: 52.3566; 均值: -0.0817; 整体的趋势: 下降; 
+        变更发生后最小值: -0.8236; 最大值: 19.8041; 均值: -0.1781; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.5285,52.3566], 变更后范围：[-0.8236,19.8041]
+    37.指标名称: node_load1{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -0.4099; 最大值: 21.8624; 均值: -0.2368; 整体的趋势: 下降; 
+        变更发生后最小值: -0.5261; 最大值: 14.7343; 均值: -0.2099; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.4099,21.8624], 变更后范围：[-0.5261,14.7343]
+    38.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[0.0,0.0], 变更后范围：[0.0,0.0]
+    39.指标名称: <:ControlInfo:>
+        变更发生前最小值: -1.486; 最大值: 12.1674; 均值: 0.2656; 整体的趋势: 下降; 
+        变更发生后最小值: -1.6015; 最大值: 1.7352; 均值: 0.3855; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.486,12.1674], 变更后范围：[-1.6015,1.7352]
+    40.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: -0.2582; 最大值: 4.5103; 均值: -0.1601; 整体的趋势: 下降; 
+        变更发生后最小值: -0.237; 最大值: 2.5813; 均值: -0.1377; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.2582,4.5103], 变更后范围：[-0.237,2.5813]
+    41.指标名称: node_load15{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -0.5512; 最大值: 7.5903; 均值: -0.5512; 整体的趋势: 下降; 
+        变更发生后最小值: -0.5164; 最大值: 7.8409; 均值: -0.5164; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.5512,7.5903], 变更后范围：[-0.5164,7.8409]
+    42.指标名称: node_load15{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.0715; 最大值: 12.0664; 均值: -0.0715; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0575; 最大值: 10.1707; 均值: -0.0575; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0715,12.0664], 变更后范围：[-0.0575,10.1707]
+    43.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -1.2044; 最大值: 43.5731; 均值: 0.1089; 整体的趋势: 下降; 
+        变更发生后最小值: -1.7337; 最大值: 4.0527; 均值: 0.2845; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.2044,43.5731], 变更后范围：[-1.7337,4.0527]
+    44.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -0.0414; 最大值: 38.107; 均值: -0.0414; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0426; 最大值: 26.5295; 均值: -0.0426; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0414,38.107], 变更后范围：[-0.0426,26.5295]
+    45.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+        变更发生前最小值: -2.8423; 最大值: 15.3215; 均值: 0.0101; 整体的趋势: 下降; 
+        变更发生后最小值: -0.6858; 最大值: 14.4217; 均值: -0.003; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-2.8423,15.3215], 变更后范围：[-0.6858,14.4217]
+    46.指标名称: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.1655; 最大值: 6.0404; 均值: -0.1655; 整体的趋势: 上升; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.1655,6.0404], 变更后范围：[0.0,0.0]
+    47.指标名称: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -1.5964; 最大值: 10.5215; 均值: -0.0328; 整体的趋势: 上升; 
+        变更发生后最小值: -1.7186; 最大值: 3.757; 均值: 0.0883; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.5964,10.5215], 变更后范围：[-1.7186,3.757]
+    48.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -3.4232; 最大值: 11.509; 均值: 0.061; 整体的趋势: 下降; 
+        变更发生后最小值: -3.3924; 最大值: 6.3948; 均值: -0.13; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-3.4232,11.509], 变更后范围：[-3.3924,6.3948]
+    49.指标名称: increase(http_service_level_sli_result_error_ratio_total{job="be/bkverify"}[2m])
+        变更发生前最小值: -0.0225; 最大值: 53.5262; 均值: -0.0225; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0828; 最大值: 15.9694; 均值: -0.0828; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0225,53.5262], 变更后范围：[-0.0828,15.9694]
+    50.指标名称: node_load5{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -0.7796; 最大值: 10.4331; 均值: -0.2867; 整体的趋势: 下降; 
+        变更发生后最小值: -0.6913; 最大值: 8.8342; 均值: -0.243; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.7796,10.4331], 变更后范围：[-0.6913,8.8342]
+    51.指标名称: node_load5{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -0.7626; 最大值: 10.7754; 均值: -0.2554; 整体的趋势: 下降; 
+        变更发生后最小值: -0.9126; 最大值: 11.285; 均值: -0.2707; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.7626,10.7754], 变更后范围：[-0.9126,11.285]
+    52.指标名称: increase(http_service_level_sli_result_duration_le5_total{job="be/bkverify"}[2m])
+        变更发生前最小值: -0.0281; 最大值: 49.762; 均值: -0.0277; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0755; 最大值: 23.7552; 均值: -0.0546; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0281,49.762], 变更后范围：[-0.0755,23.7552]
+    53.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[0.0,0.0], 变更后范围：[0.0,0.0]
+    54.指标名称: pyroscope upload profile: do http <:RequestPost:>
+        变更发生前最小值: -0.9514; 最大值: 5.928; 均值: 0.0314; 整体的趋势: 上升; 
+        变更发生后最小值: -1.0629; 最大值: 3.4841; 均值: -0.1535; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.9514,5.928], 变更后范围：[-1.0629,3.4841]
+    55.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -3.6503; 最大值: 5.3696; 均值: 0.2582; 整体的趋势: 下降; 
+        变更发生后最小值: -1.7335; 最大值: 3.6177; 均值: 0.3225; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-3.6503,5.3696], 变更后范围：[-1.7335,3.6177]
+    56.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -2.9511; 最大值: 3.26; 均值: 0.3817; 整体的趋势: 下降; 
+        变更发生后最小值: -4.8838; 最大值: 2.3836; 均值: 0.2034; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-2.9511,3.26], 变更后范围：[-4.8838,2.3836]
+    57.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -2.2417; 最大值: 4.1056; 均值: 0.3421; 整体的趋势: 下降; 
+        变更发生后最小值: -2.4165; 最大值: 2.2834; 均值: 0.3189; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-2.2417,4.1056], 变更后范围：[-2.4165,2.2834]
+    58.指标名称: probe_duration_seconds{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -0.0413; 最大值: 4.0333; 均值: -0.0165; 整体的趋势: 上升; 
+        变更发生后最小值: -0.0285; 最大值: 0.2519; 均值: -0.0042; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.0413,4.0333], 变更后范围：[-0.0285,0.2519]
+    59.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -1.049; 最大值: 20.0752; 均值: -0.3587; 整体的趋势: 上升; 
+        变更发生后最小值: -0.7683; 最大值: 19.1615; 均值: -0.3329; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.049,20.0752], 变更后范围：[-0.7683,19.1615]
+    60.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+        变更发生前最小值: -0.0326; 最大值: 45.9784; 均值: -0.0326; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0305; 最大值: 21.5649; 均值: -0.0305; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0326,45.9784], 变更后范围：[-0.0305,21.5649]
+    61.指标名称: node_sockstat_TCP_inuse{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -2.5876; 最大值: 5.8201; 均值: 0.3551; 整体的趋势: 下降; 
+        变更发生后最小值: -3.7815; 最大值: 2.1369; 均值: 0.2277; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-2.5876,5.8201], 变更后范围：[-3.7815,2.1369]
+    62.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -4.6; 最大值: 5.0298; 均值: -0.0965; 整体的趋势: 下降; 
+        变更发生后最小值: -3.1246; 最大值: 5.1851; 均值: -0.0689; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-4.6,5.0298], 变更后范围：[-3.1246,5.1851]
+    63.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+        变更发生前最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[0.0,0.0], 变更后范围：[0.0,0.0]
+    64.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-01"}))*100
+        变更发生前最小值: -3.2081; 最大值: 1.101; 均值: 0.3254; 整体的趋势: 下降; 
+        变更发生后最小值: -2.8451; 最大值: 1.9101; 均值: 0.2348; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-3.2081,1.101], 变更后范围：[-2.8451,1.9101]
+    65.指标名称: 1-sum(increase(std_grpc_server_handled_total{job="be/bkverify",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod"}[2m])) or vector(1)
+        变更发生前最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[0.0,0.0], 变更后范围：[0.0,0.0]
+    66.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"})
+        变更发生前最小值: -0.3656; 最大值: 0.3166; 均值: 0.0085; 整体的趋势: 上升; 
+        变更发生后最小值: -0.2279; 最大值: 0.3041; 均值: -0.0667; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.3656,0.3166], 变更后范围：[-0.2279,0.3041]
+    67.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+        变更发生前最小值: -0.0283; 最大值: 0.0284; 均值: -0.0001; 整体的趋势: 上升; 
+        变更发生后最小值: -0.0056; 最大值: 0.0056; 均值: 0.0; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.0283,0.0284], 变更后范围：[-0.0056,0.0056]
+    68.指标名称: 1- ((sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/bkverify",environment="prod"}[2m])))
+        变更发生前最小值: -1.6272; 最大值: 0.0017; 均值: 0.0017; 整体的趋势: 下降; 
+        变更发生后最小值: -0.755; 最大值: 0.0022; 均值: 0.0022; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.6272,0.0017], 变更后范围：[-0.755,0.0022]
+    69.指标名称: node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-01"}
+        变更发生前最小值: -1.5424; 最大值: 19.0666; 均值: 0.0587; 整体的趋势: 下降; 
+        变更发生后最小值: -1.8581; 最大值: 3.4361; 均值: 0.2358; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.5424,19.0666], 变更后范围：[-1.8581,3.4361]
+    70.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.0319; 最大值: 48.4499; 均值: -0.0319; 整体的趋势: 上升; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0319,48.4499], 变更后范围：[0.0,0.0]
+    71.指标名称: ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>
+        变更发生前最小值: -0.4471; 最大值: 10.7526; 均值: -0.4471; 整体的趋势: 上升; 
+        变更发生后最小值: -0.2153; 最大值: 11.7456; 均值: -0.2153; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.4471,10.7526], 变更后范围：[-0.2153,11.7456]
+    72.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-03", mode=~"idle"}[2m])) by (mode, hostname)
+        变更发生前最小值: -0.1471; 最大值: 0.3264; 均值: 0.0107; 整体的趋势: 上升; 
+        变更发生后最小值: -0.1507; 最大值: 0.2703; 均值: 0.0072; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.1471,0.3264], 变更后范围：[-0.1507,0.2703]
+    73.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        变更发生前最小值: -1.6022; 最大值: 6.2202; 均值: 0.2727; 整体的趋势: 下降; 
+        变更发生后最小值: -1.7496; 最大值: 2.4497; 均值: 0.3333; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.6022,6.2202], 变更后范围：[-1.7496,2.4497]
+    74.指标名称: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.2385; 最大值: 5.8912; 均值: -0.1876; 整体的趋势: 下降; 
+        变更发生后最小值: -0.2662; 最大值: 3.8847; 均值: -0.2191; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.2385,5.8912], 变更后范围：[-0.2662,3.8847]
+    75.指标名称: unknown
+        变更发生前最小值: -0.477; 最大值: 15.4295; 均值: -0.477; 整体的趋势: 下降; 
+        变更发生后最小值: -0.523; 最大值: 9.0122; 均值: -0.523; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.477,15.4295], 变更后范围：[-0.523,9.0122]
+    76.指标名称: histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job="be/bkverify",environment="prod"}[2m])) by (job,le))
+        变更发生前最小值: -4.1295; 最大值: 7.176; 均值: 0.3338; 整体的趋势: 上升; 
+        变更发生后最小值: -3.9002; 最大值: 1.9225; 均值: 0.3677; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-4.1295,7.176], 变更后范围：[-3.9002,1.9225]
+    77.指标名称: node_sockstat_TCP_alloc{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -2.9356; 最大值: 3.2745; 均值: 0.3209; 整体的趋势: 下降; 
+        变更发生后最小值: -4.8561; 最大值: 2.414; 均值: 0.2329; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-2.9356,3.2745], 变更后范围：[-4.8561,2.414]
+    78.指标名称: increase(http_service_level_sli_result_count_total{job="be/bkverify"}[2m])
+        变更发生前最小值: -0.0281; 最大值: 49.7586; 均值: -0.0277; 整体的趋势: 下降; 
+        变更发生后最小值: -0.0802; 最大值: 22.9663; 均值: -0.0567; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0281,49.7586], 变更后范围：[-0.0802,22.9663]
+    79.指标名称: node_sockstat_TCP_tw{hostname=~"bj3-rd-bkverify-prod-02"}
+        变更发生前最小值: -1.4923; 最大值: 19.2467; 均值: 0.2403; 整体的趋势: 上升; 
+        变更发生后最小值: -1.9057; 最大值: 3.5855; 均值: 0.2565; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-1.4923,19.2467], 变更后范围：[-1.9057,3.5855]
+    80.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.0265; 最大值: 44.7943; 均值: -0.0265; 整体的趋势: 下降; 
+        变更发生后最小值: 0.0; 最大值: 0.0; 均值: 0.0; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.0265,44.7943], 变更后范围：[0.0,0.0]
+    81.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+        变更发生前最小值: -0.922; 最大值: 24.0799; 均值: -0.3664; 整体的趋势: 下降; 
+        变更发生后最小值: -0.9091; 最大值: 13.4963; 均值: -0.4812; 整体的趋势: 下降; 
+        变更前后数据范围对比：变更前范围：[-0.922,24.0799], 变更后范围：[-0.9091,13.4963]
+    82.指标名称: node_load1{hostname=~"bj1-rd-bkverify-prod-03"}
+        变更发生前最小值: -0.1721; 最大值: 25.5833; 均值: -0.1721; 整体的趋势: 上升; 
+        变更发生后最小值: -0.1725; 最大值: 19.3762; 均值: -0.1725; 整体的趋势: 上升; 
+        变更前后数据范围对比：变更前范围：[-0.1721,25.5833], 变更后范围：[-0.1725,19.3762]
+
+SCWARN 算法认为在下述时间戳有异常：
+    1, 2024-03-14 16:38:16
+    2, 2024-03-14 16:50:16
+    3, 2024-03-14 21:10:16
+    4, 2024-03-15 01:14:16
+    5, 2024-03-15 01:24:16
+    6, 2024-03-15 01:44:16
+    7, 2024-03-15 09:28:16
+
+发生异常的指标中图形对应的异常类型:
+    1.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    2.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-03"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    3.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    4.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    5.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    6.指标名称: (sum(increase(std_grpc_server_handling_seconds_bucket{le='5',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) / sum(increase(std_grpc_server_handling_seconds_bucket{le='+Inf',job="be/bkverify",environment="prod", grpc_method!="ServerReflectionInfo"}[2m]))  by(job) or vector(1)) *100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    7.指标名称: 1-((sum(increase(std_requests_total{job="be/bkverify",code="200",bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",code=~"5.."}[2m]))  or  vector(0)) / (((100-99.99)/100)* sum(increase(std_requests_total{job="be/bkverify"}[2m]))))
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]恢复正常，与整体同时出现异常的时间戳: 2024-03-15 01:24:16
+    8.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    9.指标名称: node_sockstat_TCP_inuse{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]恢复正常，与整体同时出现异常的时间戳: 2024-03-14 16:38:16, 2024-03-15 01:14:16, 2024-03-15 01:24:16, 2024-03-15 01:44:16
+    10.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-bkverify-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-bkverify-prod-01"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    11.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    12.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    13.指标名称: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    14.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    15.指标名称: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    16.指标名称: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    17.指标名称: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    18.指标名称: sum(rate(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    19.指标名称: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]恢复正常，与整体同时出现异常的时间戳: 2024-03-15 01:24:16
+    20.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    21.指标名称: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    22.指标名称: ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    23.指标名称: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    24.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    25.指标名称: node_load1{hostname=~"bj3-rd-bkverify-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    26.指标名称: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    27.指标名称: 1- ((sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod", bizcode="6000"}[2m]) or increase(std_requests_total{job="be/bkverify",environment="prod", code=~"5.."}[2m]))  or  vector(0)) /  sum(increase(std_requests_total{job="be/bkverify",environment="prod"}[2m])))
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    28.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj3-rd-bkverify-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    29.指标名称: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-bkverify-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    30.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj3-rd-bkverify-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 2 异常类型，类型为：['Single dip', 'Multiple spikes']
+    31.指标名称: 1-sum(increase(std_grpc_server_handled_total{job="be/bkverify",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/bkverify",environment="prod"}[2m])) or vector(1)
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    32.指标名称: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    33.指标名称: node_sockstat_TCP_alloc{hostname=~"bj3-rd-bkverify-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    34.指标名称: node_sockstat_TCP_tw{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    35.指标名称: node_load5{hostname=~"bj1-rd-bkverify-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    36.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    37.指标名称: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    38.指标名称: node_sockstat_TCP_tw{hostname=~"bj3-rd-bkverify-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    39.指标名称: node_load1{hostname=~"bj1-rd-bkverify-prod-01"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    40.指标名称: sum(increase(std_requests_total{job="be/bkverify",code="404",environment="prod"}[2m]))
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    41.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-bkverify-prod-01"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    42.指标名称: (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-bkverify-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-bkverify-prod-02"}))*100
+      该指标共出现 1 异常类型，类型为：['Single spike']
+      其中，类型[Single spike]恢复正常，与整体同时出现异常的时间戳: 2024-03-15 01:24:16
+    43.指标名称: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      该指标共出现 1 异常类型，类型为：['Single dip']
+    44.指标名称: irate(node_disk_read_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    45.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-bkverify-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    46.指标名称: callService
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    47.指标名称: node_load5{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    48.指标名称: probe_duration_seconds{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    49.指标名称: <:ControlInfo:>
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    50.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    51.指标名称: node_sockstat_TCP_inuse{hostname=~"bj3-rd-bkverify-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    52.指标名称: node_load5{hostname=~"bj3-rd-bkverify-prod-02"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    53.指标名称: sum(increase(std_requests_total{job="be/bkverify",code="200",environment="prod"}[2m]))
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    54.指标名称: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-bkverify-prod-03"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    55.指标名称: increase(http_service_level_sli_result_error_ratio_total{job="be/bkverify"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    56.指标名称: 1-(node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/data"})
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    57.指标名称: node_load1{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    58.指标名称: irate(node_disk_written_bytes_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m])
+      该指标共出现 1 异常类型，类型为：['Single spike']
+    59.指标名称: node_load15{hostname=~"bj1-rd-bkverify-prod-03"}
+      该指标共出现 1 异常类型，类型为：['Single spike']
+总共发现 529 个异常情况
+出现异常的指标总数：59
+异常描述形状编号总数：3
+
+这是对异常类型(pattern)的定义：
+    异常描述形状分为两大类：Still in abnormal state和Recover to normal state,
+    Still in abnormal state,这类异常在出现异常点后持续处于异常状态
+     1. Sudden increase 突增
+     2. Sudden decrease 突降
+     3. Level shift up 整体层次上升
+     4. Level shift down 整体层次下降
+     5. Steady increase 持续上升
+     6. Steady decrease 持续下降
+    Recover to normal state,这类异常在出现异常点后回归正常状态
+     7. Single spike 单一高峰
+     8. Single dip 单一低谷
+     9. Transient level shift up 瞬间整体层次上升
+     10. Transient level shift down 瞬间整体层次下降
+     11. Multiple spikes 连续多峰
+     12. Multiple dips 连续多谷
+     13. Fluctuations 持续波动
+
+请分析如上领域文本以及指标异常情况,并给出你的判断:预期变更or失败变更
+并且给出你的思考和推理原因,如果是失败变更,请给出你的建议解决方法
+请按如下格式进行回答:{(
+ "change_type":"请返回预期变更或是失败变更,"
+ "reason":"你确定change_type字段的原因",
+ "solution":"None if this is an expected change or solution")}

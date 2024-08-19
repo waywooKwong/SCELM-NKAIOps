@@ -1,0 +1,34 @@
+指标名称,训练集均值,测试集均值,训练集趋势,测试集趋势
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",0.019144819438513358,2.733050741735273e-05,上升,下降
+"node_sockstat_TCP_inuse{hostname=~""bj1-rd-bkverify-prod-03""}",-0.165489144481838,0.0,上升,下降
+"1-avg(irate(node_cpu_seconds_total{hostname=~""bj1-rd-bkverify-prod-03"", mode=~""idle""}[2m])) by (mode, hostname)",0.010725650666291286,0.007194999498447498,上升,下降
+"irate(node_disk_writes_completed_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",-0.358686515139461,-0.33289549855424627,上升,下降
+"histogram_quantile(0.995,sum(rate(std_request_duration_seconds_bucket{job=""be/bkverify"",environment=""prod""}[2m])) by (job,le))",0.3338382188632685,0.3676859406177717,上升,下降
+"node_sockstat_TCP_tw{hostname=~""bj1-rd-bkverify-prod-03""}",-0.4881719772864801,-0.5834704794102914,下降,上升
+"irate(node_disk_write_time_seconds_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",-0.08452581753670199,-0.07171219128914753,上升,下降
+"node_sockstat_TCP_tw{hostname=~""bj3-rd-bkverify-prod-02""}",0.24032869324247294,0.2564590327220302,上升,下降
+ShuJuBao - <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:*:> <:realName:> <:idCard:> - <:ERRORPOST:>,-0.44714269033984083,-0.21532953458812268,上升,下降
+"irate(node_disk_read_time_seconds_total{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",-0.008754761091605811,0.0,上升,下降
+"irate(node_netstat_Tcp_ActiveOpens{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",0.022704511696759962,1.3036977676482917e-05,上升,下降
+"probe_duration_seconds{hostname=~""bj1-rd-bkverify-prod-03""}",-0.18758452194175187,-0.21906674195115727,下降,上升
+"node_sockstat_TCP_alloc{hostname=~""bj1-rd-bkverify-prod-03""}",-0.165489144481838,0.0,上升,下降
+"irate(node_disk_written_bytes_total{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",-0.19202655781247124,-0.07448262054059288,上升,下降
+"1-(node_filesystem_free_bytes{hostname=~""bj3-rd-bkverify-prod-02"",fstype=~""ext4|xfs"",mountpoint=""/""} / node_filesystem_size_bytes{hostname=~""bj3-rd-bkverify-prod-02"",fstype=~""ext4|xfs"",mountpoint=""/""})",-0.06780410286916219,-0.007804860766326539,下降,上升
+pyroscope upload profile: do http <:RequestPost:>,0.031393946792450445,-0.1534826981145616,上升,下降
+"node_load5{hostname=~""bj1-rd-bkverify-prod-01""}",-0.286716685865745,-0.24304365487065183,下降,上升
+"node_load1{hostname=~""bj1-rd-bkverify-prod-01""}",-0.19375350348014198,-0.21681229533868127,下降,上升
+"node_sockstat_TCP_alloc{hostname=~""bj3-rd-bkverify-prod-02""}",0.32092268348307124,0.2329284479368483,下降,上升
+"(1-(node_memory_MemAvailable_bytes{hostname=~""bj1-rd-bkverify-prod-03""}/node_memory_MemTotal_bytes{hostname=~""bj1-rd-bkverify-prod-03""}))*100",-0.3078885484326472,0.038636356768254,上升,下降
+"irate(node_network_transmit_bytes_total{hostname=~""bj1-rd-bkverify-prod-03"",device!~""tap.*|veth.*|br.*|docker.*|virbr*|lo*""}[5m])*8",-0.09651254107271169,-0.06890009856492411,下降,上升
+"node_load15{hostname=~""bj1-rd-bkverify-prod-01""}",-0.5859937499371718,-0.5645183460983213,下降,上升
+"node_netstat_Tcp_CurrEstab{hostname=~""bj3-rd-bkverify-prod-02""}",0.38167406033732243,0.20340710815120078,下降,上升
+"irate(node_disk_writes_completed_total{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",-0.5175877546075831,-0.5363387357557425,下降,上升
+"irate(node_network_receive_bytes_total{hostname=~""bj1-rd-bkverify-prod-03"",device!~""tap.*|veth.*|br.*|docker.*|virbr*|lo*""}[5m])*8",-0.05559496743939381,-0.2146501568985333,下降,上升
+unknown,-0.47702454048132864,-0.5230304792910886,下降,上升
+"1-avg(irate(node_cpu_seconds_total{hostname=~""bj3-rd-bkverify-prod-02"", mode=~""idle""}[2m])) by (mode, hostname)",-0.016651911882596335,-0.013923084507766078,上升,下降
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj1-rd-bkverify-prod-01""}[2m])",-0.032764770039285185,0.08833690729491905,上升,下降
+"1-(node_filesystem_free_bytes{hostname=~""bj1-rd-bkverify-prod-01"",fstype=~""ext4|xfs"",mountpoint=""/""} / node_filesystem_size_bytes{hostname=~""bj1-rd-bkverify-prod-01"",fstype=~""ext4|xfs"",mountpoint=""/""})",0.008483429140701744,-0.06672939102776028,上升,下降
+"probe_duration_seconds{hostname=~""bj1-rd-bkverify-prod-01""}",-0.05217457424863498,-0.04613937915694612,下降,上升
+"irate(node_disk_reads_completed_total{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",-0.03185087274340396,0.0,上升,下降
+"irate(node_netstat_Tcp_PassiveOpens{hostname=~""bj3-rd-bkverify-prod-02""}[2m])",0.13578907323651346,0.14109576609609367,上升,下降
+"irate(node_disk_write_time_seconds_total{hostname=~""bj1-rd-bkverify-prod-03""}[2m])",-0.16009416160534504,-0.13772625661769727,下降,上升

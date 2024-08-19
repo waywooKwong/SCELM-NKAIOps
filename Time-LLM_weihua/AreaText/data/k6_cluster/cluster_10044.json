@@ -1,0 +1,125 @@
+[
+    {
+        "bf632df990f454aaf158bf6e5ea4a1a8": "container_memory_rss{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",metrics_path=\"/metrics/cadvisor\"} / 1048576"
+    },
+    {
+        "dd0fddac87c8514671b2a73a455e6ca6": "sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8"
+    },
+    {
+        "d140bb4f17a639a7372764bdece1e787": "sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8"
+    },
+    {
+        "dd0fddac87c8514671b2a73a455e6ca6": "sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8"
+    },
+    {
+        "c25937e2dd2181065377e4641a2b81f8": "(sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100"
+    },
+    {
+        "862bf2e4e321ff944293fc711c24864c": "irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100"
+    },
+    {
+        "ec101c91550eadf4a8753e10700fff74": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~\"Unknown|OK\"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)"
+    },
+    {
+        "3415e4bc823ff9c472ee313e2c790cf9": "parse metadata"
+    },
+    {
+        "7023eefc5d78a5c7551373c93600b099": "infra.grpc.invoker"
+    },
+    {
+        "f128e17cfd250649baef37f04d6c19b9": "get metadata from header"
+    },
+    {
+        "6300af06fd5be620cb7ab2f3b3d2c52c": "parseDataReportFlag ok"
+    },
+    {
+        "acc9b27a031b8d0328379149f0dfaff9": "DeleteFieldValues <:REQ:>"
+    },
+    {
+        "e4aa88345de77d0282de38d940b97037": "<:staticStrategies:>"
+    },
+    {
+        "ce08cf4f6a573556e44efd5992b77721": "rego exec input:<:MAP:>"
+    },
+    {
+        "da340877fa5ea2f1c201aedfc91d22bc": "computeDeptMembersObjectIDs end"
+    },
+    {
+        "5e0cf0fa2956ad7395caae46732f5151": "computeOwnObjectIDs end"
+    },
+    {
+        "8df10c3d5b13f5e9968401e99475aa04": "build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>"
+    },
+    {
+        "19930931b560277fcf06ecc09f41e752": "AuthListByName <:<:ChineseInfo:>:>"
+    },
+    {
+        "b1bd7c01c3ef58909e115c5936d39ad0": "no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>"
+    },
+    {
+        "853015ced4aeeb33a38c6866d33110a3": "<:REQ:>"
+    },
+    {
+        "ba7e4d879f5b61c48192f115c8423009": "getDept success"
+    },
+    {
+        "001af3fb6b4d143bcf025ea210b71ead": "getBackupEmp success"
+    },
+    {
+        "96083cc4cec914fa215aec6db9ebaef6": "Depts only have yunzhanghu"
+    },
+    {
+        "2ce5ac45d4275008d857abb5385cf1b3": "getPermTagsAndValues <:*:>"
+    },
+    {
+        "cb12e6d152c39675bebadcf33887e185": "curpkg+name: code.yunzhanghu.com/be/yid/server/grpc/v1/CheckDelay [trace.id=<:SEQ:> <:transactionID:> <:spanID:>"
+    },
+    {
+        "a4a58c952a98e5616e4e5acf3cc4a933": "no need or no have tags"
+    },
+    {
+        "190fec651a741dc908508ed5a84bb5e6": "build <:*:>"
+    },
+    {
+        "a47f48821fc1ffe7057a87438b541bec": "build <:*:> <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>"
+    },
+    {
+        "addb8708ca4d6be7f10fb32c51d26c4b": "ClientEnvHandler is <:*:>"
+    },
+    {
+        "4b20aff7926272178b85218712b15cc7": "<:GIN:>"
+    },
+    {
+        "a12a3588ce6e1070ca3dd19d3b8acf4c": "Response=<:MAP:>"
+    },
+    {
+        "78e731027d8fd50ed642340b7c9a63b3": "message"
+    },
+    {
+        "6326114b91842880149e9876a90e7bca": "superiorAndDeputy empty"
+    },
+    {
+        "c1066526e3b973229933e0fb9d037bbf": "approve callback start"
+    },
+    {
+        "e937d159618b42e3d8ca2cad01913f7e": "svc.ApproveCallback failed"
+    },
+    {
+        "e476d2894bb5e9819c8fefb74ac0d59f": "approve status error"
+    },
+    {
+        "aedcea2b95e6a07cb77a9a0da350ab7f": "loaded policy count:<:NUM:>"
+    },
+    {
+        "6ad2d13248c5eddd35b3dbb2c1dd6a53": "loadRegoMySQLInterval success"
+    },
+    {
+        "62920d13ca9ff31950a65b98312bcfe0": "<:list modules:>"
+    },
+    {
+        "9201d1cd756a9806afbea36657786c0d": "GetSupervisorPosition success"
+    },
+    {
+        "ad921d60486366258809553a3db49a4a": "unknown"
+    }
+]

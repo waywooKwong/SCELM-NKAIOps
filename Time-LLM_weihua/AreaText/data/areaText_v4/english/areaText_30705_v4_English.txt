@@ -1,0 +1,685 @@
+id:NO.30705 
+Service:geass
+Submission start time:2024-04-15 00:22:01
+Submission end time:2024-04-20 00:22:01
+Analysis start time:2024-04-20 00:22:01
+Analysis end time:2024-04-21 00:22:01
+Analysis of kpi changes related to the service:
+    1.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -6.1619; max: 7.3492; mean: -0.0455; whole trend: up;  }
+        After change：{ min: -1.8908; max: 9.7139; mean: -0.0423; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-6.1619,7.3492], After change range: [-1.8908,9.7139]
+    2.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -1.2995; max: 2.5924; mean: 0.6465; whole trend: down;  }
+        After change：{ min: -1.3353; max: 2.6042; mean: 0.6344; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2995,2.5924], After change range: [-1.3353,2.6042]
+    3.kpi name: node_load5{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -1.0765; max: 7.6383; mean: -0.26; whole trend: down;  }
+        After change：{ min: -0.8694; max: 6.7235; mean: -0.3076; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0765,7.6383], After change range: [-0.8694,6.7235]
+    4.kpi name: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -0.1206; max: 1.6646; mean: -0.0928; whole trend: up;  }
+        After change：{ min: -0.1265; max: 1.1177; mean: -0.098; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1206,1.6646], After change range: [-0.1265,1.1177]
+    5.kpi name: node_load5{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -0.9528; max: 13.0817; mean: -0.2598; whole trend: up;  }
+        After change：{ min: -0.8885; max: 6.9555; mean: -0.3878; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9528,13.0817], After change range: [-0.8885,6.9555]
+    6.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -0.0587; max: 51.5415; mean: -0.0587; whole trend: up;  }
+        After change：{ min: -0.0481; max: 26.5514; mean: -0.0481; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0587,51.5415], After change range: [-0.0481,26.5514]
+    7.kpi name: sum(increase(geass_pay_scheduler_counter{mode="release_pay_order"}[2m]))
+        Before change: { min: -0.5897; max: 36.1118; mean: -0.0737; whole trend: down;  }
+        After change：{ min: -1.2891; max: 13.1111; mean: -0.0013; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5897,36.1118], After change range: [-1.2891,13.1111]
+    8.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -0.0549; max: 52.9078; mean: -0.0549; whole trend: down;  }
+        After change：{ min: -0.1139; max: 17.3556; mean: -0.1139; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0549,52.9078], After change range: [-0.1139,17.3556]
+    9.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-02", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -1.5899; max: 8.1598; mean: -0.1765; whole trend: up;  }
+        After change：{ min: -1.4422; max: 8.9438; mean: -0.0812; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5899,8.1598], After change range: [-1.4422,8.9438]
+    10.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -1.7334; max: 6.5166; mean: -0.5006; whole trend: down;  }
+        After change：{ min: -1.0036; max: 5.1561; mean: -0.4377; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7334,6.5166], After change range: [-1.0036,5.1561]
+    11.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -3.2415; max: 19.2774; mean: -0.1873; whole trend: down;  }
+        After change：{ min: -2.2419; max: 5.2372; mean: -0.1155; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.2415,19.2774], After change range: [-2.2419,5.2372]
+    12.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-02"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-02"}))*100
+        Before change: { min: -3.6761; max: 10.6698; mean: -0.0587; whole trend: down;  }
+        After change：{ min: -2.3756; max: 4.4171; mean: 0.2512; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.6761,10.6698], After change range: [-2.3756,4.4171]
+    13.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -0.0718; max: 47.3691; mean: -0.0718; whole trend: down;  }
+        After change：{ min: -0.1344; max: 20.0152; mean: -0.1344; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0718,47.3691], After change range: [-0.1344,20.0152]
+    14.kpi name: unknown
+        Before change: { min: -0.1409; max: 20.4598; mean: -0.1409; whole trend: down;  }
+        After change：{ min: -0.1504; max: 12.1854; mean: -0.1504; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1409,20.4598], After change range: [-0.1504,12.1854]
+    15.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -0.0855; max: 13.0989; mean: -0.0855; whole trend: down;  }
+        After change：{ min: -0.0671; max: 16.0593; mean: -0.0671; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0855,13.0989], After change range: [-0.0671,16.0593]
+    16.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.8909; max: 43.7597; mean: -0.1273; whole trend: down;  }
+        After change：{ min: -1.75; max: 7.6264; mean: -0.1019; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8909,43.7597], After change range: [-1.75,7.6264]
+    17.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -1.1604; max: 11.9688; mean: -0.2601; whole trend: down;  }
+        After change：{ min: -1.2425; max: 6.2116; mean: -0.3314; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1604,11.9688], After change range: [-1.2425,6.2116]
+    18.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.5602; max: 0.8024; mean: -0.059; whole trend: up;  }
+        After change：{ min: -0.3759; max: 0.484; mean: -0.0257; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5602,0.8024], After change range: [-0.3759,0.484]
+    19.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -2.7962; max: 4.0797; mean: 0.6417; whole trend: down;  }
+        After change：{ min: -2.5291; max: 5.6744; mean: -0.8884; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.7962,4.0797], After change range: [-2.5291,5.6744]
+    20.kpi name: sum(increase(geass_pay_scheduler_counter{mode="fetch_order"}[2m]))
+        Before change: { min: -0.5883; max: 36.077; mean: -0.0735; whole trend: down;  }
+        After change：{ min: -1.2888; max: 13.1235; mean: -0.0028; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5883,36.077], After change range: [-1.2888,13.1235]
+    21.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -1.6023; max: 5.2485; mean: -0.313; whole trend: down;  }
+        After change：{ min: -1.682; max: 4.1027; mean: -0.2689; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6023,5.2485], After change range: [-1.682,4.1027]
+    22.kpi name: sum(increase(geass_pay_scheduler_counter{ mode="consume_done"}[2m]))/2
+        Before change: { min: -0.5894; max: 36.1137; mean: -0.0736; whole trend: down;  }
+        After change：{ min: -1.2886; max: 13.1174; mean: -0.001; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5894,36.1137], After change range: [-1.2886,13.1174]
+    23.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -0.2037; max: 14.8578; mean: -0.2037; whole trend: up;  }
+        After change：{ min: -0.1823; max: 12.2255; mean: -0.1823; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2037,14.8578], After change range: [-0.1823,12.2255]
+    24.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -11.7513; max: 13.2065; mean: -0.0743; whole trend: down;  }
+        After change：{ min: -2.103; max: 3.7959; mean: 0.0703; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-11.7513,13.2065], After change range: [-2.103,3.7959]
+    25.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-06",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.3056; max: 4.2981; mean: -0.3739; whole trend: down;  }
+        After change：{ min: -1.2698; max: 5.6145; mean: -0.394; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3056,4.2981], After change range: [-1.2698,5.6145]
+    26.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -4.6218; max: 7.9851; mean: -0.1116; whole trend: up;  }
+        After change：{ min: -1.3181; max: 10.4482; mean: -0.2314; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-4.6218,7.9851], After change range: [-1.3181,10.4482]
+    27.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.1489; max: 39.7799; mean: -0.1489; whole trend: up;  }
+        After change：{ min: -0.1688; max: 17.3512; mean: -0.1688; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1489,39.7799], After change range: [-0.1688,17.3512]
+    28.kpi name: node_sockstat_TCP_inuse{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -1.2919; max: 4.3342; mean: 0.5835; whole trend: down;  }
+        After change：{ min: -1.3207; max: 2.4428; mean: 0.5611; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2919,4.3342], After change range: [-1.3207,2.4428]
+    29.kpi name: sum(increase(geass_pay_scheduler_counter{dealer=~"huoshan|03846658|09934414|04236904|04742796|05554802|07903142|06093840|04060592|05697813|07450151|03879479|01169402|05959070|03011133|04383882|05124946|09697747|04821802", mode="push_pay_order"}[5m]))
+        Before change: { min: -1.541; max: 7.249; mean: -0.0916; whole trend: up;  }
+        After change：{ min: -1.5427; max: 7.3298; mean: -0.0809; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.541,7.249], After change range: [-1.5427,7.3298]
+    30.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -2.9843; max: 1.6312; mean: -0.6917; whole trend: up;  }
+        After change：{ min: -0.7996; max: 1.5549; mean: -0.712; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9843,1.6312], After change range: [-0.7996,1.5549]
+    31.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-04"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-04"}))*100
+        Before change: { min: -3.7084; max: 3.4359; mean: -0.2468; whole trend: down;  }
+        After change：{ min: -1.0351; max: 3.4675; mean: -0.1053; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.7084,3.4359], After change range: [-1.0351,3.4675]
+    32.kpi name: sum(geass_pay_scheduler_guage{mode="in_consume"})
+        Before change: { min: -0.4667; max: 24.0643; mean: -0.4667; whole trend: up;  }
+        After change：{ min: -0.6597; max: 4.8749; mean: -0.6597; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4667,24.0643], After change range: [-0.6597,4.8749]
+    33.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.7658; max: 53.6928; mean: -0.0825; whole trend: up;  }
+        After change：{ min: -0.2717; max: 26.4214; mean: -0.0533; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.7658,53.6928], After change range: [-0.2717,26.4214]
+    34.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -1.4794; max: 4.8268; mean: -0.078; whole trend: down;  }
+        After change：{ min: -1.3507; max: 4.0371; mean: -0.0038; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4794,4.8268], After change range: [-1.3507,4.0371]
+    35.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.9258; max: 1.0962; mean: -0.0222; whole trend: up;  }
+        After change：{ min: -0.4595; max: 0.5539; mean: -0.0193; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9258,1.0962], After change range: [-0.4595,0.5539]
+    36.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.4283; max: 12.464; mean: -0.1835; whole trend: down;  }
+        After change：{ min: -1.9253; max: 6.2046; mean: -0.0287; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4283,12.464], After change range: [-1.9253,6.2046]
+    37.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.1011; max: 38.6607; mean: -0.1011; whole trend: up;  }
+        After change：{ min: -0.1031; max: 22.3967; mean: -0.1031; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1011,38.6607], After change range: [-0.1031,22.3967]
+    38.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-05",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-05",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.3271; max: 0.2535; mean: 0.0398; whole trend: down;  }
+        After change：{ min: -0.1285; max: 0.1149; mean: 0.0027; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3271,0.2535], After change range: [-0.1285,0.1149]
+    39.kpi name: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -0.0823; max: 1.1571; mean: -0.0183; whole trend: up;  }
+        After change：{ min: -0.0675; max: 0.9401; mean: -0.0175; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0823,1.1571], After change range: [-0.0675,0.9401]
+    40.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -11.7856; max: 12.8913; mean: -0.0665; whole trend: down;  }
+        After change：{ min: -2.1177; max: 3.7728; mean: -0.0002; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-11.7856,12.8913], After change range: [-2.1177,3.7728]
+    41.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-05",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.6781; max: 5.8919; mean: -0.2879; whole trend: up;  }
+        After change：{ min: -1.57; max: 4.1047; mean: -0.2179; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6781,5.8919], After change range: [-1.57,4.1047]
+    42.kpi name: sum(increase(geass_server_pay_new_order{type="api"}[1m]))
+        Before change: { min: -1.8445; max: 14.3543; mean: 0.0449; whole trend: down;  }
+        After change：{ min: -1.7903; max: 10.7583; mean: 0.1386; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8445,14.3543], After change range: [-1.7903,10.7583]
+    43.kpi name: histogram_quantile(0.999,sum(rate(std_grpc_server_handling_seconds_bucket{job="be/geass",environment="prod", grpc_method!~"ServerReflectionInfo|Check|Watch"}[2m])) by (job,le))
+        Before change: { min: -0.5657; max: 36.8421; mean: -0.3842; whole trend: down;  }
+        After change：{ min: -0.7204; max: 9.5874; mean: -0.3202; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5657,36.8421], After change range: [-0.7204,9.5874]
+    44.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.1698; max: 59.5341; mean: -0.0353; whole trend: down;  }
+        After change：{ min: -1.2766; max: 10.2217; mean: -0.1518; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1698,59.5341], After change range: [-1.2766,10.2217]
+    45.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -4.7943; max: 16.045; mean: -0.1828; whole trend: up;  }
+        After change：{ min: -2.5839; max: 7.449; mean: -0.2614; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.7943,16.045], After change range: [-2.5839,7.449]
+    46.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-06",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-06",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -0.0; max: 0.0; mean: -0.0; whole trend: down;  }
+        After change：{ min: -0.0; max: 0.0; mean: -0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0,0.0], After change range: [-0.0,0.0]
+    47.kpi name: sum(increase(geass_pay_scheduler_counter{mode="release_auth_check"}[2m]))
+        Before change: { min: -1.0551; max: 15.4717; mean: -0.0354; whole trend: up;  }
+        After change：{ min: -1.2925; max: 14.2634; mean: 0.0571; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0551,15.4717], After change range: [-1.2925,14.2634]
+    48.kpi name: node_load15{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -1.2874; max: 5.7425; mean: -0.2253; whole trend: down;  }
+        After change：{ min: -1.019; max: 5.4326; mean: -0.323; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2874,5.7425], After change range: [-1.019,5.4326]
+    49.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -0.0578; max: 58.4548; mean: -0.0578; whole trend: up;  }
+        After change：{ min: -0.0545; max: 26.5598; mean: -0.0545; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0578,58.4548], After change range: [-0.0545,26.5598]
+    50.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -0.2792; max: 36.9366; mean: -0.1158; whole trend: down;  }
+        After change：{ min: -0.3263; max: 5.0309; mean: -0.1356; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2792,36.9366], After change range: [-0.3263,5.0309]
+    51.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-04", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -2.0499; max: 6.8767; mean: -0.2488; whole trend: up;  }
+        After change：{ min: -0.8741; max: 6.1272; mean: -0.2298; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.0499,6.8767], After change range: [-0.8741,6.1272]
+    52.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -0.0656; max: 32.9826; mean: -0.0656; whole trend: down;  }
+        After change：{ min: -0.0448; max: 7.3474; mean: -0.0448; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0656,32.9826], After change range: [-0.0448,7.3474]
+    53.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.2142; max: 24.8889; mean: -0.1223; whole trend: down;  }
+        After change：{ min: -0.2121; max: 2.5466; mean: -0.1099; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2142,24.8889], After change range: [-0.2121,2.5466]
+    54.kpi name: probe_duration_seconds{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -0.126; max: 1.3644; mean: -0.0612; whole trend: down;  }
+        After change：{ min: -0.1242; max: 1.3901; mean: -0.0528; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.126,1.3644], After change range: [-0.1242,1.3901]
+    55.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -0.8264; max: 3.626; mean: -0.6537; whole trend: down;  }
+        After change：{ min: -0.7921; max: 2.9571; mean: -0.6663; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8264,3.626], After change range: [-0.7921,2.9571]
+    56.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -1.2783; max: 10.2289; mean: 0.0067; whole trend: up;  }
+        After change：{ min: -1.2175; max: 10.4946; mean: -0.5057; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2783,10.2289], After change range: [-1.2175,10.4946]
+    57.kpi name: node_load1{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -0.6507; max: 11.5781; mean: -0.3076; whole trend: up;  }
+        After change：{ min: -0.4827; max: 10.0773; mean: -0.2858; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6507,11.5781], After change range: [-0.4827,10.0773]
+    58.kpi name: sum(increase(geass_server_pay_new_order{type="api", dealer=~"抖音火山版|抖音短视频|内涵段子|空间变换|星图|西瓜直播|头条PGC分成|火山|快码加编|皮皮虾|火山春节活动|北京字跳_03879479|西瓜视频|火山零钱|抖音零钱|学浪平台|放心购|字节西瓜视频|星图科技"}[5m]))
+        Before change: { min: -1.8043; max: 4.8173; mean: -0.0001; whole trend: up;  }
+        After change：{ min: -1.7482; max: 4.7695; mean: 0.0021; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8043,4.8173], After change range: [-1.7482,4.7695]
+    59.kpi name: node_load1{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -0.4668; max: 12.4136; mean: -0.3755; whole trend: up;  }
+        After change：{ min: -0.4507; max: 7.6984; mean: -0.3537; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4668,12.4136], After change range: [-0.4507,7.6984]
+    60.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -1.7927; max: 1.9746; mean: 0.0278; whole trend: up;  }
+        After change：{ min: -1.8004; max: 1.7682; mean: 0.0419; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.7927,1.9746], After change range: [-1.8004,1.7682]
+    61.kpi name: node_load5{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -0.9795; max: 6.2974; mean: -0.3217; whole trend: up;  }
+        After change：{ min: -0.8502; max: 6.0044; mean: -0.301; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9795,6.2974], After change range: [-0.8502,6.0044]
+    62.kpi name: node_sockstat_TCP_tw{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -1.3989; max: 5.6059; mean: -0.3451; whole trend: down;  }
+        After change：{ min: -1.5258; max: 4.4158; mean: -0.2989; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3989,5.6059], After change range: [-1.5258,4.4158]
+    63.kpi name: node_load5{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -0.804; max: 10.2929; mean: -0.2582; whole trend: up;  }
+        After change：{ min: -0.7276; max: 7.8452; mean: -0.3549; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.804,10.2929], After change range: [-0.7276,7.8452]
+    64.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -9.4874; max: 14.4904; mean: -0.1361; whole trend: down;  }
+        After change：{ min: -1.8276; max: 4.1697; mean: -0.1449; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-9.4874,14.4904], After change range: [-1.8276,4.1697]
+    65.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-05",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.5591; max: 6.5505; mean: -0.2754; whole trend: up;  }
+        After change：{ min: -1.3833; max: 4.4844; mean: -0.3167; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5591,6.5505], After change range: [-1.3833,4.4844]
+    66.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -0.0913; max: 42.7485; mean: -0.0913; whole trend: up;  }
+        After change：{ min: -0.2153; max: 18.3499; mean: -0.2153; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0913,42.7485], After change range: [-0.2153,18.3499]
+    67.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -0.4429; max: 21.6055; mean: -0.1117; whole trend: down;  }
+        After change：{ min: -0.2811; max: 20.3097; mean: -0.1247; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4429,21.6055], After change range: [-0.2811,20.3097]
+    68.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -1.034; max: 2.8598; mean: -0.637; whole trend: up;  }
+        After change：{ min: -0.987; max: 2.8854; mean: -0.6565; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.034,2.8598], After change range: [-0.987,2.8854]
+    69.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -1.6757; max: 6.848; mean: -0.5109; whole trend: down;  }
+        After change：{ min: -0.9645; max: 5.2945; mean: -0.4451; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6757,6.848], After change range: [-0.9645,5.2945]
+    70.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-06",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-06",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -0.3333; max: 0.2145; mean: 0.0329; whole trend: up;  }
+        After change：{ min: -0.2222; max: 0.1167; mean: 0.0055; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3333,0.2145], After change range: [-0.2222,0.1167]
+    71.kpi name: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -0.0896; max: 2.1932; mean: -0.0499; whole trend: up;  }
+        After change：{ min: -0.0757; max: 0.9749; mean: -0.0463; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0896,2.1932], After change range: [-0.0757,0.9749]
+    72.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -1.4332; max: 1.3194; mean: -0.0423; whole trend: up;  }
+        After change：{ min: -0.5584; max: 0.6757; mean: -0.0283; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.4332,1.3194], After change range: [-0.5584,0.6757]
+    73.kpi name: sum(increase(geass_pay_scheduler_counter{mode="push_auth_check"}[2m]))
+        Before change: { min: -1.05; max: 15.8324; mean: -0.0324; whole trend: up;  }
+        After change：{ min: -1.2658; max: 14.0457; mean: 0.0377; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.05,15.8324], After change range: [-1.2658,14.0457]
+    74.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-02",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.2227; max: 9.6197; mean: -0.1772; whole trend: down;  }
+        After change：{ min: -1.0546; max: 6.1339; mean: -0.1451; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2227,9.6197], After change range: [-1.0546,6.1339]
+    75.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.8435; max: 4.0659; mean: -0.4049; whole trend: down;  }
+        After change：{ min: -0.8017; max: 3.0584; mean: -0.6263; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8435,4.0659], After change range: [-0.8017,3.0584]
+    76.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -0.1637; max: 55.9076; mean: -0.0414; whole trend: down;  }
+        After change：{ min: -1.2665; max: 10.009; mean: -0.1554; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1637,55.9076], After change range: [-1.2665,10.009]
+    77.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -2.8882; max: 2.7154; mean: -0.0864; whole trend: up;  }
+        After change：{ min: -1.4975; max: 3.9347; mean: -0.1394; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.8882,2.7154], After change range: [-1.4975,3.9347]
+    78.kpi name: sum(geass_pay_scheduler_guage{dealer=~"huoshan|03846658|09934414|04236904|04742796|05554802|07903142|06093840|04060592|05697813|07450151|03879479|01169402|05959070|03011133|04383882|05124946|09697747|04821802", mode="pay_order"})
+        Before change: { min: -0.5476; max: 19.6633; mean: -0.5476; whole trend: up;  }
+        After change：{ min: -0.5753; max: 4.8069; mean: -0.5753; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5476,19.6633], After change range: [-0.5753,4.8069]
+    79.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -3.8673; max: 9.8931; mean: -0.1513; whole trend: up;  }
+        After change：{ min: -1.9924; max: 6.5441; mean: -0.1035; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-3.8673,9.8931], After change range: [-1.9924,6.5441]
+    80.kpi name: sum(increase(geass_server_pay_new_order{type="manual"}[1m]))
+        Before change: { min: -0.0513; max: 53.8943; mean: -0.0513; whole trend: up;  }
+        After change：{ min: -0.0572; max: 25.3166; mean: -0.0572; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0513,53.8943], After change range: [-0.0572,25.3166]
+    81.kpi name: sum(increase(geass_server_pay_finish_order{dealer=~"抖音火山版|抖音短视频|内涵段子|空间变换|星图|西瓜直播|头条PGC分成|火山|快码加编|皮皮虾|火山春节活动|北京字跳_03879479|西瓜视频|火山零钱|抖音零钱|学浪平台|放心购|字节西瓜视频|星图科技"}[5m]))
+        Before change: { min: -1.3485; max: 7.5876; mean: -0.1774; whole trend: up;  }
+        After change：{ min: -1.3851; max: 7.6028; mean: -0.1456; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3485,7.5876], After change range: [-1.3851,7.6028]
+    82.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -11.6493; max: 3.0632; mean: 0.4669; whole trend: up;  }
+        After change：{ min: -6.9388; max: 1.3414; mean: -0.1641; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-11.6493,3.0632], After change range: [-6.9388,1.3414]
+    83.kpi name: node_load1{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -0.9108; max: 9.2569; mean: -0.2954; whole trend: up;  }
+        After change：{ min: -0.7885; max: 9.3867; mean: -0.2811; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9108,9.2569], After change range: [-0.7885,9.3867]
+    84.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -2.9623; max: 4.1472; mean: -0.1185; whole trend: down;  }
+        After change：{ min: -2.5338; max: 3.103; mean: 0.2846; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9623,4.1472], After change range: [-2.5338,3.103]
+    85.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -2.9319; max: 1.6209; mean: -0.691; whole trend: up;  }
+        After change：{ min: -0.792; max: 1.5361; mean: -0.7149; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.9319,1.6209], After change range: [-0.792,1.5361]
+    86.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -6.6478; max: 7.1317; mean: 0.0036; whole trend: up;  }
+        After change：{ min: -1.6076; max: 3.749; mean: -0.1422; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-6.6478,7.1317], After change range: [-1.6076,3.749]
+    87.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-04",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -2.2736; max: 1.8456; mean: 0.0097; whole trend: down;  }
+        After change：{ min: -2.0324; max: 1.6339; mean: 0.0254; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.2736,1.8456], After change range: [-2.0324,1.6339]
+    88.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -0.5274; max: 18.114; mean: -0.1715; whole trend: down;  }
+        After change：{ min: -0.5818; max: 15.3685; mean: -0.112; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5274,18.114], After change range: [-0.5818,15.3685]
+    89.kpi name: sum(increase(geass_pay_scheduler_counter{ mode="fetch_order"}[2m]))/2
+        Before change: { min: -0.5883; max: 36.077; mean: -0.0735; whole trend: down;  }
+        After change：{ min: -1.2888; max: 13.1235; mean: -0.0028; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5883,36.077], After change range: [-1.2888,13.1235]
+    90.kpi name: sum(increase(geass_server_pay_new_order{dealer=~"抖音火山版|抖音短视频|内涵段子|空间变换|星图|西瓜直播|头条PGC分成|火山|快码加编|皮皮虾|火山春节活动|北京字跳_03879479|西瓜视频|火山零钱|抖音零钱|学浪平台|放心购|字节西瓜视频|星图科技"}[5m]))
+        Before change: { min: -1.8043; max: 4.8173; mean: -0.0001; whole trend: up;  }
+        After change：{ min: -1.7482; max: 4.7695; mean: 0.0021; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8043,4.8173], After change range: [-1.7482,4.7695]
+    91.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.8456; max: 5.132; mean: 0.1514; whole trend: down;  }
+        After change：{ min: -0.8436; max: 4.025; mean: 0.1301; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8456,5.132], After change range: [-0.8436,4.025]
+    92.kpi name: node_load1{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -0.8903; max: 10.0768; mean: -0.2953; whole trend: down;  }
+        After change：{ min: -0.7417; max: 9.0357; mean: -0.2921; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8903,10.0768], After change range: [-0.7417,9.0357]
+    93.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/"})
+        Before change: { min: -1.3916; max: 1.4704; mean: -0.0792; whole trend: up;  }
+        After change：{ min: -0.516; max: 0.5104; mean: 0.0065; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3916,1.4704], After change range: [-0.516,0.5104]
+    94.kpi name: node_sockstat_TCP_inuse{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -2.6783; max: 1.622; mean: -0.6928; whole trend: up;  }
+        After change：{ min: -0.793; max: 1.5317; mean: -0.716; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.6783,1.622], After change range: [-0.793,1.5317]
+    95.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj2-rd-geass-prod-03",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -2.0569; max: 1.8037; mean: -0.1094; whole trend: up;  }
+        After change：{ min: -3.3311; max: 1.5293; mean: 0.0368; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.0569,1.8037], After change range: [-3.3311,1.5293]
+    96.kpi name: 1-sum(increase(std_grpc_server_handled_total{job="be/geass",biz_code="6000",environment="prod",grpc_code=~"Unknown|OK"}[2m]) or increase(std_grpc_server_handled_total{job="be/geass",environment="prod",grpc_code!~"Unknown|OK"}[2m]))/sum(increase(std_grpc_server_handled_total{job="be/geass",environment="prod"}[2m])) or vector(1)
+        Before change: { min: -0.1029; max: 0.0004; mean: 0.0004; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1029,0.0004], After change range: [0.0,0.0]
+    97.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj2-rd-geass-prod-06", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.9147; max: 23.5355; mean: -0.2009; whole trend: up;  }
+        After change：{ min: -0.4382; max: 19.5419; mean: -0.2118; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9147,23.5355], After change range: [-0.4382,19.5419]
+    98.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj2-rd-geass-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj2-rd-geass-prod-03"}))*100
+        Before change: { min: -3.6448; max: 6.8211; mean: -0.1223; whole trend: down;  }
+        After change：{ min: -2.447; max: 5.3958; mean: 0.1648; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-3.6448,6.8211], After change range: [-2.447,5.3958]
+    99.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -0.4463; max: 29.9354; mean: -0.1592; whole trend: down;  }
+        After change：{ min: -0.6503; max: 12.5562; mean: -0.1464; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.4463,29.9354], After change range: [-0.6503,12.5562]
+    100.kpi name: sum(geass_pay_scheduler_guage{mode="not_consume"})
+        Before change: { min: -0.0238; max: 56.8819; mean: -0.0238; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0238,56.8819], After change range: [0.0,0.0]
+    101.kpi name: node_sockstat_TCP_alloc{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -1.2917; max: 4.3266; mean: 0.5811; whole trend: down;  }
+        After change：{ min: -1.3207; max: 2.4428; mean: 0.5611; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2917,4.3266], After change range: [-1.3207,2.4428]
+    102.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.1405; max: 29.2659; mean: -0.1405; whole trend: up;  }
+        After change：{ min: -0.2044; max: 10.2729; mean: -0.2044; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1405,29.2659], After change range: [-0.2044,10.2729]
+    103.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-02",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -2.0112; max: 1.7653; mean: -0.0769; whole trend: up;  }
+        After change：{ min: -2.7214; max: 1.5653; mean: 0.1044; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.0112,1.7653], After change range: [-2.7214,1.5653]
+    104.kpi name: node_load1{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -0.8931; max: 8.4787; mean: -0.2779; whole trend: up;  }
+        After change：{ min: -0.8011; max: 9.135; mean: -0.2423; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8931,8.4787], After change range: [-0.8011,9.135]
+    105.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.8958; max: 12.1939; mean: -0.494; whole trend: down;  }
+        After change：{ min: -1.0044; max: 2.3526; mean: -0.5236; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8958,12.1939], After change range: [-1.0044,2.3526]
+    106.kpi name: @[DumpDayBillsV2] <*> failed, <*> <*> no such file or directory, <*> <*> <*>
+        Before change: { min: -0.0373; max: 26.8034; mean: -0.0373; whole trend: down;  }
+        After change：{ min: 0.0; max: 0.0; mean: 0.0; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0373,26.8034], After change range: [0.0,0.0]
+    107.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-01",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -2.1794; max: 1.901; mean: -0.0662; whole trend: up;  }
+        After change：{ min: -2.5937; max: 1.5535; mean: 0.0887; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.1794,1.901], After change range: [-2.5937,1.5535]
+    108.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -0.0782; max: 44.066; mean: -0.0782; whole trend: down;  }
+        After change：{ min: -0.1327; max: 21.3435; mean: -0.1327; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0782,44.066], After change range: [-0.1327,21.3435]
+    109.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-05", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -0.2922; max: 28.2216; mean: -0.1113; whole trend: up;  }
+        After change：{ min: -0.3749; max: 20.1909; mean: -0.1374; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2922,28.2216], After change range: [-0.3749,20.1909]
+    110.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.1012; max: 39.5195; mean: -0.1012; whole trend: up;  }
+        After change：{ min: -0.1331; max: 20.8839; mean: -0.1331; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1012,39.5195], After change range: [-0.1331,20.8839]
+    111.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.2008; max: 23.6391; mean: -0.2008; whole trend: down;  }
+        After change：{ min: -0.2688; max: 13.1324; mean: -0.2688; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2008,23.6391], After change range: [-0.2688,13.1324]
+    112.kpi name: sum(increase(geass_pay_scheduler_counter{mode="push_pay_order"}[2m]))
+        Before change: { min: -0.5834; max: 36.5609; mean: -0.0696; whole trend: down;  }
+        After change：{ min: -1.3151; max: 13.4338; mean: -0.0022; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5834,36.5609], After change range: [-1.3151,13.4338]
+    113.kpi name: probe_duration_seconds{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -0.1197; max: 4.8113; mean: -0.0815; whole trend: down;  }
+        After change：{ min: -0.0991; max: 2.0969; mean: -0.0681; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1197,4.8113], After change range: [-0.0991,2.0969]
+    114.kpi name: sum(increase(geass_pay_scheduler_counter{dealer=~"huoshan|03846658|09934414|04236904|04742796|05554802|07903142|06093840|04060592|05697813|07450151|03879479|01169402|05959070|03011133|04383882|05124946|09697747|04821802", mode="release_pay_order"}[5m]))
+        Before change: { min: -1.541; max: 7.2605; mean: -0.0915; whole trend: up;  }
+        After change：{ min: -1.5425; max: 7.3285; mean: -0.0786; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.541,7.2605], After change range: [-1.5425,7.3285]
+    115.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-geass-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.3354; max: 8.8729; mean: -0.1695; whole trend: down;  }
+        After change：{ min: -1.0938; max: 7.7712; mean: -0.0979; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3354,8.8729], After change range: [-1.0938,7.7712]
+    116.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -2.7469; max: 4.0671; mean: 0.6601; whole trend: down;  }
+        After change：{ min: -1.0847; max: 2.3972; mean: 0.6562; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.7469,4.0671], After change range: [-1.0847,2.3972]
+    117.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -0.0839; max: 43.6207; mean: -0.0839; whole trend: down;  }
+        After change：{ min: -0.1447; max: 20.0384; mean: -0.1447; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0839,43.6207], After change range: [-0.1447,20.0384]
+    118.kpi name: 1-(node_filesystem_free_bytes{hostname=~"bj1-rd-geass-prod-05",fstype=~"ext4|xfs",mountpoint="/data"} / node_filesystem_size_bytes{hostname=~"bj1-rd-geass-prod-05",fstype=~"ext4|xfs",mountpoint="/data"})
+        Before change: { min: -0.0004; max: 0.0003; mean: 0.0; whole trend: up;  }
+        After change：{ min: -0.0001; max: 0.0001; mean: 0.0; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0004,0.0003], After change range: [-0.0001,0.0001]
+    119.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj1-rd-geass-prod-01", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -1.5922; max: 7.5404; mean: -0.1734; whole trend: down;  }
+        After change：{ min: -1.4156; max: 9.8106; mean: -0.0624; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5922,7.5404], After change range: [-1.4156,9.8106]
+    120.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj2-rd-geass-prod-06"}[2m])
+        Before change: { min: -0.1077; max: 33.7397; mean: -0.1077; whole trend: down;  }
+        After change：{ min: -0.1782; max: 17.5372; mean: -0.1782; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.1077,33.7397], After change range: [-0.1782,17.5372]
+    121.kpi name: probe_duration_seconds{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -0.0571; max: 1.8493; mean: -0.0263; whole trend: down;  }
+        After change：{ min: -0.0463; max: 0.9562; mean: -0.0189; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0571,1.8493], After change range: [-0.0463,0.9562]
+    122.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-01"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-01"}))*100
+        Before change: { min: -4.1857; max: 7.6317; mean: 0.0229; whole trend: down;  }
+        After change：{ min: -2.0884; max: 5.2691; mean: 0.2035; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-4.1857,7.6317], After change range: [-2.0884,5.2691]
+    123.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj2-rd-geass-prod-06",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -1.1895; max: 4.253; mean: -0.5136; whole trend: down;  }
+        After change：{ min: -1.1152; max: 4.2012; mean: -0.5144; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1895,4.253], After change range: [-1.1152,4.2012]
+    124.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.3625; max: 40.7693; mean: -0.074; whole trend: down;  }
+        After change：{ min: -0.1158; max: 26.5977; mean: -0.0506; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3625,40.7693], After change range: [-0.1158,26.5977]
+    125.kpi name: node_sockstat_TCP_inuse{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -5.4889; max: 8.0826; mean: -0.0817; whole trend: up;  }
+        After change：{ min: -1.4972; max: 4.0412; mean: -0.2105; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-5.4889,8.0826], After change range: [-1.4972,4.0412]
+    126.kpi name: sum( increase(std_grpc_server_handled_total{job="be/geass",environment="prod", grpc_code="Unknown"}[2m])) by(job,grpc_code)
+        Before change: { min: -0.3309; max: 8.2174; mean: -0.2008; whole trend: up;  }
+        After change：{ min: -0.8819; max: 2.1133; mean: -0.5318; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3309,8.2174], After change range: [-0.8819,2.1133]
+    127.kpi name: node_load5{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -1.0394; max: 8.1494; mean: -0.2904; whole trend: up;  }
+        After change：{ min: -0.754; max: 7.7077; mean: -0.3115; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0394,8.1494], After change range: [-0.754,7.7077]
+    128.kpi name: node_load15{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -1.2893; max: 6.0558; mean: -0.2877; whole trend: up;  }
+        After change：{ min: -0.8684; max: 5.303; mean: -0.3222; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2893,6.0558], After change range: [-0.8684,5.303]
+    129.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -2.94; max: 2.8333; mean: -0.0533; whole trend: down;  }
+        After change：{ min: -1.5131; max: 1.2849; mean: -0.1141; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.94,2.8333], After change range: [-1.5131,1.2849]
+    130.kpi name: node_netstat_Tcp_CurrEstab{hostname=~"bj1-rd-geass-prod-02"}
+        Before change: { min: -5.6777; max: 7.0452; mean: -0.0524; whole trend: up;  }
+        After change：{ min: -1.8756; max: 9.789; mean: -0.1156; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-5.6777,7.0452], After change range: [-1.8756,9.789]
+    131.kpi name: node_load1{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -0.5492; max: 10.3979; mean: -0.3727; whole trend: up;  }
+        After change：{ min: -0.5141; max: 10.9717; mean: -0.3439; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5492,10.3979], After change range: [-0.5141,10.9717]
+    132.kpi name: sum(increase(geass_server_pay_finish_order{}[1m]))
+        Before change: { min: -0.9587; max: 26.0236; mean: -0.0519; whole trend: down;  }
+        After change：{ min: -1.5523; max: 15.7141; mean: 0.0391; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.9587,26.0236], After change range: [-1.5523,15.7141]
+    133.kpi name: node_load15{hostname=~"bj1-rd-geass-prod-04"}
+        Before change: { min: -1.0381; max: 5.1674; mean: -0.3515; whole trend: up;  }
+        After change：{ min: -0.8441; max: 4.1172; mean: -0.34; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0381,5.1674], After change range: [-0.8441,4.1172]
+    134.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -1.0568; max: 23.405; mean: -0.2106; whole trend: down;  }
+        After change：{ min: -1.2897; max: 7.2118; mean: -0.114; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.0568,23.405], After change range: [-1.2897,7.2118]
+    135.kpi name: node_sockstat_TCP_tw{hostname=~"bj1-rd-geass-prod-01"}
+        Before change: { min: -2.022; max: 5.0417; mean: -0.259; whole trend: down;  }
+        After change：{ min: -1.8737; max: 5.1864; mean: -0.183; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.022,5.0417], After change range: [-1.8737,5.1864]
+    136.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -1.2988; max: 12.5813; mean: -0.0549; whole trend: down;  }
+        After change：{ min: -1.2416; max: 4.5303; mean: -0.3303; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2988,12.5813], After change range: [-1.2416,4.5303]
+    137.kpi name: sum(increase(geass_server_pay_new_order{}[1m]))
+        Before change: { min: -1.6429; max: 25.2999; mean: 0.0265; whole trend: down;  }
+        After change：{ min: -1.79; max: 10.7336; mean: 0.1424; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6429,25.2999], After change range: [-1.79,10.7336]
+    138.kpi name: node_load15{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -0.5414; max: 8.1887; mean: -0.5414; whole trend: up;  }
+        After change：{ min: -0.4664; max: 6.4199; mean: -0.4664; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5414,8.1887], After change range: [-0.4664,6.4199]
+    139.kpi name: node_sockstat_TCP_alloc{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -6.9975; max: 7.2978; mean: 0.0442; whole trend: down;  }
+        After change：{ min: -1.6429; max: 3.5591; mean: -0.0203; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-6.9975,7.2978], After change range: [-1.6429,3.5591]
+    140.kpi name: node_load15{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -1.143; max: 5.4768; mean: -0.3155; whole trend: up;  }
+        After change：{ min: -0.8469; max: 6.0846; mean: -0.3633; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.143,5.4768], After change range: [-0.8469,6.0846]
+    141.kpi name: 1-avg(irate(node_cpu_seconds_total{hostname=~"bj2-rd-geass-prod-03", mode=~"idle"}[2m])) by (mode, hostname)
+        Before change: { min: -1.5155; max: 8.592; mean: -0.211; whole trend: down;  }
+        After change：{ min: -0.98; max: 13.0007; mean: -0.0576; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.5155,8.592], After change range: [-0.98,13.0007]
+    142.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -0.3402; max: 13.2583; mean: -0.1489; whole trend: down;  }
+        After change：{ min: -0.2254; max: 7.5573; mean: -0.0916; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.3402,13.2583], After change range: [-0.2254,7.5573]
+    143.kpi name: sum(geass_server_pay_verify_order_queue)
+        Before change: { min: -1.6336; max: 2.8577; mean: 0.6073; whole trend: up;  }
+        After change：{ min: -1.295; max: 0.7972; mean: 0.7711; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.6336,2.8577], After change range: [-1.295,0.7972]
+    144.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj1-rd-geass-prod-04",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+        Before change: { min: -0.8223; max: 37.3888; mean: -0.0734; whole trend: up;  }
+        After change：{ min: -0.3605; max: 26.106; mean: -0.0667; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8223,37.3888], After change range: [-0.3605,26.106]
+    145.kpi name: irate(node_disk_written_bytes_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -0.5733; max: 28.1119; mean: -0.1462; whole trend: down;  }
+        After change：{ min: -0.3262; max: 21.4962; mean: -0.0944; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5733,28.1119], After change range: [-0.3262,21.4962]
+    146.kpi name: sum(increase(geass_server_pay_new_order{channel="自主结算"}[5m]))
+        Before change: { min: -1.8633; max: 3.7356; mean: 0.073; whole trend: up;  }
+        After change：{ min: -1.8188; max: 3.4792; mean: 0.1262; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8633,3.7356], After change range: [-1.8188,3.4792]
+    147.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-04"}[2m])
+        Before change: { min: -0.5926; max: 25.3112; mean: -0.4989; whole trend: down;  }
+        After change：{ min: -0.6109; max: 4.2177; mean: -0.5038; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.5926,25.3112], After change range: [-0.6109,4.2177]
+    148.kpi name: irate(node_disk_read_time_seconds_total{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -0.0571; max: 53.7349; mean: -0.0571; whole trend: up;  }
+        After change：{ min: -0.0504; max: 26.2169; mean: -0.0504; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0571,53.7349], After change range: [-0.0504,26.2169]
+    149.kpi name: sum( increase(std_grpc_server_handled_total{job="be/geass",environment="prod", grpc_code="OK"}[2m])) by(job,grpc_code)
+        Before change: { min: -1.9227; max: 6.8019; mean: 0.0608; whole trend: up;  }
+        After change：{ min: -2.0747; max: 5.8739; mean: 0.0965; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.9227,6.8019], After change range: [-2.0747,5.8739]
+    150.kpi name: irate(node_disk_writes_completed_total{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -1.2261; max: 8.5525; mean: 0.198; whole trend: down;  }
+        After change：{ min: -1.1857; max: 5.4402; mean: -0.3057; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.2261,8.5525], After change range: [-1.1857,5.4402]
+    151.kpi name: irate(node_disk_write_time_seconds_total{hostname=~"bj1-rd-geass-prod-05"}[2m])
+        Before change: { min: -0.2038; max: 22.6129; mean: -0.0944; whole trend: down;  }
+        After change：{ min: -0.2119; max: 1.6802; mean: -0.0885; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.2038,22.6129], After change range: [-0.2119,1.6802]
+    152.kpi name: sum(increase(geass_server_pay_verify_order_total{}[1m]))
+        Before change: { min: -1.1472; max: 15.2348; mean: -0.0309; whole trend: down;  }
+        After change：{ min: -1.5615; max: 16.0992; mean: 0.0564; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-1.1472,15.2348], After change range: [-1.5615,16.0992]
+    153.kpi name: irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-geass-prod-01"}[2m])
+        Before change: { min: -4.8562; max: 8.6917; mean: -0.1628; whole trend: up;  }
+        After change：{ min: -2.3191; max: 5.0702; mean: -0.1974; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-4.8562,8.6917], After change range: [-2.3191,5.0702]
+    154.kpi name: node_load5{hostname=~"bj2-rd-geass-prod-03"}
+        Before change: { min: -0.8948; max: 8.2714; mean: -0.3237; whole trend: up;  }
+        After change：{ min: -0.6261; max: 8.479; mean: -0.3201; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-0.8948,8.2714], After change range: [-0.6261,8.479]
+    155.kpi name: irate(node_disk_read_bytes_total{hostname=~"bj2-rd-geass-prod-03"}[2m])
+        Before change: { min: -0.0993; max: 31.5884; mean: -0.0993; whole trend: down;  }
+        After change：{ min: -0.0728; max: 24.6641; mean: -0.0728; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.0993,31.5884], After change range: [-0.0728,24.6641]
+    156.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj1-rd-geass-prod-05"}/node_memory_MemTotal_bytes{hostname=~"bj1-rd-geass-prod-05"}))*100
+        Before change: { min: -2.4204; max: 4.4999; mean: -0.0734; whole trend: down;  }
+        After change：{ min: -1.5335; max: 4.5886; mean: -0.5539; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-2.4204,4.4999], After change range: [-1.5335,4.5886]
+    157.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-geass-prod-02"}[2m])
+        Before change: { min: -1.3394; max: 6.5419; mean: -0.5104; whole trend: down;  }
+        After change：{ min: -0.9561; max: 5.4889; mean: -0.4532; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.3394,6.5419], After change range: [-0.9561,5.4889]
+    158.kpi name: node_sockstat_TCP_tw{hostname=~"bj2-rd-geass-prod-06"}
+        Before change: { min: -2.8897; max: 3.6362; mean: -0.2793; whole trend: down;  }
+        After change：{ min: -2.9512; max: 3.6597; mean: -0.3068; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-2.8897,3.6362], After change range: [-2.9512,3.6597]
+    159.kpi name: node_load15{hostname=~"bj1-rd-geass-prod-05"}
+        Before change: { min: -0.6474; max: 9.7109; mean: -0.6474; whole trend: down;  }
+        After change：{ min: -0.6384; max: 4.0473; mean: -0.6384; whole trend: down;  }
+        Comparison of data ranges before and after change: Before change range: [-0.6474,9.7109], After change range: [-0.6384,4.0473]
+    160.kpi name: (1-(node_memory_MemAvailable_bytes{hostname=~"bj2-rd-geass-prod-06"}/node_memory_MemTotal_bytes{hostname=~"bj2-rd-geass-prod-06"}))*100
+        Before change: { min: -1.8775; max: 4.9549; mean: 0.427; whole trend: down;  }
+        After change：{ min: -1.3615; max: 4.8297; mean: -0.5563; whole trend: up;  }
+        Comparison of data ranges before and after change: Before change range: [-1.8775,4.9549], After change range: [-1.3615,4.8297]
+
+SCWARN algorithm identifies anomalies at the following timestamps:
+    1, 2024-04-21 00:06:01
+    2, 2024-04-21 00:12:01
+    3, 2024-04-21 00:16:01
+
+Types of single kpi anomalies related to overall anomalies (single kpi anomalies not related to overall anomalies are not output):
+    80.kpi name: irate(node_network_transmit_bytes_total{hostname=~"bj2-rd-geass-prod-03",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8
+      This kpi has 1 anomaly types in total, with types: ['Steady increase']
+      Among them, type [Steady increase] remained abnormal, timestamps are: 2024-04-20 23:46:01
+Total anomalies found: 1408
+Total number of anomalous kpis: 83
+Total number of anomaly description shapes: 3
+
+These are definitions for anomaly types (patterns):
+        Anomaly description shapes are divided into two major categories: Still in abnormal state and Recover to normal state,
+        Still in abnormal state, these anomalies remain in an abnormal state after appearing at the anomaly point
+        1. Sudden increase
+        2. Sudden decrease
+        3. Level shift up
+        4. Level shift down
+        5. Steady increase
+        6. Steady decrease
+        Recover to normal state, these anomalies return to normal state after appearing at the anomaly point
+        7. Single spike
+        8. Single dip
+        9. Transient level shift up
+        10. Transient level shift down
+        11. Multiple spikes
+        12. Multiple dips
+        13. Fluctuations
+
+Please analyze the above domain text and kpi anomaly situations, and provide your judgment: Expected change or failed change
+Also provide your thoughts and reasoning. If it's a failed change, please provide your suggested solution
+Please answer in the following format:{(
+ "change_type":"Please return expected change or failed change,"
+ "reason":"Your reason for the change_type field",
+ "solution":"None if this is an expected change or solution")}
