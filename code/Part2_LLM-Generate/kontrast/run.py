@@ -213,7 +213,7 @@ for id in ids:
     # Create retrieval chains
     history_prompt = ChatPromptTemplate.from_messages([
         MessagesPlaceholder(variable_name="chat_history"),
-        ("user", """需求的描述是{input}"""),
+        ("user", """The requirement description is {input}"""),
         (
             "user",
             "Given the above conversation, generate a search query to look up in order to get information relevant to the conversation.",
@@ -230,9 +230,9 @@ for id in ids:
         (
             "system",
             """
-            您现在是一个企业日常进行变更维护的工程师，\n
-            你擅长通过读取记录变更服务相关指标判断变更是否导致发生异常并提供可能的修复措施。\n
-            我现在有一些记录变更服务指标数据的领域文本文件信息，请判断这次变更是否符合预期。\n
+            You are now an engineer who performs routine change maintenance for an enterprise,\n
+            You excel at reading and analyzing change service-related metrics to determine if changes have caused anomalies and provide possible remedial measures.\n
+            I now have some domain text file information that records change service metrics, please determine if this change meets expectations.\n
             {context}
             """,
         ),
