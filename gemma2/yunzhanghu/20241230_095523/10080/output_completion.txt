@@ -1,0 +1,25 @@
+
+areaText_10080_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100,(1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100,ClientEnvHandler is <:*:>,sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])),1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100",
+	"reason": "A significant number of kpis are showing anomalies, indicating potential issues with grpc server performance and handling.  The `ClientEnvHandler` KPI also shows a notable shift, suggesting changes in client environment interactions.",
+	"solution": "Investigate the root cause of the anomalous KPIs, focusing on: \n* GPRC server logs for errors or bottlenecks.\n* Performance metrics of `ListFieldValues`, `ListPermResource`, `CheckUserOperatePage`, and `ListAuthZResources` operations.\n* Analyze `ClientEnvHandler` KPI changes to understand client environment impact."
+}
+``` 
+
+
+Let me know if you'd like me to elaborate on any specific aspect or KPI.
+reason similarity score:0.5504267811775208
+solution similarity score:0.8252208828926086

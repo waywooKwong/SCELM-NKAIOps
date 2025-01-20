@@ -1,0 +1,25 @@
+
+areaText_10079_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), <:list modules:>, callback status error, getBackupEm<:updateFanweiEmployee failed:>, get metadata from header",
+	"reason": "The provided data shows a significant shift in the ranges and trends of several KPIs after the change. KPIs like 'sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))', '<:list modules:>', 'callback status error', 'getBackupEm<:updateFanweiEmployee failed:>', and 'get metadata from header' exhibit noticeable decreases in their maximum values and changes in overall trends, suggesting potential issues with service performance or functionality.",
+	"solution": "Investigate the root cause of the changes in these KPIs. Analyze logs, monitor system resources, and review recent code changes to pinpoint the source of the problem. Consider reverting the recent change if it is identified as the primary cause. Additionally, monitor the affected KPIs closely and implement appropriate mitigation strategies to restore normal service levels."
+}
+``` 
+
+
+
+reason similarity score:0.6557338237762451
+solution similarity score:0.7443422675132751

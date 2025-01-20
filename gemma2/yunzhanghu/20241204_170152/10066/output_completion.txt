@@ -1,0 +1,22 @@
+
+areaText_10066_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1),Depts only have yunzhanghu,getPermTagsAndValues <:*:>,parseDataReportFlag ok,loadRegoMySQLInterval success",
+	"reason": "The data indicates a significant change in several key performance indicators (KPIs) after the change.  Several KPIs, such as '1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)', 'Depts only have yunzhanghu', 'getPermTagsAndValues <:*:>', 'parseDataReportFlag ok', and 'loadRegoMySQLInterval success', exhibit a downward trend or significant shifts in their ranges. This suggests that the change may have negatively impacted the system's performance or stability.",
+	"solution": "Investigate the specific changes implemented and their potential impact on the affected KPIs. Review logs and system monitoring data to identify any errors or anomalies related to the altered code or configuration. Consider reverting the changes or implementing mitigating measures to restore the system's performance to its previous state. Further analysis and testing are required to pinpoint the root cause of the issue and develop a permanent solution."
+}
+```
+reason similarity score:0.6458950042724609
+solution similarity score:0.8274881839752197

@@ -1,0 +1,26 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>\nDepts only have yunzhanghu\n(sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100 \n<:GIN:> ",
+	"reason": "Multiple KPIs exhibit unusual fluctuations and trends. Notably, 'no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>]' and 'Depts only have yunzhanghu' show unexpected spikes, while '(sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100' demonstrates a significant shift in resource utilization. These anomalies suggest potential issues with system performance or configuration.",
+	"solution": "Investigate the root cause of the unusual fluctuations and spikes in the identified KPIs. Review recent changes to system configurations, deployment pipelines, or application code that could be contributing to these issues. Monitor resource consumption closely and consider scaling resources as needed. Analyze logs and error messages for further insights into potential problems."
+}
+
+```
+reason similarity score:0.7434279918670654
+solution similarity score:0.7070131897926331

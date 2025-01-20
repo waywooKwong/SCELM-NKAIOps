@@ -1,0 +1,26 @@
+
+areaText_10068_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1), Depts only have yunzhanghu, getPermTagsAndValues <:*:>, build <:*:>, parseDataReportFlag ok, loadRegoMySQLInterval success",
+	"reason": "The data indicates a significant shift in several key performance indicators (KPIs) after the change.  KPIs like '1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)' show a drastic decrease in their mean values, suggesting potential issues with service handling or data processing.  Similarly, KPIs like 'Depts only have yunzhanghu', 'getPermTagsAndValues <:*:>' and 'parseDataReportFlag ok' also exhibit significant downward trends, indicating potential problems with data access or permission management.",
+	"solution": "1. **Investigate the '1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)' KPI:** Analyze logs and metrics related to the 'be/yid' service to pinpoint the cause of the decreased server handling. This could involve checking for errors, resource constraints, or changes in traffic patterns.
+2. **Review recent code changes:** Examine the code deployed around the time of the change to identify any potential bugs or regressions that might be affecting the affected KPIs.
+3. **Monitor resource utilization:** Ensure that the system has sufficient resources (CPU, memory, network) to handle the workload. If resources are being overutilized, consider scaling up the infrastructure or optimizing resource consumption.
+4. **Implement logging and monitoring:** Enhance logging and monitoring capabilities to provide more detailed insights into the system's behavior. This can help in identifying the root cause of issues more quickly and effectively.
+5. **Rollback if necessary:** If the issue is severe and cannot be resolved quickly, consider rolling back the recent changes to restore the previous state. "
+}
+```
+reason similarity score:0.6254494786262512
+solution similarity score:0.5272243618965149

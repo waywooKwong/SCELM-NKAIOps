@@ -1,0 +1,22 @@
+
+areaText_10051_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>, computeOwnObjectIDs end, message,  sum(rate(http_requests_total[1m])) by (lebel) ",
+	"reason": "Several KPIs show significant deviations from their expected ranges.  'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>', and 'computeOwnObjectIDs end' exhibit unusual spikes, while 'message' shows a consistent downward trend. The high number of anomalies suggests a systemic issue rather than isolated incidents.",
+	"solution": "1. **Investigate the spike in 'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>', and 'computeOwnObjectIDs end'.**  This could indicate increased load on these services or potential errors in their processing. 2. **Analyze the downward trend in 'message' to understand the cause.** It might point to a problem with message delivery or processing within the system. 3. **Review system logs and monitoring data for any correlation between the anomalous KPIs and potential error messages or performance issues.** This can provide further insights into the root cause of the problems."
+}
+```
+reason similarity score:0.6769354343414307
+solution similarity score:0.7905727624893188

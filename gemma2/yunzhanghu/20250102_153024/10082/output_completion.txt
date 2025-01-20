@@ -1,0 +1,18 @@
+
+areaText_10082_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100, sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), ClientEnvHandler is <:*>, 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))",
+	"reason": "The increase in  `ClientEnvHandler is <:*>` and `sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))` suggests potential issues with the grpc server handling requests. The anomalies in `sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100` might indicate inefficient handling of certain grpc methods.",
+	"solution": "Investigate the logs and metrics for the grpc server to identify the root cause of the anomalies. Consider optimizing the implementation of the affected grpc methods and checking for any resource bottlenecks."
+}
+```
+reason similarity score:0.167043536901474
+solution similarity score:0.5383958220481873

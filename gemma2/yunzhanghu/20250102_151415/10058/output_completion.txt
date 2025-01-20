@@ -1,0 +1,22 @@
+
+areaText_10058_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(1m_metric),getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>, computeOwnObjectIDs end, message",
+	"reason": "Several KPIs exhibit significant deviations from their expected behavior. Notably, 'sum(1m_metric)' shows a drastic increase, indicating potential resource contention.  'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>' and 'computeOwnObjectIDs end' have negative trends, suggesting service degradation or performance issues. 'message' displays abnormal values.",
+	"solution": "1. Investigate the cause of the spike in 'sum(1m_metric)' by examining system resource usage and identifying potential bottlenecks. 2. Analyze the logs and metrics for 'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>' and 'computeOwnObjectIDs end' to pinpoint the root cause of the negative trends. 3.  Monitor the 'message' KPI closely and investigate any error messages or unusual patterns. 4. Consider scaling resources or optimizing application performance based on findings."
+}
+```
+reason similarity score:0.6638593077659607
+solution similarity score:0.7554083466529846

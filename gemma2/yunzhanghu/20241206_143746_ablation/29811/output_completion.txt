@@ -1,0 +1,17 @@
+
+areaText_29811_v4_English.txt
+root_cause_from_redis: []
+Expected Software Changes
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "75.kpi name: node_sockstat_TCP_alloc{hostname=~"bj1-rd-bkverify-prod-03"} \n79.kpi name: node_sockstat_TCP_tw{hostname=~"bj3-rd-bkverify-prod-02"} \n81.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-bkverify-prod-02"}[2m]) \n74.kpi name: irate(node_network_receive_bytes_total{hostname=~"bj1-rd-bkverify-prod-01",device!~"tap.*|veth.*|br.*|docker.*|virbr*|lo*"}[5m])*8 \n59.kpi name: node_filesystem_free_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"} / node_filesystem_size_bytes{hostname=~"bj3-rd-bkverify-prod-02",fstype=~"ext4|xfs",mountpoint="/"}" ,
+	"reason": "The system is experiencing a significant performance degradation. Several key metrics, including network receive rate, disk read completion rate, and TCP connection statistics, have shown drastic changes, indicating potential network congestion, disk I/O issues, or increased system load.",
+	"solution": "Investigate the following areas:\n* **Network:** Analyze network traffic patterns and identify potential bottlenecks. Consider increasing bandwidth or optimizing network configuration.\n* **Disk I/O:** Check disk utilization, I/O latency, and error rates. Ensure sufficient disk space and optimize disk performance settings.\n* **System Load:** Monitor CPU and memory usage. If resources are heavily consumed, consider scaling up resources or optimizing application performance."
+}
+``` 
+
+
+
+reason similarity score:-0.06878932565450668
+solution similarity score:-0.03568226099014282

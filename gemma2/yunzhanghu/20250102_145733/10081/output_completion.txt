@@ -1,0 +1,25 @@
+
+areaText_10081_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100, ClientEnvHandler is <:*>, 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(1))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1), sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100", 
+	"reason": "There are significant deviations in the values of several KPIs, particularly those related to gRPC server handling and ClientEnvHandler. This indicates potential issues with service performance, request processing, or communication between components.",
+	"solution": "Investigate the following steps: \n1. **Monitor system resources:** Check CPU, memory, and network utilization for abnormal spikes during periods of KPI deviation.\n2. **Analyze gRPC logs:** Look for errors, latency issues, or unexpected traffic patterns in gRPC server logs related to the affected KPIs.\n3. **Review ClientEnvHandler implementation:** Analyze the code for potential bottlenecks, inefficient operations, or logic errors that might be contributing to performance degradation.\n4. **Implement performance profiling:** Use tools to profile code execution and identify areas for optimization within the relevant services."
+}
+```
+reason similarity score:0.5932187438011169
+solution similarity score:0.7147956490516663

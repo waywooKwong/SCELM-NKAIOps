@@ -1,0 +1,25 @@
+
+areaText_10049_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>,computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "A significant number of KPIs show abnormal changes after the modification, including a drastic reduction in the 'loaded policy count:<:NUM:>' KPI to 0. This, coupled with changes in KPIs related to object ID retrieval and network traffic, suggests potential issues with the deployment or configuration.",
+	"solution": "Investigate the changes made to the system and analyze the logs for any errors or warnings related to policy loading, object ID retrieval, and network communication. Review the configuration files for potential misconfigurations.  Consider reverting the changes and testing the system again to isolate the root cause."
+}
+``` 
+
+
+
+reason similarity score:0.8861544728279114
+solution similarity score:0.6802693009376526

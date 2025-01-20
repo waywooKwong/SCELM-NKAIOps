@@ -1,0 +1,25 @@
+
+areaText_10065_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100\nsum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\nsum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\nparseDataReportFlag ok\nloadRegoMySQLInterval success",
+	"reason": "The data ranges for several KPIs have significantly changed after the modification. KPIs like `irate`, `sum(rate(container_network_receive_bytes_total))`, `sum(rate(container_network_transmit_bytes_total))`, `parseDataReportFlag ok`, and `loadRegoMySQLInterval success` show drastic changes in their minimum and maximum values, indicating potential issues with the system's performance or functionality.",
+	"solution": "Investigate the changes made to the system and their impact on the affected KPIs. Analyze the logs and monitoring data to identify the root cause of the anomalies. Consider reverting the changes or implementing corrective actions to restore the KPIs to their normal ranges."
+}
+``` 
+
+
+
+reason similarity score:0.8394766449928284
+solution similarity score:0.9066505432128906

@@ -1,0 +1,25 @@
+
+areaText_10055_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8, message, getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>, computeOwnObjectIDs end",
+	"reason": "The system exhibits several anomalies after the change. Notably, 'loaded policy count:<:NUM:>' drops to 0, indicating a potential issue with policy loading. 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' shows an upward trend, suggesting increased network traffic. Other KPIs like 'message', 'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>', and 'computeOwnObjectIDs end' also demonstrate deviations from their previous trends, indicating potential cascading effects.",
+	"solution": "Investigate the root cause of the 'loaded policy count:<:NUM:>' drop. Analyze the network traffic increase in 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8'. Review logs and system configurations related to 'getBackupEmp success', 'AuthListByName <:<:ChineseInfo:>:>', and 'computeOwnObjectIDs end' to identify potential issues."
+}
+``` 
+
+
+
+reason similarity score:0.678024172782898
+solution similarity score:0.5618491172790527

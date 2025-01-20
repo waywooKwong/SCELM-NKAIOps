@@ -1,0 +1,561 @@
+
+areaText_40009_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations or performance degradations.  The SCWARN algorithm also identified anomalies, but these are not considered indicators of a failed change based on the context.",
+	"solution": "N/A"
+}
+``` 
+
+
+**Explanation:**
+
+* **change_type:** "normal" because the KPIs are within historical norms and there are no significant performance issues.
+* **Top 5 abnormal kpi:** "N/A" because there are no KPIs that are significantly abnormal.
+* **reason:** The analysis emphasizes that the KPIs are stable, and the SCWARN anomalies, while present, don't point to a failed change based on the given information.
+* **solution:**  "N/A" because there are no issues to solve. 
+
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+
+areaText_40012_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPIs remain within historical norms and there are no significant deviations suggesting disruptions or performance degradation. The SCWARN algorithm identified anomalies, but these are not directly linked to a failure based on the available KPI data.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_51009_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration",
+	"reason": "Significant deviations in KPIs after the change. Memory usage decreased, CPU usage increased with a wider range, and istio_duration showed a larger range. These indicate potential resource contention or performance degradation.",
+	"solution": "Investigate the impact of the change on resource utilization. Analyze the logs and application code to identify the root cause of the increased CPU usage and memory decrease. Consider optimizing resource allocation and code performance to mitigate the issues."
+}
+``` 
+
+
+
+
+areaText_41009_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that KPIs remain within historical norms after the change. There are no significant deviations or performance degradation observed. All indicator data is within the defined threshold.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_51011_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "net_recv_packet, cpu_usage, istio_count, diskio, istio_duration",
+	"reason": "The change resulted in several abnormal KPI trends.  net_recv_packet showed a Level shift down, indicating a decrease in network packet reception. cpu_usage increased significantly, suggesting higher resource utilization. istio_count and istio_duration both showed upward trends, potentially related to increased traffic or latency within the Istio service mesh. diskio also showed a change in behavior with a new range of values.",
+	"solution": "Investigate the root cause of the increased cpu_usage and the changes in network and Istio metrics. Review logs and system configurations to identify potential bottlenecks or misconfigurations. Consider scaling resources or optimizing application performance to mitigate the observed anomalies."
+}
+``` 
+
+
+areaText_50012_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration, diskio, net_recv_packet",
+	"reason": "The change resulted in significant deviations in key performance indicators. Memory usage, CPU usage, and istio_duration saw substantial increases, while diskio showed a drastic decrease to zero. Additionally, net_recv_packet experienced a notable shift in its range. These anomalies indicate potential resource contention, increased processing load, and a possible issue with disk I/O.",
+	"solution": "Investigate the nature of the change and its impact on resource consumption. Review logs and system configurations to identify potential bottlenecks. Consider scaling resources, optimizing code performance, and addressing any disk I/O related issues."
+}
+``` 
+
+
+
+
+areaText_50003_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration, net_recv_packet, net_send_packet",
+	"reason": "Significant deviations in key performance indicators (KPIs) were observed after the change. Memory usage decreased, CPU usage increased, and istio_duration showed a substantial increase. Additionally, net_recv_packet and net_send_packet experienced a downward trend. These changes indicate potential performance issues and resource contention.",
+	"solution": "Investigate the root cause of the increased CPU usage and memory usage. Review the code changes to identify potential performance bottlenecks. Optimize the system configuration and resource allocation. Monitor the istio_duration KPI closely and address any performance degradation. Consider implementing caching mechanisms and load balancing to improve system performance."
+}
+```
+
+areaText_41011_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations suggesting performance degradation. The 'Types of single kpi anomalies related to overall anomalies' report does not indicate any KPIs exceeding thresholds, classifying this as a normal change.",
+	"solution": "N/A"
+}
+``` 
+
+
+**Explanation:**
+
+The analysis focuses on these key points:
+
+* **No KPI Exceeding Thresholds:** The provided data explicitly states that the "Types of single kpi anomalies related to overall anomalies"  do not exceed thresholds, implying normal behavior.
+* **Within Historical Norms:** The text mentions KPIs remaining within historical norms, further supporting a normal change classification.
+* **Absence of Performance Degradation:** There is no indication of disruptions, increased error rates, or decreased system availability, all hallmarks of a failure change.
+
+
+
+
+Let me know if you have any other data points you'd like to analyze!
+
+areaText_40005_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that no KPIs exceed their thresholds after the change. All KPIs show an upward trend, and the data ranges remain within acceptable limits.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_50011_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration, istio_count, net_send_packet",
+	"reason": "The change resulted in significant anomalies across multiple key performance indicators (KPIs). Memory usage, CPU usage, and network packet metrics (net_send_packet) showed upward trends, indicating increased resource consumption.  Istio metrics (istio_duration and istio_count) also spiked, suggesting potential issues with service mesh communication. These anomalies point towards a potential performance degradation or instability introduced by the change.",
+	"solution": "Investigate the code changes introduced during this period to identify the root cause of the increased resource consumption and communication issues. Consider reverting the changes or implementing performance optimizations to mitigate the negative impact."
+}
+``` 
+
+
+**Explanation:**
+
+* **Change Type:** Classified as "failure" due to the significant deviations in KPIs after the change.
+* **Top 5 Abnormal KPIs:**  Selected based on the magnitude of the change and potential impact on system performance.
+* **Reason:**  The analysis highlights the increase in resource usage (memory, CPU) and potential problems with service mesh communication (Istio metrics). This suggests the change might have introduced inefficiencies or bugs.
+* **Solution:**  Recommends investigating the code changes and exploring potential solutions like reverting the change or optimizing the code to address the identified issues. 
+
+
+
+Let me know if you have any other change analysis scenarios you'd like me to evaluate!
+
+areaText_41010_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and no significant deviations or anomalies exceeding the threshold were detected. ",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_51013_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_count, istio_duration, net_send_packet",
+	"reason": "Significant deviations in key performance indicators (KPIs) after the change. Memory usage, CPU usage, and network metrics (net_send_packet) show increased values, while istio_count and istio_duration indicate higher request counts and processing times. This suggests potential resource contention or increased load on the system.",
+	"solution": "Investigate the root cause of the increased resource consumption. Analyze logs and system activity to identify any bottlenecks or performance issues. Consider scaling resources, optimizing code, or implementing caching mechanisms to alleviate the load."
+}
+``` 
+
+
+areaText_40003_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates no significant deviations in KPIs after the change. All KPIs remain within historical norms and there are no indications of system disruptions or performance degradation. ",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_51012_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_count, istio_duration, net_send_packet",
+	"reason": "Significant increases in memory usage, CPU usage, and 'istio_count' along with changes in 'net_send_packet' and 'istio_duration' suggest the change introduced resource contention issues. The 'SCWARN' algorithm also flagged anomalies at a specific timestamp, indicating a deviation from expected behavior.",
+	"solution": "Investigate the code changes related to the 'productcatalogservice' to identify the source of the increased resource consumption. Optimize resource utilization, consider scaling resources, or review the design of the service to mitigate contention."
+}
+``` 
+
+
+areaText_40008_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPIs remain within historical norms and there are no significant deviations suggesting disruptions or performance degradation.  The analysis shows that the indicator data does not exceed the threshold, which is considered normal.",
+	"solution": "N/A"
+}
+``` 
+
+
+**Explanation:**
+
+The analysis clearly states that all KPIs are within acceptable ranges and there are no anomalies exceeding thresholds.  
+
+Therefore, the classification is "normal" and there is no need for a "Top 5 abnormal kpi" list or a solution. 
+
+
+areaText_50004_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration",
+	"reason": "Significant deviations in KPIs after the change indicate a potential failure. Memory usage and CPU usage decreased, suggesting resource contention issues.  Istio duration increased, pointing to potential communication bottlenecks.",
+	"solution": "Investigate the code changes introduced to identify the root cause of resource contention. Optimize resource allocation and consider scaling up infrastructure if necessary. Analyze Istio logs to pinpoint communication bottlenecks and implement solutions to improve network performance."
+}
+``` 
+
+
+areaText_40013_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPIs remain within historical norms and there are no significant deviations suggesting system performance degradation.  The SCWARN algorithm identified anomalies, but these are not considered to exceed thresholds and are not indicative of a failure.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_50008_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "net_recv_packet, net_send_packet, memory_usage, cpu_usage, diskio",
+	"reason": "Several key performance indicators (KPIs) show significant deviations after the change.  net_recv_packet and net_send_packet show a decrease in average values, memory_usage, cpu_usage, and diskio show changes in their ranges, indicating potential resource contention or increased load. The SCWARN algorithm also identified anomalies, suggesting the change deviated from expected behavior patterns.",
+	"solution": "Investigate the code changes introduced to identify the root cause of the KPI deviations. Review logs and system performance metrics to pinpoint specific areas of concern. Consider rolling back the change or implementing mitigation strategies to address resource bottlenecks."
+}
+``` 
+
+
+
+
+areaText_41012_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": null,
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations suggesting system performance degradation.  The 'Types of single kpi anomalies related to overall anomalies'  are considered indicator data which exceed the threshold, which is considered normal.",
+	"solution": null
+}
+``` 
+
+
+areaText_50010_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_duration, memory_usage, net_recv_packet, net_send_packet, cpu_usage",
+	"reason": "Significant deviations in KPIs after the change.  'istio_duration' shows a large increase in maximum value and a decrease in the mean, indicating potential latency issues. 'memory_usage' and 'cpu_usage' also show notable increases, suggesting resource contention. 'net_recv_packet' and 'net_send_packet' experience changes in their ranges, potentially pointing to network performance fluctuations.",
+	"solution": "Investigate the code changes introduced to identify the root cause of the resource contention and latency issues. Optimize resource usage, potentially by adjusting memory allocations or thread pools. Review network configurations and investigate potential bottlenecks."
+}
+``` 
+
+
+areaText_41013_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations suggesting performance degradation.  The 'Types of single kpi anomalies related to overall anomalies'  report  indicates no data exceeding thresholds.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_40011_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations or anomalies detected. The system performance appears stable.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_40007_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPIs remain within historical norms and there are no significant deviations or disruptions in system performance. The SCWARN algorithm also identifies anomalies, but these are categorized as 'Recover to normal state' and do not suggest persistent abnormal behavior.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_51010_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration, diskio, net_send_packet",
+	"reason": "Significant deviations in key performance indicators (KPIs) after the change.  Memory usage, CPU usage, and network send packet show a decrease, while disk IO and istio_duration show a drastic change in their ranges. This suggests a potential performance degradation or resource bottleneck.",
+	"solution": "Investigate the root cause of the KPI deviations. Review logs and system configurations to identify potential issues related to resource allocation, network performance, or application code changes. Consider scaling resources, optimizing code performance, or adjusting system configurations to mitigate the observed performance degradation."
+}
+``` 
+
+
+areaText_40004_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that KPIs remain within historical norms and there are no significant deviations suggesting system performance degradation.  All indicator data is within the threshold.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_40010_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that all KPI values remain within historical norms and there are no significant deviations suggesting system performance degradation.  The SCWARN algorithm also identified anomalies, but these are categorized as 'recover to normal state' and do not indicate persistent issues.",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_40006_v4_English.txt
+root_cause_from_redis: set()
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "The provided data indicates that no KPIs exceed their thresholds after the change. The overall trend remains consistent with historical norms. ",
+	"solution": "N/A"
+}
+``` 
+
+
+areaText_50013_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, diskio, istio_duration",
+	"reason": "Significant deviations in CPU usage, disk I/O, and Istio duration metrics indicate a potential performance degradation. CPU usage dropped sharply, disk I/O became extremely low, and Istio duration increased significantly, suggesting resource contention or service disruption.",
+	"solution": "Investigate the root cause of the decreased CPU usage and disk I/O. Analyze the increased Istio duration to identify potential bottlenecks or latency issues within the service mesh. Consider scaling resources or optimizing configurations to address the performance degradation."
+}
+``` 
+
+
+areaText_50005_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_count, istio_duration, net_recv_packet",
+	"reason": "Significant deviations in key performance indicators (KPIs) after the change. Memory usage, CPU usage, and network packet reception have all shown increases, while disk I/O has become extremely low. These changes suggest a potential resource contention issue or increased load on the service.",
+	"solution": "Investigate the increased resource consumption in memory, CPU, and network. Analyze the logs and system behavior around the time of the change to identify the root cause. Consider optimizing resource allocation, scaling the service, or reviewing the recent code changes for potential performance bottlenecks."
+}
+``` 
+
+
+
+
+areaText_50006_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, istio_duration, cpu_usage, diskio, net_recv_packet",
+	"reason": "There are significant deviations in key performance indicators (KPIs) after the change. memory_usage shows an upward trend, istio_duration has increased, cpu_usage has decreased significantly, diskio shows a drastic reduction, and net_recv_packet has a downward trend. These changes indicate potential performance degradation and resource contention.",
+	"solution": "Investigate the code changes introduced during this deployment to identify the root cause of the KPI deviations. Consider rolling back the changes or implementing optimizations to improve resource utilization and system performance. Additionally, monitor the affected KPIs closely and adjust system configurations as needed."
+}
+``` 
+
+
+
+
+areaText_50007_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "memory_usage, cpu_usage, istio_duration, istio_count, diskio",
+	"reason": "Several key performance indicators (KPIs) show significant deviations after the change. Memory usage decreased, CPU usage increased, and both istio_duration and istio_count spiked.  Diskio also showed a significant change in behavior. These anomalies suggest a potential issue with resource consumption or system performance.",
+	"solution": "Investigate the changes made to the productcatalogservice and identify the root cause of the KPI deviations.  Consider reviewing logs around the time of the anomalies for further clues. Potential solutions could include optimizing resource allocation, addressing code performance bottlenecks, or investigating potential configuration issues."
+}
+``` 
+
+
+**Explanation:**
+
+* **Change Type: Failure:** The significant changes in memory usage, CPU usage, istio metrics, and diskio point to a negative impact on the system's performance.
+* **Top 5 Abnormal KPIs:**  The list prioritizes the KPIs with the most drastic changes.
+* **Reason:** The provided data clearly indicates a shift in system behavior after the change, with several KPIs moving outside their normal ranges. 
+* **Solution:** The suggested solution emphasizes a systematic approach to troubleshooting:
+    * **Review Changes:** Understand what was altered in the productcatalogservice.
+    * **Log Analysis:** Examine logs around the time of the anomalies for specific error messages or patterns.
+    * **Performance Tuning:**  Focus on optimizing resource usage (memory, CPU) and addressing potential performance bottlenecks in the code.
+    * **Configuration Review:** Ensure that all configurations related to the service are correct and haven't been inadvertently changed. 
+
+
+
+Let me know if you have any other data points or scenarios you'd like to analyze!
+
+areaText_50009_v4_English.txt
+root_cause_from_redis: set()
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, istio_duration, memory_usage, diskio, net_send_packet",
+	"reason": "Significant deviations in KPIs after the change. CPU usage decreased, memory usage decreased, diskio decreased, net_send_packet decreased.  Istio duration increased significantly, indicating potential latency issues.",
+	"solution": "Investigate the root cause of the CPU, memory, diskio, and net_send_packet decreases. Analyze the increased istio_duration for bottlenecks or configuration issues in the Istio service mesh. Consider rolling back the change or implementing mitigations to address the performance degradation."
+}
+``` 
+
+
+**Explanation:**
+
+* **Change Type:** "failure" - The significant decrease in CPU usage, memory usage, diskio, and net_send_packet, coupled with a substantial increase in istio_duration, strongly suggests a negative impact on the service's performance.
+* **Top 5 abnormal kpi:** The listed KPIs show the most drastic changes after the change.
+* **Reason:** The combined effect of these KPI changes points to a potential issue with the deployed change. Decreased resource utilization could indicate a problem with the service itself or its interactions with other components. The increased istio_duration suggests potential issues within the service mesh, leading to higher latency.
+* **Solution:** The suggested solution focuses on:
+    * **Root Cause Analysis:**  Identify why resources are being used less and if the service is functioning correctly.
+    * **Istio Optimization:**  Investigate the increased istio_duration to pinpoint bottlenecks or misconfigurations within the service mesh.
+    * **Rollback or Mitigation:** Depending on the findings, consider rolling back the change or implementing strategies to mitigate the performance degradation. 
+
+
+
+Let me know if you have any other questions or need further clarification!
+Precision: 0.00Recall: 0.00F1 Score: 0.00

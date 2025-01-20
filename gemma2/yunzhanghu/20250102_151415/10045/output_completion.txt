@@ -1,0 +1,29 @@
+
+areaText_10045_v4_English.txt
+root_cause_from_redis: []
+```json
+[
+  {
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+  }, 
+  {
+	"item": "Missing Modification of Correlated Configuration-Configuration Errors-Defective Software Changes"
+  },
+  {
+	"item": "Deleting White List by Mistake-Configuration Errors-Defective Software Changes"
+  }
+]
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>, computeOwnObjectIDs end, message,  sum(rate(http_requests_total[1m])) by (lebel)", 
+	"reason": "Several KPIs indicate performance degradation and potential issues. 'getBackupEmp success' and 'AuthListByName <:<:ChineseInfo:>:>' show negative trends suggesting service disruptions or access problems. 'computeOwnObjectIDs end', 'message', and 'sum(rate(http_requests_total[1m])) by (lebel)' exhibit unusual fluctuations, pointing to increased load or errors in system operations.",
+	"solution": "Investigate the logs and metrics for the affected services ('getBackupEmp', 'AuthListByName', 'computeOwnObjectIDs', and related HTTP requests). Identify the root cause of performance degradation and implement appropriate solutions. This may involve optimizing resource allocation, addressing bottlenecks, or resolving underlying configuration issues."
+}
+``` 
+
+
+
+reason similarity score:0.48712313175201416
+solution similarity score:0.4113459587097168

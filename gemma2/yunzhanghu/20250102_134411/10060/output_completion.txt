@@ -1,0 +1,21 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Resource Contention-Defective Software Changes" 
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>\nDepts only have yunzhanghu\n(sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100\n<:GIN:>\nno need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ",
+	"reason": "Several KPIs show significant deviations from their normal ranges, indicating potential issues within the system. These include: \n-  'Depts only have yunzhanghu': This KPI suggests that departments are relying solely on a specific resource ('yunzhanghu') which might indicate dependency issues or lack of diversity.\n- '(sum(irate(container_cpu_usage_seconds_total...)) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota...))) * 100': This complex KPI likely measures resource utilization and suggests possible CPU overuse or insufficient allocation.\n- '<:GIN:>' :  This KPI might represent a specific application performance metric and its deviation could signal problems within that component.\n- 'no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>': This indicates issues with tracing and logging, potentially hindering debugging and monitoring efforts.",
+	"solution": "1. Investigate the root cause of high CPU utilization by analyzing the complex KPI '(sum(irate(container_cpu_usage_seconds_total...)) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota...))) * 100'.\n2. Explore alternative resources besides 'yunzhanghu' for departments to reduce dependencies.\n3. Analyze the '<:GIN:>' KPI to pinpoint performance bottlenecks within that application component.\n4. Address tracing and logging issues indicated by 'no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:>]'  by ensuring proper instrumentation and data collection."
+}
+``` 
+
+
+
+reason similarity score:0.0742960125207901
+solution similarity score:0.31577759981155396

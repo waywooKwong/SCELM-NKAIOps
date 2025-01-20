@@ -1,0 +1,17 @@
+
+areaText_30659_v4_English.txt
+root_cause_from_redis: []
+Expected Software Changes
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"prod\"}[5m])), irate(node_disk_written_bytes_total{hostname=~\"bj1-rd-yos-prod-01\"}[2m]), irate(node_netstat_Tcp_PassiveOpens{hostname=~\"bj1-rd-yos-prod-01\"}[2m]), irate(node_disk_written_bytes_total{hostname=~\"bj3-rd-yos-prod-02\"}[2m]), (1-(node_memory_MemAvailable_bytes{hostname=~\"bj3-rd-yos-prod-02\"}/node_memory_MemTotal_bytes{hostname=~\"bj3-rd-yos-prod-02\"})) * 100",
+	"reason": "The system is experiencing performance degradation as indicated by several key performance indicators (KPIs) showing negative trends. These include increased request rates, higher disk write activity, and a decrease in available memory. This suggests potential resource contention or increased workload.",
+	"solution": "1. Investigate the cause of the increased request rate for the 'be/yid' job. 2. Analyze disk write patterns on the affected nodes to identify potential bottlenecks. 3. Monitor memory usage closely and consider scaling resources if necessary. 4. Implement performance tuning strategies for the affected applications and services."
+}
+``` 
+
+
+
+reason similarity score:-0.04032142832875252
+solution similarity score:-0.09974656999111176

@@ -1,0 +1,18 @@
+
+areaText_24878_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+Expected Software Changes
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "dealSmsCallback complete <:callback:>, begin Consume call, irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj1-rd-yos-prod-01"}[1m]), (1-(node_memory_MemAvailable_bytes{hostname=~"bj3-rd-yos-prod-03"}/node_memory_MemTotal_bytes{hostname=~"bj3-rd-yos-prod-03"}))*100, irate(node_netstat_Tcp_ActiveOpens{hostname=~"bj3-rd-yos-prod-01"}[1m])",
+	"reason": "The system experienced a significant increase in network activity and memory pressure, potentially indicating a resource contention issue. Additionally, several callback functions showed anomalies, suggesting potential delays or errors in processing requests.",
+	"solution": "Investigate the root cause of the increased network and memory usage. Analyze the logs for any error messages related to the callback functions. Consider scaling up resources (e.g., CPU, memory) if necessary. Optimize database queries and application code to reduce resource consumption."
+}
+```
+reason similarity score:0.5157945156097412
+solution similarity score:0.5974394679069519

@@ -1,0 +1,25 @@
+
+areaText_10077_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "approve status error, sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m])), svc.ApproveCallback failed, <:REQ:>, <:list modules:>",
+	"reason": "The data indicates a significant drop in several key performance indicators (KPIs) after the change.  'approve status error' and 'svc.ApproveCallback failed' show increased errors, suggesting potential issues with the approval process. 'sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m]))'  decreased, indicating fewer successful requests.  '<:REQ:>' and '<:list modules:>' also show negative trends, pointing to potential problems in data retrieval or processing.",
+	"solution": "Investigate the changes made to identify the root cause of these issues.  Review logs and monitoring data for the affected components, particularly those related to the approval process, data retrieval, and request handling.  Consider rolling back the change if the impact is severe and a quick fix is not immediately available."
+}
+``` 
+
+
+
+reason similarity score:0.54730623960495
+solution similarity score:0.7635377645492554

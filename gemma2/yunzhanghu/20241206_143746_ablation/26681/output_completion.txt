@@ -1,0 +1,17 @@
+
+areaText_26681_v4_English.txt
+root_cause_from_redis: []
+Expected Software Changes
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "91.kpi name: node_sockstat_TCP_alloc{hostname=~"bj3-rd-yos-prod-02"} \n92.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj1-rd-yos-prod-01"}[1m]) \n93.kpi name: irate(node_disk_reads_completed_total{hostname=~"bj3-rd-yos-prod-03"}[1m]) \n94.kpi name: no employee \n95.kpi name: irate(node_netstat_Tcp_PassiveOpens{hostname=~"bj3-rd-yos-prod-02"}[1m])",
+	"reason": "Several key performance indicators (KPIs) show significant deviations after the change. Notably,  'node_sockstat_TCP_alloc', 'irate(node_netstat_Tcp_PassiveOpens)', 'irate(node_disk_reads_completed_total)', 'no employee', and 'irate(node_netstat_Tcp_PassiveOpens)' all exhibit increased ranges and shifts in their mean values. This suggests potential issues with network connectivity, disk I/O, or resource allocation.",
+	"solution": "1. **Investigate the code changes:** Carefully review the code changes implemented to pinpoint the source of the issue. 2. **Monitor resource utilization:** Track CPU, memory, and network usage to identify bottlenecks or resource contention. 3. **Analyze logs:** Examine system and application logs for any error messages or warnings related to the affected KPIs. 4. **Test and rollback:** If possible, revert the changes and test the system to confirm if the issue is resolved. 5. **Optimize configurations:** Adjust system and application configurations to improve performance and resource utilization."
+}
+``` 
+
+
+
+reason similarity score:-0.06289374828338623
+solution similarity score:0.10952463746070862

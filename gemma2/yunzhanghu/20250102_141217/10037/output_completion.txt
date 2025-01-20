@@ -1,0 +1,27 @@
+
+areaText_10037_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "AuthListByName <:<:ChineseInfo:>:>, getBackupEmp success, computeOwnObjectIDs end, message,  629\nTotal anomalies found: 629\nTotal number of anomalous kpis: 40",
+	"reason": "The analysis indicates a significant deviation in key performance indicators (KPIs) post-change. KPIs like AuthListByName <:<:ChineseInfo:>:>, getBackupEmp success, computeOwnObjectIDs end, and message show unusual fluctuations, suggesting potential issues with authentication, data retrieval, or system communication.",
+	"solution": "1. **Investigate the impacted systems**:  Focus on the systems related to the abnormal KPIs, such as authentication services, database servers, and messaging queues.
+
+2. **Review recent changes**: Analyze any recent code deployments, configuration updates, or infrastructure modifications that might have triggered these anomalies.
+
+3. **Monitor logs and error messages**: Examine system logs for errors, warnings, or exceptions related to the affected KPIs.
+
+4. **Test and debug**: Implement targeted tests to isolate the source of the problem and perform debugging steps to identify the root cause.
+
+
+5. **Roll back changes (if applicable)**: If a recent change is suspected to be the cause, consider rolling back to a previous stable state for further investigation."
+}
+```
+reason similarity score:-0.04097384959459305
+solution similarity score:0.3095613420009613

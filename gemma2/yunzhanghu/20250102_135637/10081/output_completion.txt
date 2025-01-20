@@ -1,0 +1,26 @@
+
+areaText_10081_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100, ClientEnvHandler is <:*>, 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(1))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1), sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100",
+	"reason": "The metrics indicate a potential performance degradation or instability in the system. Several KPIs, particularly those related to gRPC server handling and ClientEnvHandler, show significant deviations from expected behavior, suggesting underlying issues.",
+	"solution": "Investigate the logs and metrics of the affected components (especially 'be/yid' service) to pinpoint the root cause of the performance degradation. Focus on analyzing the following:\n- **gRPC Server Handling:** Identify any bottlenecks or errors in processing gRPC requests.\n- **ClientEnvHandler:** Examine potential issues with environment configuration or client interactions.\n- **Resource Utilization:** Check CPU, memory, and network usage to identify resource contention.\n- **System Logs:** Analyze logs for error messages or warnings related to performance issues.Based on the findings, implement appropriate solutions, such as optimizing code, scaling resources, or addressing configuration problems."
+}
+```
+reason similarity score:0.5622963309288025
+solution similarity score:0.5721139907836914

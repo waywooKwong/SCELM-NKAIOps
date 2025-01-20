@@ -1,0 +1,28 @@
+
+areaText_10056_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "AuthListByName <:<:ChineseInfo:>:>, getBackupEmp success,  sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8, message,  \n",
+	"reason": "Several KPIs show significant deviations from their expected ranges and trends, indicating potential issues with authentication, data retrieval, network communication, and message processing. ",
+	"solution": "Investigate the specific cause of the anomalies in each KPI.\n* **AuthListByName <:<:ChineseInfo:>:>**: Review authentication logs and configurations for any errors or unexpected behavior.\n* **getBackupEmp success**: Analyze backup processes and verify successful data retrieval.\n* **sum(rate(container_network_receive_bytes_total...))**: Examine network traffic patterns and troubleshoot potential bottlenecks or resource constraints.\n* **message**: Investigate message queues and communication channels for delays or errors. \nConsider monitoring system resources and logs for further insights into the root cause of these anomalies."
+}
+``` 
+
+
+Let me know if you have any other questions or need further assistance!
+reason similarity score:0.6244286298751831
+solution similarity score:0.7629913687705994

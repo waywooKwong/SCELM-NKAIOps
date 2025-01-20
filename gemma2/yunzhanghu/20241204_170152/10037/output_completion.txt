@@ -1,0 +1,22 @@
+
+areaText_10037_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "Several KPIs exhibit significant changes in their ranges and trends after the change. Notably, 'loaded policy count:<:NUM:>' shows a drastic reduction in its maximum value and a shift towards negative values. 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' show positive shifts in their means and trends, suggesting potential performance improvements. However, the significant changes in 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' indicate potential network issues.",
+	"solution": "Investigate the changes in 'loaded policy count:<:NUM:>' and determine the cause of the reduced maximum value. Analyze the network performance metrics in 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' to identify potential bottlenecks or congestion. Monitor the performance of the affected systems and applications to understand the impact of the changes."
+}
+```
+reason similarity score:0.6028026342391968
+solution similarity score:0.5284603238105774

@@ -1,0 +1,25 @@
+
+areaText_10052_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "Multiple KPIs show significant changes in range and trend after the change, indicating potential issues. 'loaded policy count:<:NUM:>' shows a drastic reduction to zero, suggesting a policy loading problem. 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' exhibit changes in range and trend, pointing to potential errors in object ID management and backup operations. 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' shows a narrowing range and a shift in mean, indicating potential network traffic changes.",
+	"solution": "Investigate the root cause of the policy loading issue and ensure policies are correctly applied. Analyze the changes in 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' to identify and resolve any errors in object ID management and backup operations. Monitor and analyze the network traffic changes observed in 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' to understand the impact and implement necessary adjustments."
+}
+``` 
+
+
+
+reason similarity score:0.5492189526557922
+solution similarity score:0.5615622401237488

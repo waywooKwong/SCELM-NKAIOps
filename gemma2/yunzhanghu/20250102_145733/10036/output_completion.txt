@@ -1,0 +1,22 @@
+
+areaText_10036_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>, computeOwnObjectIDs end, message,  sum(rate(node_cpu_seconds_total{pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd"}[1m])) by (instance) ",
+	"reason": "The metrics indicate a significant deviation from normal patterns. Several KPIs, particularly those related to system performance and resource utilization, are showing spikes or unusual trends.  This suggests potential issues with resource contention, application load, or underlying infrastructure problems.",
+	"solution": "1. **Investigate resource usage:** Analyze the CPU, memory, and network usage of affected pods and nodes. Identify any processes consuming excessive resources. 2. **Check logs:** Examine application and system logs for errors, warnings, or unusual events that might correlate with the observed anomalies. 3. **Monitor infrastructure health:** Ensure that the underlying infrastructure (e.g., servers, network) is functioning correctly and has sufficient capacity to handle the workload. 4. **Scale resources:** If resource contention is identified, consider scaling up the affected pods or nodes. 5. **Optimize applications:** Review application code for potential performance bottlenecks and optimize accordingly."
+}
+```
+reason similarity score:0.6692153215408325
+solution similarity score:0.6295085549354553

@@ -1,0 +1,2 @@
+id,kpi1,kpi2,kpi3,kpi4,kpi5
+10051,sum(rate(app_requests_total[1m])) by (job)\n\nsum(http_requests_total[1m]) by (method, status_code)\n\nsum(redis_get_seconds_total[1m]) by (instance)\n\ncount_over_time(app_error_rate[1m]) by (job)\n\nmax(app_request_latency_seconds[1m]) by (job),,,

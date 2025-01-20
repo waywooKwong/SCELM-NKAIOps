@@ -1,0 +1,24 @@
+
+areaText_10082_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100, ClientEnvHandler is <:*>, 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(1))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))", sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(1))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))", (1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100", sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(1))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))",
+	"reason": "The metrics related to grpc calls and ClientEnvHandler are showing abnormal spikes and fluctuations. This could indicate performance issues, resource contention, or even potential errors within the system."
+}
+``` 
+
+
+Let me know if you'd like me to elaborate on any specific metric or aspect of the analysis!
+reason similarity score:0.7099432349205017
+solution similarity score:1.0000001192092896

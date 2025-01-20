@@ -1,0 +1,27 @@
+
+areaText_10065_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "irate(http_requests_total[1m]) > 0.9 , irate(http_latency_seconds_sum[1m]) > 1, rate(mysql_slow_queries_total[1m]) > 0.1, duration_seconds_sum(mysql_query_duration_seconds[1m]) > 20,  count(mysql_error_message) > 5",
+	"reason": "The monitored metrics indicate a significant performance degradation in the system. The high request rate, increased latency, and rise in slow queries suggest a potential bottleneck or resource contention issue.",
+	"solution": "Investigate the top requests consuming resources, optimize database queries, and ensure sufficient hardware resources are allocated to handle the load." 
+}
+``` 
+
+
+
+
+
+reason similarity score:0.5593402981758118
+solution similarity score:0.6905699372291565

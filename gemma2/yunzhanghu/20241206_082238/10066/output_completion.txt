@@ -1,0 +1,25 @@
+
+areaText_10066_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1) <:GIN:>, Depts only have yunzhanghu, getPermTagsAndValues <:*:>, build <:*:>, parseDataReportFlag ok",
+	"reason": "There are significant changes in the data ranges and trends of several KPIs after the change. KPIs like <:GIN:>, Depts only have yunzhanghu, getPermTagsAndValues <:*:>, build <:*:>, and parseDataReportFlag ok show a downward trend in their mean values and a narrowing of their data ranges, suggesting potential issues with data collection or processing. The KPI '1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)' also shows a significant change, indicating potential issues with the system's performance.",
+	"solution": "Investigate the code changes introduced and review the logs for any errors or warnings related to the affected KPIs. Check the data pipelines and ensure that data is being collected and processed correctly. Analyze the system's performance metrics and identify any bottlenecks or resource constraints. Consider reverting the changes if they are causing significant negative impacts."
+}
+``` 
+
+
+
+reason similarity score:0.6715819239616394
+solution similarity score:0.8406880497932434

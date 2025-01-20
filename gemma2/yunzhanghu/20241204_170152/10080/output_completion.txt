@@ -1,0 +1,25 @@
+
+areaText_10080_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), callback status error, getBackupEm<:updateFanweiEmployee failed:>, get metadata from header, ClientEnvHandler is <:*:>",
+	"reason": "The data indicates a significant performance degradation after the change. Multiple KPIs, including request rates, error rates, and latency, have shown a negative shift. This suggests that the change has introduced issues impacting the system's responsiveness and stability.",
+	"solution": "Investigate the code changes introduced and identify the root cause of the performance degradation. Review logs and monitoring data for any errors or unusual behavior. Consider reverting the change or implementing mitigating measures to restore system performance."
+}
+``` 
+
+
+
+reason similarity score:0.9565719366073608
+solution similarity score:0.7182039618492126

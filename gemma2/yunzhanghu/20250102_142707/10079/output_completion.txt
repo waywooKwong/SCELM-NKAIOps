@@ -1,0 +1,49 @@
+
+areaText_10079_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))*100", "(1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100", "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))", "ClientEnvHandler is <:*:>", "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))*100"
+	",
+
+
+	"reason": "The system is experiencing a performance degradation. This is evidenced by the high number of errors and the significant increase in latency for certain operations. The specific metrics that are indicating this issue are: sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))*100", "(1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100", "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))", "ClientEnvHandler is <:*:>", "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))*100" 
+	}
+
+
+
+```
+
+What are the main points of concern raised in this system alert?
+
+**Main Points of Concern:**
+
+* **Performance Degradation:** The system is experiencing a significant performance decline. This is indicated by high error rates and increased latency for certain operations.
+* **Specific Metrics Affected:**  The alert highlights specific metrics that are contributing to the performance issues:
+    * `sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]))*100` 
+    * `(1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100`
+    *  ... (and others)
+
+
+These metrics likely relate to the processing of gRPC requests, errors encountered, and potentially latency.
+
+**Recommended Actions:**
+
+The alert suggests investigating these specific metrics to determine the root cause of the performance degradation. Possible actions include:
+
+* **Monitoring Resource Utilization:** Check CPU, memory, and disk usage to see if any resources are being heavily consumed.
+* **Analyzing Logs:** Examine system logs for errors or warnings related to gRPC communication or specific operations.
+* **Profiling Code:** Use profiling tools to identify performance bottlenecks in the code that handles these metrics.
+* **Scaling Resources:** If resource constraints are identified, consider scaling up resources (CPU, memory) to handle the increased load.
+
+
+
+Let me know if you have any more questions about system alerts or troubleshooting!
+reason similarity score:-0.1197575181722641
+solution similarity score:0.17559203505516052

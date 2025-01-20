@@ -1,0 +1,25 @@
+
+areaText_10068_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1),Depts only have yunzhanghu,getPermTagsAndValues <:*:>,parseDataReportFlag ok,loadRegoMySQLInterval success",
+	"reason": "The data indicates a significant shift in the performance metrics after the change. Multiple KPIs, including those related to system load, data processing, and network communication, exhibit unusual trends, suggesting potential issues with the implemented changes. ",
+	"solution": "Investigate the code changes introduced and their impact on the affected KPIs. Analyze logs and system monitoring data to pinpoint the source of the anomalies. Consider rolling back the changes or implementing corrective measures to restore normal system behavior."
+}
+``` 
+
+
+
+reason similarity score:0.962374746799469
+solution similarity score:0.8603388071060181

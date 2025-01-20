@@ -1,0 +1,22 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1. svc.ApproveCallback failed\n2. parseDataReportFlag ok\n3. sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-d7664fd98-xxn9b", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n4. sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-d7664fd98-xxn9b", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n5. <:list modules:> ",
+	"reason": "The data indicates a failure in the system, with several KPIs showing abnormal behavior.  Specifically, 'svc.ApproveCallback failed' suggests issues with the approval callback service. 'parseDataReportFlag ok' and network transmission metrics indicate potential problems with data processing and network traffic.  '<:list modules>'' shows reduced activity, which could be a symptom of broader system issues.",
+	"solution": "1. Investigate the root cause of 'svc.ApproveCallback failed', checking for errors in logs or configuration.\n2. Analyze the 'parseDataReportFlag ok' and network transmission metrics to identify bottlenecks or anomalies in data processing.\n3. Monitor '<:list modules>'' activity closely, looking for patterns or triggers that may indicate a system-wide problem.\n4. Review system logs and monitoring data for any additional clues about the failure."
+}
+```
+reason similarity score:0.5010618567466736
+solution similarity score:0.7089503407478333

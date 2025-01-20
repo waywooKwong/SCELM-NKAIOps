@@ -1,0 +1,22 @@
+
+areaText_10080_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "_sum_increase_std_grpc_server_handled_total_job_be_yid_biz_code_instance_yid_k_s_aiops_d_fd_xxn_b_grpc_code_Unknown_OK_grpc_method_ListFieldValues_ListPermResource_CheckUserOperatePage_ListAuthZResources_m_or_increase_std_grpc_server_handled_total_job_be_yid_instance_yid_k_s_aiops_d_fd_xxn_b_grpc_method_ListFieldValues_ListPermResource_CheckUserOperatePage_ListAuthZResources_m_sum_increase_std_grpc_server_handled_total_job_be_yid_instance_yid_k_s_aiops_d_fd_xxn_b_grpc_method_ListFieldValues_ListPermResource_CheckUserOperatePage_ListAuthZResources_m_", "ClientEnvHandler_is_", "_sum_increase_std_grpc_server_handled_total_job_be_yid_instance_environment_rc_m_",  "_sum_increase_std_grpc_server_handled_total_job_be_yid_biz_code_environment_rc_instance_grpc_code_Unknown_OK_m_or_increase_std_grpc_server_handled_total_job_be_yid_instance_environment_rc_m_", "_sum_increase_std_grpc_server_handled_total_job_be_yid_instance_yid_k_s_aiops_d_fd_xxn_b_biz_code_grpc_method_ListFieldValues_ListPermResource_CheckUserOperatePage_ListAuthZResources_m_",
+	"reason": "The metrics indicate a significant spike in the number of grpc calls being handled, particularly related to resource listing and authorization operations. This suggests a potential overload on the system or a surge in requests.",
+	"solution": "Investigate the following: 1) Identify the specific applications or users generating these high volumes of requests. 2) Analyze the logs for any errors or performance bottlenecks. 3) Consider scaling up resources (CPU, memory, network bandwidth) if necessary. 4) Optimize database queries and application code to reduce resource consumption. 5) Implement rate limiting or caching mechanisms to handle spikes in traffic."
+}
+```
+reason similarity score:0.4514528512954712
+solution similarity score:0.6412730813026428

@@ -1,0 +1,25 @@
+
+areaText_10033_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "message\ngetBackupEmp success\nAuthListByName <:<:ChineseInfo:>:>\ncomputeOwnObjectIDs end\ncomputeOwnObjectIDs end",
+	"reason": "The metrics show several KPIs experiencing significant deviations from their expected ranges, indicating potential system instability. KPIs like 'message', 'getBackupEmp success', and 'AuthListByName <:<:ChineseInfo:>:>' are showing increased negative values and reduced overall mean, suggesting potential errors or bottlenecks in these processes. Furthermore, 'computeOwnObjectIDs end' has a wider range than before the change, indicating increased volatility.",
+	"solution": "Investigate the logs and error messages associated with the affected KPIs to pinpoint the root cause of the anomalies. Review recent code changes that might have introduced regressions. Consider implementing monitoring tools to track these KPIs in real-time and set up alerts for significant deviations."
+}
+```
+reason similarity score:0.6911519765853882
+solution similarity score:0.8293474912643433

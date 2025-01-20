@@ -1,0 +1,22 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1. svc.ApproveCallback failed\n2. parseDataReportFlag ok\n3. sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n4. sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n5. sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "The increase in the number of anomalies suggests a potential issue with the system's stability or performance.  Several KPIs related to network transmission and API call processing show significant deviations from normal behavior.",
+	"solution": "1. **Investigate the 'svc.ApproveCallback failed' KPI:** Determine the root cause of these failures. It could be due to issues with the callback service itself, network connectivity problems, or errors in the data being passed. 2. **Analyze the Network Transmission KPIs:** The spikes in 'sum(rate(...)) by (pod,namespace,node) * 8'  might indicate network congestion or high resource utilization. Review network traffic patterns and identify potential bottlenecks. 3. **Monitor Resource Utilization:** Ensure that system resources (CPU, memory, etc.) are not being overutilized, which can contribute to performance issues and anomalies. 4. **Log Analysis:** Examine logs for any error messages or warnings related to the affected KPIs. This can provide valuable insights into the underlying cause of the problems. 5. **Implement Monitoring and Alerting:** Set up robust monitoring and alerting systems to proactively detect anomalies and trigger notifications for timely intervention."
+}
+```
+reason similarity score:0.5615220665931702
+solution similarity score:0.7205770015716553

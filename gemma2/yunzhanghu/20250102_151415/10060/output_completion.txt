@@ -1,0 +1,22 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1. (sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100\n2. Depts only have yunzhanghu\n3. <:GIN:> \n4. no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:> \n5.  approve process",
+	"reason": "The container CPU usage rate is significantly higher than expected, indicating potential resource contention or inefficient workload distribution. Additionally, several KPIs related to transaction tracing and departmental processes exhibit anomalies, suggesting possible bottlenecks or errors in these areas.",
+	"solution": "1. Investigate the top consuming containers and optimize their resource allocation.\n2. Analyze the 'Depts only have yunzhanghu' KPI to identify potential process inefficiencies or missing information.\n3.  Debug the <:GIN:> KPI to pinpoint the source of performance issues in this component.\n4. Review transaction traces for anomalies and investigate any errors related to trace IDs, transaction IDs, and span IDs.\n5. Evaluate the 'approve process' KPI and identify any bottlenecks or delays within the approval workflow."
+}
+```
+reason similarity score:-0.040108345448970795
+solution similarity score:0.478131502866745

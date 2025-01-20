@@ -1,0 +1,28 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "svc.ApproveCallback failed\nparseDataReportFlag ok\nsum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\nsum(rate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\"}[1m])) by (pod,namespace,node) * 8\n<:list modules:> ",
+	"reason": "The metrics indicate significant deviations from normal behavior. Several key KPIs related to system performance, resource consumption, and service callbacks are exhibiting anomalies, suggesting potential issues with resource contention, application logic, or network connectivity.",
+	"solution": "1. **Investigate the `svc.ApproveCallback failed` KPI:** Analyze logs and traces to identify the root cause of callback failures. Ensure proper communication between services and address any configuration errors. \n2. **Review `parseDataReportFlag ok` performance:** Monitor the time taken for data report parsing and optimize processes if necessary.  \n3. **Analyze network traffic patterns:** Examine the high values in `sum(rate(...))` KPIs to identify potential bottlenecks or excessive data transfer. Optimize network configurations and investigate application behavior.\n4. **Resource consumption analysis:** Check CPU and memory usage of affected pods using the `sum(rate(...))` KPIs. Adjust resource limits or scale resources as needed.\n5. **Investigate `<:list modules:>` anomalies:**  Understand which modules are experiencing issues and focus on resolving those specific problems. "
+}
+``` 
+
+
+
+reason similarity score:0.61825031042099
+solution similarity score:0.666326642036438

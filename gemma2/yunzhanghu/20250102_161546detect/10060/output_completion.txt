@@ -1,0 +1,22 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "Depts only have yunzhanghu\nno need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:> \ngin \nsum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100 \nno need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ]",
+	"reason": "Multiple KPIs indicate potential issues. 'Depts only have yunzhanghu' suggests a possible lack of diversification in departments, 'no need or no have tags' points to insufficient tracing information for debugging, and 'GIN' might be experiencing performance fluctuations. The CPU utilization metrics show high resource consumption.",
+	"solution": "1. Investigate the cause of 'Depts only have yunzhanghu'. Consider diversifying department roles or resources.\n2. Implement comprehensive tracing with proper tags for improved debugging capabilities.\n3. Analyze the 'GIN' performance issues and optimize resource allocation if necessary.\n4. Monitor CPU utilization closely and adjust resource quotas or application configurations to prevent overloading."
+}
+```
+reason similarity score:0.48677772283554077
+solution similarity score:0.6709157228469849

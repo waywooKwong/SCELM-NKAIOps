@@ -1,0 +1,23 @@
+
+areaText_10079_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))*100  ,sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])) ,1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~"Unknown|OK\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]))),ClientEnvHandler is <:*> ",
+	"reason": "The system is experiencing performance degradation as indicated by several kpis showing abnormal spikes and drops. These anomalies are concentrated around gRPC metrics related to specific methods, suggesting a problem in those areas of the application.",
+	"solution": "Investigate the logs and traces for the affected gRPC methods (ListFieldValues, ListPermResource, CheckUserOperatePage, ListAuthZResources).  Look for common patterns or errors that could explain the performance issues. Consider profiling the code to identify bottlenecks and explore optimization strategies." 
+}
+
+```
+reason similarity score:0.570655107498169
+solution similarity score:0.46240460872650146

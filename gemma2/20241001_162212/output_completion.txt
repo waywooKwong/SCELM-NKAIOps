@@ -1,0 +1,691 @@
+
+areaText_10033_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build, loaded policy count, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The provided data indicates a significant shift in the performance metrics after the change. Several KPIs exhibit a downward trend, indicating potential performance degradation.  Specifically, 'build', 'loaded policy count', 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' show substantial decreases in their mean values and/or wider ranges, suggesting issues with these functionalities.",
+	"solution": "1. **Investigate the code changes**: Thoroughly review the code modifications introduced after the change to pinpoint the source of the performance issues. 2. **Monitor resource utilization**: Analyze CPU, memory, and network usage to identify bottlenecks or resource contention. 3. **Optimize code**: Refactor inefficient code segments and leverage caching mechanisms to improve performance. 4. **Test and iterate**: Conduct rigorous testing after implementing changes to ensure the desired performance improvements are achieved."
+}
+``` 
+
+
+
+
+areaText_10034_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "30.kpi name: loaded policy count:<:NUM:>, 34.kpi name: loadRegoMySQLInterval success, 29.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>, 32.kpi name: Depts only have yunzhanghu, 39.kpi name: message",
+	"reason": "The data analysis reveals significant anomalies in several key performance indicators (KPIs). Notably, 'loaded policy count:<:NUM:>' and 'loadRegoMySQLInterval success' show a drastic reduction in range, indicating potential issues with policy loading and MySQL interval operations. 'build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>' exhibits a shift in mean and a narrowed range, suggesting performance changes in build processes. 'Depts only have yunzhanghu' shows a change in trend from up to down, requiring further investigation. 'message' experiences a significant decrease in mean and a narrower range, implying communication or processing issues. ",
+	"solution": "1. **Investigate the root cause of the reduced range in 'loaded policy count:<:NUM:>' and 'loadRegoMySQLInterval success'.** This could involve reviewing logs, monitoring system resources, and checking for any recent configuration changes. 2. **Analyze the changes in 'build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>]' to identify the specific factors contributing to the performance shift.** This might involve examining build logs, analyzing resource usage, and optimizing build processes. 3. **Further investigate the trend change in 'Depts only have yunzhanghu' to determine the underlying reasons.** This could involve analyzing department configurations, user activity, and system logs. 4. **Examine the 'message' KPI to pinpoint the source of the communication or processing issues.** This might involve reviewing message queues, analyzing network traffic, and debugging relevant code. 5. **Implement appropriate solutions based on the identified root causes.** This could involve resolving configuration issues, optimizing system resources, implementing code fixes, or adjusting policies."
+}
+``` 
+
+
+
+
+areaText_10035_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "30.kpi name: loaded policy count:<:NUM:>, 34.kpi name: loadRegoMySQLInterval success, 35.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8, 37.kpi name: AuthListByName <:<:ChineseInfo:>:>, 38.kpi name: computeOwnObjectIDs end",
+	"reason": "Multiple KPIs show significant changes in their data ranges and trends, indicating potential issues.  'loaded policy count' and 'loadRegoMySQLInterval success' both show a drastic reduction in range and a shift to zero, suggesting a possible failure in policy loading or MySQL interval checks. 'sum(rate(container_network_receive_bytes_total))' shows an unexpected change in trend from down to up, indicating a possible network issue. 'AuthListByName' and 'computeOwnObjectIDs end' also show range reductions, hinting at potential performance bottlenecks or data retrieval issues.",
+	"solution": "1. Investigate the root cause of the zero values in 'loaded policy count' and 'loadRegoMySQLInterval success'. Check for errors in policy loading configurations or MySQL interval settings. 2. Analyze the network traffic patterns reflected in 'sum(rate(container_network_receive_bytes_total))' to identify potential bottlenecks or anomalies. 3. Monitor the performance of 'AuthListByName' and 'computeOwnObjectIDs end' by checking resource utilization and query execution times. 4. Review system logs and error messages for any clues related to the identified issues. 5. Implement appropriate solutions based on the root cause analysis, such as adjusting configurations, optimizing network performance, or addressing resource constraints."
+}
+```
+
+areaText_10036_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:> , loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The data analysis reveals several key performance indicators (KPIs) exhibiting significant deviations from their expected ranges and trends. Specifically, 'build <:*:> ', 'loaded policy count:<:NUM:>', 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' show notable drops in minimum values and shifts in overall trends, indicating potential performance bottlenecks or issues within the system.",
+	"solution": "1. **Investigate the 'build <:*:> ' KPI:** Analyze the build process for potential bottlenecks or errors causing the increased variance and negative trend. Review build logs and system resource utilization during build phases. 2. **Examine 'loaded policy count:<:NUM:>' :**  Determine the cause of the sharp decrease in loaded policy count. Verify policy loading mechanisms and investigate any errors or failures during policy deployment. 3. **Review 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu':**  Analyze the code and configurations related to department member object identification and yunzhanghu management. Look for potential performance issues or logic errors affecting these processes. 4. **Diagnose 'getBackupEmp success':**  Identify the reasons behind the reduced success rate of backup employee retrieval. Examine backup procedures, database connectivity, and any error logs related to this operation. 5. **Monitor System Resources:** Continuously monitor system resource utilization (CPU, memory, disk I/O) during periods of high activity to identify potential resource constraints impacting performance."
+}
+``` 
+
+
+
+
+areaText_10037_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success, message",
+	"reason": "The provided data indicates a significant shift in KPI values after a change. Several KPIs, including 'build <:*:>' and 'computeDeptMembersObjectIDs end', show a notable increase in both minimum and maximum values, suggesting potential performance degradation or unexpected behavior. Similarly, KPIs like 'Depts only have yunzhanghu', 'getBackupEmp success', and 'message' exhibit upward trends in their mean values, indicating potential issues with resource utilization or data processing.",
+	"solution": "Further investigation is required to pinpoint the root cause of these anomalies. 1. Analyze logs and system metrics around the time of the change to identify any correlated events. 2. Review the code changes implemented to determine if they directly or indirectly impact the affected KPIs. 3. Monitor the KPIs closely after implementing any potential solutions to ensure the issue is resolved."
+}
+``` 
+
+
+
+
+areaText_10038_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build, loaded policy count, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, message",
+	"reason": "The data analysis reveals a significant shift in the distribution of several key performance indicators (KPIs) after the change.  KPIs like 'build', 'loaded policy count', 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'message' exhibit drastic changes in their minimum, maximum, and mean values, indicating potential issues with the implemented changes. These anomalies suggest a negative impact on system performance and stability.",
+	"solution": "1. **Investigate the code changes:** Carefully review the code modifications introduced after the change to pinpoint the specific areas that might be causing these anomalies. 2. **Monitor affected systems:** Closely monitor the performance of systems and services directly impacted by the changes. Focus on resource utilization, error rates, and latency. 3. **Rollback or revert changes:** If the anomalies are severe and impacting critical functionality, consider rolling back the changes to the previous stable state. 4. **Test and validate changes:** Implement rigorous testing procedures to ensure that future changes are thoroughly evaluated and do not introduce similar issues."
+}
+``` 
+
+
+
+
+areaText_10039_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu,  message",
+	"reason": "Several KPIs show significant deviations from their historical trends, indicating potential issues.  'loaded policy count:<:NUM:>' has drastically reduced to a constant 0, suggesting a problem with policy loading. 'build <:*:>' and 'message' show a shift towards positive values, indicating a possible change in functionality or data processing. 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu'  exhibit changes in their trend direction, suggesting underlying system modifications.",
+	"solution": "1. **Investigate the 'loaded policy count:<:NUM:>' issue:**  Check for errors in policy loading mechanisms, configuration issues, or potential resource constraints. 2. **Analyze the shift in 'build <:*:>' and 'message':** Review recent code changes or system updates that might have influenced these KPIs.  3. **Examine the trend changes in 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu':** Identify the specific changes that led to these shifts and assess their impact on system behavior. 4. **Monitor the affected KPIs closely:** Track their values and trends to identify any further anomalies or recurring issues."
+}
+``` 
+
+
+
+
+areaText_10040_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu,  getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>",
+	"reason": "The data analysis reveals a significant shift in several key performance indicators (KPIs) after the change.  KPIs like 'build <:*:>' and 'computeDeptMembersObjectIDs end' exhibit a notable upward trend, while others like 'Depts only have yunzhanghu' and 'getBackupEmp success' show a positive shift. However, 'AuthListByName <:<:ChineseInfo:>:>' displays a downward trend. This inconsistency suggests potential issues with the implemented change.",
+	"solution": "1. **Investigate the code changes:** Carefully review the code modifications introduced with the change to pinpoint the exact source of the discrepancies. 2. **Monitor affected systems:** Closely track the performance of systems and services impacted by the change, paying special attention to the KPIs mentioned above. 3. **Roll back the change (if necessary):** If the issues persist or cause significant disruption, consider rolling back the change to the previous stable state. 4. **Implement targeted fixes:** Once the root cause is identified, develop and implement targeted fixes to address the anomalies and restore normal KPI behavior."
+}
+``` 
+
+
+
+
+areaText_10041_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, loadRegoMySQLInterval success, getBackupEmp success",
+	"reason": "The data analysis reveals significant deviations in several key performance indicators (KPIs) after the change.  KPIs like 'build <:*:>' and 'computeDeptMembersObjectIDs end' show increased maximum values and shifted trends, indicating potential performance bottlenecks or resource contention. 'Depts only have yunzhanghu' exhibits a wider range, suggesting instability or inconsistencies in department configurations. 'loadRegoMySQLInterval success' and 'getBackupEmp success' show drastically altered ranges, pointing to potential issues with data loading or retrieval processes. These anomalies collectively suggest that the change has introduced unforeseen negative impacts on system performance and stability.",
+	"solution": "1. **Investigate the code changes:**  Thoroughly review the code modifications introduced to pinpoint the root cause of the anomalies. 2. **Monitor resource utilization:**  Closely monitor CPU, memory, and network resources to identify potential bottlenecks or resource starvation. 3. **Analyze logs and error messages:**  Examine system logs and error messages for clues about the nature of the issues. 4. **Rollback the change:**  If the impact is severe, consider rolling back the recent changes to restore the system to a stable state. 5. **Iterative testing and refinement:**  Implement a phased rollout approach, accompanied by rigorous testing and monitoring, to gradually introduce changes and minimize disruption."
+}
+```
+
+areaText_10042_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "Multiple KPIs exhibit significant shifts in their data ranges and trends after the change. This suggests the change introduced issues impacting various system components.  Specifically, KPIs related to 'build', 'loaded policy count', 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' show drastic changes in minimum and maximum values, and a reversal in overall trends. This points towards potential bugs or misconfigurations introduced by the change.",
+	"solution": "1. **Review the code changes**: Carefully examine the code changes implemented after the observed shift. Look for potential issues with data processing, configuration updates, or logic errors that could be affecting these KPIs. 2. **Rollback the change**: If possible, temporarily rollback the change to revert to the previous state and observe if the KPIs return to their normal behavior. This can help isolate the source of the problem. 3. **Monitor system logs**: Analyze system logs for any error messages or warnings that might provide clues about the issues affecting these KPIs. 4. **Conduct further testing**: Perform thorough testing to identify the specific scenarios where these KPIs deviate from their expected behavior. This can help pinpoint the root cause and develop targeted solutions. 5. **Seek expert assistance**: If the issue persists, consult with experienced developers or system administrators for further guidance and support."
+}
+``` 
+
+
+
+
+areaText_10043_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu,  getBackupEmp success",
+	"reason": "The data analysis reveals several KPIs exhibiting significant deviations from their expected ranges and trends after the change.  Specifically, 'build <:*:>' and 'loaded policy count:<:NUM:>' show drastic shifts in their minimum and maximum values, suggesting potential issues with the build process and policy loading. 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' also display notable changes in their trends, indicating potential problems in object ID management and backup operations.",
+	"solution": "1. **Investigate the 'build <:*:>' process:** Analyze the build logs and configurations to identify the root cause of the increased range and potential performance degradation. 2. **Review policy loading mechanisms:** Examine the code and configuration related to policy loading for 'loaded policy count:<:NUM:>' to pinpoint the cause of the significant data shift. 3. **Monitor object ID management:** Closely observe the performance of 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' to detect any bottlenecks or errors related to object ID operations. 4. **Troubleshoot backup operations:** Analyze the logs and error reports for 'getBackupEmp success' to identify any issues hindering successful backups. 5. **Implement robust monitoring and alerting:** Set up comprehensive monitoring and alerting systems to proactively detect anomalies and potential failures in these critical KPIs."
+}
+``` 
+
+
+
+
+areaText_10044_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "GIN:<:GIN:>, build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu",
+	"reason": "The data ranges of several key performance indicators (KPIs) have significantly changed after the modification. For example, the 'GIN' KPI's range has narrowed considerably, indicating a potential issue with its calculation or data source. Similarly, 'build <:*:>' and 'loaded policy count:<:NUM:>' show reduced ranges, suggesting potential data loss or filtering issues. 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' show a shift in their trend and range, indicating a possible impact on the system's functionality.",
+	"solution": "1. Investigate the changes in the calculation logic or data sources for the affected KPIs, particularly 'GIN', 'build <:*:>' and 'loaded policy count:<:NUM:>' to identify the root cause of the range reduction. 2. Review the data pipelines and filters for 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' to understand why their trends and ranges have shifted. 3. Analyze system logs and error reports for any clues related to the observed anomalies. 4. Roll back the recent changes if the issues persist after thorough investigation and analysis."
+}
+``` 
+
+
+
+
+areaText_10045_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The data ranges of several key performance indicators (KPIs) have significantly changed after the modification.  Specifically, the 'build <:*:>' KPI shows a decrease in minimum and maximum values, indicating potential issues with the build process.  The 'loaded policy count:<:NUM:>' KPI now has a range of [0.0,0.0], suggesting a complete absence of loaded policies.  'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' KPIs show shifts in their ranges, indicating potential problems with object identification and department structure. 'getBackupEmp success' KPI also exhibits a change in range, implying potential issues with the backup employee retrieval process.",
+	"solution": "1. **Investigate the 'build <:*:>' KPI:** Analyze the build logs and identify the root cause of the decreased range.  2. **Troubleshoot the 'loaded policy count:<:NUM:>' KPI:** Verify if policies are being loaded correctly and if there are any configuration issues. 3. **Review the 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' KPIs:** Examine the object identification and department structure to identify any inconsistencies or errors. 4. **Examine the 'getBackupEmp success' KPI:** Investigate the backup employee retrieval process and identify any potential bottlenecks or errors."
+}
+```
+
+areaText_10046_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, Depts only have yunzhanghu, computeDeptMembersObjectIDs end, AuthListByName <:<:ChineseInfo:>:>, message",
+	"reason": "Several key performance indicators (KPIs) exhibit significant deviations from their expected ranges and trends after the change. This indicates potential issues with the implemented changes. KPIs like 'build <:*:>' and 'Depts only have yunzhanghu' show a narrowing of the data range and a shift in the overall trend. 'computeDeptMembersObjectIDs end' and 'AuthListByName <:<:ChineseInfo:>:>' show a reversal in trend, indicating potential performance degradation. 'message' also shows a significant shift in its data range. ",
+	"solution": "1. **Review the code changes:** Carefully examine the code modifications made to identify potential sources of the anomalies. Pay close attention to areas affecting the KPIs mentioned above. 2. **Monitor relevant logs:** Analyze logs related to the affected systems and components to identify any error messages, warnings, or unusual activity that might shed light on the cause of the issues. 3. **Rollback the changes:** If the anomalies are severe and impacting critical functionalities, consider rolling back the recent changes to restore the previous stable state. 4. **Incremental testing:** Implement a phased approach to testing future changes, gradually introducing them and closely monitoring the impact on KPIs. 5. **Performance tuning:** Once the root cause is identified, implement appropriate performance tuning measures to address the identified bottlenecks or inefficiencies."
+}
+``` 
+
+
+
+
+areaText_10047_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, kpi name: loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu,  message",
+	"reason": "The provided data shows a significant shift in several key performance indicators (KPIs) after the change.  Metrics like 'build <:*:>' and 'loaded policy count:<:NUM:>' exhibit drastic reductions in range and mean values, suggesting potential issues with loading policies or the build process.  KPIs like 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'message' also show unusual trends, indicating potential problems within data processing or communication. ",
+	"solution": "1. **Investigate the 'loaded policy count:<:NUM:>' KPI:**  Analyze why the policy count has dropped to zero. Check if policies are being loaded correctly and if there are any errors during the loading process. 2. **Examine the 'build <:*:>' KPI:**  Review the build process for any changes that might have caused the decrease in range and mean values. Look for potential bottlenecks or errors in the build pipeline. 3. **Analyze the 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' KPIs:**  Investigate the data processing logic related to these KPIs. Identify any potential issues with data retrieval, transformation, or aggregation. 4. **Review the 'message' KPI:**  Analyze the messages being generated to identify any error messages or warnings that might provide clues about the issues. 5. **Compare Logs:** Compare logs from before and after the change to pinpoint the exact time and location of the issues. "
+}
+```
+
+areaText_10048_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "31.kpi name: loaded policy count:<:NUM:>, 30.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>, 36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8, 38.kpi name: AuthListByName <:<:ChineseInfo:>:>",
+	"reason": "The data for several KPIs shows significant changes after the change, with some KPIs dropping to 0 and others showing a wider range of values. This suggests that the change may have introduced unexpected behavior or errors.",
+	"solution": "Further investigation is needed to identify the root cause of these changes. This may involve reviewing the code changes, monitoring logs, and analyzing the impact on system performance.  It's also important to compare the data before and after the change in more detail to understand the specific nature of the anomalies."
+}
+``` 
+
+
+
+
+areaText_10049_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The data analysis reveals significant changes in the ranges and trends of several key performance indicators (KPIs) after the change.  Specifically, KPIs like 'build <:*:>' and 'loaded policy count:<:NUM:>' show drastic reductions in range and a shift to a downward trend, indicating potential issues with resource utilization or policy loading.  Similarly, KPIs like 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'getBackupEmp success' also exhibit concerning changes in their ranges and trends, suggesting potential problems with object retrieval, department management, or backup processes.",
+	"solution": "Investigate the root cause of these changes by examining logs, system configurations, and recent code deployments.  Focus on the affected KPIs and their dependencies to pinpoint the source of the anomalies.  Consider reverting the recent change if it appears to be the primary cause.  Additionally, monitor the KPIs closely after implementing any solutions to ensure the stability of the system."
+}
+``` 
+
+
+
+
+areaText_10050_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The provided data indicates a significant shift in key performance indicators (KPIs) after the change.  Several KPIs show a drastic reduction in range, indicating potential issues with data collection or processing. Additionally, some KPIs exhibit unexpected upward trends despite the overall downward trend observed before the change. This suggests that the change might have introduced unforeseen side effects.",
+	"solution": "1. **Investigate data collection pipelines:** Review the data collection processes for the affected KPIs to identify potential errors or inconsistencies introduced by the change. 2. **Analyze log files and system metrics:** Examine logs and system performance metrics around the time of the change to pinpoint any anomalies or resource constraints that could be impacting data accuracy. 3. **Revert the change and test:** If possible, revert the recent change and re-test the system to confirm if the abnormal behavior is indeed caused by the implemented modification. 4. **Refine the change implementation:** If reverting is not feasible, carefully analyze the change implementation and identify potential areas for improvement to mitigate the observed negative effects."
+}
+``` 
+
+
+
+
+areaText_10051_v4_English.txt
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, Depts only have yunzhanghu,  computeDeptMembersObjectIDs end, getBackupEmp success, AuthListByName <:<:ChineseInfo:>:>",
+	"reason": "The data ranges for several KPIs have significantly shifted after the change, indicating potential issues. KPIs like 'build <:*:>' and 'Depts only have yunzhanghu' show a decrease in minimum values and an increase in maximum values, suggesting potential performance degradation or unexpected behavior.  'computeDeptMembersObjectIDs end', 'getBackupEmp success', and 'AuthListByName <:<:ChineseInfo:>:>' also exhibit unusual changes in their ranges, hinting at possible errors or unexpected outcomes.",
+	"solution": "1. **Investigate the code changes**: Thoroughly review the code changes made to identify the source of the anomalies. 2. **Monitor affected systems**: Closely monitor the systems and services impacted by the changes, paying attention to logs, error messages, and resource utilization. 3. **Rollback the changes**: If the anomalies are severe and impacting critical functionalities, consider rolling back the changes to the previous stable state. 4. **Test and debug**: Once potential issues are identified, implement fixes and conduct thorough testing to ensure the stability and functionality of the system."
+}
+``` 
+
+
+
+
+areaText_10052_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "build <:*:>, loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, getBackupEmp success",
+	"reason": "The provided data indicates several KPIs have experienced significant shifts in their ranges and trends after the change. This suggests the change has introduced issues. KPIs like 'loaded policy count:<:NUM:>' now have a drastically reduced range, potentially indicating a problem with data collection or processing. Others like 'build <:*:>' and 'computeDeptMembersObjectIDs end' show a narrowing range and a shift in trend, suggesting performance degradation or unexpected behavior.",
+	"solution": "1. **Investigate the 'loaded policy count:<:NUM:>' issue:**  Verify the data collection mechanism for this KPI and ensure it's functioning correctly. 2. **Analyze the changes in 'build <:*:>' and 'computeDeptMembersObjectIDs end':**  Identify the specific code changes that might have impacted these KPIs and review their implementation. 3. **Monitor other affected KPIs closely:** Track their performance and look for further anomalies. 4. **Rollback the change if necessary:** If the issues persist, consider reverting the change and investigating further."
+}
+``` 
+
+
+
+
+areaText_10053_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "31.kpi name: loaded policy count:<:NUM:>, 40.kpi name: message, 38.kpi name: AuthListByName <:<:ChineseInfo:>:>, 33.kpi name: Depts only have yunzhanghu, 32.kpi name: computeDeptMembersObjectIDs end",
+	"reason": "The data indicates a significant shift in several key performance indicators (KPIs) after the change. KPIs like 'loaded policy count:<:NUM:>','message', 'AuthListByName <:<:ChineseInfo:>:>', 'Depts only have yunzhanghu', and 'computeDeptMembersObjectIDs end' show abnormal trends with reduced ranges and altered means. This suggests potential issues with data loading, authentication, or internal system processes.",
+	"solution": "1. **Investigate the code changes:** Thoroughly review the code changes implemented after the data shift to identify potential bugs or unintended consequences affecting the affected KPIs. 2. **Monitor system logs:** Analyze system logs for error messages or warnings related to data loading, authentication, or the specific functions impacted by the abnormal KPIs. 3. **Review configuration files:** Check configuration files for any recent modifications that might have influenced the behavior of the affected systems or processes. 4. **Rollback the changes:** If possible, consider rolling back the recent changes to revert to a stable state and then investigate the root cause of the anomalies. 5. **Implement monitoring and alerting:** Set up comprehensive monitoring and alerting systems to track the performance of critical KPIs and receive notifications in case of significant deviations from expected behavior."
+}
+``` 
+
+
+
+
+areaText_10054_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>, AuthListByName <:<:ChineseInfo:>:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, build <:*:>",
+	"reason": "The data analysis reveals a significant shift in several key performance indicators (KPIs) after the change. Notably, 'loaded policy count:<:NUM:>'  shows a drastic reduction, indicating a potential issue with policy loading.  'AuthListByName <:<:ChineseInfo:>:>' exhibits a downward trend with a negative mean, suggesting authentication challenges. 'computeDeptMembersObjectIDs end' and 'Depts only have yunzhanghu' also demonstrate negative changes, pointing towards potential problems with object handling and department structure. 'build <:*:>' shows a narrowing range, hinting at potential performance bottlenecks.",
+	"solution": "Further investigation is required to pinpoint the root cause of these anomalies.  Consider reviewing recent code changes, log files, and system configurations related to policy loading, authentication, object management, and department structures.  Monitoring these KPIs closely and identifying the specific triggers for the negative changes will be crucial for implementing effective solutions."
+}
+``` 
+
+
+
+
+areaText_10055_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n31.kpi name: loaded policy count:<:NUM:>\n40.kpi name: message\n33.kpi name: Depts only have yunzhanghu\n38.kpi name: AuthListByName <:<:ChineseInfo:>:>",
+	"reason": "Several KPIs show significant deviations from their expected trends. KPI 36 unexpectedly shows an upward trend after the change, while KPIs 31, 33, and 38 exhibit a decrease in their range, indicating potential issues with data collection or processing. KPI 40 also shows an unexpected upward trend.",
+	"solution": "Investigate the changes made that could have affected KPIs 36, 31, 33, 38, and 40. Analyze the data collection and processing pipelines for these KPIs to identify potential errors or inconsistencies. Review the logs and monitoring data for any relevant clues about the cause of the anomalies. Consider reverting the changes if they are identified as the primary cause of the issues."
+}
+```
+
+areaText_10056_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "29.kpi name: <:GIN:>\n30.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:> \n36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n37.kpi name: getBackupEmp success\n40.kpi name: message",
+	"reason": "The data for several key performance indicators (KPIs) exhibits significant deviations from expected patterns. KPIs like <:GIN:>, build, sum(rate(container_network_receive_bytes_total)), getBackupEmp success, and message show unusual spikes or drops in their values, indicating potential performance issues or system instability. ",
+	"solution": "1. **Investigate the root cause of the anomalies:** Analyze logs, system metrics, and application performance data to pinpoint the source of the deviations in the affected KPIs. 2. **Monitor the affected systems closely:** Continuously track the performance of the systems and KPIs to identify any recurring patterns or trends. 3. **Implement appropriate mitigation strategies:** Based on the identified root cause, implement solutions to address the performance issues, such as optimizing resource allocation, scaling infrastructure, or resolving code defects. 4. **Establish alerting mechanisms:** Configure alerts to notify system administrators of any significant deviations in KPI values, enabling timely intervention and resolution."
+}
+```
+
+areaText_10057_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "29.kpi name: <:GIN:>\n30.kpi name: build <:*:> \n36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n37.kpi name: getBackupEmp success\n38.kpi name: AuthListByName <:<:ChineseInfo:>:>",
+	"reason": "Several KPIs show significant changes in their data ranges and trends after the change. Some KPIs like <:GIN:>, build <:*:>, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8>, getBackupEmp success, and AuthListByName <:<:ChineseInfo:>:> exhibit a shift towards more positive values, indicating potential performance improvements. However, the sudden change in their ranges raises concerns about the stability and reliability of the system.",
+	"solution": "Further investigation is required to understand the root cause of these changes.  \n1. **Review recent code changes:** Identify any recent modifications that might have affected the performance of the monitored systems.\n2. **Monitor resource utilization:** Check CPU, memory, and network usage to identify any bottlenecks or resource contention.\n3. **Analyze logs and error messages:** Examine system logs for any unusual activity or errors that might be contributing to the changes in KPIs.\n4. **Compare pre- and post-change data:** Conduct a detailed analysis of the data before and after the change to pinpoint the exact impact on each KPI.\n5. **Roll back the changes:** If the changes are deemed detrimental, consider rolling back to the previous state and investigating further."
+}
+```
+
+areaText_10058_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "29.kpi name: <:GIN:>, 30.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:>, 33.kpi name: Depts only have yunzhanghu, 34.kpi name: build <:*:>, 36.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "The data ranges of multiple KPIs have significantly changed after the modification. Some KPIs show a sudden increase in maximum values, while others exhibit a decrease in minimum values. This indicates a potential issue with the implemented changes, which might be causing unexpected behavior in the system.",
+	"solution": "1. **Review the code changes**: Carefully examine the code modifications made to identify the potential source of the data fluctuations. Pay close attention to areas affecting the KPIs mentioned above. 2. **Monitor system logs**: Analyze system logs for any error messages or warnings related to the affected components. This can provide valuable insights into the nature of the issue. 3. **Rollback the changes**: If the issue is severe, consider reverting the changes to the previous state and investigate the problem further. 4. **Test and debug**: Implement thorough testing procedures to identify the root cause of the anomalies. Use debugging tools to track the execution flow and data values within the affected code. 5. **Seek expert assistance**: If the problem persists, consult with experienced developers or system administrators for guidance and support."
+}
+``` 
+
+
+
+
+areaText_10060_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "32.kpi name: irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100\n31.kpi name: approve status error\n33.kpi name: rego exec input:<:MAP:>\n38.kpi name: <:GIN:>\n39.kpi name: Depts only have yunzhanghu",
+	"reason": "Several key performance indicators (KPIs) show significant deviations from expected trends, indicating potential issues.  The 'irate' metric for container CPU usage has increased, suggesting potential resource contention. The 'approve status error' metric has also worsened, indicating potential problems with application approvals.  The 'rego exec input' metric and the '<:GIN:' metric show increased volatility, hinting at possible configuration or logic issues. Finally, the 'Depts only have yunzhanghu' metric indicates a potential data or system configuration problem.",
+	"solution": "1. **Investigate the 'irate' metric:** Analyze container resource usage and identify potential bottlenecks. Consider scaling resources, optimizing applications, or reviewing deployment configurations. 2. **Address 'approve status error' issues:** Examine the application approval process and identify the root cause of the errors. Implement fixes or workarounds to improve approval success rates. 3. **Review 'rego exec input' and '<:GIN:' metrics:** Analyze the code and configurations related to these metrics to identify potential issues. Consider debugging, testing, and refining the logic. 4. **Investigate 'Depts only have yunzhanghu' metric:** Analyze the data model and system configuration to understand the meaning of this metric and identify the cause of the issue. 5. **Monitor system logs and metrics closely:**  Continuously track the performance of affected systems and adjust configurations as needed."
+}
+``` 
+
+
+
+
+areaText_10062_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "32.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n33.kpi name: getPermTagsAndValues <:*:>\n34.kpi name: build <:*:>\n35.kpi name: parseDataReportFlag ok\n37.kpi name: (sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100",
+	"reason": "Multiple KPIs show significant deviations from their expected ranges after the change. This indicates potential issues with the system's performance, resource utilization, or data processing.  Specific KPIs like container network receive bytes, CPU usage, and memory usage show abnormal spikes or drops, suggesting resource contention or faulty application behavior.",
+	"solution": "1. **Investigate the code changes**: Carefully review the changes made to pinpoint the source of the anomalies.  \n2. **Monitor resource usage**:  Continuously monitor CPU, memory, and network utilization to identify bottlenecks and resource exhaustion. \n3. **Check application logs**: Analyze application logs for errors, warnings, or unusual activity that might correlate with the observed KPI changes. \n4. **Test and rollback**: If possible, revert the recent changes and test the system again to isolate the impact of the modifications. \n5. **Optimize resource allocation**: Adjust resource limits and requests for containers to ensure efficient resource utilization and prevent contention."
+}
+``` 
+
+
+
+
+areaText_10063_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "32.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n33.kpi name: getPermTagsAndValues <:*:> \n34.kpi name: build <:*:> \n35.kpi name: parseDataReportFlag ok \n38.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ",
+	"reason": "The provided data shows several key performance indicators (KPIs) experiencing significant deviations from expected ranges.  KPIs like 'sum(rate(container_network_receive_bytes_total))', 'getPermTagsAndValues', 'build', 'parseDataReportFlag ok', and 'build'  demonstrate increased minimum and maximum values after the change, indicating potential performance issues or unexpected behavior. The 'loadRegoMySQLInterval success' KPI shows a drastic reduction in range, suggesting a possible issue with data collection or processing. ",
+	"solution": "1. **Investigate the Code Changes:** Carefully review the code changes implemented to identify the specific modifications that might have caused these KPI deviations. 2. **Monitor Resource Utilization:** Monitor system resources like CPU, memory, and network bandwidth to identify potential bottlenecks or resource exhaustion. 3. **Log Analysis:** Analyze system logs for any error messages or warnings that might provide insights into the root cause of the anomalies. 4. **Performance Testing:** Conduct thorough performance testing to assess the impact of the changes on system performance. 5. **Rollback Changes:** If the anomalies are severe and cannot be immediately resolved, consider rolling back the recent changes to restore the system to a stable state."
+}
+``` 
+
+
+
+
+areaText_10064_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "32.kpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n33.kpi name: getPermTagsAndValues <:*:>\n34.kpi name: build <:*:>\n35.kpi name: parseDataReportFlag ok\n38.kpi name: build <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ",
+	"reason": "The data ranges for several KPIs have significantly expanded after the change. This indicates potential issues with resource consumption, performance degradation, or unexpected behavior introduced by the modification.",
+	"solution": "1. **Review the code changes:** Carefully examine the code modifications made to pinpoint the source of the expanded data ranges. 2. **Monitor resource usage:** Track CPU, memory, and network usage of affected pods and services to identify bottlenecks or excessive resource consumption. 3. **Analyze logs:** Investigate logs for errors, warnings, or unusual activity related to the changed functionality. 4. **Revert the changes:** If the issue persists after thorough investigation, consider reverting the changes and implementing alternative solutions. 5. **Test thoroughly:** After implementing any fixes, conduct comprehensive testing to ensure the stability and functionality of the system."
+}
+```
+
+areaText_10065_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100\n\nkpi name: sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n\nkpi name: sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n\nkpi name: build <:*:>\n\nkpi name: loadRegoMySQLInterval success",
+	"reason": "The provided data indicates a significant deviation in several key performance indicators (KPIs) after a change was implemented. This suggests that the change may have introduced issues affecting resource utilization, network traffic, and application performance. KPIs like 'irate', 'container_network_receive_bytes_total', 'container_network_transmit_bytes_total', 'build', and 'loadRegoMySQLInterval success' show substantial changes in their ranges and trends, pointing towards potential performance bottlenecks or errors.",
+	"solution": "1. **Investigate the change**: Carefully review the code changes made and identify the specific modifications that could have impacted the affected KPIs. 2. **Monitor resource usage**: Utilize monitoring tools to closely track CPU, memory, and network resource consumption of the affected applications and services. 3. **Analyze logs**: Examine application and system logs for any error messages or unusual patterns that might shed light on the root cause of the performance degradation. 4. **Roll back the change**: If the issue is severe, consider temporarily rolling back the change to restore the previous state and investigate further. 5. **Optimize code**: Once the root cause is identified, implement code optimizations to address performance bottlenecks and ensure efficient resource utilization."
+}
+```
+
+areaText_10066_v4_English.txt
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: <:GIN:>, kpi name: 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1), kpi name: Depts only have yunzhanghu, kpi name: build <:*:>, kpi name: parseDataReportFlag ok",
+	"reason": "The data analysis indicates a significant shift in the distribution of several key performance indicators (KPIs) after the change. This includes a notable decrease in the mean values and an overall contraction of the data ranges for many KPIs, suggesting a potential negative impact on system performance. ",
+	"solution": "1. **Investigate the specific changes implemented:** Carefully review the code changes and configuration updates made after the change to identify potential root causes for the observed KPI deviations. \n2. **Monitor system logs and error reports:** Analyze system logs and error reports for any unusual activity or exceptions that might correlate with the KPI changes. \n3. **Conduct load testing:** Perform load testing to assess the system's performance under various stress conditions and identify any bottlenecks or performance degradation introduced by the change. \n4. **Roll back the change:** If the impact is deemed severe, consider rolling back the change to restore the previous system state and further investigate the root cause. \n5. **Fine-tune system parameters:** Adjust system parameters and configurations based on the load testing results and performance monitoring data to optimize system performance."
+}
+```
+
+areaText_10067_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: <:GIN:>, kpi name: Depts only have yunzhanghu, kpi name: build <:*:>, kpi name: parseDataReportFlag ok, kpi name: loadRegoMySQLInterval success",
+	"reason": "The data ranges of several KPIs have significantly changed after the modification, indicating potential issues.  Specifically, KPIs like <:GIN:>, Depts only have yunzhanghu, build <:*:>, parseDataReportFlag ok, and loadRegoMySQLInterval success show a downward trend or a drastic reduction in range, suggesting potential problems in data processing or system functionality.",
+	"solution": "1. **Investigate the code changes:** Carefully review the modifications made to the system and identify any potential issues that could be affecting the KPIs. 2. **Monitor logs and error messages:** Analyze logs and error messages for any clues related to the abnormal KPI behavior. 3. **Compare pre- and post-change data:** Conduct a detailed comparison of the data before and after the change to pinpoint the exact points of divergence. 4. **Rollback the changes:** If possible, temporarily revert the changes to assess if the issue is resolved. 5. **Test and debug:** Thoroughly test the system after addressing the identified issues and ensure that the KPIs are functioning as expected."
+}
+``` 
+
+
+
+
+areaText_10068_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1), <:GIN:>, build <:*:>, parseDataReportFlag ok, loadRegoMySQLInterval success",
+	"reason": "The data indicates a significant shift in several key performance indicators (KPIs) after the change.  This suggests the change introduced issues impacting system performance and stability.  The following KPIs show particularly drastic changes:\n* **1-sum(increase(std_grpc_server_handled_total{...})):** This metric related to gRPC server handling suggests a potential bottleneck or increased latency.\n* **<:GIN:>:**  A significant drop in mean and an altered trend for this KPI indicates a problem with a specific component or service.\n* **build <:*:>, parseDataReportFlag ok, loadRegoMySQLInterval success:** These KPIs all experienced shifts in their ranges and trends, suggesting broader impacts on data processing and system operations.",
+	"solution": "1. **Immediate Investigation:**  Focus on the top 5 abnormal KPIs listed above. Analyze logs, system metrics, and traces to pinpoint the root cause of the changes. 2. **Rollback or Remediation:** If possible, consider rolling back the recent change to restore previous functionality. If a rollback is not feasible, implement targeted fixes to address the identified issues. 3. **Monitoring and Alerting:**  Enhance monitoring and alerting systems to detect similar anomalies in the future.  Set thresholds based on historical data and expected performance. 4. **Performance Tuning:** Optimize system resources and configurations to improve efficiency and reduce bottlenecks.  5. **Code Review:**  Thoroughly review the code changes that were implemented to identify any potential bugs or unintended consequences."
+}
+``` 
+
+
+
+
+areaText_10076_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: superiorAndDeputy empty, kpi name: sum( increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m])) , kpi name: approve status error, kpi name: <:REQ:>, kpi name: build <:*:>",
+	"reason": "The provided data indicates a significant shift in several key performance indicators (KPIs) after the change.  These KPIs, including 'superiorAndDeputy empty', 'sum( increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m]))', 'approve status error', '<:REQ:>', and 'build <:*:>',  show negative trends or unexpected fluctuations, suggesting potential issues with the implemented change.",
+	"solution": "1. **Investigate the change logs:** Carefully review the changes made to identify the specific modifications that might be affecting these KPIs. 2. **Monitor relevant system resources:** Check CPU usage, memory consumption, network traffic, and disk I/O to identify any resource bottlenecks or performance degradation. 3. **Analyze logs and error messages:** Scrutinize application and system logs for any errors or warnings related to the affected KPIs. 4. **Rollback the change:** If possible, temporarily revert the change to determine if it is the root cause of the observed issues. 5. **Test and refine:** Once potential issues are identified, implement fixes and thoroughly test the system to ensure stability and performance."
+}
+``` 
+
+
+
+
+areaText_10077_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "43.kpi name: <:REQ:>, 45.kpi name: DeleteFieldValues <:REQ:>, 39.kpi name: sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m])), 41.kpi name: sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m])), 2.kpi name: sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m]))",
+	"reason": "The data indicates a significant shift in performance metrics after the change. Several KPIs, particularly those related to request processing (<:REQ:>, DeleteFieldValues <:REQ:>) and server handling, show drastic reductions in values, suggesting a potential issue with the implemented changes. The shift in trends from up to down for metrics like sum(increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK\"}[1m])) further reinforces this concern.",
+	"solution": "1. **Roll back the recent changes:** This is the most immediate step to mitigate the observed performance degradation. 2. **Thoroughly review the code changes:** Analyze the implemented changes to identify potential issues that might be causing the performance decline. 3. **Conduct further testing:** Perform comprehensive testing on the affected systems to pinpoint the root cause of the anomalies. 4. **Monitor key metrics closely:** Continuously track the performance metrics after implementing any solutions to ensure stability and prevent future regressions."
+}
+``` 
+
+
+
+
+areaText_10079_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "42, 43, 45, 47, 50",
+	"reason": "The data ranges for several KPIs have significantly shifted after the change. KPIs like 'sum(rate(std_requests_total{...}))', '<:list modules:>' , 'getBackupEm<:updateFanweiEmployee failed:>' , 'build <:*:> <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ' and 'ClientEnvHandler is <:*:> ' show decreased minimum values and/or maximum values, indicating potential issues with data collection, processing, or the application's functionality.",
+	"solution": "1. **Investigate the code changes:**  Review the recent code changes to pinpoint the modifications that might have impacted these KPIs. \n2. **Monitor logs and error messages:** Analyze application logs and error messages for any clues about the cause of the data anomalies. \n3. **Check data ingestion and processing pipelines:** Ensure that the data pipelines responsible for collecting and processing the data for these KPIs are functioning correctly. \n4. **Test and debug:** Conduct thorough testing to identify the root cause of the issues and implement necessary fixes."
+}
+``` 
+
+
+
+
+areaText_10080_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "42.kpi name: sum(rate(std_requests_total{job=\"be/yid\",code=~"4..",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), 43.kpi name: <:list modules:>, 44.kpi name: callback status error, 45.kpi name: getBackupEm<:updateFanweiEmployee failed:>, 50.kpi name: ClientEnvHandler is <:*:>",
+	"reason": "The data ranges of several KPIs have significantly changed after the modification.  Some KPIs, like 'sum(rate(std_requests_total{job=\"be/yid\",code=~"4..",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))' and 'callback status error', show a drastic decrease in their maximum values and a shift in the overall trend. Others, like 'ClientEnvHandler is <:*:>' experienced a reduction in their range and a change in trend. This indicates potential issues with the implementation or configuration changes.",
+	"solution": "1. **Review the code changes:** Carefully examine the code modifications made to identify the specific areas that might be causing these anomalies. 2. **Monitor logs:** Check the system logs for any error messages or warnings related to the affected KPIs. 3. **Test and debug:** Conduct thorough testing to isolate the root cause of the issues and debug the problematic code sections. 4. **Revert changes:** If the anomalies are severe, consider reverting the changes and analyzing the data before implementing further modifications. 5. **Consult documentation:** Refer to relevant documentation and seek assistance from experts if needed to understand the expected behavior of the KPIs and resolve the issues."
+}
+``` 
+
+
+
+
+areaText_10081_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "42.kpi name: sum(rate(std_requests_total{job=\"be/yid\",code=~"4..",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))\n43.kpi name: <:list modules:>\n46.kpi name: get metadata from header\n47.kpi name: build <:*:> <:*:> [trace.id=<:SEQ:> <:transactionID:> <:spanID:> \n49.kpi name: (1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~"Unknown|OK\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100",
+	"reason": "The data ranges of several key performance indicators (KPIs) have shifted significantly after the change. Specifically, KPIs like 'sum(rate(std_requests_total{...}))' and 'get metadata from header' show a dramatic decrease in their maximum values and an overall narrowing of the data range. This suggests that the change might have impacted the system's capacity or efficiency in handling requests or retrieving metadata.",
+	"solution": "1. **Investigate the code changes:** Carefully review the code changes introduced after the update to identify potential issues affecting request handling, metadata retrieval, or system performance. 2. **Monitor system resources:** Monitor CPU, memory, and network usage to identify any resource bottlenecks or spikes that might be causing the observed changes. 3. **Analyze logs:** Examine system logs for any errors, warnings, or unusual activity that could provide insights into the cause of the anomalies. 4. **Roll back the change:** If the issue is severe and cannot be quickly resolved, consider rolling back the recent changes to restore the system to its previous state. 5. **Test thoroughly:** After implementing any fixes, conduct thorough testing to ensure that the system is functioning correctly and that the observed anomalies have been resolved."
+}
+``` 
+
+
+
+
+areaText_10082_v4_English.txt
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), kpi name: <:list modules:>, kpi name: callback status error, kpi name: getBackupEm<:updateFanweiEmployee failed:>, kpi name: get metadata from header",
+	"reason": "The data ranges of several KPIs have significantly narrowed after the change, indicating a potential decrease in system activity or a change in request patterns. Additionally, some KPIs show a shift in trend from up to down, suggesting a negative impact on performance or functionality.",
+	"solution": "Investigate the code changes implemented and identify the specific areas that might be affecting these KPIs. Analyze the logs and system metrics to pinpoint the root cause of the reduced activity and performance degradation. Consider reverting the changes or implementing mitigating measures to restore the system to its previous state."
+}
+``` 
+
+
+
+Precision: 1.00Recall: 1.00F1 Score: 1.00

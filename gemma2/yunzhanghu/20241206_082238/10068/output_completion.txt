@@ -1,0 +1,22 @@
+
+areaText_10068_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\",grpc_code=~"Unknown|OK"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1),Depts only have yunzhanghu,getPermTagsAndValues <:*:>,parseDataReportFlag ok,loadRegoMySQLInterval success",
+	"reason": "The system experienced significant changes in key performance indicators (KPIs) after the change. Several KPIs, including those related to gRPC server handling, data parsing, and system load, showed notable deviations from their previous trends. This suggests that the change may have introduced issues affecting system performance and data processing.",
+	"solution": "1. **Investigate the affected gRPC servers:** Analyze the logs and metrics of the gRPC servers to identify the root cause of the increased errors and decreased handling efficiency. 2. **Review the data parsing logic:** Carefully examine the code responsible for parsing data reports to ensure that the changes implemented did not introduce any bugs or inconsistencies. 3. **Monitor system load:** Continuously track the system load after the change and identify any potential bottlenecks that may be contributing to the performance issues. 4. **Rollback the changes:** If the issues cannot be resolved quickly, consider rolling back the changes to restore the system to its previous state while further investigation is conducted."
+}
+```
+reason similarity score:0.864528238773346
+solution similarity score:0.6625480055809021

@@ -1,0 +1,14 @@
+
+areaText_29836_v4_English.txt
+root_cause_from_redis: []
+Expected Software Changes
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "90.kpi name: sum(rate(std_requests_total{job=\"be/yid\",code=~\"3..\",environment=\"prod\"}[5m]))\n91.kpi name: node_sockstat_TCP_alloc{hostname=~\"bj1-rd-yos-prod-01\"}\n92.kpi name: node_load15{hostname=~\"bj3-rd-yos-prod-02\"}\n93.kpi name: sum(rate(std_requests_total{job=\"be/yid\", code=\"200\",method=~\"GET|POST\",url=~\"/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset\"}[5m]))\n94.kpi name: [getOtpKey] <:*:> failed:> ",
+	"reason": "The system experienced performance degradation and potential instability after the change. Several key performance indicators (KPIs) showed significant shifts in their ranges and trends. This suggests that the change might have introduced unexpected side effects or impacted resource utilization.",
+	"solution": "1. **Investigate the code changes**: Carefully review the code changes introduced with the deployment to identify potential issues causing the observed anomalies. Focus on areas related to resource allocation, concurrency, and data access.\n2. **Monitor resource utilization**:  Continuously monitor system resource usage (CPU, memory, disk I/O) to pinpoint bottlenecks or excessive resource consumption that could be contributing to the performance degradation.\n3. **Review logs and error messages**: Analyze system logs and error messages for any clues about the root cause of the issues. Look for patterns, exceptions, or warnings related to the affected KPIs.\n4. **Rollback or revert changes**: If the issues are severe and cannot be quickly resolved, consider rolling back the changes to the previous stable state. This will allow you to isolate the problematic changes and focus on fixing them.\n5. **Test and validate**: After implementing any fixes, thoroughly test the system to ensure that the performance issues are resolved and that the system functions as expected."
+}
+```
+reason similarity score:-0.052845459431409836
+solution similarity score:0.021596385166049004

@@ -1,0 +1,22 @@
+
+areaText_10041_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "loaded policy count:<:NUM:>, computeDeptMembersObjectIDs end, Depts only have yunzhanghu, loadRegoMySQLInterval success, sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+	"reason": "The data ranges for several KPIs have significantly changed after the update, indicating potential issues.  'loaded policy count:<:NUM:>' has drastically reduced its range, suggesting a possible policy loading problem. 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'loadRegoMySQLInterval success' show a shift in their mean values and ranges, indicating potential performance or configuration changes. 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' shows a decrease in its range, potentially indicating network traffic changes.",
+	"solution": "Investigate the changes in 'loaded policy count:<:NUM:>' to identify any policy loading issues. Analyze the shifted mean values and ranges of 'computeDeptMembersObjectIDs end', 'Depts only have yunzhanghu', and 'loadRegoMySQLInterval success' to pinpoint the root cause of the changes. Examine the network traffic patterns reflected in 'sum(rate(container_network_receive_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~"jiesuan", pod=~"yid-k8s-aiops-81-5778cb86bf-tmvfd", node=\"10.200.65.114\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8' to understand any potential network impact."
+}
+```
+reason similarity score:0.595960795879364
+solution similarity score:0.6117141842842102

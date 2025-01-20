@@ -1,0 +1,25 @@
+
+areaText_10081_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m])), <:list modules:>, callback status error, getBackupEm<:updateFanweiEmployee failed:>, get metadata from header",
+	"reason": "The data ranges of multiple KPIs have significantly narrowed after the change, indicating a potential decrease in system activity or responsiveness. KPIs like 'sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))' and '<:list modules:>' show a downward trend in their means and ranges, suggesting a decline in requests and module performance.  The 'callback status error' KPI also exhibits a decrease in range, potentially indicating fewer errors but also a possibility of reduced activity.",
+	"solution": "Investigate the code changes introduced to pinpoint the source of the reduced activity. Analyze logs and monitoring data to identify any bottlenecks or issues that might be affecting the KPIs. Consider reverting the changes or implementing adjustments to restore system performance."
+}
+``` 
+
+
+
+reason similarity score:0.7319579720497131
+solution similarity score:0.8081470727920532

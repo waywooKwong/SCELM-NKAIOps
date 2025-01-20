@@ -1,0 +1,22 @@
+
+areaText_10047_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "sum(rate(requests_total[1m])) by (method)  \nsum(increase(jvm_memory_used_bytes[1m])) \n sum(increase(http_request_duration_seconds_bucket[1m])) by (code) \ndifference(active_connections, active_connections_prev) \naverage_over_time(node_cpu_load_avg_1)\n",
+	"reason": "The metrics indicate a significant increase in system load, including increased request volume, memory consumption, and CPU usage. This suggests a potential resource contention issue.",
+	"solution": "Investigate the top 5 abnormal KPIs for further analysis. Identify the contributing factors to the increased load and consider scaling resources (e.g., adding more instances, increasing memory), optimizing code performance, or implementing caching mechanisms."
+}
+```
+reason similarity score:0.6093521118164062
+solution similarity score:0.7295650243759155

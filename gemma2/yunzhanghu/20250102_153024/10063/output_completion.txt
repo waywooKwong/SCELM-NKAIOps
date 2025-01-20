@@ -1,0 +1,21 @@
+
+areaText_10063_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "30. container_memory_rss{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-57-78-cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} / 1048576\n39. superiorAndDeputy empty\n41. approve status error\n7. get request latency\n29. request timeouts",
+	"reason": "The analyzed metrics indicate performance degradation and potential resource contention issues. Several KPIs, including container memory usage, system latency, and approval status errors, show significant deviations from normal ranges.",
+	"solution": "Investigate the root cause of increased container memory consumption by analyzing application resource requirements and optimizing memory management strategies. Review logs and monitor system performance for bottlenecks that contribute to request timeouts and latency issues. Address any underlying infrastructure limitations or configuration problems affecting service availability." 
+}
+```
+reason similarity score:0.7120556235313416
+solution similarity score:0.28457197546958923

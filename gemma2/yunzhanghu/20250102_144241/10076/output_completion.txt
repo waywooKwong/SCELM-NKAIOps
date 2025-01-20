@@ -1,0 +1,22 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "parseDataReportFlag ok\nsvc.ApproveCallback failed\n<:list modules:> \nsum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\n<:module name 1> ",
+	"reason": "The observed data shows significant deviations from the expected normal behavior in several key performance indicators (KPIs). This indicates potential issues with system stability, resource utilization, and service responsiveness.",
+	"solution": "A thorough investigation is required to pinpoint the root cause of these anomalies. 1. Analyze logs and system events for clues about potential errors or failures. 2. Monitor resource consumption (CPU, memory, network) to identify bottlenecks or excessive usage. 3. Review configuration settings and recent changes that might have impacted performance. 4.  Consider implementing automated monitoring and alerting systems to proactively detect and respond to anomalies."
+}
+```
+reason similarity score:-0.04221231862902641
+solution similarity score:0.6237220168113708

@@ -1,0 +1,22 @@
+
+areaText_10077_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "svc.ApproveCallback failed\nsum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\nparseDataReportFlag ok\n<:list modules:> ",
+	"reason": "A significant number of KPIs show anomalous behavior, indicating potential system instability or performance degradation. Specifically, metrics related to service callbacks, network transmission, and module listing exhibit unusual trends. This suggests possible issues with communication between services, resource contention, or errors in data processing.",
+	"solution": "1. Investigate the `svc.ApproveCallback failed` KPI for root causes of callback failures. Analyze logs and trace requests to identify bottlenecks or errors in the approval process.\n2. Examine the `sum(rate(container_network_transmit_bytes_total{...}) * 8` KPI for unusual spikes or drops in network traffic. Review resource utilization and application behavior to pinpoint potential congestion or misconfigurations.\n3. Analyze the `parseDataReportFlag ok` KPI for any errors or inconsistencies in data reporting. Verify data sources and processing pipelines for accuracy and completeness.\n4. Investigate the `<:list modules:>` KPI for unexpected changes in module listing. Check for configuration issues, system updates, or potential dependencies impacting module availability."
+}
+```
+reason similarity score:0.6963491439819336
+solution similarity score:0.6041956543922424

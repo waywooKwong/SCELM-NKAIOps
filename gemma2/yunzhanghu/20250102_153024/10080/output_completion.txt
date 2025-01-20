@@ -1,0 +1,25 @@
+
+areaText_10080_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",environment=\"rc\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)\n (1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100", 
+"ClientEnvHandler is <:*:>", 
+"sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\",instance=\"{1}\",grpc_code!~"Unknown|OK"}[1m]))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"{2}\",environment=\"rc\"}[1m])) or vector(1)",
+"ClientEnvHandler is <:*:> " , 
+"1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown|OK\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m])))*100" ,
+	"reason": "Several key performance indicators (KPIs) show significant deviations from their normal ranges.  These include metrics related to gRPC server handling, ClientEnvHandler processing, and overall system resource utilization. The sharp increases in some KPIs and decreases in others indicate potential bottlenecks, errors, or unexpected load patterns. ",
+	"solution": "1. **Investigate the top 5 abnormal kpis**: Deep dive into the data behind these KPIs to pinpoint the exact cause of the anomalies. Look for trends, spikes, or unusual behavior.  \n2. **Resource Monitoring**: Monitor system resources (CPU, memory, network) closely to identify any resource contention or exhaustion. Consider scaling up resources if necessary. \n3. **Log Analysis**: Analyze application and system logs for error messages, warnings, or patterns that might shed light on the root cause. \n4. **Code Review**: Review relevant code for potential bugs or inefficient logic that could be contributing to performance issues.  \n5. **Performance Testing**: Conduct thorough performance tests under realistic load conditions to identify bottlenecks and stress points in the system. "
+}
+``` 
+
+
+Let me know if you'd like me to elaborate on any of these suggestions!
+reason similarity score:-0.07567381858825684
+solution similarity score:0.30740079283714294

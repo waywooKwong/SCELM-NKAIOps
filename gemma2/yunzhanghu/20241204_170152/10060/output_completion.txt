@@ -1,0 +1,25 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "approve status error, irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100, container_memory_rss{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} / 1048576, Response=<:MAP:>,  Depts only have yunzhanghu",
+	"reason": "The system is experiencing performance issues indicated by several key performance indicators (KPIs) that have shifted outside of their expected ranges.  The 'approve status error' KPI shows an increase in errors, suggesting potential issues with approval workflows. The 'irate' and 'container_memory_rss' KPIs indicate elevated CPU and memory usage, respectively, which could be causing performance bottlenecks. The 'Response' KPI shows a decrease in response time, which could be impacting user experience. Finally, the 'Depts only have yunzhanghu' KPI suggests potential data or configuration issues.",
+	"solution": "Investigate the root cause of the performance issues by analyzing logs, monitoring system resources, and reviewing recent changes.  Focus on addressing the 'approve status error' and the KPIs related to CPU and memory usage. Optimize resource allocation, investigate potential bottlenecks, and consider scaling resources if necessary.  Address the 'Response' KPI by optimizing code and configurations to improve response times.  Finally, investigate the 'Depts only have yunzhanghu' KPI to identify and resolve any data or configuration inconsistencies."
+}
+``` 
+
+
+
+reason similarity score:0.7126384973526001
+solution similarity score:0.7465417981147766

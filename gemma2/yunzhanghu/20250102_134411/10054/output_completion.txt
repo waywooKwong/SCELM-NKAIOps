@@ -1,0 +1,29 @@
+
+areaText_10054_v4_English.txt
+root_cause_from_redis: []
+```json
+[
+  {
+    "item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+  },
+  {
+    "item": "Missing Modification of Correlated Configuration-Configuration Errors-Defective Software Changes"
+  },
+  {
+    "item": "Deleting White List by Mistake-Configuration Errors-Defective Software Changes"
+  },
+  {
+    "item": "Resource Contention-Defective Software Changes"
+  }
+]
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "AuthListByName <:<:ChineseInfo:>:>,getBackupEmp success,computeOwnObjectIDs end,message,sum(rate(http_requests_total[1m])) by (method)",
+	"reason": "The metrics analysis shows several KPIs have significantly deviated from their normal ranges, indicating potential performance issues or system errors. The most concerning are AuthListByName <:<:ChineseInfo:>:>,getBackupEmp success,computeOwnObjectIDs end,message,sum(rate(http_requests_total[1m])) by (method), which show drastic increases or decreases in values.",
+	"solution": "Investigate the root cause of these anomalies. Analyze logs and system performance data for the affected services. Identify any recent changes that might have triggered these deviations. Consider scaling resources, optimizing code, or addressing underlying infrastructure issues to restore normal operation."
+}
+```
+reason similarity score:-0.04785960540175438
+solution similarity score:0.2910740077495575

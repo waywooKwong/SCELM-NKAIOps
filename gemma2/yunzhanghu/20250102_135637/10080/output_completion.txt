@@ -1,0 +1,26 @@
+
+areaText_10080_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100, (1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100, ClientEnvHandler is <:*:>, sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~"Unknown|OK"}[1m])) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\"}[1m]) or vector(0)", 1-sum(increase(std_grpc_server_handled_total{job=\"be/yid\",biz_code=\"6000\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_code=~\"Unknown\|OK\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",biz_code=\"6000\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m]) or vector(0))/sum(increase(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues\|ListPermResource\|CheckUserOperatePage\|ListAuthZResources\"}[1m])))*100",
+	"reason": "The system is experiencing anomalies in several key performance indicators (KPIs), including grpc server handled total and client environment handler. These KPIs indicate that the system may be under heavy load or experiencing performance degradation. This could be caused by a variety of factors, such as increased traffic, resource contention, or software bugs.",
+	"solution": "Further investigation is needed to determine the root cause of these anomalies. Some potential solutions include: \n* Reviewing logs and monitoring metrics to identify patterns and bottlenecks.\n* Increasing system resources, such as CPU, memory, or disk space.\n* Optimizing application code and configurations to improve performance.\n* Implementing caching mechanisms to reduce database load."
+}
+``` 
+
+
+
+Let me know if you need me to elaborate on any specific point!
+reason similarity score:0.8138478994369507
+solution similarity score:0.6549807190895081

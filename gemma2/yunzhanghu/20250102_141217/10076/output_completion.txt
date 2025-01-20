@@ -1,0 +1,18 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "svc.ApproveCallback failed\nparseDataReportFlag ok\nsum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8\nsum(increase(prometheus_api_requests_total[1m])) by (method)\n<:list modules:>",
+	"reason": "The analysis indicates a significant increase in errors related to service callbacks and data processing. Network traffic metrics also show potential anomalies. It's likely due to increased load or a bug affecting these critical components.",
+	"solution": "Investigate the 'svc.ApproveCallback failed' and 'parseDataReportFlag ok' kpis for root cause analysis. Check logs, application code, and system resources. Monitor network traffic patterns and identify potential bottlenecks. Consider scaling up resources if necessary."
+}
+```
+reason similarity score:0.6268981695175171
+solution similarity score:0.5845198631286621

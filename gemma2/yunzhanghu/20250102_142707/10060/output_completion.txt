@@ -1,0 +1,18 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "Depts only have yunzhanghu,no need or no have tags [trace.id=<:SEQ:> <:transactionID:> <:spanID:> ,<:GIN:>, (sum(irate(container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container!=\"POD\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\", metrics_path=\"/metrics/cadvisor\"} [1m])) by(namespace,pod) / on (namespace,pod) (sum(container_spec_cpu_quota{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",container!=\"\",metrics_path=\"/metrics/cadvisor\"}) by(namespace,pod) / 100000) ) * 100",
+	"reason": "The following kpis show anomalies: Depts only have yunzhanghu indicates potential issue with department setup or resource allocation. The 'no need or no have tags' and '<:GIN:>' KPIs suggest potential problems with tracing or logging, which can hinder debugging and performance analysis. The high CPU usage in container_cpu_usage_seconds_total, particularly when exceeding the cpu quota, points to potential resource contention or application inefficiency.",
+	"solution": "1. Investigate 'Depts only have yunzhanghu' by reviewing department configurations and resource allocation. 2. Analyze tracing and logging issues indicated by '<:GIN:>' and 'no need or no have tags' KPIs. Ensure proper tagging and configuration for effective tracing. 3. Address high CPU usage in containers: optimize application code, adjust resource quotas, and monitor container performance."
+}
+```
+reason similarity score:0.558595597743988
+solution similarity score:0.30371758341789246

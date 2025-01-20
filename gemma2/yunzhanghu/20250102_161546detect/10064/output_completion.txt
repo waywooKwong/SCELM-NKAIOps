@@ -1,0 +1,27 @@
+
+areaText_10064_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+``` 
+
+
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "container_memory_rss{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} / 1048576,  superiorAndDeputy empty, approve status error, get <:trace.id:> <:transactionID:> <:spanID:>,  get <:trace.id:> <:transactionID:> <:spanID:>",
+	"reason": "Several key performance indicators (KPIs) show significant deviations from expected behavior. Notably, container memory usage has spiked, while KPIs related to task completion and resource management ('superiorAndDeputy empty', 'approve status error') indicate potential bottlenecks or errors in processing.",
+	"solution": "Investigate the root cause of the elevated container memory consumption. Analyze resource allocation policies and ensure sufficient resources are available.  Diagnose the issues causing errors in 'superiorAndDeputy empty' and 'approve status error'. Review logs, configurations, and dependencies to pinpoint the source of these problems."
+}
+```
+reason similarity score:0.6501972675323486
+solution similarity score:0.5243663787841797

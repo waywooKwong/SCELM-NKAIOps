@@ -1,0 +1,650 @@
+
+areaText_51012_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, net_send_packet, istio_duration, cpu_usage, net_recv_packet",
+	"reason": "Significant deviations in key performance indicators (KPIs) after the change.  'istio_count', 'net_send_packet', and 'net_recv_packet' show increased volatility and outliers compared to historical trends. 'cpu_usage' indicates a slight but noticeable increase, suggesting potential resource contention. 'istio_duration' also exhibits a shift, implying changes in service request processing times.",
+	"solution": "1. **Investigate the root cause of the anomalies:** Analyze logs, application performance metrics, and system resources to pinpoint the source of the deviations in KPIs. 2. **Review recent code changes:** Identify any modifications made around the time of the change that could have impacted service performance or resource utilization. 3. **Optimize resource allocation:** If resource contention is identified, consider adjusting resource limits or scaling up infrastructure components as needed. 4. **Implement monitoring and alerting:** Establish robust monitoring and alerting mechanisms to detect performance anomalies in real-time and trigger timely interventions."
+}
+```
+reason similarity score:0.2651510238647461
+solution similarity score:0.32570680975914
+
+areaText_50005_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": " istio_count, net_send_packet, cpu_usage, net_recv_packet, istio_duration",
+	"reason": "The metrics indicate a significant deviation from normal behavior.  Key indicators like `istio_count`, `net_send_packet`, and `cpu_usage` show unusual increases or decreases after the change. Additionally, `net_recv_packet` and `istio_duration` are affected, suggesting a broader impact on system performance.",
+	"solution": "Investigate the recent changes that occurred to pinpoint the cause of these deviations. Review logs, application code, and infrastructure configurations for any potential issues introduced during the change process. Consider reverting the changes or implementing mitigating measures until the root cause is identified and resolved." 
+}
+```
+reason similarity score:0.1466161161661148
+solution similarity score:0.30294227600097656
+
+areaText_41012_v4_English.txt
+root_cause_from_redis:  
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All key performance indicators (KPIs) are within acceptable thresholds. There are no significant deviations or trends that indicate a failure or abnormality.",
+	"solution": ""
+}
+```
+reason similarity score:0.23653611540794373
+solution similarity score:0.39889875054359436
+
+areaText_40008_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": null,
+	"reason": "This set of data has been tested, and all indicator data does not exceed the threshold, which is considered normal.",
+	"solution": null
+}
+``` 
+
+
+
+reason similarity score:0.6516424417495728
+solution similarity score:0.809577226638794
+
+areaText_50007_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, net_recv_packet, istio_duration, cpu_usage,  net_send_packet",
+	"reason": "The `istio_count` and `net_recv_packet` show a significant upward trend after the change period, indicating a potential increase in network traffic or request volume. The `cpu_usage` also shows a downward trend which can be concerning if it's accompanied by increased load. The `istio_duration` showing an unusual pattern alongside `net_send_packet`, further suggests a potential issue with latency or processing time.",
+	"solution": "Investigate the spike in `istio_count` and `net_recv_packet`. Analyze logs for error messages or performance bottlenecks related to network requests.  Review application code to identify any changes that might be contributing to increased load on CPU. Monitor system resources closely, such as memory and disk I/O, to ensure they are not being overwhelmed."
+}
+``` 
+
+
+
+reason similarity score:0.16674135625362396
+solution similarity score:0.12404636293649673
+
+areaText_50004_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, net_send_packet, istio_count, net_recv_packet, istio_duration",
+	"reason": "The data indicates a significant deviation from normal patterns. CPU usage dropped, while network sending and receiving packets increased drastically. 'istio_count' and 'istio_duration' also show abnormal spikes, suggesting potential issues with service mesh performance or communication.",
+	"solution": "1. Investigate the cause of the sudden increase in network traffic. 2. Analyze system logs and resource utilization to pinpoint bottlenecks affecting CPU usage. 3. Examine Istio configuration and metrics to identify any misconfigurations or performance issues within the service mesh. 4. Consider scaling resources (CPU, memory) if necessary to handle the increased workload."
+}
+``` 
+
+
+
+reason similarity score:0.7704795002937317
+solution similarity score:0.7926549315452576
+
+areaText_40012_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All KPI values are within acceptable thresholds and no significant deviations or trends were observed.",
+	"solution": ""
+}
+```  
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+reason similarity score:0.8747922778129578
+solution similarity score:0.6428091526031494
+
+areaText_50010_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "net_send_packet, istio_count, cpu_usage, istio_duration, net_recv_packet",
+	"reason": "Several key performance indicators (KPIs) show significant deviations from their normal ranges.  Specifically,  'net_send_packet', 'istio_count', 'cpu_usage', 'istio_duration', and 'net_recv_packet' all exhibit unusual increases or decreases. This suggests a potential issue impacting the service's performance and resource utilization.",
+	"solution": "1. **Investigate the root cause of the anomalies:** Analyze logs, system metrics, and application behavior to pinpoint the source of the performance degradation. 2. **Monitor resource consumption closely:** Keep a vigilant eye on CPU usage, memory allocation, and network traffic to identify bottlenecks or excessive resource demands. 3. **Optimize application code and configurations:** Review the application's efficiency and make necessary adjustments to reduce resource consumption and improve responsiveness. 4. **Scale resources as needed:** If the issue stems from insufficient resources, consider scaling up servers, adding more memory, or increasing network bandwidth. 5. **Implement caching mechanisms:** Utilize caching strategies to reduce database load and speed up data retrieval."
+}
+``` 
+
+
+Let me know if you'd like a deeper dive into any of these points!
+reason similarity score:0.5970538258552551
+solution similarity score:0.5876162052154541
+
+areaText_51013_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, cpu_usage, net_send_packet, net_recv_packet, istio_duration",
+	"reason": "The metrics show significant deviations after the change.  `cpu_usage` and `net_recv_packet` increased while `net_send_packet` decreased. `istio_count` and `istio_duration` also showed notable shifts. This suggests a disruption in service performance or resource utilization.",
+	"solution": "Investigate the code changes introduced alongside the metrics shift. Review logs for error messages or performance bottlenecks. Analyze system resource consumption (CPU, memory) during periods of increased metric values. Consider rolling back recent changes if the issue persists."
+}
+``` 
+
+
+Let me know if you'd like to explore any specific metric in more detail!
+reason similarity score:0.932231605052948
+solution similarity score:0.8074961304664612
+
+areaText_50011_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Network Traffic"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, istio_duration, net_send_packet, net_recv_packet, cpu_usage",
+	"reason": "The metrics show significant deviations after the change. istio_count and istio_duration have shifted ranges indicating potential issues with request processing.  net_send_packet and net_recv_packet fluctuations suggest network performance problems. cpu_usage increase points to potential resource contention.",
+	"solution": "Investigate the code changes introduced alongside the data shifts. Analyze logs for errors or warnings related to network communication and resource utilization. Consider increasing server resources if necessary. Optimize code performance to reduce CPU load."
+}
+``` 
+
+
+
+reason similarity score:0.8495437502861023
+solution similarity score:0.8324703574180603
+
+areaText_51009_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, net_send_packet, cpu_usage, istio_duration, net_recv_packet",
+	"reason": "Several key performance indicators (KPIs) exhibit significant deviations from their expected ranges.  'istio_count', 'net_send_packet', and 'cpu_usage' show increased values, indicating potential resource strain or heightened activity. 'istio_duration' has a noticeable upward trend, suggesting possible latency issues within the system. 'net_recv_packet' also demonstrates an unusual spike, potentially signaling network congestion.",
+	"solution": "1. **Resource Monitoring:** Implement comprehensive monitoring of CPU, memory, and network resources to identify bottlenecks and optimize resource allocation. 2. **Load Testing:** Conduct thorough load tests to determine the system's capacity under stress and identify areas for improvement. 3. **Network Optimization:** Analyze network traffic patterns and implement measures to reduce congestion and improve data transmission efficiency. 4. **Performance Tuning:** Fine-tune application settings, database configurations, and other system parameters to enhance overall performance."
+}
+```
+reason similarity score:0.5125789642333984
+solution similarity score:0.5833605527877808
+
+areaText_50012_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, istio_count, net_send_packet, istio_duration, net_recv_packet",
+	"reason": "Several key performance indicators (KPIs) show significant deviations from their expected ranges. cpu_usage and net_send_packet are both showing  decreases, while istio_count, istio_duration and net_recv_packet are experiencing increases. These fluctuations suggest potential issues with resource utilization, network communication, or service performance.",
+	"solution": "1. **Monitor Resource Utilization:**  Continuously track CPU, memory, and network usage to identify bottlenecks and optimize resource allocation. 2. **Investigate Network Traffic:** Analyze network traffic patterns to pinpoint any anomalies or congestion that could be impacting service performance. 3. **Review Service Logs:** Examine logs for errors, warnings, or unusual activity related to the affected services. 4. **Scale Resources:**  If necessary, adjust resource allocation (CPU, memory) for impacted services to handle increased load. 5. **Optimize Application Code:** Review application code for potential inefficiencies or areas for improvement that could be contributing to performance issues."
+}
+``` 
+
+
+**Explanation:**
+
+* **change_type: "failure"**: The data shows significant deviations from expected behavior, indicating a potential issue.
+* **Top 5 abnormal kpi**:  The list highlights the most critical KPIs experiencing anomalies.  
+* **reason**: This section explains the observed trends and their potential implications. It's crucial to provide a clear and concise explanation based on the data.
+* **solution**: The suggested actions are designed to address the identified problems. They should be specific, actionable, and focused on resolving the root causes of the performance issues.
+
+
+
+Let me know if you have any other questions or need further clarification!
+reason similarity score:0.9566972851753235
+solution similarity score:0.8209007978439331
+
+areaText_50008_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Network Traffic-Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, istio_count, net_send_packet,  net_recv_packet, istio_duration",
+	"reason": "The metrics show significant deviations from expected norms. cpu_usage spiked upwards, while istio_count and net_send_packet experienced unusual fluctuations.  Net_recv_packet also saw a drop, indicating potential network congestion. Istio_duration showed some instability.",
+	"solution": "1. **Investigate the cause of the CPU usage spike:** Analyze resource consumption patterns and identify any processes or applications consuming excessive resources. 2. **Review logs and monitoring data for the affected KPIs:** Look for error messages, performance bottlenecks, or other indicators that might explain the anomalies. 3. **Scale resources if necessary:** Increase server capacity, memory allocation, or network bandwidth to handle the increased load. 4. **Optimize application code:** Identify areas for improvement in efficiency and resource utilization."
+}
+```
+reason similarity score:0.46960562467575073
+solution similarity score:0.4023846387863159
+
+areaText_40007_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "This set of data has been tested, and all indicator data does not exceed the threshold, which is considered normal.",
+	"solution": ""
+}
+``` 
+
+
+**Explanation:**
+
+The provided data indicates that none of the KPIs exceeded their thresholds. This suggests the change did not negatively impact system performance or stability. 
+
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+reason similarity score:0.39090582728385925
+solution similarity score:0.5779902935028076
+
+areaText_40003_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All indicator data falls within established thresholds, indicating no significant deviations or anomalies.",
+	"solution": ""
+}
+``` 
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+reason similarity score:0.43204084038734436
+solution similarity score:0.5779902935028076
+
+areaText_41009_v4_English.txt
+root_cause_from_redis:  
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": null,
+	"reason": "All indicator data does not exceed the threshold.",
+	"solution": null
+}
+``` 
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+reason similarity score:0.49147528409957886
+solution similarity score:0.22606272995471954
+
+areaText_50009_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "net_send_packet, istio_count, cpu_usage, net_recv_packet, istio_duration",
+	"reason": "The metrics show a significant deviation from the baseline.  Specifically, net_send_packet shows an abnormal increase, while istio_count and cpu_usage have unexpected upward trends. Additionally, net_recv_packet  and istio_duration exhibit anomalies suggesting potential performance issues.",
+	"solution": "Investigate the root cause of the anomalies in net_send_packet, istio_count, cpu_usage, net_recv_packet, and istio_duration. This may involve examining system logs, application code, and network traffic patterns.  Consider implementing load balancing, optimizing database queries, or upgrading hardware resources to alleviate performance bottlenecks."
+}
+``` 
+
+
+
+
+Let me know if you have any other questions!
+reason similarity score:0.8963903784751892
+solution similarity score:0.8265482187271118
+
+areaText_51010_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "net_send_packet, istio_count, cpu_usage, net_recv_packet, istio_duration",
+	"reason": "The KPIs `net_send_packet`, `istio_count`, `cpu_usage`, `net_recv_packet`, and `istio_duration` show significant deviations from their baseline values after the change. This suggests a potential performance degradation or issue in the system.",
+	"solution": "Investigate the root cause of the changes in these KPIs. Analyze logs, monitor resource usage, and check for any recent configuration updates that might be contributing to the issue. Consider rolling back the recent changes if they are identified as the primary cause."
+}
+``` 
+
+
+
+reason similarity score:0.24113193154335022
+solution similarity score:0.39205798506736755
+
+areaText_41010_v4_English.txt
+root_cause_from_redis:  
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All KPI data is within normal thresholds and there are no significant deviations or trends indicating failure.",
+	"solution": ""
+}
+``` 
+
+
+
+reason similarity score:0.7693642377853394
+solution similarity score:0.4966564476490021
+
+areaText_40004_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "['net_send_packet', 'istio_count', 'cpu_usage']",
+	"reason": "While there are some fluctuations in KPIs like net_send_packet, istio_count, and cpu_usage after the change, these variations fall within acceptable ranges. There's no significant degradation in overall system performance.",
+	"solution": "No immediate action required. Continue monitoring KPIs for any persistent or concerning trends."
+}
+``` 
+
+
+**Explanation:**
+
+* **change_type:**  We classify this as "normal" because the provided data doesn't indicate a system failure. The KPIs show some variation, but nothing outside acceptable limits.
+* **Top 5 abnormal kpi:** We list `net_send_packet`, `istio_count`, and `cpu_usage` as they show notable changes. However, remember that "abnormal" in this context means a deviation from the baseline, not necessarily a problem. 
+* **reason:** We explain that the observed variations are within acceptable ranges and don't point to a systemic issue.
+* **solution:**  Since it's a normal scenario, we recommend continued monitoring for any unusual trends.
+
+
+
+Let me know if you have any more data points or want to explore specific KPIs in more detail!
+reason similarity score:0.2179153710603714
+solution similarity score:0.3347359895706177
+
+areaText_40013_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "None",
+	"reason": "The provided data indicates that all KPIs are within acceptable thresholds and no significant deviations or anomalies were detected. ",
+	"solution": "N/A"
+}
+``` 
+
+
+
+reason similarity score:0.8902212381362915
+solution similarity score:0.7340047955513
+
+areaText_50013_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_duration, net_recv_packet, istio_count, cpu_usage,  net_send_packet",
+	"reason": "Several KPIs show significant deviations after the change. istio_duration and net_recv_packet show negative trends while others like istio_count, cpu_usage, and net_send_packet have reduced ranges compared to before the change. This indicates a potential performance degradation or issue with the service.",
+	"solution": "Investigate the reasons behind the changes in these KPIs. Analyze logs, system resources, and network traffic to pinpoint the source of the problem. Consider rolling back the recent changes if they are identified as the cause."
+}
+``` 
+
+
+Let me know if you'd like me to elaborate on any specific aspect or KPI!
+reason similarity score:0.7317410111427307
+solution similarity score:0.4958683252334595
+
+areaText_40005_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All monitored KPIs remain within acceptable thresholds.",
+	"solution": ""
+}
+``` 
+
+
+**Explanation:**
+
+* **`change_type`: "normal"`**  The provided data shows no significant deviations or anomalies in the KPIs. All values fall within expected ranges.
+* **`Top 5 abnormal kpi`: ""** Since there are no abnormalities, this field is left empty.
+* **`reason`**: The reason for classifying the change as "normal" is that the KPIs are behaving as expected and within acceptable limits.
+* **`solution`**:  No solution is needed because there's no issue to address. 
+
+
+
+Let me know if you have any other data sets you'd like analyzed!
+reason similarity score:0.36156362295150757
+solution similarity score:0.5779902935028076
+
+areaText_40006_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All monitored KPIs remain within acceptable thresholds and demonstrate no significant deviations post-change implementation.",
+	"solution": ""
+}
+```
+reason similarity score:0.8367534279823303
+solution similarity score:0.9246141910552979
+
+areaText_51011_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "istio_count, cpu_usage, istio_duration, net_recv_packet, net_send_packet",
+	"reason": "Several KPIs show significant deviations from their typical behavior after the change.  'istio_count' and 'cpu_usage' exhibit upward trends, while 'net_recv_packet' and 'net_send_packet' demonstrate downward shifts. Additionally, 'istio_duration' shows an unexpected increase. These anomalies suggest a potential disruption in network communication and resource utilization.",
+	"solution": "1. **Investigate the code changes:** Review the recent modifications to pinpoint potential causes for the observed KPI fluctuations. 2. **Monitor resource consumption:**  Closely track CPU, memory, and network usage to identify any bottlenecks or excessive demands. 3. **Analyze network traffic:** Examine network logs and patterns to understand the impact of the change on data flow and communication between services. 4. **Optimize resource allocation:** Adjust system configurations and resource limits to ensure efficient utilization and prevent overload.  5. **Roll back changes (if possible):** If a recent code update is identified as the primary source of the issue, consider reverting it temporarily to restore stability."
+}
+```
+reason similarity score:0.7765682339668274
+solution similarity score:0.6012752056121826
+
+areaText_40010_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": null,
+	"reason": "All indicator data is within the threshold.",
+	"solution": null
+}
+```
+reason similarity score:0.7552028894424438
+solution similarity score:0.5324793457984924
+
+areaText_50006_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "cpu_usage, istio_count, net_send_packet, net_recv_packet, istio_duration",
+	"reason": "Significant deviations in CPU usage, request count, network traffic metrics (both send and receive) and  Istio duration after the change indicate a potential issue. These changes suggest a performance degradation or increased load on the system.",
+	"solution": "Investigate the root cause of these deviations. Analyze logs, monitor resource consumption, and review recent code changes to identify the source of the problem. Potential solutions might include optimizing code, scaling resources, or addressing network bottlenecks."
+}
+``` 
+
+
+
+reason similarity score:0.7798534035682678
+solution similarity score:0.6912297010421753
+
+areaText_50003_v4_English.txt
+root_cause_from_redis:  
+```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+``` 
+
+
+
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": " istio_count, cpu_usage, net_send_packet, net_recv_packet, istio_duration",
+	"reason": "Multiple key performance indicators (KPIs) show significant deviations from normal behavior.  `cpu_usage` has dropped significantly, while `net_send_packet` and `net_recv_packet` have both decreased with a notable increase in the range.  `istio_count` also shows a decrease in its average value and an expanded range. These changes suggest potential issues with network performance or resource contention.",
+	"solution": "Investigate the reasons behind the decreased CPU usage. Monitor network traffic patterns to identify bottlenecks or unusual activity. Review application logs for any error messages related to network or resource limitations. Consider scaling resources if necessary."
+}
+```
+reason similarity score:0.2850775718688965
+solution similarity score:0.3381396234035492
+
+areaText_41013_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "None",
+	"reason": "All KPI values are within acceptable thresholds and show no significant deviations or alarming trends.",
+	"solution": null
+}
+``` 
+
+
+Let me know if you'd like to explore a scenario with abnormal KPIs!  I can then provide a more detailed analysis.
+reason similarity score:0.3820599615573883
+solution similarity score:0.5532604455947876
+
+areaText_40009_v4_English.txt
+root_cause_from_redis:  
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "N/A",
+	"reason": "All indicator data is within the threshold and no significant anomalies were detected.",
+	"solution": "N/A"
+}
+``` 
+
+
+Let me know if you have any other data sets you'd like me to analyze!
+reason similarity score:0.5809352993965149
+solution similarity score:0.3066979646682739
+
+areaText_41011_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "The provided KPI data does not indicate any significant deviations or anomalies exceeding established thresholds. All metrics fall within acceptable ranges.",
+	"solution": ""
+}
+``` 
+
+
+Let me know if you'd like to explore this further with different sets of data or hypothetical scenarios!
+reason similarity score:0.9352166652679443
+solution similarity score:0.9602053761482239
+
+areaText_40011_v4_English.txt
+root_cause_from_redis: Expected Software Changes
+Expected Software Changes
+```json
+{
+	"change_type": "normal",
+	"Top 5 abnormal kpi": "",
+	"reason": "All indicator data does not exceed the threshold.",
+	"solution": ""
+}
+```  
+
+reason similarity score:0.7964005470275879
+solution similarity score:0.9602053761482239
+Precision: 1.00Recall: 1.00F1 Score: 1.00

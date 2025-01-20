@@ -1,0 +1,22 @@
+
+areaText_10076_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "kpi name: superiorAndDeputy empty, kpi name: sum( increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK"}[1m])) , kpi name: approve status error, kpi name: <:REQ:>, kpi name: svc.ApproveCallback failed",
+	"reason": "Several KPIs indicate a significant drop in performance and potential errors after the change. 'superiorAndDeputy empty' shows a drastic shift in data distribution, suggesting a potential issue with data collection or processing. 'sum( increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK"}[1m]))' shows a decrease in successful server requests, indicating a potential service disruption. 'approve status error' also shows an increase in errors, suggesting problems with approval processes. ' <:REQ:>' and 'svc.ApproveCallback failed'  further point to issues with request handling and callback functions.",
+	"solution": "Investigate the changes made and their impact on the affected services.  Review logs and monitoring data for the 'superiorAndDeputy empty' KPI to identify potential data collection or processing issues. Analyze the 'sum( increase(std_grpc_server_handled_total{job=\"be/yid\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\", grpc_code=\"OK"}[1m]))' and 'approve status error' KPIs to pinpoint the root cause of service disruptions and approval errors.  Review the code related to ' <:REQ:>' and 'svc.ApproveCallback failed' to identify and fix any bugs or configuration issues."
+}
+```
+reason similarity score:0.533423900604248
+solution similarity score:0.6625412702560425

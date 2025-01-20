@@ -1,0 +1,25 @@
+
+areaText_10060_v4_English.txt
+root_cause_from_redis: ```json
+{
+	"item": "Resource Contention-Defective Software Changes"
+}
+```
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "approve status error, irate (container_cpu_usage_seconds_total{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} [1m]) * 100, Response=<:MAP:>,  container_memory_rss{prometheus=\"monitoring-cce-bj4-dev-01\",container=\"\",namespace=~\"jiesuan\",pod=~\"yid-k8s-aiops-81-5778cb86bf-tmvfd\",metrics_path=\"/metrics/cadvisor\"} / 1048576, Depts only have yunzhanghu",
+	"reason": "Several key performance indicators (KPIs) exhibit significant deviations after the change.  'approve status error' shows a decrease in range, indicating potential processing issues. 'irate'  shows an upward trend, suggesting increased resource consumption. 'Response'  also shows a positive trend, implying potential delays. 'container_memory_rss'  shows a change in range, possibly indicating memory pressure. 'Depts only have yunzhanghu'  also shows a change in range, hinting at potential data integrity issues.",
+	"solution": "1. **Investigate the 'approve status error'**: Analyze the logs and error messages to identify the root cause of the decrease in range. 2. **Monitor 'irate' closely**:  Implement strategies to optimize resource utilization and prevent excessive CPU usage. 3. **Review 'Response'**:  Identify bottlenecks in the system and optimize processes to reduce response times. 4. **Analyze 'container_memory_rss'**:  Check for memory leaks and optimize memory management practices. 5. **Examine 'Depts only have yunzhanghu'**: Investigate the data integrity issues and ensure accurate data representation."
+}
+``` 
+
+
+
+reason similarity score:0.7404146194458008
+solution similarity score:0.6616238951683044

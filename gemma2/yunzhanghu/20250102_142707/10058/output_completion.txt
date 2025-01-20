@@ -1,0 +1,18 @@
+
+areaText_10058_v4_English.txt
+root_cause_from_redis: []
+```json
+{
+	"item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+}
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "36. AuthListByName <:<:ChineseInfo:>:>, 1.  getBackupEmp success, 2. computeOwnObjectIDs end, 3. message, 4. sum(rate(http_requests_total[1m])) by (method) ",
+	"reason": "Several KPIs show significant deviations from their normal ranges after the change. Specifically, 'AuthListByName <:<:ChineseInfo:>:>' shows a downward trend in mean and max values, while 'getBackupEmp success' and 'computeOwnObjectIDs end' have reduced min and max values. Additionally, 'message' exhibits an increased negative mean value. These changes suggest potential issues with authentication, backup processes, and communication.",
+	"solution": "1. **Investigate the cause of the downward trend in 'AuthListByName <:<:ChineseInfo:>:>'**. Review authentication logs and ensure proper configuration. 2. **Examine the reduced min and max values in 'getBackupEmp success' and 'computeOwnObjectIDs end' to identify potential bottlenecks or errors during backup and object retrieval processes.** 3. Analyze the increased negative mean value in 'message' to determine if there are any communication failures or issues with message handling."
+}
+```
+reason similarity score:0.011642595753073692
+solution similarity score:0.2423829287290573

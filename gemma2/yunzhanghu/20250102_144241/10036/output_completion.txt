@@ -1,0 +1,26 @@
+
+areaText_10036_v4_English.txt
+root_cause_from_redis: []
+```json
+[
+  {
+    "item": "Wrong IP Address-Configuration Errors-Defective Software Changes"
+  },
+  {
+    "item": "Missing Modification of Correlated Configuration-Configuration Errors-Defective Software Changes"
+  },
+  {
+    "item": "Deleting White List by Mistake-Configuration Errors-Defective Software Changes"
+  }
+]
+```
+```json
+{
+	"change_type": "failure",
+	"Top 5 abnormal kpi": "computeOwnObjectIDs end\nAuthListByName <:<:ChineseInfo:>:>\ngetBackupEmp success\nyid-k8s-aiops-81-5778cb86bf-tmvfd  metric \nmessage",
+	"reason": "The provided data shows a significant increase in anomalies, particularly affecting metrics related to object IDs, authentication lists, backup operations, and message processing. This suggests potential issues with system performance, security, or data integrity.",
+	"solution": "1. **Investigate the `computeOwnObjectIDs end` and `AuthListByName <:<:ChineseInfo:>:>` anomalies:** Analyze logs and system activity to identify the root cause of these spikes. Consider reviewing authentication policies, object storage configurations, and performance bottlenecks. \n2. **Review `getBackupEmp success` data:** Examine backup logs for errors or failures. Ensure that backup processes are running as expected and that data is being restored correctly. \n3. **Analyze the `yid-k8s-aiops-81-5778cb86bf-tmvfd` metric:** Focus on understanding the context of this specific metric and its relationship to other affected KPIs. Identify potential resource contention or application issues. \n4. **Monitor `message` processing:**  Inspect message queues, error logs, and system performance metrics related to messaging. Address any bottlenecks or failures in message delivery."
+}
+```
+reason similarity score:0.6882082223892212
+solution similarity score:0.6284673810005188
