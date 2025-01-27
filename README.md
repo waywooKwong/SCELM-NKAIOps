@@ -1,9 +1,9 @@
 # NKAIOps-SoftwareChange
-Repository of Paper: SCELM, NKAIOps, SoftwareChange Project.
+Repository of Paper: SCELM, NKAIOps, SoftwareChange Project. Maintained by [Weihua Kuang](https://github.com/waywooKwong).
 
 Using Large Language Model to improve efficiency of software change maintainance.
 
-Maintained by [Weihua Kuang](https://github.com/waywooKwong)
+<img src="pic/image.png" width="500" alt="示意图">
 
 ## Environment
 
