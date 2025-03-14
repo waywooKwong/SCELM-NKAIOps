@@ -1,2 +1,0 @@
-id,kpi1,kpi2,kpi3,kpi4,kpi5
-10047,sum(rate(requests_total[1m])) by (method)  \nsum(increase(jvm_memory_used_bytes[1m])) \n sum(increase(http_request_duration_seconds_bucket[1m])) by (code) \ndifference(active_connections, active_connections_prev) \naverage_over_time(node_cpu_load_avg_1)\n,,,
