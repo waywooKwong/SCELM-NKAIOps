@@ -295,6 +295,14 @@ for kpi in kpis:
 
         target_key = str("cluster:"+ kpi+":"+ id+":" + anomaly_cluster_str)
         value_set = r1.smembers(target_key)
+
+         # 修改：处理redis中初始cluster为空的问题
+        if not value_set:  # 如果 Redis 里没有该 key
+            print(f"⚠️ Redis cold start detected! No data found for {target_key}")
+            r2.sadd(target_key, "Default cluster information: No previous records found")  # 存入默认值
+            value_set = r1.smembers(target_key)  # 重新读取，防止后续代码崩溃
+        
+        
         doc_from_redis = []
 
         # 如果匹配到
