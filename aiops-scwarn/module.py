@@ -55,7 +55,9 @@ with open("configs.yml", 'r') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 
 # 输出为json
+# 这个函数有修改：修改了json文件的保存位置
 def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong_score:dict, zong_threshold:dict, test_dim_score, fen_threshold: list):
+    # print("进入module.output()")
     output_dict = {
         "metadata":{
         "id": sc_id,
@@ -80,7 +82,13 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
     #print(len(train_data))
     max_distance = 1 
     if max_distance != 0:
-        csv_save_dir = 'result_json_and_csv_{0}/result_csv/{0}/'.format(sc_id)
+
+        # 修改位置1：
+        # csv_save_dir = 'result_byte_dance/result_json_and_csv_{0}/result_csv/{0}/'.format(sc_id)
+        csv_save_dir = 'result_byte_dance/{0}/result_json_and_csv_{1}/result_csv/{1}/'.format(sc_info['service'],sc_id)
+        
+        # print("sc_info['service']:",sc_info['service'])
+        # print("csv_save_dir:",csv_save_dir)
         if not os.path.exists(csv_save_dir):
             os.makedirs(csv_save_dir)
         
@@ -97,9 +105,10 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
         #print(f"promql:{promql}")
         # 获取训练时间戳
         train_timestamps = []
+        # print(f"==================train_data.columns:{train_data.columns}")
         for data in train_data['timestamp']:
-            # train_timestamps.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(data)))) 
-            train_timestamps.append(time.strptime(data,'%Y-%m-%d %H:%M:%S'))
+            train_timestamps.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data))) 
+            # train_timestamps.append(time.strptime(str(data),'%Y-%m-%d %H:%M:%S'))
             # train_timestamps.append(data[0])
         train_data_header = ['timestamp', 'origin_value']
         for i in range(len(promql)):
@@ -107,7 +116,9 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
             f_train_dim = open(csv_train_dim_save_path, 'w')
             csv_train_dim_writer = csv.writer(f_train_dim)
             csv_train_dim_writer.writerow(train_data_header)
-            train_data_column = train_data.columns
+            # 修改位置5：这里错误导致生成的train_origin.csv的第二列origin_value错误
+            # train_data_column = train_data.columns
+            train_data_column = train_data.iloc[:, i]  # 选取数据，而不是列名
             for time_stamp, origin_value in zip(train_timestamps, train_data_column):
                 csv_train_dim_writer.writerow([time_stamp, origin_value])
             f_train_dim.close()
@@ -115,8 +126,8 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
         # 获取测试时间戳
         test_timestamps = []
         for data in test_data['timestamp']:
-            #test_timestamps.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(data))))
-            test_timestamps.append(time.strptime(data,'%Y-%m-%d %H:%M:%S'))
+            test_timestamps.append(time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(data))))
+            # test_timestamps.append(time.strptime(data,'%Y-%m-%d %H:%M:%S'))
             #test_timestamps.append(data[0])       
  
         csv_dim_header = ['timestamp', 'origin_value', 'anomaly_score', 'threshold', 'model_label']
@@ -188,8 +199,9 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
                 anomaly_score_dict['threshold'] = 0
                 anomaly_score_dict['anomaly_score'] = 0
             else:
-                anomaly_score_dict['threshold'] = zong_threshold['thresholds'][i-10]
-                anomaly_score_dict['anomaly_score']  = test_zong_score[i]
+                # print(f"onlinecount={online_count}   i=={i}   length:{len(zong_threshold['thresholds'])}")
+                anomaly_score_dict['threshold'] = zong_threshold['thresholds'][i-12]
+                anomaly_score_dict['anomaly_score']  = test_zong_score[i-1]
             
             if anomaly_score_dict['anomaly_score'] > anomaly_score_dict['threshold']:
                 anomaly_score_dict['is_anomaly'] = True
@@ -211,13 +223,37 @@ def output_SC_json_and_csv(sc_id, sc_info, train_data, test_data:list, test_zong
         output_dict['train_status'] = "train success!"
     else:
         output_dict['train_status'] = "train failed"
-    
-    result_json_save_name = 'result_json_and_csv_{0}/result_json/'.format(sc_id)
+  
+   # 修改位置2
+    # result_json_save_name = 'result_byte_dance/result_json_and_csv_{0}/result_json/'.format(sc_id)
+    result_json_save_name = 'result_byte_dance/{0}/result_json_and_csv_{1}/result_json/'.format(sc_info['service'],sc_id)
+
     if not os.path.exists(result_json_save_name):
         os.makedirs(result_json_save_name)
-    result_json_save_path = f'result_json_and_csv_{sc_id}/result_json/' + 'result_{0}.json'.format(sc_id)
+
+    # 修改位置3
+    # result_json_save_path = f'result_byte_dance/result_json_and_csv_{sc_id}/result_json/' + 'result_{0}.json'.format(sc_id)
+    # result_json_save_path = f'{sc_info['service']}/result_json_and_csv_{sc_id}/result_json/' + 'result_{0}.json'.format(sc_id)
+    result_json_save_path = f"result_byte_dance/{sc_info['service']}/result_json_and_csv_{sc_id}/result_json/result_{sc_id}.json"
+
+    # output_dict = convert_numpy_types(output_dict)
     with open(result_json_save_path, 'w') as f:
         json.dump(output_dict, f)
+
+def convert_numpy_types(obj):
+    """ 递归转换 numpy 数据类型为 Python 原生类型 """
+    if isinstance(obj, np.bool_):  # 处理 numpy.bool_
+        return bool(obj)
+    elif isinstance(obj, np.integer):  # 处理 numpy.int32, numpy.int64
+        return int(obj)
+    elif isinstance(obj, np.floating):  # 处理 numpy.float32, numpy.float64
+        return float(obj)
+    elif isinstance(obj, list):  # 处理列表
+        return [convert_numpy_types(i) for i in obj]
+    elif isinstance(obj, dict):  # 处理字典
+        return {k: convert_numpy_types(v) for k, v in obj.items()}
+    else:
+        return obj  # 其他类型不变
 
 def add_log(csv_file, data):
     log_kpi = []
@@ -312,10 +348,13 @@ def fix_data(train_end_date, kpinames, multiple_kpi, step):
 
 def load_data_no_sklearn(train_data_path, test_data_path, train_size) ->list:
     mul_kpi = []
-    df_train = pd.read_csv(train_data_path+'train.csv')
+    df_train = pd.read_csv(train_data_path+'train_kpi.csv')
     #print(df_train)
+    # print(f"==================train_data.columns:{train_data.columns}")   
+
     df_train = df_train.set_index('timestamp')
-    df_test = pd.read_csv(test_data_path+'test.csv')
+    df_test = pd.read_csv(test_data_path+'test_kpi.csv')
+    print("Columns in df_test:", df_test.columns)
     df_test = df_test.set_index('timestamp')
     
     kpi_names = []
@@ -324,7 +363,8 @@ def load_data_no_sklearn(train_data_path, test_data_path, train_size) ->list:
         mul_kpi.append( list(df_train[kpi_name])+list(df_test[kpi_name]))
     
     data = run_norm(kpi_names, mul_kpi, Args.scaler)
-    return data[0: int(train_size)+1], data[int(train_size)+1:] 
+    # return data[0: int(train_size)+1], data[int(train_size)+1:] 
+    return kpi_names, len(data) - int(train_size) - 1, data[0: int(train_size)+1], data[int(train_size)+1:]
 
 def load_data_no_sklearn_addlog(train_data_path, test_data_path, train_size) ->list:
     with open(test_data_path+'test_kpi.csv', 'r') as file:
@@ -365,8 +405,10 @@ def load_data_no_sklearn_addlog(train_data_path, test_data_path, train_size) ->l
     for kpi_name in df_train_log.columns:
         kpi_names.append(kpi_name)
         mul_kpi.append( list(df_train_log[kpi_name])+list(df_test_log[kpi_name]))
-
+    # print(kpi_names)
+    # print(len(mul_kpi))
     data = run_norm(kpi_names, mul_kpi, Args.scaler)
+    # print(len(data))
     return kpi_columns, log_columns, len(data)-int(train_size), data[0: int(train_size)+1], data[int(train_size)+1:]
 
     
@@ -386,6 +428,11 @@ def load_data(data_path):
 
 #训练模型，系统里调用这个
 def train_model(algorithm, train_data: np.ndarray, params, sc_id:str, modal:list):
+
+    # 确保 modal 是整数列表
+    modal = [int(dim) for dim in modal]
+
+
     if algorithm == "MLSTM":
         model = get_model_MLSTM(train_data, modal,
                                 params['seq_len'], params['batch_size'], params['epoch'], params['learning_rate'])
@@ -453,21 +500,44 @@ def output_score(df_test_no_transform, df_train: pd.DataFrame, df_test: pd.DataF
     return df_results, results, dim_res
 
 #异常检测，输出异常分数，系统里调用这个
-def output_score_no_sklearn(train_data, test_data, test_timestamp, sc_id: str, modal:list):
+def output_score_no_sklearn(train_data, test_data, test_timestamp, sc_id: str, modal: list):
     results, dim_results = run_algorithms(config['algorithms'], train_data, test_data, sc_id, modal)
-    # save results
+
+    # 将 results 转为 DataFrame
     df_results = pd.DataFrame(results)
-    # print(df_results)
     df_results['timestamp'] = test_timestamp
     df_results = df_results.set_index('timestamp')
+
+    # 检查 dim_results 的维度和形状
     shape = dim_results.shape
     ndim = dim_results.ndim
-    new_shape = (shape[0] * shape[1], shape[2]) if ndim > 2 else (shape[0], shape[1])
+
+    # 根据 dim_results 的维度定义 new_shape
+    if ndim == 3:
+        new_shape = (shape[0] * shape[1], shape[2])  # 三维情况
+    elif ndim == 2:
+        new_shape = (shape[0], shape[1])  # 二维情况
+    elif ndim == 1:
+        new_shape = (shape[0], 1)  # 一维情况，扩展为二维
+    else:
+        raise ValueError(f"Unexpected tensor dimensions: {ndim}")
+
     dim_results_2d = dim_results.reshape(new_shape)
     dim_res = pd.DataFrame(dim_results_2d)
-    dim_res['timestamp'] = test_timestamp[10: 721]
+
+    # 检查 test_timestamp 的长度是否匹配 dim_res
+    # if len(test_timestamp[10: 721]) == dim_res.shape[0]:
+    #     dim_res['timestamp'] = test_timestamp[10: 721]
+    if len(test_timestamp[10: 289]) == dim_res.shape[0]:
+          dim_res['timestamp'] = test_timestamp[10: 289]
+    else:
+        # 使用适配长度的 timestamp
+        adjusted_timestamp = test_timestamp[-dim_res.shape[0]:]
+        dim_res['timestamp'] = adjusted_timestamp
+
     dim_res = dim_res.set_index('timestamp')
     return df_results, results, dim_res
+
 
 #异常检测可视化
 def anomaly_pic(df_results:pd.DataFrame):
@@ -507,6 +577,8 @@ def online_detect(test_data, sc_id:str, modal:list):
 #test_data用于接收在线数据输出的列表
 def online_detect_no_sklearn(train_data, test_data, test_data_origin,sc_id:str, modal:list, if_id: str):
     #异常检测输出异常分数并输出保存成csv文件
+    print(train_data)
+    print(test_data_origin)
     test_timestamp = test_data_origin['timestamp']
     # print(f'test_timestamp:{test_timestamp}')
     df_results,results, dim_res = output_score_no_sklearn(train_data, test_data, test_timestamp, sc_id, modal)
@@ -518,17 +590,55 @@ def online_detect_no_sklearn(train_data, test_data, test_data_origin,sc_id:str, 
 
 
 #检测train data,用于spot的训练
-def detect_train_data(train_data, sc_id,modal:list, params=config['algorithms']['MLSTM']):
-    model = torch.load(Args.model_path.format(sc_id)+f"/MLSTM_{params['epoch']}_{params['batch_size']}_{params['learning_rate']}.pt")
-    scores, dim_score = get_prediction_MLSTM(model, train_data[-720:], params['seq_len'], modal)
+# def detect_train_data(train_data, sc_id,modal:list, params=config['algorithms']['MLSTM']):
+#     model = torch.load(Args.model_path.format(sc_id)+f"/MLSTM_{params['epoch']}_{params['batch_size']}_{params['learning_rate']}.pt")
+
+#     if len(train_data) < 720:
+#         padding_needed = 720 - len(train_data)
+#         # 使用零填充，或者可以重复前几条数据
+#         train_data = np.pad(train_data, ((padding_needed, 0), (0, 0)), mode='edge')
+
+#     scores, dim_score = get_prediction_MLSTM(model, train_data[-720:], params['seq_len'], modal)
+#     shape = dim_score.shape
+#     ndim = dim_score.ndim
+#     new_shape = (shape[0] * shape[1], shape[2]) if ndim > 2 else (shape[0], shape[1])
+#     dim_score_2d = dim_score.reshape(new_shape)
+#     dim_scores = pd.DataFrame(dim_score_2d)
+#     return train_data, scores, dim_score
+
+def detect_train_data(train_data, sc_id, modal: list, params=config['algorithms']['MLSTM']):
+    model = torch.load(Args.model_path.format(sc_id) + f"/MLSTM_{params['epoch']}_{params['batch_size']}_{params['learning_rate']}.pt")
+
+    # print(f"np.pad前:{train_data}")
+    if len(train_data) < 288:
+        padding_needed = 288 - len(train_data)
+        train_data = np.pad(train_data, ((padding_needed, 0), (0, 0)), mode='edge')
+
+    # scores, dim_score = get_prediction_MLSTM(model, train_data[-720:], params['seq_len'], modal)
+    scores, dim_score = get_prediction_MLSTM(model, train_data[-288:], params['seq_len'], modal)
     shape = dim_score.shape
     ndim = dim_score.ndim
-    new_shape = (shape[0] * shape[1], shape[2]) if ndim > 2 else (shape[0], shape[1])
+
+    # 设置 new_shape 根据 dim_score 的维度
+    if ndim == 3:
+        new_shape = (shape[0] * shape[1], shape[2])  # 三维情况
+    elif ndim == 2:
+        new_shape = shape  # 已经是二维
+    elif ndim == 1:
+        new_shape = (shape[0], 1)  # 一维情况扩展为 (shape[0], 1)
+    else:
+        raise ValueError(f"Unexpected tensor dimensions: {ndim}")
+
     dim_score_2d = dim_score.reshape(new_shape)
     dim_scores = pd.DataFrame(dim_score_2d)
     return train_data, scores, dim_score
+
+
     
 def spot(train_score, sc_id:str) -> int:
+
+    print(f"train_score shape: {train_score.shape}, content: {train_score}")
+
     #检测结果的异常分数处理
     test_score = pd.read_csv(Args.output_path.format(sc_id))
     test_data_np = np.array(test_score['MLSTM'])
@@ -538,8 +648,12 @@ def spot(train_score, sc_id:str) -> int:
     q = 0.001			# risk parameter
     d = 10				# depth parameter
     s = dSPOT(q,d)     	# biDSPOT object
-    #s = SPOT(q)
+    # s = SPOT(q)
     s.fit(init_data,data) 	# data import
+    # 确保在调用 initialize() 之前加载数据
+
+    if s.init_data.size == 0:
+        raise ValueError("init_data is empty. Please check data loading process and ensure init_data is populated before initializing.")
     s.initialize() 	  		# initialization step
     results = s.run()    	# run
     # counter返回异常点的数量，alarm返回异常点的位置
@@ -554,7 +668,7 @@ def dim_spot(train_dim_score, sc_id:str):
         init_data = np.array(train_dim_score[:, 0, i-1])
         q = 0.001	 			# risk parameter
         d = 10
-        #s = SPOT(q)  				# depth parameter
+        # s = SPOT(q)  				# depth parameter
         s = dSPOT(q,d)     	# biDSPOT object
         s.fit(init_data,test_data_np)
         s.initialize()
@@ -591,7 +705,4 @@ def get_average_difference(sc_id:str, results):
     df2['difference'] = abs(df1['column1'].sub(df2['column2']))
     average_distance = df2['difference'].mean()
     return average_distance
-
-
-
 
