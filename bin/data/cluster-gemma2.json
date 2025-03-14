@@ -1,0 +1,56 @@
+{
+    "clusters": [
+      {
+        "name": "Network Traffic",
+        "metrics": [
+          "sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-81-d7664fd98-xxn9b\", node=\"10.200.67.230\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+          "sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-79785d8695-s9nzf\", node=\"10.200.64.186\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8",
+          "sum(rate(container_network_transmit_bytes_total{prometheus=\"monitoring-cce-bj4-dev-01\",namespace=~\"jiesuan\", pod=~\"yid-k8s-aiops-82-abnormal-797d56fbd4-tsrm4\", node=\"10.200.64.17\", metrics_path=\"/metrics/cadvisor\"}[1m])) by (pod,namespace,node) * 8"
+        ]
+      },
+      {
+        "name": "gRPC Service Requests",
+        "metrics": [
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\", grpc_code=\"OK\", instance=\"yid-k8s-aiops-81-8479bf857f-dwxwt\" ,grpc_method=~\"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp\"}[1m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\", grpc_code=\"OK\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\" ,grpc_method=~\"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp\"}[1m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\", grpc_code=\"Unknown\",grpc_method=~\"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp\"}[5m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\", grpc_code=\"Unknown\",instance=\"yid-k8s-aiops-81-8479bf857f-dwxwt\", grpc_method=~\"GetEmployee|ListEmployee|GetDepartment|ListDepartment|GetTeam|ListTeam|ListSupervisor|IsDeptLeader|GetDepartTree|GetEmployeeDepartTree|ListUserNameByEmpID|ListAuthZTeamsByUserName|ListWeChatDeptIDByDeptID|ListJiesuanBusinessDeptMember|ListAllInternalEmployees|IsEmployeeBelongToDept|ListApproveAuthEmp|ListApproveAuthDept|ListApproveBackupEmp\"}[1m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-8479bf857f-dwxwt\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\", grpc_code=\"OK\"}[1m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\",instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\", grpc_code=\"OK\"}[1m]))",
+          "sum(rate(std_grpc_server_handled_total{job=\"be/yid\",grpc_method=~\"ListFieldValues|ListPermResource|CheckUserOperatePage|ListAuthZResources\", grpc_code=\"Unknown\"}[5m]))"
+        ]
+      },
+      {
+        "name": "HTTP Requests",
+        "metrics": [
+          "sum(rate(std_requests_total{job=\"be/bkverify\",code=\"200\",environment=\"prod\"}[2m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\", code=\"200\",method=\"GET\",url=~\"/api/v1/employee/:empID|/api/v1/employees|/api/v1/dept|/api/v1/depts|/api/v1/team/:teamID|/api/v1/teams|/api/v1/supervisors/:empIDs|/api/v1/dept-tree|/api/v1/emplist\"}[5m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\", code=\"200\",method=~\"GET|POST\",url=~\"/api/v2/user/publickey|/api/v2/user/login|/api/v2/user/verify/totp|/api/v2/user/password/change|/api/v2/email/password|/api/v2/password/auth|/api/v2/password/reset\"}[5m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\",code=~\"2..\",environment=\"prod\"}[5m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\",code=~\"3..\",environment=\"prod\"}[5m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"prod\"}[5m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-8479bf857f-dwxwt\"}[1m]))",
+          "sum(rate(std_requests_total{job=\"be/yid\",code=~\"4..\",environment=\"rc\", instance=\"yid-k8s-aiops-81-d7664fd98-xxn9b\"}[1m]))"
+        ]
+      },
+      {
+        "name": "System Errors/Events",
+        "metrics": [
+          "superiorAndDeputy empty",
+          "svc.ApproveCallback failed",
+          "sync <:*:>",
+          "the employee does not exist",
+          "timestamp"
+        ]
+      },
+      {
+        "name": "Unknown/Generic",
+        "metrics": [
+          "tx_bytes",
+          "unknown",
+          "yid_login_rate{exported_job=\"yid_login\",instance=\"172.16.17.3:9092\",job=\"push-gateway\"}"
+        ]
+      }
+    ]
+  }
+  

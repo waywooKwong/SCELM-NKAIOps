@@ -3,7 +3,7 @@ Repository of Paper: SCELM, NKAIOps, SoftwareChange Project. Maintained by [Weih
 
 Using Large Language Model to improve efficiency of software change maintainance.
 
-<img src="pic/image.png" width="500" alt="示意图">
+<img src="pic/image.png" width="800" alt="示意图">
 
 ## Environment
 
