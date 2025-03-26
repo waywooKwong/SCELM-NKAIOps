@@ -1,0 +1,2 @@
+- m3e-base, vector embeeding model.
+- all-MiniLM-L6-v2, semantic similarity matching model.

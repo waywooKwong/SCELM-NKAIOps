@@ -2,14 +2,14 @@
 
 Repository of SCELM, SoftwareChange Project from AIOps Lab, Nankai University.
 
-Repo & Funtion Code maintained by [Weihua Kuang](https://github.com/waywooKwong).
+Maintained by [Weihua Kuang](https://github.com/waywooKwong), 
 
-Further deployment  in enterprise by Hailin Zhang.
+feel free to email `weihua.kwong@mail.nankai.edu.cn` if you have any function problems.
 
 ## News
 
-:star: 2025/03/25: Our Paper **A Multimodal Intelligent Change Assessment Framework for Microservice
-Systems Based on Large Language Models** (SCELM) accepted by FSE 2025 Industry!
+⭐️ 2025/03/25: Our Paper ***A Multimodal Intelligent Change Assessment Framework for Microservice
+Systems Based on Large Language Models*** (SCELM) accepted by FSE 2025 Industry (45/165)!
 
 2025/03/10: Test & Deploy SCELM on ByteDance enterprise data.
 
@@ -23,7 +23,10 @@ Systems Based on Large Language Models** (SCELM) accepted by FSE 2025 Industry!
 
 Using Large Language Model to improve efficiency of software change maintainance.
 
-Yun Zhanghu Technology
+Our method achieved SOTA performance on the business scenario: 
+
+- *Yun Zhanghu Technology*
+- preliminary tests on *ByteDance*
 
 <img src="pic/image.png" width="800" alt="示意图">
 
@@ -32,22 +35,46 @@ Yun Zhanghu Technology
 ### Tools
 
 - Ollama, deploy models on local server
-
-  recommended gemma2-9b, qwen2.5-7b,llama3.1-7b
-- Redis
+  - version 0.5.1
+  - recommended model: gemma2-9b, qwen2.5-7b,llama3.1-7b
+- Redis, vector database
+  - version 7.2.5
 
 ### Models
 
-- m3e-base, vector embeeding model.
-- all-MiniLM-L6-v2, semantic similarity matching model.
+download the model files from the web and place them under the `/model` folder
+
+- [m3e-base](https://huggingface.co/moka-ai/m3e-base), vector embeeding model.
+- [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), semantic similarity matching model.
 
 ## How to run
 
 ### 1. Run Ollama server
 
+```
+ollama serve
+```
+
+(optional) Test ollama model chat
+
+models supported according to:  [Ollama Models](https://ollama.com/search)
+
+```
+ollama pull <model_name>
+<input chat content>
+```
+
 ### 2. Run Redis server
 
-### 3. Run code
+```
+redis-server
+```
+
+more detailed command according to [Redis tutorials](https://redis.io/docs/latest/),
+
+(recommended) Use [Redis Insight](https://redis.io/insight/) to visually manage data, mind your connection port.
+
+### 3. Run SCELM function code
 
 1. Part1_AreaText-Generate
 
@@ -56,10 +83,16 @@ Yun Zhanghu Technology
 
    Change analysis by LLM using Retriever-Augmented Generation.
 
+### 4. Evaluate results
+
+according to codes in `/utils`
+
 ## Contributions
 
-LLM-RAG part code & experiment design by Weihua Kuang,
+Any function problems connect [Weihua Kuang](https://github.com/waywooKwong) by `weihua.kwong@mail.nankai.edu.cn`
 
-Baseline experiment by ShenChao,
+Any baseline experiments connect [Chao Shen](https://github.com/sc2213404) by `2213404@mail.nankai.edu.cn`
 
-Co-guided & Mainly Paper writing by other writers.
+- RAG functional code, experiment design & Paper script by Weihua Kuang,
+- Baseline experiment by Chao Shen,
+- Co-guided & Mainly paper writing by other writers.
