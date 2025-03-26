@@ -2,7 +2,7 @@
 
 Repository of SCELM, SoftwareChange Project from AIOps Lab, Nankai University.
 
-Maintained by [Weihua Kuang](https://github.com/waywooKwong), 
+Maintained by [Weihua Kuang](https://github.com/waywooKwong), Guided by [Yongqian Sun](https://nkcs.iops.ai/yongqiansun/) and [Shenglin Zhang](https://nkcs.iops.ai/zhangshenglin/).
 
 feel free to email `weihua.kwong@mail.nankai.edu.cn` if you have any function problems.
 
@@ -23,7 +23,7 @@ Systems Based on Large Language Models*** (SCELM) accepted by FSE 2025 Industry 
 
 Using Large Language Model to improve efficiency of software change maintainance.
 
-Our method achieved SOTA performance on the business scenario: 
+Our method achieved SOTA performance on the business scenario:
 
 - *Yun Zhanghu Technology*
 - preliminary tests on *ByteDance*
@@ -96,3 +96,9 @@ Any baseline experiments connect [Chao Shen](https://github.com/sc2213404) by `2
 - RAG functional code, experiment design & Paper script by Weihua Kuang,
 - Baseline experiment by Chao Shen,
 - Co-guided & Mainly paper writing by other writers.
+
+## Thanks
+
+- Tinghua Zheng, his intern experience in *Yun Zhanghu Technology* leads to this project.
+- [Guangba Yu](https://yuxiaoba.github.io/) helps for one baseline experiment about his work [ChangeRCA](https://github.com/IntelligentDDS/ChangeRCA).
+- [Hailin Zhang](https://github.com/HeilynZhang) helps run our SCELM on preliminary data of *Bytedance*.
